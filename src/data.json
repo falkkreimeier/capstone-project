@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Lakritzel",
+    "price": "18,-",
+    "description": "Total übergeschnapster Lakritzlikör mit Süßholz, Samliaksalz und Sternanis.",
+    "alcohol": "25%",
+    "mount": "700ml",
+    "image": "./img/painted-bottle.jpg"
+  }
+]
