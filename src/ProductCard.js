@@ -3,7 +3,7 @@ import styled from 'styled-components'
 function ProductCard(props) {
   return (
     <Wrapper>
-      <Image src={props.image} alt="A bottle of Lakritzel"></Image>
+      <Image src={props.image} alt="A bottle of Lakritzel" />
       <Price>{props.price}</Price>
     </Wrapper>
   )
