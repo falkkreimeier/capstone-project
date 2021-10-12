@@ -5,12 +5,13 @@ function App({ data }) {
     <div>
       {data.map(product => (
         <ProductCard
-          product={product.name}
+          claim={product.claim}
           price={product.price}
-          description={product.description}
+          ingredients={product.ingredients}
           alcohol={product.alcohol}
           mount={product.mount}
           image={product.image}
+          logo={product.logo}
           key={product.name}
         />
       ))}
