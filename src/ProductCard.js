@@ -17,9 +17,7 @@ function ProductCard(props) {
 
       <FlipCardBack>
         <Logo src={props.logo} alt="Lakritzel Logo" />
-        <Text>
-          Total übergeschnapster Lakritzlikör. VORSICHT: Kann abfüllend wirken.
-        </Text>
+        <Text>{props.description}</Text>
         <Details>
           <Headline>{props.claim}</Headline>
           <List>{props.ingredients}</List>
