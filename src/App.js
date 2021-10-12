@@ -5,6 +5,7 @@ function App({ data }) {
     <div>
       {data.map(product => (
         <ProductCard
+          description={product.description}
           claim={product.claim}
           price={product.price}
           ingredients={product.ingredients}
