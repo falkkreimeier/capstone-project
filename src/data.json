@@ -7,6 +7,7 @@
     "alcohol": "25% Alkohol",
     "mount": "700ml",
     "image": "./img/painted-bottle.jpg",
-    "logo": "./img/Logo.jpg"
+    "logo": "./img/Logo.jpg",
+    "lettering": "./img/Schriftzug.jpg"
   }
 ]
