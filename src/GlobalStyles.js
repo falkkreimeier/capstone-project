@@ -19,5 +19,9 @@ body {
     background-color: black;
 }
 
+h2 {
+    font-family: Wisdom;
+}
+
 `
 export default GlobalStlyles
