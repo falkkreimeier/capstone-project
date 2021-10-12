@@ -1,10 +1,12 @@
 [
   {
-    "name": "Lakritzel",
+    "description": "Total übergeschnapster Lakritzlikör. VORSICHT: Kann abfüllend wirken.",
+    "claim": "Der dunkle Wahnsinn",
     "price": "18,-",
-    "description": "Total übergeschnapster Lakritzlikör mit Süßholz, Samliaksalz und Sternanis.",
-    "alcohol": "25%",
+    "ingredients": "Süßholz, Samliaksalz und Sternanis.",
+    "alcohol": "25% Alkohol",
     "mount": "700ml",
-    "image": "./img/painted-bottle.jpg"
+    "image": "./img/painted-bottle.jpg",
+    "logo": "./img/Logo.jpg"
   }
 ]
