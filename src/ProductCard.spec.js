@@ -14,7 +14,7 @@ describe('render ProductCard', () => {
   it('has the correct alt text', () => {
     const altText = 'Lakritzel bottle'
 
-    render(<ProductCard path="https://localhist:3000/" alt={altText} />)
+    render(<ProductCard path="https://localhost:3000/" alt={altText} />)
 
     const Image = screen.getByAltText(altText)
     expect(Image).toHaveAttribute('alt', altText)
@@ -23,7 +23,7 @@ describe('render ProductCard', () => {
   it('has the correct alt text', () => {
     const altText2 = 'Lakritzel Logo'
 
-    render(<ProductCard path="https://localhist:3000/" alt={altText2} />)
+    render(<ProductCard path="https://localhost:3000/" alt={altText2} />)
 
     const Image2 = screen.getByAltText(altText2)
     expect(Image2).toHaveAttribute('alt', altText2)
@@ -34,5 +34,12 @@ describe('render ProductCard', () => {
 
     const Price = screen.getByText('18,-')
     expect(Price).toBeInTheDocument()
+  })
+
+  it('renders two buttons', () => {
+    render(<ProductCard />)
+
+    const Buttons = screen.getAllByRole('button')
+    expect(Buttons).toHaveLength(2)
   })
 })
