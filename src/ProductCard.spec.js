@@ -1,14 +1,32 @@
 import { render, screen } from '@testing-library/react'
 import ProductCard from './ProductCard'
 
-describe('it shows ProductCard', () => {
+describe('render ProductCard', () => {
   const price = '18,-'
 
-  it('renders', () => {
+  it('shows ProductCard Images', () => {
     render(<ProductCard />)
 
-    const Image = screen.getByRole('img')
-    expect(Image).toBeInTheDocument()
+    const Images = screen.getAllByRole('img')
+    expect(Images).toHaveLength(2)
+  })
+
+  it('has the correct alt text', () => {
+    const altText = 'Lakritzel bottle'
+
+    render(<ProductCard path="https://localhist:3000/" alt={altText} />)
+
+    const Image = screen.getByAltText(altText)
+    expect(Image).toHaveAttribute('alt', altText)
+  })
+
+  it('has the correct alt text', () => {
+    const altText2 = 'Lakritzel Logo'
+
+    render(<ProductCard path="https://localhist:3000/" alt={altText2} />)
+
+    const Image2 = screen.getByAltText(altText2)
+    expect(Image2).toHaveAttribute('alt', altText2)
   })
 
   it('displays the Price of the Product', () => {
