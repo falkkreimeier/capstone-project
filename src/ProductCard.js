@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from 'styled-components/macro'
 import { useState } from 'react'
 
 function ProductCard(props) {
@@ -10,16 +10,16 @@ function ProductCard(props) {
   return (
     <FlipCard flipToDetails={flipToDetails}>
       <FlipCardFront>
-        <Image src={props.image} alt="Lakritzel bottle" />
+        <Image src={props.image} alt="" />
         <Price>{props.price}</Price>
         <ButtonFront onClick={flipToDetailsButton}>Was 'n das?!</ButtonFront>
       </FlipCardFront>
 
       <FlipCardBack>
-        <Logo src={props.logo} alt="Lakritzel Logo" />
+        <Logo src={props.logo} alt="Lakritzel" />
         <Text>{props.description}</Text>
+        <Headline>{props.claim}</Headline>
         <Details>
-          <Headline>{props.claim}</Headline>
           <List>{props.ingredients}</List>
           <List>{props.alcohol}</List>
           <List>{props.mount}</List>

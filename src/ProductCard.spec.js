@@ -12,18 +12,18 @@ describe('render ProductCard', () => {
   })
 
   it('has the correct alt text', () => {
-    const altText = 'Lakritzel bottle'
+    const altText = ''
 
-    render(<ProductCard path="https://localhost:3000/" alt={altText} />)
+    render(<ProductCard image="https://localhost:3000/" />)
 
     const Image = screen.getByAltText(altText)
     expect(Image).toHaveAttribute('alt', altText)
   })
 
   it('has the correct alt text', () => {
-    const altText2 = 'Lakritzel Logo'
+    const altText2 = 'Lakritzel'
 
-    render(<ProductCard path="https://localhost:3000/" alt={altText2} />)
+    render(<ProductCard image="https://localhost:3000/" />)
 
     const Image2 = screen.getByAltText(altText2)
     expect(Image2).toHaveAttribute('alt', altText2)
