@@ -112,14 +112,14 @@ const FlipCardBack = styled.section`
   display: grid;
   grid-template-areas:
     'logo portrait'
-    'details details';
+    'details button';
 `
 
 const ButtonBack = styled.button`
   backface-visibility: hidden;
   position: relative;
-  bottom: 35px;
-  right: 140px;
+  top: 50px;
+  right: 80px;
   grid-area: button;
   text-decoration: none;
   text-align: center;
@@ -144,12 +144,14 @@ const Logo = styled.img`
 
 const Text = styled.p`
   width: 200px;
-  margin: 40px 0 0 10px;
+  margin: 40px 20px 0 -125px;
   grid-area: portrait;
 `
 
 const Headline = styled.h2`
-  margin: 0;
+  grid-area: details;
+  padding-left: 50px;
+  margin: -10px;
 `
 
 const Details = styled.ul`
