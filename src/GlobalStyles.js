@@ -1,10 +1,15 @@
 import { createGlobalStyle } from 'styled-components'
-import Wisdom from './Font/Wisdom.otf'
+import Ventana from './Font/Lakritzel-Ventana.otf'
 
 const GlobalStlyles = createGlobalStyle`
+
+:root {
+    --border-radius: 19px;
+    --main-width: 22rem;
+} 
 @font-face {
-    font-family: wisdom;
-    src: url(${Wisdom}) format("openType");
+    font-family: Ventana;
+    src: url(${Ventana}) format("openType");
 }
 
 html {
@@ -20,7 +25,7 @@ body {
 }
 
 h2 {
-    font-family: Wisdom;
+    font-family: Ventana;
 }
 
 `

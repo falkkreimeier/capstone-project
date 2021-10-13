@@ -8,32 +8,40 @@ function ProductCard(props) {
   }
 
   return (
-    <FlipCard flipToDetails={flipToDetails}>
-      <FlipCardFront>
-        <Image src={props.image} alt="" />
-        <Price>{props.price}</Price>
-        <ButtonFront onClick={flipToDetailsButton}>Was 'n das?!</ButtonFront>
-      </FlipCardFront>
+    <Container>
+      <FlipCard flipToDetails={flipToDetails}>
+        <FlipCardFront>
+          <Image src={props.image} alt="" />
+          <Price>{props.price}</Price>
+          <ButtonFront onClick={flipToDetailsButton}>
+            Was ist da drin?!
+          </ButtonFront>
+        </FlipCardFront>
 
-      <FlipCardBack>
-        <Logo src={props.logo} alt="Lakritzel" />
-        <Text>{props.description}</Text>
-        <Headline>{props.claim}</Headline>
-        <Details>
-          <List>{props.ingredients}</List>
-          <List>{props.alcohol}</List>
-          <List>{props.mount}</List>
-        </Details>
-        <ButtonBack onClick={flipToDetailsButton}>Produkt</ButtonBack>
-      </FlipCardBack>
-    </FlipCard>
+        <FlipCardBack>
+          <Logo src={props.logo} alt="Lakritzel" />
+          <Text>{props.description}</Text>
+          <Headline>Wahnsinniger Inhalt</Headline>
+          <Details>
+            <List>{props.ingredients}</List>
+            <List>{props.alcohol}</List>
+            <List>{props.mount}</List>
+          </Details>
+          <ButtonBack onClick={flipToDetailsButton}>Produkt</ButtonBack>
+        </FlipCardBack>
+      </FlipCard>
+    </Container>
   )
 }
+
+const Container = styled.div`
+  height: 19.5rem;
+  perspective: 1000px;
+`
 
 const FlipCard = styled.section`
   display: flex;
   justify-content: center;
-  perspective: 1000px;
   padding: 0px;
   transition: transform 1s;
   transform-style: preserve-3d;
@@ -48,8 +56,7 @@ const FlipCard = styled.section`
 
 const FlipCardFront = styled.section`
   background-color: white;
-  height: 20rem;
-  width: 22rem;
+  width: var(--main-width);
   backface-visibility: hidden;
   position: absolute;
   border-radius: 25px;
@@ -61,8 +68,8 @@ const FlipCardFront = styled.section`
 
 const Image = styled.img`
   grid-area: image;
-  height: 20rem;
-  border-radius: 15px;
+  height: 19rem;
+  border-radius: 19px;
   margin: 0;
 `
 
@@ -73,7 +80,7 @@ const Price = styled.div`
   position: relative;
   top: 40px;
   right: 90px;
-  font-family: wisdom;
+  font-family: Ventana;
   grid-area: price;
   font-size: 3rem;
 `
@@ -101,8 +108,8 @@ const ButtonFront = styled.button`
 `
 
 const FlipCardBack = styled.section`
-  height: 20rem;
-  width: 22rem;
+  height: 19rem;
+  width: var(--main-width);
   background-color: white;
   backface-visibility: hidden;
   transform: rotateY(180deg);
@@ -118,8 +125,8 @@ const FlipCardBack = styled.section`
 const ButtonBack = styled.button`
   backface-visibility: hidden;
   position: relative;
-  top: 50px;
-  right: 80px;
+  top: 45px;
+  right: 120px;
   grid-area: button;
   text-decoration: none;
   text-align: center;
@@ -139,28 +146,29 @@ const ButtonBack = styled.button`
 const Logo = styled.img`
   margin: 20px 0 0 30px;
   grid-area: logo;
-  height: 10rem;
+  height: 8rem;
 `
 
 const Text = styled.p`
   width: 200px;
-  margin: 40px 20px 0 -125px;
+  margin: 40px 20px 0 -180px;
   grid-area: portrait;
 `
 
 const Headline = styled.h2`
   grid-area: details;
   padding-left: 50px;
-  margin: -10px;
+  margin: -40px -10px; ;
 `
 
-const Details = styled.ul`
+const Details = styled.ol`
+  margin: -10px 15px;
   grid-area: details;
 `
 
 const List = styled.li`
   width: 260px;
-  list-style: none;
+  /* list-style: none; */
 `
 
 export default ProductCard
