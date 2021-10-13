@@ -1,9 +1,11 @@
 import ProductCard from './ProductCard'
 import Header from './Header'
+import OrderingForm from './OrderingForm'
+import styled from 'styled-components/macro'
 
 function App({ data }) {
   return (
-    <div>
+    <Wrapper>
       <Header />
       {data.map(product => (
         <ProductCard
@@ -18,8 +20,16 @@ function App({ data }) {
           key={product.name}
         />
       ))}
-    </div>
+      <div style={{ clear: 'both' }}></div>
+      <OrderingForm />
+    </Wrapper>
   )
 }
+
+const Wrapper = styled.section`
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+`
 
 export default App
