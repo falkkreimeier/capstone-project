@@ -8,5 +8,5 @@ export default {
 
 const Template = args => <Header {...args} />
 
-export const Normal = Template.bind({})
-Normal.args = {}
+export const Standard = Template.bind({})
+Standard.args = {}
