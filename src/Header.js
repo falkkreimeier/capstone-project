@@ -1,14 +1,14 @@
 import styled from 'styled-components'
 
-function Header() {
+function Header(props) {
   return (
     <Wrapper>
-      <Image src="/img/Schriftzug.jpg" alt="" />
+      <Image src={'img/Logo-lettering.jpg'} alt="Lakritzel App" />
     </Wrapper>
   )
 }
 
-const Wrapper = styled.section`
+const Wrapper = styled.header`
   display: flex;
   justify-content: center;
   margin: 0 auto;

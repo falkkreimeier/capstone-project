@@ -9,6 +9,4 @@ export default {
 const Template = args => <Header {...args} />
 
 export const Normal = Template.bind({})
-Normal.args = {
-  image: process.env.PUBLIC_URL + '/img/painted-bottle.jpg',
-}
+Normal.args = {}
