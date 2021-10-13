@@ -2,6 +2,7 @@ import ProductCard from './ProductCard'
 import Header from './Header'
 import OrderingForm from './OrderingForm'
 import styled from 'styled-components/macro'
+import Storytelling from './Storytelling'
 
 function App({ data }) {
   return (
@@ -22,6 +23,7 @@ function App({ data }) {
       ))}
       <div style={{ clear: 'both' }}></div>
       <OrderingForm />
+      <Storytelling />
     </Wrapper>
   )
 }
