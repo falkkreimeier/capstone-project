@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 function OrderingForm() {
   return (
@@ -126,6 +126,12 @@ const Form = styled.form`
 
 const Label = styled.label``
 
+const iconStyle = css`
+  border: none;
+  text-align: center;
+  width: 155px;
+`
+
 // Add HidenLabelText to hide the Label Text, to make it usable for screenreader
 const HiddenLabelText = styled.span`
   display: block;
@@ -154,51 +160,37 @@ const InputContainer = styled.div`
 
 const Nachnahme = styled.input`
   grid-area: nachname;
-  border: none;
-  text-align: center;
-  width: 160px;
+  ${iconStyle}
 `
 
 const Vorname = styled.input`
   grid-area: vorname;
-  border: none;
-  text-align: center;
-  width: 160px;
+  ${iconStyle}
 `
 
 const Straße = styled.input`
   grid-area: straße;
-  border: none;
-  text-align: center;
-  width: 160px;
+  ${iconStyle}
 `
 
 const Postleitzahl = styled.input`
   grid-area: postleitzahl;
-  border: none;
-  text-align: center;
-  width: 160px;
+  ${iconStyle}
 `
 
 const Stadt = styled.input`
   grid-area: stadt;
-  border: none;
-  text-align: center;
-  width: 160px;
+  ${iconStyle}
 `
 
 const Mail = styled.input`
   grid-area: mail;
-  border: none;
-  text-align: center;
-  width: 160px;
+  ${iconStyle}
 `
 
 const Amount = styled.input`
   grid-area: menge;
-  border: none;
-  text-align: center;
-  width: 160px;
+  ${iconStyle}
 `
 
 const MessageContainer = styled.div`
@@ -215,9 +207,7 @@ const MessageContainer = styled.div`
 `
 
 const Message = styled.input`
-  border: none;
-  text-align: center;
-  width: 160px;
+  ${iconStyle}
   height: 60px;
 `
 
