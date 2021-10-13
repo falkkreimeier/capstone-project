@@ -90,7 +90,7 @@ function OrderingForm() {
           </Label>
         </MessageContainer>
         <ButtonContainer>
-          <Button type="submit" value="Jetzt retten" />
+          <Button>Hol mich hier raus!</Button>
         </ButtonContainer>
       </Form>
     </Wrapper>
@@ -228,7 +228,7 @@ const ButtonContainer = styled.div`
   display: flex;
 `
 
-const Button = styled.input`
+const Button = styled.button`
   position: relative;
   top: 0px;
   left: 40px;
