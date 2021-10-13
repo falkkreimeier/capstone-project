@@ -7,17 +7,6 @@ function OrderingForm() {
       <Form>
         <InputContainer>
           <Label>
-            <HiddenLabelText>Nachname:</HiddenLabelText>
-            <Nachnahme
-              type="text"
-              placeholder="Nachname"
-              name="name"
-              maxlength="20"
-            />
-          </Label>
-        </InputContainer>
-        <InputContainer>
-          <Label>
             <HiddenLabelText>Vorname:</HiddenLabelText>
             <Vorname
               type="text"
@@ -27,6 +16,18 @@ function OrderingForm() {
             />
           </Label>
         </InputContainer>
+        <InputContainer>
+          <Label>
+            <HiddenLabelText>Nachname:</HiddenLabelText>
+            <Nachnahme
+              type="text"
+              placeholder="Nachname"
+              name="name"
+              maxlength="20"
+            />
+          </Label>
+        </InputContainer>
+
         <InputContainer>
           <Label>
             <HiddenLabelText>Straße:</HiddenLabelText>
@@ -155,7 +156,6 @@ const Nachnahme = styled.input`
   grid-area: nachname;
   border: none;
   text-align: center;
-  border-radius: 19px;
   width: 160px;
 `
 
@@ -163,7 +163,6 @@ const Vorname = styled.input`
   grid-area: vorname;
   border: none;
   text-align: center;
-  border-radius: 19px;
   width: 160px;
 `
 
@@ -171,7 +170,6 @@ const Straße = styled.input`
   grid-area: straße;
   border: none;
   text-align: center;
-  border-radius: 19px;
   width: 160px;
 `
 
@@ -179,7 +177,6 @@ const Postleitzahl = styled.input`
   grid-area: postleitzahl;
   border: none;
   text-align: center;
-  border-radius: 19px;
   width: 160px;
 `
 
@@ -187,7 +184,6 @@ const Stadt = styled.input`
   grid-area: stadt;
   border: none;
   text-align: center;
-  border-radius: 19px;
   width: 160px;
 `
 
@@ -195,7 +191,6 @@ const Mail = styled.input`
   grid-area: mail;
   border: none;
   text-align: center;
-  border-radius: 19px;
   width: 160px;
 `
 
@@ -203,24 +198,27 @@ const Amount = styled.input`
   grid-area: menge;
   border: none;
   text-align: center;
-  border-radius: 19px;
   width: 160px;
 `
 
 const MessageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   grid-area: message;
   margin: 10px;
   width: 170px;
-  border: 2px solid black;
+  height: 80px;
   border-radius: 19px;
+  border: 2px solid black;
   text-align: center;
 `
 
 const Message = styled.input`
   border: none;
   text-align: center;
-  border-radius: 19px;
   width: 160px;
+  height: 60px;
 `
 
 const ButtonContainer = styled.div`

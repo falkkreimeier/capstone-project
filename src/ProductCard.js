@@ -13,7 +13,9 @@ function ProductCard(props) {
         <FlipCardFront>
           <Image src={props.image} alt="" />
           <Price>{props.price}</Price>
-          <ButtonFront onClick={flipToDetailsButton}>Was 'n das?!</ButtonFront>
+          <ButtonFront onClick={flipToDetailsButton}>
+            Was ist da drin?!
+          </ButtonFront>
         </FlipCardFront>
 
         <FlipCardBack>
