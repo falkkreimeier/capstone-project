@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-function Header(props) {
+function Header() {
   return (
     <Wrapper>
       <Image src={'img/Logo-lettering.jpg'} alt="Lakritzel App" />
