@@ -44,7 +44,7 @@ function OrderingForm() {
             <HiddenLabelText>Postleitzahl:</HiddenLabelText>
             <Postleitzahl
               maxlength="20"
-              type="text"
+              type="number"
               placeholder="Postleitzahl"
               name="postleitzahl"
             />
