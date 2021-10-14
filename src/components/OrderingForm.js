@@ -11,7 +11,7 @@ function OrderingForm() {
             <Vorname
               type="text"
               placeholder="Vorname"
-              name="nachname"
+              name="firstname"
               maxlength="20"
             />
           </Label>
@@ -35,7 +35,7 @@ function OrderingForm() {
               maxlength="20"
               type="text"
               placeholder="Straße"
-              name="straße"
+              name="street"
             />
           </Label>
         </InputContainer>
@@ -46,7 +46,7 @@ function OrderingForm() {
               maxlength="20"
               type="number"
               placeholder="Postleitzahl"
-              name="postleitzahl"
+              name="zipcode"
             />
           </Label>
         </InputContainer>
@@ -57,7 +57,7 @@ function OrderingForm() {
               maxlength="20"
               type="text"
               placeholder="Stadt"
-              name="stadt"
+              name="city<"
             />
           </Label>
         </InputContainer>
@@ -75,7 +75,7 @@ function OrderingForm() {
         <InputContainer>
           <Label>
             <HiddenLabelText>Anzahl:</HiddenLabelText>
-            <Amount maxlength="20" type="number" placeholder="0" name="menge" />
+            <Amount maxlength="20" type="number" placeholder="0" name="mount" />
           </Label>
         </InputContainer>
         <MessageContainer>
@@ -86,7 +86,7 @@ function OrderingForm() {
               cols="10"
               rows="8"
               placeholder="Nachricht"
-              name="nachricht"
+              name="message"
             />
           </Label>
         </MessageContainer>
