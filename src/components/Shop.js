@@ -14,7 +14,7 @@ function Shop() {
         <FlipCardFront>
           <StoryToShop />
           <ButtonFront onClick={flipToShopButton}>
-            Lakritzel befreien{' '}
+            Lakritzel befreien
             <Warnung>(Vorsicht! Kann abfüllend wirken.)</Warnung>
           </ButtonFront>
         </FlipCardFront>
