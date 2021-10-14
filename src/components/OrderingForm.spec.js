@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react'
-import { findRenderedComponentWithType } from 'react-dom/test-utils'
 import OrderingForm from './OrderingForm'
 
 describe('Header', () => {

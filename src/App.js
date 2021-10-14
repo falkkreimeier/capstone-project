@@ -1,7 +1,7 @@
-import ProductCard from './ProductCard'
-import Header from './Header'
-import OrderingForm from './OrderingForm'
+import ProductCard from './components/ProductCard'
+import Header from './components/Header'
 import styled from 'styled-components/macro'
+import Shop from './components/Shop'
 
 function App({ data }) {
   return (
@@ -20,8 +20,7 @@ function App({ data }) {
           key={product.name}
         />
       ))}
-      <div style={{ clear: 'both' }}></div>
-      <OrderingForm />
+      <Shop />
     </Wrapper>
   )
 }
