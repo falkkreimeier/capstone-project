@@ -91,7 +91,7 @@ function OrderingForm() {
           </Label>
         </MessageContainer>
         <ButtonContainer>
-          <Button>Hol mich hier raus!</Button>
+          <ButtonOrder>Hol mich hier raus!</ButtonOrder>
         </ButtonContainer>
       </Form>
     </Wrapper>
@@ -121,7 +121,7 @@ const Form = styled.form`
     'email'
     'menge'
     'message'
-    'button';
+    'buttonOrder';
 `
 
 const Label = styled.label``
@@ -197,7 +197,6 @@ const MessageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-area: message;
   margin: 10px;
   width: 170px;
   height: 80px;
@@ -207,26 +206,27 @@ const MessageContainer = styled.div`
 `
 
 const Message = styled.input`
+  grid-area: message;
   ${iconStyle}
   height: 60px;
 `
 
 const ButtonContainer = styled.div`
-  grid-area: button;
   display: flex;
 `
 
-const Button = styled.button`
+const ButtonOrder = styled.button`
+  grid-area: buttonOrder;
   position: relative;
   top: 0px;
-  left: 40px;
+  right: 75px;
   margin: 0 auto;
   margin: 10px;
   padding: 5px;
   border: none;
   background-color: black;
   color: white;
-  width: 6rem;
+  width: 9rem;
   height: 6rem;
   font-size: 1rem;
   border-radius: 15px;
