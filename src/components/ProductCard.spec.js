@@ -16,8 +16,8 @@ describe('render ProductCard', () => {
 
     render(<ProductCard image="https://localhost:3000/" />)
 
-    const Image = screen.getByAltText(altText)
-    expect(Image).toHaveAttribute('alt', altText)
+    const text = screen.getByAltText(altText)
+    expect(text).toHaveAttribute('alt', altText)
   })
 
   it('has the correct alt text', () => {
@@ -25,8 +25,8 @@ describe('render ProductCard', () => {
 
     render(<ProductCard image="https://localhost:3000/" />)
 
-    const Image2 = screen.getByAltText(altText2)
-    expect(Image2).toHaveAttribute('alt', altText2)
+    const text2 = screen.getByAltText(altText2)
+    expect(text2).toHaveAttribute('alt', altText2)
   })
 
   it('displays the Price of the Product', () => {
@@ -39,7 +39,7 @@ describe('render ProductCard', () => {
   it('renders two buttons', () => {
     render(<ProductCard />)
 
-    const Buttons = screen.getAllByRole('button')
-    expect(Buttons).toHaveLength(2)
+    const buttons = screen.getAllByRole('button')
+    expect(buttons).toHaveLength(2)
   })
 })
