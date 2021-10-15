@@ -1,0 +1,25 @@
+{
+  "files": {
+    "0.104e80c9.iframe.bundle.js": "./0.104e80c9.iframe.bundle.js",
+    "main.js": "./main.5cbd0462.iframe.bundle.js",
+    "runtime~main.js": "./runtime~main.6a0826e8.iframe.bundle.js",
+    "vendors~main.js": "./vendors~main.319e0b9d.iframe.bundle.js",
+    "vendors~main.js.map": "./vendors~main.319e0b9d.iframe.bundle.js.map",
+    "4.99f879f1.iframe.bundle.js": "./4.99f879f1.iframe.bundle.js",
+    "4.99f879f1.iframe.bundle.js.map": "./4.99f879f1.iframe.bundle.js.map",
+    "5.137186e6.iframe.bundle.js": "./5.137186e6.iframe.bundle.js",
+    "6.9cc1428b.iframe.bundle.js": "./6.9cc1428b.iframe.bundle.js",
+    "6.9cc1428b.iframe.bundle.js.map": "./6.9cc1428b.iframe.bundle.js.map",
+    "7.63f123b8.iframe.bundle.js": "./7.63f123b8.iframe.bundle.js",
+    "4.99f879f1.iframe.bundle.js.LICENSE.txt": "./4.99f879f1.iframe.bundle.js.LICENSE.txt",
+    "6.9cc1428b.iframe.bundle.js.LICENSE.txt": "./6.9cc1428b.iframe.bundle.js.LICENSE.txt",
+    "iframe.html": "./iframe.html",
+    "static/media/Lakritzel-Ventana.324e6a45.otf": "./static/media/Lakritzel-Ventana.324e6a45.otf",
+    "vendors~main.319e0b9d.iframe.bundle.js.LICENSE.txt": "./vendors~main.319e0b9d.iframe.bundle.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "runtime~main.6a0826e8.iframe.bundle.js",
+    "vendors~main.319e0b9d.iframe.bundle.js",
+    "main.5cbd0462.iframe.bundle.js"
+  ]
+}
