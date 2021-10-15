@@ -70,7 +70,7 @@ function App({ data }) {
           key={product.name}
         />
       ))}
-      <Shop handleAddOrder={handleAddOrder} />
+      <Shop onAddOrder={handleAddOrder} />
       {data.campaign.map(campaign => (
         <CampaignCard image={campaign.image} />
       ))}

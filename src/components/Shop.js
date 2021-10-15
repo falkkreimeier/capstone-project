@@ -20,7 +20,7 @@ function Shop({ handleAddOrder }) {
         </FlipCardFront>
 
         <FlipCardBack>
-          <OrderingForm handleAddOrder={handleAddOrder} />
+          <OrderingForm onAddOrder={handleAddOrder} />
           <ButtonBack onClick={flipToShopButton}>
             <TextButtonSmall>ZURÜCK</TextButtonSmall>
           </ButtonBack>

@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-function OrderingForm({ handleAddOrder }) {
+function OrderingForm({ onAddOrder }) {
   return (
     <Wrapper>
       <Headline>Rette mich, wer kann!</Headline>
@@ -118,7 +118,7 @@ function OrderingForm({ handleAddOrder }) {
       message,
     } = form.elements
 
-    handleAddOrder({
+    onAddOrder({
       firstName: firstName.value,
       name: name.value,
       street: street.value,
