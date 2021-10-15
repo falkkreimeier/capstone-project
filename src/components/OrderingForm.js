@@ -13,6 +13,7 @@ function OrderingForm({ handleAddOrder }) {
               name="firstName"
               placeholder="Vorname"
               maxlength="20"
+              required
             />
           </Label>
         </InputContainer>
@@ -24,6 +25,7 @@ function OrderingForm({ handleAddOrder }) {
               placeholder="Nachname"
               name="name"
               maxlength="20"
+              required
             />
           </Label>
         </InputContainer>
@@ -36,6 +38,7 @@ function OrderingForm({ handleAddOrder }) {
               type="text"
               placeholder="Straße"
               name="street"
+              required
             />
           </Label>
         </InputContainer>
@@ -47,6 +50,7 @@ function OrderingForm({ handleAddOrder }) {
               type="number"
               placeholder="Postleitzahl"
               name="zipCode"
+              required
             />
           </Label>
         </InputContainer>
@@ -64,6 +68,7 @@ function OrderingForm({ handleAddOrder }) {
               type="text"
               placeholder="eMail Adresse"
               name="email"
+              required
             />
           </Label>
         </InputContainer>
@@ -75,6 +80,7 @@ function OrderingForm({ handleAddOrder }) {
               type="number"
               placeholder="0"
               name="quantity"
+              required
             />
           </Label>
         </InputContainer>
@@ -173,6 +179,7 @@ const HiddenLabelText = styled.span`
 `
 
 const Headline = styled.h2`
+  padding-top: 10px;
   grid-area: headline;
   text-align: center;
   font-family: Ventana;
