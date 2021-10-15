@@ -1,9 +1,11 @@
-import ProductCard from './components/ProductCard'
 import Header from './components/Header'
-import styled from 'styled-components/macro'
+import ProductCard from './components/ProductCard'
 import Shop from './components/Shop'
-import { useState } from 'react'
 import CampaignCard from './components/CampaignCard'
+import Footer from './components/Footer'
+import styled from 'styled-components/macro'
+import { useState } from 'react'
+import { Switch, Route } from 'react-router-dom'
 
 function App({ data }) {
   const initialData = [
@@ -57,23 +59,30 @@ function App({ data }) {
   return (
     <Wrapper>
       <Header />
-      {data.product.map(product => (
-        <ProductCard
-          description={product.description}
-          claim={product.claim}
-          price={product.price}
-          ingredients={product.ingredients}
-          alcohol={product.alcohol}
-          mount={product.mount}
-          image={product.image}
-          logo={product.logo}
-          key={product.name}
-        />
-      ))}
-      <Shop onAddOrder={handleAddOrder} />
-      {data.campaign.map(campaign => (
-        <CampaignCard image={campaign.image} />
-      ))}
+      <Switch>
+        <Route exact path="/">
+          {data.product.map(product => (
+            <ProductCard
+              description={product.description}
+              claim={product.claim}
+              price={product.price}
+              ingredients={product.ingredients}
+              alcohol={product.alcohol}
+              mount={product.mount}
+              image={product.image}
+              logo={product.logo}
+              key={product.name}
+            />
+          ))}
+          <Shop onAddOrder={handleAddOrder} />
+        </Route>
+        <Route exact path="/motive">
+          {data.campaign.map(campaign => (
+            <CampaignCard image={campaign.image} />
+          ))}
+        </Route>
+      </Switch>
+      <Footer />
     </Wrapper>
   )
 }
