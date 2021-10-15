@@ -71,7 +71,7 @@ const FlipCardBack = styled.section`
 const ButtonFront = styled.button`
   backface-visibility: hidden;
   position: relative;
-  bottom: 30px;
+  bottom: 20px;
   left: 30px;
   margin: 0 auto;
   border: none;
