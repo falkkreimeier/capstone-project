@@ -15,7 +15,7 @@ function Shop({ handleAddOrder }) {
           <StoryToShop />
           <ButtonFront onClick={flipToShopButton}>
             Lakritzel befreien
-            <Warnung>(Vorsicht! Kann abfüllend wirken.)</Warnung>
+            <Text>(Vorsicht! Kann abfüllend wirken.)</Text>
           </ButtonFront>
         </FlipCardFront>
 
@@ -107,7 +107,7 @@ const ButtonBack = styled.button`
   }
 `
 
-const Warnung = styled.p`
+const Text = styled.p`
   font-size: 1rem;
 `
 
