@@ -2,6 +2,7 @@ import ProductCard from './components/ProductCard'
 import Header from './components/Header'
 import styled from 'styled-components/macro'
 import Shop from './components/Shop'
+import { useState } from 'react'
 
 function App({ data }) {
   const initialData = [
