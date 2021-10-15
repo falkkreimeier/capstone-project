@@ -3,7 +3,7 @@ import styled from 'styled-components'
 function campaignCard(props) {
   return (
     <Wrapper>
-      <Image src={props.image}></Image>
+      <Image src={props.image} alt="Lakritzel escalates quickly"></Image>
     </Wrapper>
   )
 }
