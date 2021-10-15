@@ -7,24 +7,51 @@ import { useState } from 'react'
 function App({ data }) {
   const initialData = [
     {
-      vorname: 'Falk',
-      nachname: 'Kreimeier',
-      straße: 'Gesundheitstraße 11',
-      postleitzahl: '42699',
-      stadt: 'Solingen',
-      eMail: 'f.kreimeier@gmx.net',
-      quantity: '4',
+      firstName: 'Falk',
+      name: 'Kreimeier',
+      street: 'Gesundheitstraße 11',
+      zipCode: '42699',
+      city: 'Solingen',
+      email: 'f.kreimeier@gmx.net',
+      mount: '4',
       message: 'Hallo World',
     },
   ]
 
-  const [userData, setUserData] = useState(() => {
+  const [orderData, setOrderData] = useState(() => {
     if (localStorage.getItem('usersLocalStorage')) {
       return JSON.parse(localStorage.getItem('usersLocalStorage'))
     } else {
       return initialData
     }
   })
+
+  function handleAddOrder({
+    firstName,
+    name,
+    street,
+    zipCode,
+    city,
+    quantity,
+    message,
+  }) {
+    const addOrder = [
+      ...orderData,
+      {
+        firstName: firstName,
+        name: name,
+        street: street,
+        zipCode: zipCode,
+        city: city,
+        quantity: quantity,
+        message: message,
+      },
+    ]
+    setOrderData(addOrder)
+
+    const stringifiedValue = JSON.stringify(addOrder)
+    localStorage.setItem('productsLocalStorage', stringifiedValue)
+  }
 
   return (
     <Wrapper>
@@ -42,7 +69,7 @@ function App({ data }) {
           key={product.name}
         />
       ))}
-      <Shop />
+      <Shop handleAddOrder={handleAddOrder} />
     </Wrapper>
   )
 }

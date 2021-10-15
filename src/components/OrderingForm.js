@@ -1,17 +1,17 @@
 import styled, { css } from 'styled-components'
 
-function OrderingForm() {
+function OrderingForm({ handleAddOrder }) {
   return (
     <Wrapper>
       <Headline>Rette mich, wer kann!</Headline>
-      <Form>
+      <Form onSubmit={event => handleOnClickButton(event)}>
         <InputContainer>
           <Label>
             <HiddenLabelText>Vorname:</HiddenLabelText>
             <Vorname
               type="text"
+              name="firstName"
               placeholder="Vorname"
-              name="firstname"
               maxlength="20"
             />
           </Label>
@@ -46,19 +46,14 @@ function OrderingForm() {
               maxlength="20"
               type="number"
               placeholder="Postleitzahl"
-              name="zipcode"
+              name="zipCode"
             />
           </Label>
         </InputContainer>
         <InputContainer>
           <Label>
             <HiddenLabelText>Stadt:</HiddenLabelText>
-            <Stadt
-              maxlength="20"
-              type="text"
-              placeholder="Stadt"
-              name="city<"
-            />
+            <Stadt maxlength="20" type="text" placeholder="Stadt" name="city" />
           </Label>
         </InputContainer>
         <InputContainer>
@@ -75,7 +70,12 @@ function OrderingForm() {
         <InputContainer>
           <Label>
             <HiddenLabelText>Anzahl:</HiddenLabelText>
-            <Amount maxlength="20" type="number" placeholder="0" name="mount" />
+            <Amount
+              maxlength="20"
+              type="number"
+              placeholder="0"
+              name="quantity"
+            />
           </Label>
         </InputContainer>
         <MessageContainer>
@@ -96,6 +96,34 @@ function OrderingForm() {
       </Form>
     </Wrapper>
   )
+
+  function handleOnClickButton(event) {
+    event.preventDefault()
+    const form = event.target
+    console.log(form)
+    const {
+      firstName,
+      name,
+      street,
+      zipCode,
+      city,
+      email,
+      quantity,
+      message,
+    } = form.elements
+
+    handleAddOrder({
+      firstName: firstName.value,
+      name: name.value,
+      street: street.value,
+      zipCode: zipCode.value,
+      city: city.value,
+      email: email.value,
+      quantity: quantity.value,
+      message: message.value,
+    })
+    form.reset()
+  }
 }
 
 const Wrapper = styled.section`

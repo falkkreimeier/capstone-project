@@ -3,7 +3,7 @@ import { useState } from 'react'
 import StoryToShop from './StoryToShop'
 import OrderingForm from './OrderingForm'
 
-function Shop() {
+function Shop({ handleAddOrder }) {
   const [flipToShop, setFlipToShop] = useState(false)
   function flipToShopButton() {
     setFlipToShop(!flipToShop)
@@ -20,7 +20,7 @@ function Shop() {
         </FlipCardFront>
 
         <FlipCardBack>
-          <OrderingForm />
+          <OrderingForm handleAddOrder={handleAddOrder} />
           <ButtonBack onClick={flipToShopButton}>
             <Zurück>ZURÜCK</Zurück>
           </ButtonBack>
