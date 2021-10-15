@@ -22,7 +22,7 @@ function Shop() {
         <FlipCardBack>
           <OrderingForm />
           <ButtonBack onClick={flipToShopButton}>
-            <Warnung>Lass mich nicht</Warnung>ZURÜCK
+            <Zurück>ZURÜCK</Zurück>
           </ButtonBack>
         </FlipCardBack>
       </FlipCard>
@@ -90,14 +90,14 @@ const ButtonFront = styled.button`
 const ButtonBack = styled.button`
   backface-visibility: hidden;
   position: relative;
-  bottom: 110px;
-  left: 190px;
+  bottom: 40px;
+  left: 270px;
   margin: 0 auto;
   border: none;
   background-color: black;
   color: white;
-  width: 9rem;
-  height: 6rem;
+  width: 4.5rem;
+  height: 1rem;
   font-size: 2rem;
   border-radius: 15px;
   box-shadow: 0px 5px 10px 5px grey;
@@ -109,5 +109,10 @@ const ButtonBack = styled.button`
 
 const Warnung = styled.p`
   font-size: 1rem;
+`
+
+const Zurück = styled.p`
+  font-size: 0.7rem;
+  margin: 0 auto;
 `
 export default Shop

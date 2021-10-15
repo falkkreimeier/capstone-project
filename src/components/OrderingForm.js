@@ -217,12 +217,8 @@ const ButtonContainer = styled.div`
 
 const ButtonOrder = styled.button`
   grid-area: buttonOrder;
-  position: relative;
-  top: 0px;
-  right: 75px;
   margin: 0 auto;
-  margin: 10px;
-  padding: 5px;
+  margin-bottom: 15px;
   border: none;
   background-color: black;
   color: white;
