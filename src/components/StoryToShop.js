@@ -39,7 +39,7 @@ const Image = styled.img`
 const Headline = styled.h2`
   margin: 0 auto;
   font-size: 3rem;
-  padding: 0;
+  padding-top: 25px;
   grid-area: headline;
   font-family: Ventana;
 `
