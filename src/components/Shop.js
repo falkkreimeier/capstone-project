@@ -3,7 +3,7 @@ import { useState } from 'react'
 import StoryToShop from './StoryToShop'
 import OrderingForm from './OrderingForm'
 
-function Shop() {
+function Shop({ handleAddOrder }) {
   const [flipToShop, setFlipToShop] = useState(false)
   function flipToShopButton() {
     setFlipToShop(!flipToShop)
@@ -15,14 +15,14 @@ function Shop() {
           <StoryToShop />
           <ButtonFront onClick={flipToShopButton}>
             Lakritzel befreien
-            <Warnung>(Vorsicht! Kann abfüllend wirken.)</Warnung>
+            <Text>(Vorsicht! Kann abfüllend wirken.)</Text>
           </ButtonFront>
         </FlipCardFront>
 
         <FlipCardBack>
-          <OrderingForm />
+          <OrderingForm handleAddOrder={handleAddOrder} />
           <ButtonBack onClick={flipToShopButton}>
-            <Warnung>Lass mich nicht</Warnung>ZURÜCK
+            <TextButtonSmall>ZURÜCK</TextButtonSmall>
           </ButtonBack>
         </FlipCardBack>
       </FlipCard>
@@ -31,7 +31,7 @@ function Shop() {
 }
 
 const Container = styled.div`
-  height: 19.5rem;
+  height: 37.5rem;
   perspective: 1000px;
 `
 
@@ -71,7 +71,7 @@ const FlipCardBack = styled.section`
 const ButtonFront = styled.button`
   backface-visibility: hidden;
   position: relative;
-  bottom: 30px;
+  bottom: 20px;
   left: 30px;
   margin: 0 auto;
   border: none;
@@ -90,14 +90,14 @@ const ButtonFront = styled.button`
 const ButtonBack = styled.button`
   backface-visibility: hidden;
   position: relative;
-  bottom: 110px;
-  left: 190px;
+  bottom: 570px;
+  left: 20px;
   margin: 0 auto;
   border: none;
   background-color: black;
   color: white;
-  width: 9rem;
-  height: 6rem;
+  width: 4.5rem;
+  height: 1rem;
   font-size: 2rem;
   border-radius: 15px;
   box-shadow: 0px 5px 10px 5px grey;
@@ -107,7 +107,12 @@ const ButtonBack = styled.button`
   }
 `
 
-const Warnung = styled.p`
+const Text = styled.p`
   font-size: 1rem;
+`
+
+const TextButtonSmall = styled.p`
+  font-size: 0.7rem;
+  margin: 0 auto;
 `
 export default Shop

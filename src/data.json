@@ -1,13 +1,30 @@
-[
-  {
-    "description": "Total übergeschnapster Lakritzlikör. VORSICHT: Kann abfüllend wirken.",
-    "claim": "Der dunkle Wahnsinn",
-    "price": "18,-",
-    "ingredients": "Süßholz, Samliaksalz und Sternanis.",
-    "alcohol": "25% Alkohol",
-    "mount": "700ml",
-    "image": "./img/painted-bottle.jpg",
-    "logo": "./img/Logo.jpg",
-    "lettering": "./img/Logo-lettering.jpg"
-  }
-]
+{
+  "product": [
+    {
+      "description": "Total übergeschnapster Lakritzlikör. VORSICHT: Kann abfüllend wirken.",
+      "claim": "Der dunkle Wahnsinn",
+      "price": "18,-",
+      "ingredients": "Süßholz, Samliaksalz und Sternanis.",
+      "alcohol": "25% Alkohol",
+      "mount": "700ml",
+      "image": "./img/painted-bottle.jpg",
+      "logo": "./img/Logo.jpg",
+      "lettering": "./img/Logo-lettering.jpg"
+    }
+  ],
+  "campaign": [
+    {
+      "image": "./img/Übergeschnapst.jpg"
+    },
+    {
+      "image": "./img/Süß.jpg"
+    },
+    {
+      "image": "./img/der-ballert.jpg"
+    },
+
+    {
+      "image": "./img/Nacht.jpg"
+    }
+  ]
+}

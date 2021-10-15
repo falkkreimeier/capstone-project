@@ -1,18 +1,19 @@
 import styled, { css } from 'styled-components'
 
-function OrderingForm() {
+function OrderingForm({ handleAddOrder }) {
   return (
     <Wrapper>
       <Headline>Rette mich, wer kann!</Headline>
-      <Form>
+      <Form onSubmit={event => handleOnClickButton(event)}>
         <InputContainer>
           <Label>
             <HiddenLabelText>Vorname:</HiddenLabelText>
             <Vorname
               type="text"
+              name="firstName"
               placeholder="Vorname"
-              name="nachname"
               maxlength="20"
+              required
             />
           </Label>
         </InputContainer>
@@ -24,6 +25,7 @@ function OrderingForm() {
               placeholder="Nachname"
               name="name"
               maxlength="20"
+              required
             />
           </Label>
         </InputContainer>
@@ -35,7 +37,8 @@ function OrderingForm() {
               maxlength="20"
               type="text"
               placeholder="Straße"
-              name="straße"
+              name="street"
+              required
             />
           </Label>
         </InputContainer>
@@ -44,21 +47,17 @@ function OrderingForm() {
             <HiddenLabelText>Postleitzahl:</HiddenLabelText>
             <Postleitzahl
               maxlength="20"
-              type="text"
+              type="number"
               placeholder="Postleitzahl"
-              name="postleitzahl"
+              name="zipCode"
+              required
             />
           </Label>
         </InputContainer>
         <InputContainer>
           <Label>
             <HiddenLabelText>Stadt:</HiddenLabelText>
-            <Stadt
-              maxlength="20"
-              type="text"
-              placeholder="Stadt"
-              name="stadt"
-            />
+            <Stadt maxlength="20" type="text" placeholder="Stadt" name="city" />
           </Label>
         </InputContainer>
         <InputContainer>
@@ -66,16 +65,23 @@ function OrderingForm() {
             <HiddenLabelText>eMail:</HiddenLabelText>
             <Mail
               maxlength="20"
-              type="text"
+              type="email"
               placeholder="eMail Adresse"
               name="email"
+              required
             />
           </Label>
         </InputContainer>
         <InputContainer>
           <Label>
             <HiddenLabelText>Anzahl:</HiddenLabelText>
-            <Amount maxlength="20" type="number" placeholder="0" name="menge" />
+            <Amount
+              maxlength="20"
+              type="number"
+              placeholder="0"
+              name="quantity"
+              required
+            />
           </Label>
         </InputContainer>
         <MessageContainer>
@@ -86,7 +92,7 @@ function OrderingForm() {
               cols="10"
               rows="8"
               placeholder="Nachricht"
-              name="nachricht"
+              name="message"
             />
           </Label>
         </MessageContainer>
@@ -96,6 +102,34 @@ function OrderingForm() {
       </Form>
     </Wrapper>
   )
+
+  function handleOnClickButton(event) {
+    event.preventDefault()
+    const form = event.target
+    console.log(form)
+    const {
+      firstName,
+      name,
+      street,
+      zipCode,
+      city,
+      email,
+      quantity,
+      message,
+    } = form.elements
+
+    handleAddOrder({
+      firstName: firstName.value,
+      name: name.value,
+      street: street.value,
+      zipCode: zipCode.value,
+      city: city.value,
+      email: email.value,
+      quantity: quantity.value,
+      message: message.value,
+    })
+    form.reset()
+  }
 }
 
 const Wrapper = styled.section`
@@ -145,6 +179,7 @@ const HiddenLabelText = styled.span`
 `
 
 const Headline = styled.h2`
+  padding-top: 10px;
   grid-area: headline;
   text-align: center;
   font-family: Ventana;
@@ -217,12 +252,8 @@ const ButtonContainer = styled.div`
 
 const ButtonOrder = styled.button`
   grid-area: buttonOrder;
-  position: relative;
-  top: 0px;
-  right: 75px;
   margin: 0 auto;
-  margin: 10px;
-  padding: 5px;
+  margin-bottom: 15px;
   border: none;
   background-color: black;
   color: white;
