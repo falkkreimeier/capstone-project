@@ -65,7 +65,7 @@ function OrderingForm({ handleAddOrder }) {
             <HiddenLabelText>eMail:</HiddenLabelText>
             <Mail
               maxlength="20"
-              type="text"
+              type="email"
               placeholder="eMail Adresse"
               name="email"
               required
