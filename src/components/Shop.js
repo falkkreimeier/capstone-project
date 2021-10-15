@@ -22,7 +22,7 @@ function Shop({ handleAddOrder }) {
         <FlipCardBack>
           <OrderingForm handleAddOrder={handleAddOrder} />
           <ButtonBack onClick={flipToShopButton}>
-            <Zurück>ZURÜCK</Zurück>
+            <TextButtonSmall>ZURÜCK</TextButtonSmall>
           </ButtonBack>
         </FlipCardBack>
       </FlipCard>
@@ -90,8 +90,8 @@ const ButtonFront = styled.button`
 const ButtonBack = styled.button`
   backface-visibility: hidden;
   position: relative;
-  bottom: 40px;
-  left: 270px;
+  bottom: 570px;
+  left: 20px;
   margin: 0 auto;
   border: none;
   background-color: black;
@@ -111,7 +111,7 @@ const Warnung = styled.p`
   font-size: 1rem;
 `
 
-const Zurück = styled.p`
+const TextButtonSmall = styled.p`
   font-size: 0.7rem;
   margin: 0 auto;
 `

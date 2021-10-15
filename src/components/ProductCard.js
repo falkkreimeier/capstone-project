@@ -27,7 +27,9 @@ function ProductCard(props) {
             <List>{props.alcohol}</List>
             <List>{props.mount}</List>
           </Details>
-          <ButtonBack onClick={flipToDetailsButton}>Produkt</ButtonBack>
+          <ButtonBack onClick={flipToDetailsButton}>
+            <TextButton>ZURÜCK</TextButton>
+          </ButtonBack>
         </FlipCardBack>
       </FlipCard>
     </Container>
@@ -125,13 +127,13 @@ const FlipCardBack = styled.section`
 const ButtonBack = styled.button`
   backface-visibility: hidden;
   position: relative;
-  top: 45px;
-  right: 120px;
+  bottom: 208px;
+  right: 330px;
   grid-area: button;
   text-decoration: none;
   text-align: center;
-  width: 90px;
-  height: 25px;
+  width: 5rem;
+  height: 1rem;
   margin: 14px;
   border: 1px solid grey;
   border-radius: 15px;
@@ -166,9 +168,13 @@ const Details = styled.ol`
   grid-area: details;
 `
 
+const TextButton = styled.p`
+  font-size: 0.7rem;
+  margin: 0 auto;
+`
+
 const List = styled.li`
   width: 260px;
-  /* list-style: none; */
 `
 
 export default ProductCard
