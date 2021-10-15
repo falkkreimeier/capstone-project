@@ -31,7 +31,7 @@ function Shop({ handleAddOrder }) {
 }
 
 const Container = styled.div`
-  height: 19.5rem;
+  height: 37.5rem;
   perspective: 1000px;
 `
 
