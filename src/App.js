@@ -3,6 +3,7 @@ import Header from './components/Header'
 import styled from 'styled-components/macro'
 import Shop from './components/Shop'
 import { useState } from 'react'
+import CampaignCard from './components/CampaignCard'
 
 function App({ data }) {
   const initialData = [
@@ -56,7 +57,7 @@ function App({ data }) {
   return (
     <Wrapper>
       <Header />
-      {data.map(product => (
+      {data.product.map(product => (
         <ProductCard
           description={product.description}
           claim={product.claim}
@@ -70,6 +71,9 @@ function App({ data }) {
         />
       ))}
       <Shop handleAddOrder={handleAddOrder} />
+      {data.campaign.map(campaign => (
+        <CampaignCard image={campaign.image} />
+      ))}
     </Wrapper>
   )
 }
