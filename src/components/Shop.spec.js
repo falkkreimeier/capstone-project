@@ -26,9 +26,6 @@ describe('Shop', () => {
   it('shows Button Back Text', () => {
     render(<Shop />)
 
-    const buttonBackText = screen.getByText('Lass mich nicht')
-    expect(buttonBackText).toBeInTheDocument()
-
     const buttonBackText2 = screen.getByText('ZURÜCK')
     expect(buttonBackText2).toBeInTheDocument()
   })

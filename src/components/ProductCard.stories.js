@@ -8,8 +8,8 @@ export default {
 
 const Template = args => <ProductCard {...args} />
 
-export const WithPrice = Template.bind({})
-WithPrice.args = {
+export const Standard = Template.bind({})
+Standard.args = {
   image: process.env.PUBLIC_URL + '/img/painted-bottle.jpg',
   logo: process.env.PUBLIC_URL + '/img/Logo.jpg',
   price: '18,-',
