@@ -20,7 +20,7 @@ describe('Footer', () => {
 
     render(
       <MemoryRouter>
-        <Footer image="https://localhost:3000/" />
+        <Footer />
       </MemoryRouter>
     )
 
