@@ -1,15 +1,15 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-function Footer(props) {
+function Footer() {
   return (
     <Wrapper>
-      <Container to="/">
+      <Link to="/">
         <Product src="./img/painted-bottle.jpg" alt="Products" />
-      </Container>
-      <Container to="/motive">
+      </Link>
+      <Link to="/motive">
         <Motiv src="./img/Logo.jpg" alt="Motive" />
-      </Container>
+      </Link>
     </Wrapper>
   )
 }
@@ -26,7 +26,6 @@ const Wrapper = styled.footer`
   width: 22rem;
   height: 5rem;
 `
-const Container = styled(Link)``
 
 const Product = styled.img`
   margin-left: 15px;
