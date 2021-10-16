@@ -9,4 +9,3 @@ export default {
 const Template = args => <OrderingForm {...args} />
 
 export const Standard = Template.bind({})
-Standard.args = {}
