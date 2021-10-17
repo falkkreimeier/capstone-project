@@ -4,10 +4,10 @@ function MixedDrinks({ name, mixed, ingredience, preparation }) {
   return (
     <Wrapper>
       <Headline>
-        {mixed}: {name}
+        {mixed} - {name}
       </Headline>
-      <Ingredience>Zutaten: {ingredience}</Ingredience>
-      <MixIt>Zuberereitung: {preparation}</MixIt>
+      <Ingredience>{ingredience}</Ingredience>
+      <MixIt>{preparation}</MixIt>
     </Wrapper>
   )
 }
@@ -19,8 +19,6 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   padding: 10px;
-  /* justify-content: center;
-  align-items: center; */
   width: var(--main-width);
 `
 
