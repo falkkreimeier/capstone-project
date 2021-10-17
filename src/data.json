@@ -31,20 +31,20 @@
     {
       "mixedDrinks": "Shot",
       "name": "Wahnsinniger Bayleys",
-      "ingredience": "Lakritzel und Bayleys",
-      "preparation": "Bayleys und Lakritzel zu gleichen Teilen in ein Pinnchen"
+      "ingredience": "Zutaten: Lakritzel und Bayleys",
+      "preparation": "Zutaten: Bayleys und Lakritzel zu gleichen Teilen in ein Pinnchen"
     },
     {
       "mixedDrinks": "Cocktail",
       "name": "Wahnsinniger Caipirinha",
-      "ingredience": "Lakritzel, Pitu, Limetten, Limettensaft, Rohzucker",
-      "preparation": "1 Limette in vier Teile schnneiden und mit braunem Rohrzucker zerstampfen. 4cl Limettensaft hinzugeben, den Rest mit crushed Ice auffüllen und 2 cl Lakritzel drauf gießen."
+      "ingredience": "Zutaten: Lakritzel, Pitu, Limetten, Limettensaft, Rohzucker",
+      "preparation": "Zutaten: 1 Limette in vier Teile schnneiden und mit braunem Rohrzucker zerstampfen. 4cl Limettensaft hinzugeben, den Rest mit crushed Ice auffüllen und 2 cl Lakritzel drauf gießen."
     },
     {
       "mixedDrinks": "Shot",
       "name": "Wahnsinniger B52",
-      "ingredience": "Lakritzel, Bayleys, Ceantreau oder Kalua und Strohrum",
-      "preparation": "Lakritzel, Bayleys, Ceantreau oder Kalua zu gleichen Teilen in ein 4cl Pinnchen, ein Teelöffel Strohrum obendrauf, anzünden, nach 1,30 Minuten auspusten und dann mit einem Strohhalm in einem Zug von unten nach oben trinken."
+      "ingredience": "Zutaten: Lakritzel, Bayleys, Ceantreau oder Kalua und Strohrum",
+      "preparation": "Zutaten: Lakritzel, Bayleys, Ceantreau oder Kalua zu gleichen Teilen in ein 4cl Pinnchen, ein Teelöffel Strohrum obendrauf, anzünden, nach 1,30 Minuten auspusten und dann mit einem Strohhalm in einem Zug von unten nach oben trinken."
     }
   ]
 }
