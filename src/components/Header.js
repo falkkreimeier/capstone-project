@@ -12,10 +12,9 @@ const Wrapper = styled.header`
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  margin-bottom: 10px;
   border-radius: 19px;
   background-color: white;
-  width: 22rem;
+  width: var(--main-width);
 `
 
 const Image = styled.img`

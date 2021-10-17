@@ -37,7 +37,7 @@ function ProductCard(props) {
 }
 
 const Container = styled.div`
-  height: 19.5rem;
+  height: 19rem;
   perspective: 1000px;
 `
 
@@ -61,7 +61,7 @@ const FlipCardFront = styled.section`
   width: var(--main-width);
   backface-visibility: hidden;
   position: absolute;
-  border-radius: 25px;
+  border-radius: var(--border-radius);
   display: grid;
   grid-template-areas:
     'image price'
@@ -117,7 +117,7 @@ const FlipCardBack = styled.section`
   transform: rotateY(180deg);
   position: absolute;
   border: 1px solid black;
-  border-radius: 25px;
+  border-radius: var(--border-radius);
   display: grid;
   grid-template-areas:
     'logo portrait'
