@@ -1,19 +1,23 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import cocktailImg from '../Assets/Logo.jpg'
+import bottleImg from '../Assets/painted-bottle.jpg'
+import shot from '../Assets/Pinnchen.jpg'
+import portfolio from '../Assets/Portfolio.jpg'
 
 function Footer() {
   return (
     <Wrapper>
       <Link to="/">
-        <Product src="./img/painted-bottle.jpg" alt="Products" />
+        <Product src={bottleImg} alt="Products" />
       </Link>
       <Link to="/campaign">
-        <Motiv src="./img/Logo.jpg" alt="Motive" />
+        <Motiv src={cocktailImg} alt="Motive" />
       </Link>
       <Link to="/cocktails">
-        <Cocktails src="./img/Pinnchen.jpg" alt="Cocktails and Shots" />
+        <Cocktails src={shot} alt="Cocktails and Shots" />
       </Link>
-      <DoodleHead src="./img/Portfolio.jpg" alt="The Man behind the Monster" />
+      <DoodleHead src={portfolio} alt="The Man behind the Monster" />
     </Wrapper>
   )
 }
