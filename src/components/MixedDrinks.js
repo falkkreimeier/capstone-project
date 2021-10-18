@@ -1,12 +1,14 @@
 import styled from 'styled-components/macro'
 
-function MixedDrinks({ name, mixed, ingredience, preparation }) {
+function MixedDrinks({ name, mixed, ingredients, preparation }) {
   return (
     <Wrapper>
       <Headline>
-        {mixed} - {name}
+        {mixed} {name}
       </Headline>
-      <Ingredience>{ingredience}</Ingredience>
+      <InnerHeadline>Zutaten:</InnerHeadline>
+      <Ingredience>{ingredients}</Ingredience>
+      <InnerHeadline>Zubereitung:</InnerHeadline>
       <MixIt>{preparation}</MixIt>
     </Wrapper>
   )
@@ -25,8 +27,12 @@ const Wrapper = styled.section`
 
 const Headline = styled.h2`
   margin: 0 auto;
-  font: 'Ventana';
+  font-family: 'Ventana';
   margin-bottom: 5px;
+`
+
+const InnerHeadline = styled.h4`
+  margin: 0;
 `
 
 const Ingredience = styled.div`
