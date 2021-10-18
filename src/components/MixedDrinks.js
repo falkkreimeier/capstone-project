@@ -15,6 +15,7 @@ function MixedDrinks({ name, mixed, ingredience, preparation }) {
 const Wrapper = styled.section`
   border-radius: var(--border-radius);
   margin: 0 auto;
+  margin-bottom: 5px;
   background-color: white;
   display: flex;
   flex-direction: column;
