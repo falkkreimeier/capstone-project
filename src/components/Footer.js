@@ -19,6 +19,7 @@ function Footer() {
 }
 
 const Wrapper = styled.footer`
+  grid-area: footer;
   display: grid;
   grid-template-areas: 'product campaign cocktails doodleHead';
   align-items: center;
@@ -26,7 +27,8 @@ const Wrapper = styled.footer`
   border-radius: 19px;
   background-color: white;
   width: var(--main-width);
-  height: 5rem;
+  margin-top: 5px;
+  height: 100px;
 `
 
 const Product = styled.img`

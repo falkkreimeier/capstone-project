@@ -60,48 +60,60 @@ function App({ data }) {
   return (
     <Wrapper>
       <Header />
-      <Switch>
-        <Route exact path="/">
-          {data.product.map(product => (
-            <ProductCard
-              description={product.description}
-              claim={product.claim}
-              price={product.price}
-              ingredients={product.ingredients}
-              alcohol={product.alcohol}
-              mount={product.mount}
-              image={product.image}
-              logo={product.logo}
-              key={product.name}
-            />
-          ))}
-          <Shop onAddOrder={handleAddOrder} />
-        </Route>
-        <Route exact path="/motive">
-          {data.campaign.map(campaign => (
-            <CampaignCard image={campaign.image} />
-          ))}
-        </Route>
-        <Route>
-          {data.cocktails.map(cocktails => (
-            <MixedDrinks
-              name={cocktails.name}
-              mixed={cocktails.mixedDrinks}
-              ingredience={cocktails.ingredience}
-              preparation={cocktails.preparation}
-            />
-          ))}
-        </Route>
-      </Switch>
+      <Main>
+        <Switch>
+          <Route exact path="/">
+            {data.product.map(product => (
+              <ProductCard
+                description={product.description}
+                claim={product.claim}
+                price={product.price}
+                ingredients={product.ingredients}
+                alcohol={product.alcohol}
+                mount={product.mount}
+                image={product.image}
+                logo={product.logo}
+                key={product.name}
+              />
+            ))}
+            <Shop onAddOrder={handleAddOrder} />
+          </Route>
+          <Route exact path="/motive">
+            {data.campaign.map(campaign => (
+              <CampaignCard image={campaign.image} />
+            ))}
+          </Route>
+          <Route>
+            {data.cocktails.map(cocktails => (
+              <MixedDrinks
+                name={cocktails.name}
+                mixed={cocktails.mixedDrinks}
+                ingredience={cocktails.ingredience}
+                preparation={cocktails.preparation}
+              />
+            ))}
+          </Route>
+        </Switch>
+      </Main>
       <Footer />
     </Wrapper>
   )
 }
 
 const Wrapper = styled.section`
-  display: flex;
-  flex-direction: column;
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
   gap: 5px;
+`
+
+const Main = styled.main`
+  grid-area: main;
+  height: auto;
+  overflow: auto;
 `
 
 export default App
