@@ -11,7 +11,7 @@ describe('Footer', () => {
     )
 
     const image = screen.getAllByRole('img')
-    expect(image).toHaveLength(2)
+    expect(image).toHaveLength(4)
   })
 
   it('has the correct alt text', () => {
