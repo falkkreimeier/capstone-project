@@ -1,16 +1,16 @@
 import React from 'react'
-import MixedDCocktailsrinks from './Cocktails'
+import Cocktails from './Cocktails'
 
 export default {
-  title: 'component/MixedDrinks',
-  component: MixedDrinks,
+  title: 'component/Cocktails',
+  component: Cocktails,
 }
 
 const Template = args => <Cocktails {...args} />
 
 export const Standard = Template.bind({})
 Standard.args = {
-  mixedDrinks: 'Shot',
+  mixed: 'Shot',
   name: 'Wahnsinniger Bayleys',
   ingredience: 'Lakritzel und Bayleys',
   preparation: 'Bayleys und Lakritzel zu gleichen Teilen in ein Pinnchen',
