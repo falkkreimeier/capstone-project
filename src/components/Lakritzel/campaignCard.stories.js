@@ -2,7 +2,7 @@ import React from 'react'
 import CampaignCard from './CampaignCard'
 
 export default {
-  title: 'component/campaignCard',
+  title: 'component/CampaignCard',
   component: CampaignCard,
 }
 

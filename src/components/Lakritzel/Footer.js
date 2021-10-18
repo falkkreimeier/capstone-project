@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import cocktailImg from '../Assets/Logo.jpg'
-import bottleImg from '../Assets/painted-bottle.jpg'
-import shot from '../Assets/Pinnchen.jpg'
-import portfolio from '../Assets/Portfolio.jpg'
+import cocktailImg from '../Lakritzel/Assets/Logo.jpg'
+import bottleImg from '../Lakritzel/Assets/painted-bottle.jpg'
+import shot from '../Lakritzel/Assets/Pinnchen.jpg'
+import portfolio from '../Lakritzel/Assets/Portfolio.jpg'
 
 function Footer() {
   return (
@@ -17,7 +17,9 @@ function Footer() {
       <Link to="/cocktails">
         <Cocktails src={shot} alt="Cocktails and Shots" />
       </Link>
-      <DoodleHead src={portfolio} alt="The Man behind the Monster" />
+      <Link to="/kritzelkopf">
+        <DoodleHead src={portfolio} alt="The Man behind the Monster" />
+      </Link>
     </Wrapper>
   )
 }
