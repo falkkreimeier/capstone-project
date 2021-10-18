@@ -7,10 +7,10 @@ function Footer() {
       <Link to="/">
         <Product src="./img/painted-bottle.jpg" alt="Products" />
       </Link>
-      <Link to="/motive">
+      <Link to="/campaign">
         <Motiv src="./img/Logo.jpg" alt="Motive" />
       </Link>
-      <Link to="/mixedDrinks">
+      <Link to="/cocktails">
         <Cocktails src="./img/Pinnchen.jpg" alt="Cocktails and Shots" />
       </Link>
       <DoodleHead src="./img/Portfolio.jpg" alt="The Man behind the Monster" />
