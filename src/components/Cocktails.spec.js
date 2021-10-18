@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react'
-import MixedDrinks from './Cocktails'
+import Cocktails from './Cocktails'
 
-describe('MixedDrinks', () => {
+describe('Cocktails', () => {
   it('shows all Text', () => {
     render(
-      <MixedDrinks
+      <Cocktails
         mixed="Shot"
         name="Wahnsinniger Bayleys"
         ingredients="Lakritzel, Bayleys"

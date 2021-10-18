@@ -1,12 +1,12 @@
 import React from 'react'
-import MixedDrinks from './Cocktails'
+import MixedDCocktailsrinks from './Cocktails'
 
 export default {
   title: 'component/MixedDrinks',
   component: MixedDrinks,
 }
 
-const Template = args => <MixedDrinks {...args} />
+const Template = args => <Cocktails {...args} />
 
 export const Standard = Template.bind({})
 Standard.args = {
