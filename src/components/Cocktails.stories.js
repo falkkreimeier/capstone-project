@@ -1,5 +1,5 @@
 import React from 'react'
-import MixedDrinks from './MixedDrinks'
+import MixedDrinks from './Cocktails'
 
 export default {
   title: 'component/MixedDrinks',

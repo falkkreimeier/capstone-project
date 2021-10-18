@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import MixedDrinks from './MixedDrinks'
+import MixedDrinks from './Cocktails'
 
 describe('MixedDrinks', () => {
   it('shows all Text', () => {

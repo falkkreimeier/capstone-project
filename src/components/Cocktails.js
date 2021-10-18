@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro'
 
-function MixedDrinks({ name, mixed, ingredients, preparation }) {
+function Cocktails({ name, mixed, ingredients, preparation }) {
   return (
     <Wrapper>
       <Headline>
@@ -43,4 +43,4 @@ const MixIt = styled.div`
   margin-bottom: 5px;
 `
 
-export default MixedDrinks
+export default Cocktails
