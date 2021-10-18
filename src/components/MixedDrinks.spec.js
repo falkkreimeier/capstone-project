@@ -18,15 +18,13 @@ describe('MixedDrinks', () => {
       />
     )
 
-    const text = screen.getByText('Shot - Wahnsinniger Bayleys')
+    const text = screen.getByText(`${mixed} - ${name}`)
     expect(text).toBeInTheDocument()
 
-    const text2 = screen.getByText('Zutaten: Lakritzel und Bayleys')
+    const text2 = screen.getByText(ingredience)
     expect(text2).toBeInTheDocument()
 
-    const text3 = screen.getByText(
-      'Zubereitung: Bayleys und Lakritzel zu gleichen Teilen in ein Pinnchen'
-    )
+    const text3 = screen.getByText(preparation)
     expect(text3).toBeInTheDocument()
   })
 })

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
 function MixedDrinks({ name, mixed, ingredience, preparation }) {
   return (
