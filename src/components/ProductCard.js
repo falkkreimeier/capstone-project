@@ -37,7 +37,7 @@ function ProductCard(props) {
 }
 
 const Container = styled.div`
-  height: 19rem;
+  height: 19.5rem;
   perspective: 1000px;
 `
 

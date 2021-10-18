@@ -90,8 +90,8 @@ const ButtonFront = styled.button`
 const ButtonBack = styled.button`
   backface-visibility: hidden;
   position: relative;
-  bottom: 570px;
-  left: 20px;
+  bottom: 50px;
+  left: 270px;
   margin: 0 auto;
   border: none;
   background-color: black;
