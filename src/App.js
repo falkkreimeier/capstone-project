@@ -78,18 +78,19 @@ function App({ data }) {
             ))}
             <Shop onAddOrder={handleAddOrder} />
           </Route>
-          <Route exact path="/motive">
+          <Route exact path="/campaign">
             {data.campaign.map(campaign => (
-              <CampaignCard image={campaign.image} />
+              <CampaignCard image={campaign.image} key={campaign.image} />
             ))}
           </Route>
-          <Route>
+          <Route exact path="/cocktails">
             {data.cocktails.map(cocktails => (
               <MixedDrinks
                 name={cocktails.name}
                 mixed={cocktails.mixedDrinks}
-                ingredience={cocktails.ingredience}
+                ingredients={cocktails.ingredients}
                 preparation={cocktails.preparation}
+                key={cocktails.name}
               />
             ))}
           </Route>
