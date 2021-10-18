@@ -17,7 +17,7 @@ const Wrapper = styled.section`
   background-color: white;
   width: var(--main-width);
   height: 25rem;
-  border-radius: 19px;
+  border-radius: var(--border-radius);
   margin: 0 auto;
   align-items: flex-start;
   display: grid;

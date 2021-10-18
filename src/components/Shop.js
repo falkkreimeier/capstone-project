@@ -31,7 +31,7 @@ function Shop({ handleAddOrder }) {
 }
 
 const Container = styled.div`
-  height: 37.5rem;
+  height: 33rem;
   perspective: 1000px;
 `
 
@@ -55,7 +55,7 @@ const FlipCardFront = styled.section`
   width: var(--main-width);
   backface-visibility: hidden;
   position: absolute;
-  border-radius: 25px;
+  border-radius: var(--border-radius);
 `
 
 const FlipCardBack = styled.section`
@@ -66,19 +66,19 @@ const FlipCardBack = styled.section`
   transform: rotateY(180deg);
   position: absolute;
   border: 1px solid black;
-  border-radius: 25px;
+  border-radius: var(--border-radius);
 `
 const ButtonFront = styled.button`
   backface-visibility: hidden;
   position: relative;
   bottom: 20px;
-  left: 30px;
+  left: 80px;
   margin: 0 auto;
   border: none;
   background-color: black;
   color: white;
-  width: 18rem;
-  height: 12rem;
+  width: 12rem;
+  height: 8rem;
   font-size: 2rem;
   border-radius: 15px;
   box-shadow: 0px 5px 10px 5px grey;
@@ -90,8 +90,8 @@ const ButtonFront = styled.button`
 const ButtonBack = styled.button`
   backface-visibility: hidden;
   position: relative;
-  bottom: 570px;
-  left: 20px;
+  bottom: 50px;
+  left: 270px;
   margin: 0 auto;
   border: none;
   background-color: black;

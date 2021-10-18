@@ -3,6 +3,7 @@ import ProductCard from './components/ProductCard'
 import Shop from './components/Shop'
 import CampaignCard from './components/CampaignCard'
 import Footer from './components/Footer'
+import Cocktails from './components/Cocktails'
 import styled from 'styled-components/macro'
 import { useState } from 'react'
 import { Switch, Route } from 'react-router-dom'
@@ -59,38 +60,61 @@ function App({ data }) {
   return (
     <Wrapper>
       <Header />
-      <Switch>
-        <Route exact path="/">
-          {data.product.map(product => (
-            <ProductCard
-              description={product.description}
-              claim={product.claim}
-              price={product.price}
-              ingredients={product.ingredients}
-              alcohol={product.alcohol}
-              mount={product.mount}
-              image={product.image}
-              logo={product.logo}
-              key={product.name}
-            />
-          ))}
-          <Shop onAddOrder={handleAddOrder} />
-        </Route>
-        <Route exact path="/motive">
-          {data.campaign.map(campaign => (
-            <CampaignCard image={campaign.image} />
-          ))}
-        </Route>
-      </Switch>
+      <Main>
+        <Switch>
+          <Route exact path="/">
+            {data.product.map(product => (
+              <ProductCard
+                description={product.description}
+                claim={product.claim}
+                price={product.price}
+                ingredients={product.ingredients}
+                alcohol={product.alcohol}
+                mount={product.mount}
+                image={product.image}
+                logo={product.logo}
+                key={product.name}
+              />
+            ))}
+            <Shop onAddOrder={handleAddOrder} />
+          </Route>
+          <Route exact path="/campaign">
+            {data.campaign.map(campaign => (
+              <CampaignCard image={campaign.image} key={campaign.image} />
+            ))}
+          </Route>
+          <Route exact path="/cocktails">
+            {data.cocktails.map(cocktails => (
+              <Cocktails
+                name={cocktails.name}
+                mixed={cocktails.mixedDrinks}
+                ingredients={cocktails.ingredients}
+                preparation={cocktails.preparation}
+                key={cocktails.name}
+              />
+            ))}
+          </Route>
+        </Switch>
+      </Main>
       <Footer />
     </Wrapper>
   )
 }
 
 const Wrapper = styled.section`
-  display: flex;
-  flex-direction: column;
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
   gap: 5px;
+`
+
+const Main = styled.main`
+  grid-area: main;
+  height: auto;
+  overflow: auto;
 `
 
 export default App

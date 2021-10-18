@@ -9,13 +9,14 @@ function Header() {
 }
 
 const Wrapper = styled.header`
+  grid-area: header;
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  margin-bottom: 10px;
   border-radius: 19px;
   background-color: white;
-  width: 22rem;
+  width: var(--main-width);
+  height: 120px;
 `
 
 const Image = styled.img`

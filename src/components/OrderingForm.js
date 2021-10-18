@@ -139,6 +139,7 @@ const Wrapper = styled.section`
   border-radius: 15px;
   padding: 0px;
   background-color: white;
+  height: 33rem;
 `
 
 const Form = styled.form`
@@ -257,8 +258,8 @@ const ButtonOrder = styled.button`
   border: none;
   background-color: black;
   color: white;
-  width: 9rem;
-  height: 6rem;
+  width: 11rem;
+  height: 3rem;
   font-size: 1rem;
   border-radius: 15px;
   box-shadow: 0px 5px 10px 5px grey;
