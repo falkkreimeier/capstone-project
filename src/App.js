@@ -3,7 +3,7 @@ import ProductCard from './components/ProductCard'
 import Shop from './components/Shop'
 import CampaignCard from './components/CampaignCard'
 import Footer from './components/Footer'
-import MixedDrinks from './components/Cocktails'
+import Cocktails from './components/Cocktails'
 import styled from 'styled-components/macro'
 import { useState } from 'react'
 import { Switch, Route } from 'react-router-dom'
@@ -85,7 +85,7 @@ function App({ data }) {
           </Route>
           <Route exact path="/cocktails">
             {data.cocktails.map(cocktails => (
-              <MixedDrinks
+              <Cocktails
                 name={cocktails.name}
                 mixed={cocktails.mixedDrinks}
                 ingredients={cocktails.ingredients}
