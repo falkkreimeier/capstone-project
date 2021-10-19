@@ -1,9 +1,19 @@
-import Header from './components/Header'
-import ProductCard from './components/ProductCard'
-import Shop from './components/Shop'
-import CampaignCard from './components/CampaignCard'
-import Footer from './components/Footer'
-import Cocktails from './components/Cocktails'
+import Header from './components/Lakritzel/Header'
+import ProductCard from './components/Lakritzel/ProductCard'
+import Shop from './components/Lakritzel/Shop'
+import CampaignCard from './components/Lakritzel/CampaignCard'
+import Footer from './components/Lakritzel/Footer'
+import Cocktails from './components/Lakritzel/Cocktails'
+import Profile from './components/People/Profile'
+import Welcome from './components/People/Welcome'
+import Interests from './components/People/Interests'
+import Skills from './components/People/Skills'
+import Facts from './components/People/Facts'
+import Portfolio from './components/People/Portfolio'
+import Xing from './components/People/Xing'
+import Github from './components/People/Github'
+import LinkedIn from './components/People/linkedIn'
+import BlogText from './components/People/BlogText'
 import styled from 'styled-components/macro'
 import { useState } from 'react'
 import { Switch, Route } from 'react-router-dom'
@@ -94,6 +104,20 @@ function App({ data }) {
               />
             ))}
           </Route>
+          <Route exact path="/kritzelkopf">
+            <Container>
+              <Profile />
+              <Welcome />
+              <Interests />
+              <Skills />
+              <Facts />
+              <Portfolio />
+              <Xing />
+              <Github />
+              <LinkedIn />
+              <BlogText />
+            </Container>
+          </Route>
         </Switch>
       </Main>
       <Footer />
@@ -115,6 +139,31 @@ const Main = styled.main`
   grid-area: main;
   height: auto;
   overflow: auto;
+`
+
+const Container = styled.div`
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+    'head'
+    'profileArea'
+    'welcome'
+    'interests'
+    'skills'
+    'portfolio'
+    'facts'
+    'xing'
+    'github'
+    'linkedIn'
+    'blogText'
+    'footer';
+  grid-gap: 0.2rem;
+  text-align: center;
+  font-family: 'PT Serif', serif;
+  width: var(--main-width);
+  grid-gap: 5px;
 `
 
 export default App
