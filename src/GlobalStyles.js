@@ -24,7 +24,7 @@ html {
 }
 
 body {
-    background-color: black ;
+    background-color: black;
 }
 
 h2 {
