@@ -13,10 +13,7 @@ function Shop({ handleAddOrder }) {
       <FlipCard flipToShop={flipToShop}>
         <FlipCardFront>
           <StoryToShop />
-          <ButtonFront onClick={flipToShopButton}>
-            Lakritzel befreien
-            <Text>(Vorsicht! Kann abfüllend wirken.)</Text>
-          </ButtonFront>
+          <ButtonFront onClick={flipToShopButton}>Rette Lakritzel</ButtonFront>
         </FlipCardFront>
 
         <FlipCardBack>
