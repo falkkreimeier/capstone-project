@@ -1,12 +1,14 @@
-import Header from './components/Header'
-import ProductCard from './components/ProductCard'
-import Shop from './components/Shop'
-import CampaignCard from './components/CampaignCard'
-import Footer from './components/Footer'
-import Cocktails from './components/Cocktails'
+import Header from './components/Lakritzel/Header'
+import ProductCard from './components/Lakritzel/ProductCard'
+import Shop from './components/Lakritzel/Shop'
+import CampaignCard from './components/Lakritzel/CampaignCard'
+import Footer from './components/Lakritzel/Footer'
+import Cocktails from './components/Lakritzel/Cocktails'
+import Kritzelkopf from './components/People/Kritzelkopf'
 import styled from 'styled-components/macro'
 import { useState } from 'react'
 import { Switch, Route } from 'react-router-dom'
+import GlobalStlyles from './GlobalStyles'
 
 function App({ data }) {
   const initialData = [
@@ -59,6 +61,7 @@ function App({ data }) {
 
   return (
     <Wrapper>
+      <GlobalStlyles />
       <Header />
       <Main>
         <Switch>
@@ -93,6 +96,9 @@ function App({ data }) {
                 key={cocktails.name}
               />
             ))}
+          </Route>
+          <Route exact path="/kritzelkopf">
+            <Kritzelkopf />
           </Route>
         </Switch>
       </Main>

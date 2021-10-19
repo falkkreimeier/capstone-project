@@ -6,6 +6,9 @@ const GlobalStlyles = createGlobalStyle`
 :root {
     --border-radius: 19px;
     --main-width: 22rem;
+    --border-radius: 5px;
+    --main-padding: 5px;
+    --color-fond: black;
 } 
 @font-face {
     font-family: Ventana;
