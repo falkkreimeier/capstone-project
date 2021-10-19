@@ -108,10 +108,6 @@ const ButtonBack = styled.button`
   }
 `
 
-const Text = styled.p`
-  font-size: 1rem;
-`
-
 const TextButtonSmall = styled.p`
   font-size: 0.7rem;
   margin: 0 auto;
