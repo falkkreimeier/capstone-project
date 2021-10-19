@@ -16,7 +16,7 @@ const Wrapper = styled.section`
   background-color: white;
   width: 22rem;
   height: 25rem;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 `
 
 const Image = styled.img`

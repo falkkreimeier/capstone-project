@@ -17,12 +17,12 @@ function Cocktails({ name, mixed, ingredients, preparation }) {
 const Wrapper = styled.section`
   border-radius: var(--border-radius);
   margin: 0 auto;
-  margin-bottom: 5px;
   background-color: white;
   display: flex;
   flex-direction: column;
   padding: 10px;
   width: var(--main-width);
+  margin-bottom: 5px;
 `
 
 const Headline = styled.h2`

@@ -37,7 +37,11 @@ function ProductCard(props) {
 }
 
 const Container = styled.div`
-  height: 19.5rem;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  border-radius: var(--border-radius);
+  width: var(--main-width);
+  height: 19rem;
   perspective: 1000px;
 `
 
@@ -58,7 +62,7 @@ const FlipCard = styled.section`
 
 const FlipCardFront = styled.section`
   background-color: white;
-  width: var(--main-width);
+  width: 100%;
   backface-visibility: hidden;
   position: absolute;
   border-radius: var(--border-radius);

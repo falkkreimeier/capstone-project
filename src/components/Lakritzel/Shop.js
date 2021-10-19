@@ -31,7 +31,10 @@ function Shop({ handleAddOrder }) {
 }
 
 const Container = styled.div`
-  height: 33rem;
+  margin: 0 auto;
+  width: var(--main-width);
+  border-radius: var(--border-radius);
+  height: 34rem;
   perspective: 1000px;
 `
 
@@ -56,6 +59,7 @@ const FlipCardFront = styled.section`
   backface-visibility: hidden;
   position: absolute;
   border-radius: var(--border-radius);
+  height: 34rem;
 `
 
 const FlipCardBack = styled.section`

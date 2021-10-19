@@ -26,15 +26,14 @@ function Footer() {
 
 const Wrapper = styled.footer`
   grid-area: footer;
+  background-color: white;
   display: grid;
   grid-template-areas: 'product campaign cocktails doodleHead';
   align-items: center;
   margin: 0 auto;
   border-radius: 19px;
-  background-color: white;
   width: var(--main-width);
-  margin-top: 5px;
-  height: 100px;
+  height: 80px;
 `
 
 const Product = styled.img`
