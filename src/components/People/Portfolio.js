@@ -14,17 +14,14 @@ function Portfolio() {
           alt="Werbung für Andros, eine vegane Joghurtalternative"
         />
       </a>
-      <div>
-        <a href={PortfolioDatei}>
-          <Button>Portfolio</Button>
-        </a>
-      </div>
+      <Link href={PortfolioDatei}>Portfolio</Link>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
   grid-area: portfolio;
+  height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,17 +32,15 @@ const Wrapper = styled.div`
   min-width: var(--main-width);
 `
 
-export const Button = styled.button`
-  min-width: 130px;
-  height: 30px;
+const Link = styled.a`
+  width: 130px;
   text-decoration: none;
   border: 1px solid black;
   padding: var(--main-padding);
-  margin: 0 0 20px 0;
-  border-radius: 40px 40px 40px 40px;
+  border-radius: 40px;
+  text-decoration: none;
   background-color: white;
   font-family: 'Inter', sans-serif;
-  color: black;
   box-shadow: 5px 5px 10px 5px black;
   &:hover {
     background-color: black;

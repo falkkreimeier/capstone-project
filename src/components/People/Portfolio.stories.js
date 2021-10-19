@@ -6,6 +6,6 @@ export default {
   component: Portfolio,
 }
 
-const Template = args => <Portfolio {...args} />
+const Template = () => <Portfolio />
 
 export const Standard = Template.bind({})

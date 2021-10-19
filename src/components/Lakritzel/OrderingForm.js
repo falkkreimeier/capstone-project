@@ -136,7 +136,7 @@ const Wrapper = styled.section`
   margin: 0 auto;
   width: var(--main-width);
   border: 1px solid white;
-  border-radius: 15px;
+  border-radius: var(--border-radius);
   padding: 0px;
   background-color: white;
   height: 33rem;
@@ -261,7 +261,7 @@ const ButtonOrder = styled.button`
   width: 11rem;
   height: 3rem;
   font-size: 1rem;
-  border-radius: 15px;
+  border-radius: var(--border-radius);
   box-shadow: 0px 5px 10px 5px grey;
   &:hover {
     border: 2px solid white;

@@ -6,6 +6,6 @@ export default {
   component: BlogText,
 }
 
-const Template = args => <BlogText {...args} />
+const Template = () => <BlogText />
 
 export const Standard = Template.bind({})

@@ -6,6 +6,6 @@ export default {
   component: Profile,
 }
 
-const Template = args => <Profile {...args} />
+const Template = () => <Profile />
 
 export const Standard = Template.bind({})

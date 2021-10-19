@@ -6,6 +6,6 @@ export default {
   component: Xing,
 }
 
-const Template = args => <Xing {...args} />
+const Template = () => <Xing />
 
 export const Standard = Template.bind({})

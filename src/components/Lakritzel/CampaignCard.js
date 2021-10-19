@@ -12,7 +12,7 @@ const Wrapper = styled.section`
   display: flex;
   margin: 0 auto;
   align-items: center;
-  border-radius: 19px;
+  border-radius: var(--border-radius);
   background-color: white;
   width: 22rem;
   height: 25rem;

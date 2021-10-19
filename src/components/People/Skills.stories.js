@@ -6,6 +6,6 @@ export default {
   component: Skills,
 }
 
-const Template = args => <Skills {...args} />
+const Template = () => <Skills />
 
 export const Standard = Template.bind({})

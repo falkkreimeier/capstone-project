@@ -6,6 +6,6 @@ export default {
   component: Github,
 }
 
-const Template = args => <Github {...args} />
+const Template = () => <Github />
 
 export const Standard = Template.bind({})

@@ -12,9 +12,9 @@ function BlogText() {
         Es gibt Hüftsteak, Filetsteak, Rumpsteak, T-Bone Steak, Rib-Eye Steak,
         Tomahawk Steak...
       </Text>
-      <ButtonContainer href="https://www.maredo.com/flanksteak-interview-mit-dem-maredo-fleischexperten-martin-ostermeier/">
-        <Button type="button">weiterlesen</Button>
-      </ButtonContainer>
+      <LinkToBlog href="https://www.maredo.com/flanksteak-interview-mit-dem-maredo-fleischexperten-martin-ostermeier/">
+        weiterlesen
+      </LinkToBlog>
     </Wrapper>
   )
 }
@@ -28,13 +28,9 @@ const Wrapper = styled.div`
   padding: var(--main-padding);
 `
 
-const ButtonContainer = styled.a`
-  display: flex;
-  justify-content: center;
-`
-
-const Button = styled.button`
-  min-width: 130px;
+const LinkToBlog = styled.a`
+  margin: 0 auto;
+  width: 130px;
   height: 30px;
   text-decoration: none;
   border: 1px solid black;

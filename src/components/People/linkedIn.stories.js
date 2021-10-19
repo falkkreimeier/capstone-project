@@ -6,6 +6,6 @@ export default {
   component: LinkedIn,
 }
 
-const Template = args => <LinkedIn {...args} />
+const Template = () => <LinkedIn />
 
 export const Standard = Template.bind({})

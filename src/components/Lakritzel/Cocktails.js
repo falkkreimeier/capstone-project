@@ -23,6 +23,7 @@ const Wrapper = styled.section`
   padding: 10px;
   width: var(--main-width);
   margin-bottom: 5px;
+  height: 15rem;
 `
 
 const Headline = styled.h2`
