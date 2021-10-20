@@ -168,12 +168,6 @@ const Details = styled.ol`
   margin: -10px 15px;
   grid-area: details;
 `
-
-const TextButton = styled.p`
-  font-size: 0.7rem;
-  margin: 0 auto;
-`
-
 const List = styled.li`
   width: 260px;
 `

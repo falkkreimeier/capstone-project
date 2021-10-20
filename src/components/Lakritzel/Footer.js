@@ -4,7 +4,6 @@ import cocktailImg from '../Lakritzel/Assets/Logo.svg'
 import bottleImg from '../Lakritzel/Assets/painted-bottle.svg'
 import shot from '../Lakritzel/Assets/Pinnchen.png'
 import portfolio from '../Lakritzel/Assets/Portfolio.png'
-import Tinte from '../Lakritzel/Assets/tintenkleks.png'
 
 function Footer() {
   return (
