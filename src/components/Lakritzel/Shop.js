@@ -5,7 +5,7 @@ import OrderingForm from './OrderingForm'
 import { FaArrowCircleLeft } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
 
-function Shop({ handleAddOrder }) {
+function Shop({ onAddOrder }) {
   const [flipToShop, setFlipToShop] = useState(false)
   function flipToShopButton() {
     setFlipToShop(!flipToShop)
@@ -21,7 +21,7 @@ function Shop({ handleAddOrder }) {
         </FlipCardFront>
 
         <FlipCardBack>
-          <OrderingForm onAddOrder={handleAddOrder} />
+          <OrderingForm onAddOrder={onAddOrder} />
           <IconPosition flipToShop={flipToShop}>
             <IconContext.Provider
               value={{
