@@ -29,6 +29,7 @@ const Wrapper = styled.div`
 `
 
 const LinkToBlog = styled.a`
+  text-align: center;
   margin: 0 auto;
   width: 130px;
   height: 30px;
