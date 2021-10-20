@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Headline } from "./Profile";
+import styled from 'styled-components'
+import { Headline } from './Profile'
 
 function Welcome() {
   return (
@@ -17,7 +17,7 @@ function Welcome() {
         Unten steht meine Telefonnummer – Einfach anrufen, ich mach das.
       </Text>
     </Wrapper>
-  );
+  )
 }
 
 const Wrapper = styled.div`
@@ -28,11 +28,11 @@ const Wrapper = styled.div`
   grid-area: welcome;
   border-radius: var(--border-radius);
   padding: var(--main-padding);
-`;
+`
 
 export const Text = styled.p`
   margin: 0px 0px 20px 0px;
-  font-family: "Inter", sans-serif;
-`;
+  font-family: 'Inter', sans-serif;
+`
 
-export default Welcome;
+export default Welcome

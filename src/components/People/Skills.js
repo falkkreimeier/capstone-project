@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { List, Ol } from "./Interests";
-import { Headline } from "./Profile";
+import styled from 'styled-components'
+import { List, Ol } from './Interests'
+import { Headline } from './Profile'
 
 function Skills() {
   return (
@@ -15,7 +15,7 @@ function Skills() {
         <List>Kaufmann mit Führungserfahrung </List>
       </Ol>
     </Wrapper>
-  );
+  )
 }
 
 export const Wrapper = styled.div`
@@ -25,5 +25,5 @@ export const Wrapper = styled.div`
   grid-area: skills;
   border-radius: var(--border-radius);
   padding: var(--main-padding);
-`;
-export default Skills;
+`
+export default Skills
