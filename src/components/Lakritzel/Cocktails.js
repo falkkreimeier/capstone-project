@@ -23,24 +23,28 @@ const Wrapper = styled.section`
   padding: 10px;
   width: var(--main-width);
   margin-bottom: 5px;
-  height: 15rem;
+  height: auto;
 `
 
 const Headline = styled.h2`
   margin: 0 auto;
   font-family: 'Ventana';
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 `
 
 const InnerHeadline = styled.h4`
+  font-family: var(--main-headline);
   margin: 0;
-`
-
-const Ingredience = styled.div`
   margin-bottom: 5px;
 `
 
+const Ingredience = styled.div`
+  font-family: var(--main-font);
+  margin-bottom: 10px;
+`
+
 const MixIt = styled.div`
+  font-family: var(--main-font);
   margin-bottom: 5px;
 `
 
