@@ -54,11 +54,13 @@ const LinkButton = styled(NavLink)`
   &:hover {
     background-color: none;
     border: 1px solid grey;
+    border-radius: 50%;
     box-shadow: 5px 0px 2px 2px grey;
   }
 
   &.active {
     background-color: none;
+    border-radius: 50%;
     border: 1px solid grey;
     box-shadow: 5px 0px 2px 2px black;
   }
