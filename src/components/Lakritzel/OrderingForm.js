@@ -187,7 +187,7 @@ const Headline = styled.h2`
 `
 
 const InputContainer = styled.div`
-  margin: 10px;
+  margin: 7px;
   width: 170px;
   border: 2px solid black;
   border-radius: 19px;
@@ -233,7 +233,8 @@ const MessageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px;
+  margin: 7px;
+  margin-bottom: 20px;
   width: 170px;
   height: 80px;
   border-radius: 19px;
@@ -265,7 +266,7 @@ const ButtonOrder = styled.button`
   box-shadow: 0px 5px 10px 5px grey;
   &:hover {
     border: 2px solid white;
-    box-shadow: 0px 20px 20px 10px black;
+    box-shadow: 15px 15px 15px 8px grey;
   }
 `
 
