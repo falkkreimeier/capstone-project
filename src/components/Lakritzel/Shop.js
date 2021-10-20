@@ -2,6 +2,8 @@ import styled, { css } from 'styled-components/macro'
 import { useState } from 'react'
 import StoryToShop from './StoryToShop'
 import OrderingForm from './OrderingForm'
+import { FaArrowCircleLeft } from 'react-icons/fa'
+import { IconContext } from 'react-icons'
 
 function Shop({ handleAddOrder }) {
   const [flipToShop, setFlipToShop] = useState(false)
@@ -13,14 +15,23 @@ function Shop({ handleAddOrder }) {
       <FlipCard flipToShop={flipToShop}>
         <FlipCardFront>
           <StoryToShop />
-          <ButtonFront onClick={flipToShopButton}>Rette Lakritzel</ButtonFront>
+          <ButtonFront flipToShop={flipToShop} onClick={flipToShopButton}>
+            Rette Lakritzel
+          </ButtonFront>
         </FlipCardFront>
 
         <FlipCardBack>
           <OrderingForm onAddOrder={handleAddOrder} />
-          <ButtonBack onClick={flipToShopButton}>
-            <TextButtonSmall>ZURÜCK</TextButtonSmall>
-          </ButtonBack>
+          <IconPosition flipToShop={flipToShop}>
+            <IconContext.Provider
+              value={{
+                color: 'black',
+                size: '30px',
+              }}
+            >
+              <FaArrowCircleLeft onClick={flipToShopButton} />
+            </IconContext.Provider>
+          </IconPosition>
         </FlipCardBack>
       </FlipCard>
     </Container>
@@ -68,6 +79,7 @@ const FlipCardBack = styled.section`
   position: absolute;
   border: 1px solid black;
   border-radius: var(--border-radius);
+  height: 34rem;
 `
 const ButtonFront = styled.button`
   backface-visibility: hidden;
@@ -85,31 +97,19 @@ const ButtonFront = styled.button`
   box-shadow: 0px 5px 10px 5px grey;
   &:hover {
     border: 2px solid white;
-    box-shadow: 0px 20px 20px 10px black;
-  }
-`
-const ButtonBack = styled.button`
-  backface-visibility: hidden;
-  position: relative;
-  bottom: 50px;
-  left: 270px;
-  margin: 0 auto;
-  border: none;
-  background-color: black;
-  color: white;
-  width: 4.5rem;
-  height: 1rem;
-  font-size: 2rem;
-  border-radius: 15px;
-  box-shadow: 0px 5px 10px 5px grey;
-  &:hover {
-    border: 2px solid white;
-    box-shadow: 0px 20px 20px 10px black;
+    box-shadow: 15px 15px 15px 8px grey;
+    ${({ flipToShop }) =>
+      flipToShop &&
+      css`
+        pointer-events: none;
+      `}
   }
 `
 
-const TextButtonSmall = styled.p`
-  font-size: 0.7rem;
-  margin: 0 auto;
+const IconPosition = styled.div`
+  position: relative;
+  left: 290px;
+  bottom: 30px;
 `
+
 export default Shop
