@@ -69,7 +69,7 @@ function App({ data }) {
             {data.product.map(product => (
               <ProductCard
                 description={product.description}
-                claim={product.claim}
+                crazy={product.crazy}
                 price={product.price}
                 ingredients={product.ingredients}
                 alcohol={product.alcohol}
@@ -114,7 +114,7 @@ const Wrapper = styled.section`
     'header'
     'main'
     'footer';
-  gap: 5px;
+  grid-gap: 5px;
 `
 
 const Main = styled.main`
