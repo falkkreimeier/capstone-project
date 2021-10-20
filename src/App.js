@@ -63,6 +63,7 @@ function App({ data }) {
 
 const Wrapper = styled.section`
   height: 100vh;
+  max-height: 920px;
   display: grid;
   grid-template-areas:
     'header'
