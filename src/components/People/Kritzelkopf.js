@@ -45,7 +45,6 @@ const Container = styled.div`
     'linkedIn'
     'blogText'
     'footer';
-  grid-gap: 0.2rem;
   text-align: center;
   font-family: 'PT Serif', serif;
   width: var(--main-width);
