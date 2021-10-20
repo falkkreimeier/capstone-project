@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 function Facts() {
   return (
@@ -20,7 +20,7 @@ function Facts() {
         <List>"Wer hat das Fettnäpfchen hier hingestellt?!"</List>
       </Ol>
     </Wrapper>
-  );
+  )
 }
 
 const Wrapper = styled.div`
@@ -30,25 +30,25 @@ const Wrapper = styled.div`
   grid-area: facts;
   border-radius: var(--border-radius);
   padding: var(--main-padding);
-`;
+`
 
 const Headline = styled.h2`
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 600;
   text-align: center;
   font-size: 1.3rem;
   margin: 2px 0px 2px 0px;
   text-decoration: none;
   color: #58555a;
-`;
+`
 
 const List = styled.li`
   text-align: left;
-  font-family: "Inter", sans-serif;
-`;
+  font-family: 'Inter', sans-serif;
+`
 
 const Ol = styled.ol`
   margin: 0 0 10px 0;
-`;
+`
 
-export default Facts;
+export default Facts
