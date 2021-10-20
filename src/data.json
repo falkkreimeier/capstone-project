@@ -9,6 +9,7 @@
       "mount": "700ml",
       "image": "./img/painted-bottle.jpg",
       "logo": "./img/Logo.jpg",
+      "crazy": "./img/der-ballert.jpg",
       "lettering": "./img/Logo-lettering.jpg"
     }
   ],
