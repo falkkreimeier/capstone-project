@@ -168,6 +168,7 @@ const Details = styled.ol`
   grid-area: details;
 `
 const List = styled.li`
+  font-family: var(--main-font);
   width: 260px;
 `
 
