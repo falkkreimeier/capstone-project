@@ -64,18 +64,17 @@ function App({ data }) {
 const Wrapper = styled.section`
   height: 100vh;
   max-height: 920px;
-  display: grid;
-  grid-template-areas:
-    'header'
-    'main'
-    'footer';
-  grid-gap: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 `
 
 const Main = styled.main`
-  grid-area: main;
-  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   overflow: auto;
+  min-height: 400px;
 `
 
 export default App
