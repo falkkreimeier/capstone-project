@@ -11,10 +11,12 @@ function Welcome() {
         Unruhestifter. Egal wo er auftaucht, versucht er die Menschen davon zu
         überzeugen ihn zu Schlucken. <br /> <br />
         Unheimlich süß, raffiniert salzig und köstlich nach Lakritz duftend,
-        verführt er jede unaufmerksame, unschuldige Seele um ihr den Verstand zu
-        rauben, sie auf Tischen tanzen zu lassen, und tiefgründige Gespräche
-        über das Leben zu führen. Hütet euch vor dm dunklen Wahnsinn. Diese und
-        viele andere meiner vermeintlichen Heldentaten findet ihr hier.
+        verführt er unschuldige Seelen um ihren Verstand zu rauben, sie auf
+        Tischen tanzen zu lassen, und tiefgründige Gespräche über das Leben zu
+        führen. Hütet euch vor dem dunklen Wahnsinn.
+        <br /> <br />
+        Diese und viele andere meiner vermeintlichen Heldentaten findet ihr
+        hier.
       </Text>
     </Wrapper>
   )
