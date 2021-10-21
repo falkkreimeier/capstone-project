@@ -50,7 +50,6 @@ function ProductCard(props) {
 
 const Container = styled.div`
   margin: 0 auto;
-  margin-bottom: 5px;
   border-radius: var(--border-radius);
   width: var(--main-width);
   height: 19rem;
