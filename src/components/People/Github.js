@@ -15,7 +15,6 @@ export const Img = styled.img`
 `
 
 const Wrapper = styled.a`
-  grid-area: github;
   display: flex;
   justify-content: center;
   align-items: center;

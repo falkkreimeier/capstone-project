@@ -1,23 +1,25 @@
-import styled from "styled-components";
-import { Headline } from "./Profile";
+import styled from 'styled-components'
+import { Headline } from './Profile'
 
 function Welcome() {
   return (
     <Wrapper>
-      <Headline>Oh, ein Gast!</Headline>
+      <Headline>Programierer, Texter, Weltenretter!</Headline>
       <Text>
-        Schön, Sie/Dich kennen zu lernen ... ähh... oder besser gesagt andersrum
-        – und damit Herzlich Willkommen! Ich bin Falk, Programmierer,
-        Werbetexter, Kaufmann und Schnaps-Dealer. Man könnte sagen, ich habe
-        viele Seiten, und das hier ist eine davon. <br /> <br />
-        Lakritzel.com, die App und diese Unterseite habe ich komplett
-        programmiert und bekritzelt ... textet. Das Zeichnen gehört leider nicht
-        zu meinen Stärken, aber dafür kenne ich viele talentierte Art-Directoren
-        und Illiustratoren. Wer jetzt denkt: "Sieht geil aus, will ich auch!"
-        Unten steht meine Telefonnummer – Einfach anrufen, ich mach das.
+        Und damit herzlich Willkommen! Ich bin Falk aka Kritzelkopf und ich habe
+        die Welt gerettet – vor Lakritzel. Denn dieser übergeschnapste kleine
+        Tropfen ist ein echter Unruhestifter. Egal wo er auftaucht, versucht er
+        die Menschen davon zu überzeugen, ihn zu Schlucken. <br /> <br />
+        Unheimlich süß, raffiniert salzig und köstlich nach Lakritz duftend,
+        verführt er unschuldige Seelen, um ihren Verstand zu rauben, sie auf
+        Tischen tanzen zu lassen, und tiefgründige Gespräche über das Leben zu
+        führen. Hütet euch vor dem dunklen Wahnsinn.
+        <br /> <br />
+        Diese und viele andere meiner vermeintlichen Heldentaten findet ihr
+        hier.
       </Text>
     </Wrapper>
-  );
+  )
 }
 
 const Wrapper = styled.div`
@@ -25,14 +27,13 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   background: white;
-  grid-area: welcome;
   border-radius: var(--border-radius);
   padding: var(--main-padding);
-`;
+`
 
 export const Text = styled.p`
   margin: 0px 0px 20px 0px;
-  font-family: "Inter", sans-serif;
-`;
+  font-family: 'Inter', sans-serif;
+`
 
-export default Welcome;
+export default Welcome

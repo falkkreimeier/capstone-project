@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components/macro'
 import { useState } from 'react'
+import { FaArrowCircleLeft as ArrowLeft } from 'react-icons/fa'
+import { IconContext } from 'react-icons'
 
 function ProductCard(props) {
   const [flipToDetails, setFlipToDetails] = useState(false)
@@ -13,13 +15,16 @@ function ProductCard(props) {
         <FlipCardFront>
           <Image src={props.image} alt="" />
           <Price>{props.price}</Price>
-          <ButtonFront onClick={flipToDetailsButton}>
+          <ButtonFront
+            flipToDetails={flipToDetails}
+            onClick={flipToDetailsButton}
+          >
             Was ist da drin?!
           </ButtonFront>
         </FlipCardFront>
 
         <FlipCardBack>
-          <Logo src={props.logo} alt="Lakritzel" />
+          <Logo src={props.crazy} alt="Lakritzel" />
           <Text>{props.description}</Text>
           <Headline>Wahnsinniger Inhalt</Headline>
           <Details>
@@ -27,9 +32,16 @@ function ProductCard(props) {
             <List>{props.alcohol}</List>
             <List>{props.mount}</List>
           </Details>
-          <ButtonBack onClick={flipToDetailsButton}>
-            <TextButton>ZURÜCK</TextButton>
-          </ButtonBack>
+          <IconPosition>
+            <IconContext.Provider
+              value={{
+                color: 'black',
+                size: '30px',
+              }}
+            >
+              <ArrowLeft onClick={flipToDetailsButton} />
+            </IconContext.Provider>
+          </IconPosition>
         </FlipCardBack>
       </FlipCard>
     </Container>
@@ -38,7 +50,6 @@ function ProductCard(props) {
 
 const Container = styled.div`
   margin: 0 auto;
-  margin-bottom: 5px;
   border-radius: var(--border-radius);
   width: var(--main-width);
   height: 19rem;
@@ -109,8 +120,13 @@ const ButtonFront = styled.button`
   box-shadow: 5px 5px 5px 2px grey;
   &:hover  {
     border: 2px solid white;
-    box-shadow: 10px 10px 10px 4px grey;
+    box-shadow: 10px 5px 5px 3px grey;
   }
+  ${({ flipToDetails }) =>
+    flipToDetails &&
+    css`
+      pointer-events: none;
+    `}
 `
 
 const FlipCardBack = styled.section`
@@ -128,27 +144,6 @@ const FlipCardBack = styled.section`
     'details button';
 `
 
-const ButtonBack = styled.button`
-  backface-visibility: hidden;
-  position: relative;
-  bottom: 208px;
-  right: 330px;
-  grid-area: button;
-  text-decoration: none;
-  text-align: center;
-  width: 5rem;
-  height: 1rem;
-  margin: 14px;
-  border: 1px solid grey;
-  border-radius: 15px;
-  background-color: black;
-  color: white;
-  box-shadow: 5px 5px 5px 2px grey;
-  &:hover  {
-    border: 2px solid white;
-    box-shadow: 10px 10px 10px 4px grey;
-  }
-`
 const Logo = styled.img`
   margin: 20px 0 0 30px;
   grid-area: logo;
@@ -156,6 +151,7 @@ const Logo = styled.img`
 `
 
 const Text = styled.p`
+  font-family: var(--main-font);
   width: 200px;
   margin: 40px 20px 0 -180px;
   grid-area: portrait;
@@ -171,14 +167,15 @@ const Details = styled.ol`
   margin: -10px 15px;
   grid-area: details;
 `
-
-const TextButton = styled.p`
-  font-size: 0.7rem;
-  margin: 0 auto;
+const List = styled.li`
+  font-family: var(--main-font);
+  width: 260px;
 `
 
-const List = styled.li`
-  width: 260px;
+const IconPosition = styled.div`
+  position: relative;
+  right: 40px;
+  top: 50px;
 `
 
 export default ProductCard

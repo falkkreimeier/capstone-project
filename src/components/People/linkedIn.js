@@ -10,7 +10,6 @@ function linkedIn() {
 }
 
 const Wrapper = styled.a`
-  grid-area: linkedIn;
   display: flex;
   justify-content: center;
   align-items: center;

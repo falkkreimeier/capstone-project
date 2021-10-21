@@ -26,13 +26,13 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   background: white;
-  grid-area: portfolio;
   border-radius: var(--border-radius);
   padding: var(--main-padding);
   min-width: var(--main-width);
 `
 
 const Link = styled.a`
+  margin-bottom: 5px;
   width: 130px;
   text-decoration: none;
   border: 1px solid black;

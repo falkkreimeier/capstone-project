@@ -23,12 +23,12 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   background: white;
-  grid-area: blogText;
   border-radius: var(--border-radius);
   padding: var(--main-padding);
 `
 
 const LinkToBlog = styled.a`
+  text-align: center;
   margin: 0 auto;
   width: 130px;
   height: 30px;

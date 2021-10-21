@@ -1,105 +1,115 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
+import { FaArrowCircleLeft as ArrowLeft } from 'react-icons/fa'
+import { IconContext } from 'react-icons'
 
-function OrderingForm({ onAddOrder }) {
+function OrderingForm({ onAddOrder, flipToShop, onButtonClick }) {
   return (
     <Wrapper>
       <Headline>Rette mich, wer kann!</Headline>
       <Form onSubmit={event => handleOnClickButton(event)}>
         <InputContainer>
-          <Label>
+          <label>
             <HiddenLabelText>Vorname:</HiddenLabelText>
-            <Vorname
+            <Input
               type="text"
               name="firstName"
               placeholder="Vorname"
               maxlength="20"
               required
             />
-          </Label>
+          </label>
         </InputContainer>
         <InputContainer>
-          <Label>
+          <label>
             <HiddenLabelText>Nachname:</HiddenLabelText>
-            <Nachnahme
+            <Input
               type="text"
               placeholder="Nachname"
               name="name"
               maxlength="20"
               required
             />
-          </Label>
+          </label>
         </InputContainer>
 
         <InputContainer>
-          <Label>
+          <label>
             <HiddenLabelText>Straße:</HiddenLabelText>
-            <Straße
+            <Input
               maxlength="20"
               type="text"
               placeholder="Straße"
               name="street"
               required
             />
-          </Label>
+          </label>
         </InputContainer>
         <InputContainer>
-          <Label>
+          <label>
             <HiddenLabelText>Postleitzahl:</HiddenLabelText>
-            <Postleitzahl
+            <Input
               maxlength="20"
               type="number"
               placeholder="Postleitzahl"
               name="zipCode"
               required
             />
-          </Label>
+          </label>
         </InputContainer>
         <InputContainer>
-          <Label>
+          <label>
             <HiddenLabelText>Stadt:</HiddenLabelText>
-            <Stadt maxlength="20" type="text" placeholder="Stadt" name="city" />
-          </Label>
+            <Input maxlength="20" type="text" placeholder="Stadt" name="city" />
+          </label>
         </InputContainer>
         <InputContainer>
-          <Label>
+          <label>
             <HiddenLabelText>eMail:</HiddenLabelText>
-            <Mail
+            <Input
               maxlength="20"
               type="email"
               placeholder="eMail Adresse"
               name="email"
               required
             />
-          </Label>
+          </label>
         </InputContainer>
         <InputContainer>
-          <Label>
+          <label>
             <HiddenLabelText>Anzahl:</HiddenLabelText>
-            <Amount
+            <Input
               maxlength="20"
               type="number"
               placeholder="0"
               name="quantity"
               required
             />
-          </Label>
+          </label>
         </InputContainer>
         <MessageContainer>
-          <Label>
+          <label>
             <HiddenLabelText>Nachricht:</HiddenLabelText>
-            <Message
+            <Input
               type="text"
               cols="10"
               rows="8"
               placeholder="Nachricht"
               name="message"
             />
-          </Label>
+          </label>
         </MessageContainer>
-        <ButtonContainer>
-          <ButtonOrder>Hol mich hier raus!</ButtonOrder>
-        </ButtonContainer>
+        <ButtonOrder>Hol mich hier raus!</ButtonOrder>
       </Form>
+      <IconPosition>
+        <IconContext.Provider
+          value={{
+            color: 'black',
+            size: '30px',
+          }}
+        >
+          <ArrowLeft flipToShop={flipToShop} onClick={onButtonClick} />
+        </IconContext.Provider>
+      </IconPosition>
     </Wrapper>
   )
 
@@ -139,32 +149,14 @@ const Wrapper = styled.section`
   border-radius: var(--border-radius);
   padding: 0px;
   background-color: white;
-  height: 33rem;
+  height: 34rem;
 `
 
 const Form = styled.form`
-  display: grid;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  grid-template-areas:
-    'headline'
-    'vorname'
-    'nachname'
-    'straße'
-    'postleitzahl'
-    'stadt'
-    'email'
-    'menge'
-    'message'
-    'buttonOrder';
-`
-
-const Label = styled.label``
-
-const iconStyle = css`
-  border: none;
-  text-align: center;
-  width: 155px;
 `
 
 // Add HidenLabelText to hide the Label Text, to make it usable for screenreader
@@ -187,53 +179,24 @@ const Headline = styled.h2`
 `
 
 const InputContainer = styled.div`
-  margin: 10px;
+  margin: 7px;
   width: 170px;
   border: 2px solid black;
   border-radius: 19px;
   text-align: center;
 `
 
-const Nachnahme = styled.input`
-  grid-area: nachname;
-  ${iconStyle}
-`
-
-const Vorname = styled.input`
-  grid-area: vorname;
-  ${iconStyle}
-`
-
-const Straße = styled.input`
-  grid-area: straße;
-  ${iconStyle}
-`
-
-const Postleitzahl = styled.input`
-  grid-area: postleitzahl;
-  ${iconStyle}
-`
-
-const Stadt = styled.input`
-  grid-area: stadt;
-  ${iconStyle}
-`
-
-const Mail = styled.input`
-  grid-area: mail;
-  ${iconStyle}
-`
-
-const Amount = styled.input`
-  grid-area: menge;
-  ${iconStyle}
+const Input = styled.input`
+  border: none;
+  text-align: center;
 `
 
 const MessageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px;
+  margin: 7px;
+  margin-bottom: 20px;
   width: 170px;
   height: 80px;
   border-radius: 19px;
@@ -241,18 +204,7 @@ const MessageContainer = styled.div`
   text-align: center;
 `
 
-const Message = styled.input`
-  grid-area: message;
-  ${iconStyle}
-  height: 60px;
-`
-
-const ButtonContainer = styled.div`
-  display: flex;
-`
-
 const ButtonOrder = styled.button`
-  grid-area: buttonOrder;
   margin: 0 auto;
   margin-bottom: 15px;
   border: none;
@@ -265,8 +217,13 @@ const ButtonOrder = styled.button`
   box-shadow: 0px 5px 10px 5px grey;
   &:hover {
     border: 2px solid white;
-    box-shadow: 0px 20px 20px 10px black;
+    box-shadow: 15px 15px 15px 8px grey;
   }
+`
+const IconPosition = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 30px;
 `
 
 export default OrderingForm

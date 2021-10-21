@@ -1,62 +1,58 @@
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
-import cocktailImg from '../Lakritzel/Assets/Logo.jpg'
-import bottleImg from '../Lakritzel/Assets/painted-bottle.jpg'
-import shot from '../Lakritzel/Assets/Pinnchen.jpg'
-import portfolio from '../Lakritzel/Assets/Portfolio.jpg'
+import { NavLink } from 'react-router-dom'
+import cocktailImg from '../Lakritzel/Assets/Logo.svg'
+import bottleImg from '../Lakritzel/Assets/painted-bottle.svg'
+import shot from '../Lakritzel/Assets/Pinnchen.png'
+import portfolio from '../Lakritzel/Assets/Portfolio.png'
 
-function Footer() {
+function Nav() {
   return (
-    <Wrapper>
-      <Link to="/">
-        <Product src={bottleImg} alt="Products" />
-      </Link>
-      <Link to="/campaign">
-        <Motiv src={cocktailImg} alt="Motive" />
-      </Link>
-      <Link to="/cocktails">
-        <Cocktails src={shot} alt="Cocktails and Shots" />
-      </Link>
-      <Link to="/kritzelkopf">
-        <DoodleHead src={portfolio} alt="The Man behind the Monster" />
-      </Link>
-    </Wrapper>
+    <Navigation>
+      <NavigationLink exact to="/" activeClassName="active">
+        <Image src={bottleImg} alt="Products" />
+      </NavigationLink>
+      <NavigationLink exact to="/campaign" activeClassName="active">
+        <Image src={cocktailImg} alt="Motive" />
+      </NavigationLink>
+      <NavigationLink exact to="/cocktails" activeClassName="active">
+        <Image src={shot} alt="Cocktails and Shots" />
+      </NavigationLink>
+      <NavigationLink exact to="/kritzelkopf" acrtiveClassName="active">
+        <Image src={portfolio} alt="The Man behind the Monster" />
+      </NavigationLink>
+    </Navigation>
   )
 }
 
-const Wrapper = styled.footer`
-  grid-area: footer;
+const Navigation = styled.nav`
   background-color: white;
-  display: grid;
-  grid-template-areas: 'product campaign cocktails doodleHead';
+  display: flex;
   align-items: center;
+  justify-content: space-evenly;
   margin: 0 auto;
   border-radius: 19px;
   width: var(--main-width);
-  height: 80px;
+  min-height: 80px;
 `
 
-const Product = styled.img`
-  margin-left: 10px;
-  grid-area: product;
-  height: 4rem;
-`
-
-const Motiv = styled.img`
-  margin-left: 10px;
-  grid-area: campaign;
-  height: 4rem;
-`
-
-const Cocktails = styled.img`
-  margin-left: 5px;
-  grid-area: cocktails;
+const Image = styled.img`
   height: 3.5rem;
+  width: 3.5rem;
+  object-fit: contain;
 `
 
-const DoodleHead = styled.img`
-  grid-area: doodleHead;
-  height: 4rem;
+const NavigationLink = styled(NavLink)`
+  &:hover {
+    background-color: none;
+    border-radius: 50%;
+    box-shadow: 5px 0px 2px 2px grey;
+  }
+
+  &.active {
+    background-color: none;
+    border-radius: 50%;
+    box-shadow: 5px 0px 2px 2px black;
+  }
 `
 
-export default Footer
+export default Nav

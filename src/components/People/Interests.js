@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Headline } from "./Profile";
+import styled from 'styled-components'
+import { Headline } from './Profile'
 
 function Interests() {
   return (
@@ -14,26 +14,25 @@ function Interests() {
         <List>Schreiben/Texten</List>
       </Ol>
     </Wrapper>
-  );
+  )
 }
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   background: white;
-  grid-area: interests;
   border-radius: var(--border-radius);
   padding: var(--main-padding);
-`;
+`
 
 export const List = styled.li`
   text-align: left;
-  font-family: "Inter", sans-serif;
-`;
+  font-family: 'Inter', sans-serif;
+`
 
 export const Ol = styled.ol`
   padding: 5px 0px 0px 35px;
   margin: 0;
-`;
+`
 
-export default Interests;
+export default Interests

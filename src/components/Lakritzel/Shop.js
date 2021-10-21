@@ -3,7 +3,7 @@ import { useState } from 'react'
 import StoryToShop from './StoryToShop'
 import OrderingForm from './OrderingForm'
 
-function Shop({ handleAddOrder }) {
+function Shop({ onAddOrder }) {
   const [flipToShop, setFlipToShop] = useState(false)
   function flipToShopButton() {
     setFlipToShop(!flipToShop)
@@ -12,15 +12,18 @@ function Shop({ handleAddOrder }) {
     <Container>
       <FlipCard flipToShop={flipToShop}>
         <FlipCardFront>
-          <StoryToShop />
-          <ButtonFront onClick={flipToShopButton}>Rette Lakritzel</ButtonFront>
+          <StoryToShop
+            flipToShop={flipToShop}
+            onButtonClick={flipToShopButton}
+          />
         </FlipCardFront>
 
         <FlipCardBack>
-          <OrderingForm onAddOrder={handleAddOrder} />
-          <ButtonBack onClick={flipToShopButton}>
-            <TextButtonSmall>ZURÜCK</TextButtonSmall>
-          </ButtonBack>
+          <OrderingForm
+            onAddOrder={onAddOrder}
+            onButtonClick={flipToShopButton}
+            flipToShop={flipToShop}
+          />
         </FlipCardBack>
       </FlipCard>
     </Container>
@@ -31,7 +34,7 @@ const Container = styled.div`
   margin: 0 auto;
   width: var(--main-width);
   border-radius: var(--border-radius);
-  height: 34rem;
+  height: auto;
   perspective: 1000px;
 `
 
@@ -68,48 +71,7 @@ const FlipCardBack = styled.section`
   position: absolute;
   border: 1px solid black;
   border-radius: var(--border-radius);
-`
-const ButtonFront = styled.button`
-  backface-visibility: hidden;
-  position: relative;
-  bottom: 20px;
-  left: 80px;
-  margin: 0 auto;
-  border: none;
-  background-color: black;
-  color: white;
-  width: 12rem;
-  height: 8rem;
-  font-size: 2rem;
-  border-radius: 15px;
-  box-shadow: 0px 5px 10px 5px grey;
-  &:hover {
-    border: 2px solid white;
-    box-shadow: 0px 20px 20px 10px black;
-  }
-`
-const ButtonBack = styled.button`
-  backface-visibility: hidden;
-  position: relative;
-  bottom: 50px;
-  left: 270px;
-  margin: 0 auto;
-  border: none;
-  background-color: black;
-  color: white;
-  width: 4.5rem;
-  height: 1rem;
-  font-size: 2rem;
-  border-radius: 15px;
-  box-shadow: 0px 5px 10px 5px grey;
-  &:hover {
-    border: 2px solid white;
-    box-shadow: 0px 20px 20px 10px black;
-  }
+  height: 34rem;
 `
 
-const TextButtonSmall = styled.p`
-  font-size: 0.7rem;
-  margin: 0 auto;
-`
 export default Shop

@@ -11,7 +11,8 @@ function Profile() {
 }
 
 const Wrapper = styled.div`
-  grid-area: profileArea;
+  margin: 0 auto;
+  width: var(--main-width);
   display: flex;
   flex-direction: column;
   justify-content: center;
