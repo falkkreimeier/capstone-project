@@ -5,26 +5,26 @@ import bottleImg from '../Lakritzel/Assets/painted-bottle.svg'
 import shot from '../Lakritzel/Assets/Pinnchen.png'
 import portfolio from '../Lakritzel/Assets/Portfolio.png'
 
-function Footer() {
+function Nav() {
   return (
-    <Wrapper>
-      <Navigation exact to="/" activeClassName="active">
+    <Navigation>
+      <NavigationLink exact to="/" activeClassName="active">
         <Image src={bottleImg} alt="Products" />
-      </Navigation>
-      <Navigation exact to="/campaign" activeClassName="active">
+      </NavigationLink>
+      <NavigationLink exact to="/campaign" activeClassName="active">
         <Image src={cocktailImg} alt="Motive" />
-      </Navigation>
-      <Navigation exact to="/cocktails" activeClassName="active">
+      </NavigationLink>
+      <NavigationLink exact to="/cocktails" activeClassName="active">
         <Image src={shot} alt="Cocktails and Shots" />
-      </Navigation>
-      <Navigation exact to="/kritzelkopf" acrtiveClassName="active">
+      </NavigationLink>
+      <NavigationLink exact to="/kritzelkopf" acrtiveClassName="active">
         <Image src={portfolio} alt="The Man behind the Monster" />
-      </Navigation>
-    </Wrapper>
+      </NavigationLink>
+    </Navigation>
   )
 }
 
-const Wrapper = styled.footer`
+const Navigation = styled.nav`
   background-color: white;
   display: flex;
   align-items: center;
@@ -41,7 +41,7 @@ const Image = styled.img`
   object-fit: contain;
 `
 
-const Navigation = styled(NavLink)`
+const NavigationLink = styled(NavLink)`
   &:hover {
     background-color: none;
     border-radius: 50%;
@@ -55,4 +55,4 @@ const Navigation = styled(NavLink)`
   }
 `
 
-export default Footer
+export default Nav
