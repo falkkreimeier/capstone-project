@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
-function StoryToShop() {
+function StoryToShop({ flipToShop, onButtonClick }) {
   return (
     <Wrapper>
       <Image src="./img/Rettemich.jpg"></Image>
@@ -9,6 +9,9 @@ function StoryToShop() {
         Dieser übergeschnapste Kritzelkopf hat mich über Nacht abgefüllt und in
         dieser kleinen Flasche verkorkt. Rette mich!
       </Text>
+      <ButtonFront flipToShop={flipToShop} onClick={onButtonClick}>
+        Rette Lakritzel
+      </ButtonFront>
     </Wrapper>
   )
 }
@@ -16,7 +19,7 @@ function StoryToShop() {
 const Wrapper = styled.section`
   background-color: white;
   width: var(--main-width);
-  height: 25rem;
+  height: auto;
   border-radius: var(--border-radius);
   margin: 0 auto;
   align-items: flex-start;
@@ -51,6 +54,28 @@ const Text = styled.p`
   margin: 0 0 20px 0;
   text-align: center;
   grid-area: text;
+`
+
+const ButtonFront = styled.button`
+  backface-visibility: hidden;
+  margin: 0 auto;
+  border: none;
+  background-color: black;
+  color: white;
+  width: 12rem;
+  height: 8rem;
+  font-size: 2rem;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px 5px grey;
+  &:hover {
+    border: 2px solid white;
+    box-shadow: 15px 15px 15px 8px grey;
+    ${({ flipToShop }) =>
+      flipToShop &&
+      css`
+        pointer-events: none;
+      `}
+  }
 `
 
 export default StoryToShop
