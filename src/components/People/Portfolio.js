@@ -26,7 +26,6 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   background: white;
-  grid-area: portfolio;
   border-radius: var(--border-radius);
   padding: var(--main-padding);
   min-width: var(--main-width);

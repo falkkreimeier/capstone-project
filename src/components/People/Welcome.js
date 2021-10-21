@@ -25,7 +25,6 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   background: white;
-  grid-area: welcome;
   border-radius: var(--border-radius);
   padding: var(--main-padding);
 `

@@ -3,9 +3,9 @@ import styled from 'styled-components'
 function Facts() {
   return (
     <Wrapper>
-      <Headline>Facts:</Headline>
+      <Headline>Fakten:</Headline>
       <Ol>
-        <List>40 Jahre jung</List>
+        <List>41 Jahre jung</List>
         <List>1,93m klein</List>
         <List>Hoffnungsloser Optimist</List>
         <List>Philantrop</List>
@@ -27,7 +27,6 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   background: white;
-  grid-area: facts;
   border-radius: var(--border-radius);
   padding: var(--main-padding);
 `

@@ -10,7 +10,6 @@ function Header() {
 }
 
 const Wrapper = styled.header`
-  grid-area: header;
   display: flex;
   justify-content: center;
   margin: 0 auto;

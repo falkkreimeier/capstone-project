@@ -13,7 +13,6 @@ function Profile() {
 const Wrapper = styled.div`
   margin: 0 auto;
   width: var(--main-width);
-  grid-area: profileArea;
   display: flex;
   flex-direction: column;
   justify-content: center;

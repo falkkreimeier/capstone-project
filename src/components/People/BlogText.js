@@ -23,7 +23,6 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   background: white;
-  grid-area: blogText;
   border-radius: var(--border-radius);
   padding: var(--main-padding);
 `
