@@ -4,12 +4,12 @@ import { Headline } from './Profile'
 function Welcome() {
   return (
     <Wrapper>
-      <Headline>Oh, ein Gast!</Headline>
+      <Headline>Programierer, Texter, Weltenretter!</Headline>
       <Text>
-        Hi, ich bin Falk aka Kritzelkopf und ich habe die Welt gerettet – vor
-        Lakritzel. Denn dieser übergeschnapste kleine Tropfen ist ein echter
-        Unruhestifter. Egal wo er auftaucht, versucht er die Menschen davon zu
-        überzeugen ihn zu Schlucken. <br /> <br />
+        und damit herzlich Willkommen! Ich bin Falk aka Kritzelkopf und ich habe
+        die Welt gerettet – vor Lakritzel. Denn dieser übergeschnapste kleine
+        Tropfen ist ein echter Unruhestifter. Egal wo er auftaucht, versucht er
+        die Menschen davon zu überzeugen ihn zu Schlucken. <br /> <br />
         Unheimlich süß, raffiniert salzig und köstlich nach Lakritz duftend,
         verführt er unschuldige Seelen um ihren Verstand zu rauben, sie auf
         Tischen tanzen zu lassen, und tiefgründige Gespräche über das Leben zu
