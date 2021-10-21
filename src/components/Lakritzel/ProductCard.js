@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components/macro'
 import { useState } from 'react'
-import { FaArrowCircleLeft } from 'react-icons/fa'
+import { FaArrowCircleLeft as ArrowLeft } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
 
 function ProductCard(props) {
@@ -39,7 +39,7 @@ function ProductCard(props) {
                 size: '30px',
               }}
             >
-              <FaArrowCircleLeft onClick={flipToDetailsButton} />
+              <ArrowLeft onClick={flipToDetailsButton} />
             </IconContext.Provider>
           </IconPosition>
         </FlipCardBack>
