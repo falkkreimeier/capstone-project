@@ -6,7 +6,7 @@ const GlobalStlyles = createGlobalStyle`
 :root {
     --border-radius: 19px;
     --main-width: 22rem;
-    --main-padding: 5px;
+    --main-padding: 10px;
     --color-fond: black;
     --main-font: "Inter", sans-serif;
     --main-Headline: 'Playfair Display', serif;
