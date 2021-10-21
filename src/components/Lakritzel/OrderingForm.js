@@ -1,12 +1,14 @@
 import styled, { css } from 'styled-components'
+import { FaArrowCircleLeft } from 'react-icons/fa'
+import { IconContext } from 'react-icons'
 
-function OrderingForm({ onAddOrder }) {
+function OrderingForm({ onAddOrder, flipToShop, onButtonClick }) {
   return (
     <Wrapper>
       <Headline>Rette mich, wer kann!</Headline>
       <Form onSubmit={event => handleOnClickButton(event)}>
         <InputContainer>
-          <Label>
+          <label>
             <HiddenLabelText>Vorname:</HiddenLabelText>
             <Vorname
               type="text"
@@ -15,10 +17,10 @@ function OrderingForm({ onAddOrder }) {
               maxlength="20"
               required
             />
-          </Label>
+          </label>
         </InputContainer>
         <InputContainer>
-          <Label>
+          <label>
             <HiddenLabelText>Nachname:</HiddenLabelText>
             <Nachnahme
               type="text"
@@ -27,11 +29,11 @@ function OrderingForm({ onAddOrder }) {
               maxlength="20"
               required
             />
-          </Label>
+          </label>
         </InputContainer>
 
         <InputContainer>
-          <Label>
+          <label>
             <HiddenLabelText>Straße:</HiddenLabelText>
             <Straße
               maxlength="20"
@@ -40,10 +42,10 @@ function OrderingForm({ onAddOrder }) {
               name="street"
               required
             />
-          </Label>
+          </label>
         </InputContainer>
         <InputContainer>
-          <Label>
+          <label>
             <HiddenLabelText>Postleitzahl:</HiddenLabelText>
             <Postleitzahl
               maxlength="20"
@@ -52,16 +54,16 @@ function OrderingForm({ onAddOrder }) {
               name="zipCode"
               required
             />
-          </Label>
+          </label>
         </InputContainer>
         <InputContainer>
-          <Label>
+          <label>
             <HiddenLabelText>Stadt:</HiddenLabelText>
             <Stadt maxlength="20" type="text" placeholder="Stadt" name="city" />
-          </Label>
+          </label>
         </InputContainer>
         <InputContainer>
-          <Label>
+          <label>
             <HiddenLabelText>eMail:</HiddenLabelText>
             <Mail
               maxlength="20"
@@ -70,10 +72,10 @@ function OrderingForm({ onAddOrder }) {
               name="email"
               required
             />
-          </Label>
+          </label>
         </InputContainer>
         <InputContainer>
-          <Label>
+          <label>
             <HiddenLabelText>Anzahl:</HiddenLabelText>
             <Amount
               maxlength="20"
@@ -82,10 +84,10 @@ function OrderingForm({ onAddOrder }) {
               name="quantity"
               required
             />
-          </Label>
+          </label>
         </InputContainer>
         <MessageContainer>
-          <Label>
+          <label>
             <HiddenLabelText>Nachricht:</HiddenLabelText>
             <Message
               type="text"
@@ -94,12 +96,22 @@ function OrderingForm({ onAddOrder }) {
               placeholder="Nachricht"
               name="message"
             />
-          </Label>
+          </label>
         </MessageContainer>
         <ButtonContainer>
           <ButtonOrder>Hol mich hier raus!</ButtonOrder>
         </ButtonContainer>
       </Form>
+      <IconPosition>
+        <IconContext.Provider
+          value={{
+            color: 'black',
+            size: '30px',
+          }}
+        >
+          <FaArrowCircleLeft flipToShop={flipToShop} onClick={onButtonClick} />
+        </IconContext.Provider>
+      </IconPosition>
     </Wrapper>
   )
 
@@ -139,7 +151,7 @@ const Wrapper = styled.section`
   border-radius: var(--border-radius);
   padding: 0px;
   background-color: white;
-  height: 33rem;
+  height: 34rem;
 `
 
 const Form = styled.form`
@@ -159,12 +171,9 @@ const Form = styled.form`
     'buttonOrder';
 `
 
-const Label = styled.label``
-
 const iconStyle = css`
   border: none;
   text-align: center;
-  width: 155px;
 `
 
 // Add HidenLabelText to hide the Label Text, to make it usable for screenreader
@@ -268,6 +277,11 @@ const ButtonOrder = styled.button`
     border: 2px solid white;
     box-shadow: 15px 15px 15px 8px grey;
   }
+`
+const IconPosition = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 30px;
 `
 
 export default OrderingForm
