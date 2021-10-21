@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { FaArrowCircleLeft } from 'react-icons/fa'
+import { FaArrowCircleLeft as ArrowLeft } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
 
 function OrderingForm({ onAddOrder, flipToShop, onButtonClick }) {
@@ -107,7 +107,7 @@ function OrderingForm({ onAddOrder, flipToShop, onButtonClick }) {
             size: '30px',
           }}
         >
-          <FaArrowCircleLeft flipToShop={flipToShop} onClick={onButtonClick} />
+          <ArrowLeft flipToShop={flipToShop} onClick={onButtonClick} />
         </IconContext.Provider>
       </IconPosition>
     </Wrapper>
