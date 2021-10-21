@@ -8,52 +8,42 @@ import portfolio from '../Lakritzel/Assets/Portfolio.png'
 function Footer() {
   return (
     <Wrapper>
-      <LinkButton exact to="/" activeClassName="active">
-        <Product src={bottleImg} alt="Products" />
-      </LinkButton>
-      <LinkButton exact to="/campaign" activeClassName="active">
-        <Motiv src={cocktailImg} alt="Motive" />
-      </LinkButton>
-      <LinkButton exact to="/cocktails" activeClassName="active">
-        <Cocktails src={shot} alt="Cocktails and Shots" />
-      </LinkButton>
-      <LinkButton exact to="/kritzelkopf" acrtiveClassName="active">
-        <DoodleHead src={portfolio} alt="The Man behind the Monster" />
-      </LinkButton>
+      <Navigation exact to="/" activeClassName="active">
+        <Image src={bottleImg} alt="Products" />
+      </Navigation>
+      <Navigation exact to="/campaign" activeClassName="active">
+        <Image src={cocktailImg} alt="Motive" />
+      </Navigation>
+      <Navigation exact to="/cocktails" activeClassName="active">
+        <Image src={shot} alt="Cocktails and Shots" />
+      </Navigation>
+      <Navigation exact to="/kritzelkopf" acrtiveClassName="active">
+        <Image src={portfolio} alt="The Man behind the Monster" />
+      </Navigation>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.footer`
-  grid-area: footer;
   background-color: white;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-areas: 'product campaign cocktails doodleHead';
+  display: flex;
   align-items: center;
-  justify-content: space-aroud;
+  justify-content: space-evenly;
   margin: 0 auto;
   border-radius: 19px;
   width: var(--main-width);
-  height: 90px;
+  min-height: 80px;
 `
 
-const Product = styled.img`
-  margin-top: 5px;
-  grid-area: product;
+const Image = styled.img`
   height: 3.5rem;
+  width: 3.5rem;
+  object-fit: contain;
 `
 
-const LinkButton = styled(NavLink)`
-  position: relative;
-  left: 8px;
-  top: 10px;
-  width: 70px;
-  height: 70px;
-
+const Navigation = styled(NavLink)`
   &:hover {
     background-color: none;
-    border: 1px solid grey;
     border-radius: 50%;
     box-shadow: 5px 0px 2px 2px grey;
   }
@@ -61,28 +51,8 @@ const LinkButton = styled(NavLink)`
   &.active {
     background-color: none;
     border-radius: 50%;
-    border: 1px solid grey;
     box-shadow: 5px 0px 2px 2px black;
   }
-`
-
-const Motiv = styled.img`
-  margin-left: 10px;
-  grid-area: campaign;
-  height: 4rem;
-`
-
-const Cocktails = styled.img`
-  position: relative;
-  top: 7px;
-  right: 8px;
-  grid-area: cocktails;
-  height: 3.5rem;
-`
-
-const DoodleHead = styled.img`
-  grid-area: doodleHead;
-  height: 4rem;
 `
 
 export default Footer
