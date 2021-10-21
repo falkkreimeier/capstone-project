@@ -27,12 +27,6 @@ const Wrapper = styled.section`
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  /* display: grid;
-  grid-template-rows: 0.1fr 0.2fr 0.5fr;
-  grid-template-areas:
-    'headline'
-    'image'
-    'text'; */
 `
 
 const Image = styled.img`
