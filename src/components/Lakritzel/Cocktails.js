@@ -34,6 +34,7 @@ const Headline = styled.h2`
 
 const InnerHeadline = styled.h4`
   font-family: var(--main-headline);
+  color: #58555a;
   margin: 0;
   margin-bottom: 5px;
 `
