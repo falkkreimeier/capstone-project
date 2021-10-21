@@ -32,6 +32,7 @@ const Wrapper = styled.div`
 `
 
 const Link = styled.a`
+  margin-bottom: 5px;
   width: 130px;
   text-decoration: none;
   border: 1px solid black;
