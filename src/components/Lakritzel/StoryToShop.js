@@ -3,11 +3,13 @@ import styled, { css } from 'styled-components'
 function StoryToShop({ flipToShop, onButtonClick }) {
   return (
     <Wrapper>
+      <Headline>HILFEEEE!!!!</Headline>
       <Image src="./img/Rettemich.jpg"></Image>
-      <Headline>Hilf mir!</Headline>
+
       <Text>
-        Dieser übergeschnapste Kritzelkopf hat mich über Nacht abgefüllt und in
-        dieser kleinen Flasche verkorkt. Rette mich!
+        Dieser verkorkste Kritzelkopf hat mich über Nacht abgefüllt und in
+        dieser kleinen Flasche verkorkt. Hol mich hier raus, ich bin auch
+        zuckersüß ... versprochen.
       </Text>
       <ButtonFront flipToShop={flipToShop} onClick={onButtonClick}>
         Rette Lakritzel
@@ -23,12 +25,14 @@ const Wrapper = styled.section`
   border-radius: var(--border-radius);
   margin: 0 auto;
   align-items: flex-start;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  /* display: grid;
   grid-template-rows: 0.1fr 0.2fr 0.5fr;
   grid-template-areas:
     'headline'
     'image'
-    'text';
+    'text'; */
 `
 
 const Image = styled.img`
@@ -57,13 +61,14 @@ const Text = styled.p`
 `
 
 const ButtonFront = styled.button`
+  margin-bottom: 5px;
   backface-visibility: hidden;
   margin: 0 auto;
   border: none;
   background-color: black;
   color: white;
   width: 12rem;
-  height: 8rem;
+  height: 6rem;
   font-size: 2rem;
   border-radius: 15px;
   box-shadow: 0px 5px 10px 5px grey;
