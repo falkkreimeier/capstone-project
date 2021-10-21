@@ -6,15 +6,14 @@ function Welcome() {
     <Wrapper>
       <Headline>Oh, ein Gast!</Headline>
       <Text>
-        Schön, Sie/Dich kennen zu lernen ... ähh... oder besser gesagt andersrum
-        – und damit Herzlich Willkommen! Ich bin Falk, Programmierer,
-        Werbetexter, Kaufmann und Schnaps-Dealer. Man könnte sagen, ich habe
-        viele Seiten, und das hier ist eine davon. <br /> <br />
-        Lakritzel.com, die App und diese Unterseite habe ich komplett
-        programmiert und bekritzelt ... textet. Das Zeichnen gehört leider nicht
-        zu meinen Stärken, aber dafür kenne ich viele talentierte Art-Directoren
-        und Illiustratoren. Wer jetzt denkt: "Sieht geil aus, will ich auch!"
-        Unten steht meine Telefonnummer – Einfach anrufen, ich mach das.
+        Hi, ich bin Falk aka Kritzelkopf und ich habe die Welt gerettet – vor
+        Lakritzel. Denn dieser übergeschnapste kleine Tropfen ist ein echter
+        Unruhestifter. Egal wo er auftaucht, versucht er die Menschen davon zu
+        überzeugen ihn zu Schlucken. <br /> <br />
+        Unheimlich süß, raffiniert salzig und köstlich nach Lakritz duftend,
+        verführt er jede unaufmerksame, unschuldige Seele um ihr den Verstand zu
+        rauben, sie auf Tischen tanzen zu lassen, und tiefgründige Gespräche
+        über das Leben zu führen.
       </Text>
     </Wrapper>
   )
