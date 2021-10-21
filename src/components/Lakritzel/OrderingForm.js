@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { FaArrowCircleLeft } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
 
@@ -10,7 +10,7 @@ function OrderingForm({ onAddOrder, flipToShop, onButtonClick }) {
         <InputContainer>
           <label>
             <HiddenLabelText>Vorname:</HiddenLabelText>
-            <Vorname
+            <Input
               type="text"
               name="firstName"
               placeholder="Vorname"
@@ -22,7 +22,7 @@ function OrderingForm({ onAddOrder, flipToShop, onButtonClick }) {
         <InputContainer>
           <label>
             <HiddenLabelText>Nachname:</HiddenLabelText>
-            <Nachnahme
+            <Input
               type="text"
               placeholder="Nachname"
               name="name"
@@ -35,7 +35,7 @@ function OrderingForm({ onAddOrder, flipToShop, onButtonClick }) {
         <InputContainer>
           <label>
             <HiddenLabelText>Straße:</HiddenLabelText>
-            <Straße
+            <Input
               maxlength="20"
               type="text"
               placeholder="Straße"
@@ -47,7 +47,7 @@ function OrderingForm({ onAddOrder, flipToShop, onButtonClick }) {
         <InputContainer>
           <label>
             <HiddenLabelText>Postleitzahl:</HiddenLabelText>
-            <Postleitzahl
+            <Input
               maxlength="20"
               type="number"
               placeholder="Postleitzahl"
@@ -59,13 +59,13 @@ function OrderingForm({ onAddOrder, flipToShop, onButtonClick }) {
         <InputContainer>
           <label>
             <HiddenLabelText>Stadt:</HiddenLabelText>
-            <Stadt maxlength="20" type="text" placeholder="Stadt" name="city" />
+            <Input maxlength="20" type="text" placeholder="Stadt" name="city" />
           </label>
         </InputContainer>
         <InputContainer>
           <label>
             <HiddenLabelText>eMail:</HiddenLabelText>
-            <Mail
+            <Input
               maxlength="20"
               type="email"
               placeholder="eMail Adresse"
@@ -77,7 +77,7 @@ function OrderingForm({ onAddOrder, flipToShop, onButtonClick }) {
         <InputContainer>
           <label>
             <HiddenLabelText>Anzahl:</HiddenLabelText>
-            <Amount
+            <Input
               maxlength="20"
               type="number"
               placeholder="0"
@@ -89,7 +89,7 @@ function OrderingForm({ onAddOrder, flipToShop, onButtonClick }) {
         <MessageContainer>
           <label>
             <HiddenLabelText>Nachricht:</HiddenLabelText>
-            <Message
+            <Input
               type="text"
               cols="10"
               rows="8"
@@ -98,9 +98,7 @@ function OrderingForm({ onAddOrder, flipToShop, onButtonClick }) {
             />
           </label>
         </MessageContainer>
-        <ButtonContainer>
-          <ButtonOrder>Hol mich hier raus!</ButtonOrder>
-        </ButtonContainer>
+        <ButtonOrder>Hol mich hier raus!</ButtonOrder>
       </Form>
       <IconPosition>
         <IconContext.Provider
@@ -155,25 +153,10 @@ const Wrapper = styled.section`
 `
 
 const Form = styled.form`
-  display: grid;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  grid-template-areas:
-    'headline'
-    'vorname'
-    'nachname'
-    'straße'
-    'postleitzahl'
-    'stadt'
-    'email'
-    'menge'
-    'message'
-    'buttonOrder';
-`
-
-const iconStyle = css`
-  border: none;
-  text-align: center;
 `
 
 // Add HidenLabelText to hide the Label Text, to make it usable for screenreader
@@ -203,39 +186,9 @@ const InputContainer = styled.div`
   text-align: center;
 `
 
-const Nachnahme = styled.input`
-  grid-area: nachname;
-  ${iconStyle}
-`
-
-const Vorname = styled.input`
-  grid-area: vorname;
-  ${iconStyle}
-`
-
-const Straße = styled.input`
-  grid-area: straße;
-  ${iconStyle}
-`
-
-const Postleitzahl = styled.input`
-  grid-area: postleitzahl;
-  ${iconStyle}
-`
-
-const Stadt = styled.input`
-  grid-area: stadt;
-  ${iconStyle}
-`
-
-const Mail = styled.input`
-  grid-area: mail;
-  ${iconStyle}
-`
-
-const Amount = styled.input`
-  grid-area: menge;
-  ${iconStyle}
+const Input = styled.input`
+  border: none;
+  text-align: center;
 `
 
 const MessageContainer = styled.div`
@@ -251,18 +204,7 @@ const MessageContainer = styled.div`
   text-align: center;
 `
 
-const Message = styled.input`
-  grid-area: message;
-  ${iconStyle}
-  height: 60px;
-`
-
-const ButtonContainer = styled.div`
-  display: flex;
-`
-
 const ButtonOrder = styled.button`
-  grid-area: buttonOrder;
   margin: 0 auto;
   margin-bottom: 15px;
   border: none;
