@@ -13,7 +13,8 @@ function Welcome() {
         Unheimlich süß, raffiniert salzig und köstlich nach Lakritz duftend,
         verführt er jede unaufmerksame, unschuldige Seele um ihr den Verstand zu
         rauben, sie auf Tischen tanzen zu lassen, und tiefgründige Gespräche
-        über das Leben zu führen.
+        über das Leben zu führen. Hütet euch vor dm dunklen Wahnsinn. Diese und
+        viele andere meiner vermeintlichen Heldentaten findet ihr hier.
       </Text>
     </Wrapper>
   )
