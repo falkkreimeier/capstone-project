@@ -17,7 +17,7 @@ function Nav() {
       <NavigationLink exact to="/cocktails" activeClassName="active">
         <Image src={shot} alt="Cocktails and Shots" />
       </NavigationLink>
-      <NavigationLink exact to="/kritzelkopf" acrtiveClassName="active">
+      <NavigationLink exact to="/kritzelkopf" activeClassName="active">
         <Image src={portfolio} alt="The Man behind the Monster" />
       </NavigationLink>
     </Navigation>
@@ -29,7 +29,7 @@ const Navigation = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin: 0 auto;
+  margin: 0 auto 8px auto;
   border-radius: 19px;
   width: var(--main-width);
   min-height: 80px;
