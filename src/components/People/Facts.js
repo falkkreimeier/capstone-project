@@ -26,7 +26,9 @@ function Facts() {
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  background: white;
+  background: black;
+  color: white;
+  border: 20px solid white;
   border-radius: var(--border-radius);
   padding: var(--main-padding);
 `
@@ -38,7 +40,7 @@ const Headline = styled.h2`
   font-size: 1.3rem;
   margin: 2px 0px 2px 0px;
   text-decoration: none;
-  color: #58555a;
+  color: white;
 `
 
 const List = styled.li`
