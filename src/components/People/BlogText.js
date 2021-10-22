@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Headline } from './Profile'
 import { Text } from './Welcome'
 
 function BlogText() {
@@ -22,7 +21,8 @@ function BlogText() {
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  background: white;
+  color: white;
+  border: 20px solid white;
   border-radius: var(--border-radius);
   padding: var(--main-padding);
 `
@@ -31,7 +31,7 @@ const LinkToBlog = styled.a`
   text-align: center;
   margin: 0 auto;
   width: 130px;
-  height: 30px;
+  height: auto;
   text-decoration: none;
   border: 1px solid black;
   padding: var(--main-padding);
@@ -46,6 +46,15 @@ const LinkToBlog = styled.a`
     box-shadow: 0px 0px 5px 5px grey;
     color: white;
   }
+`
+
+const Headline = styled.h2`
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  font-size: 1.2rem;
+  padding-bottom: 10px;
+  margin: 10px 0px 5px 0px;
+  color: white;
 `
 
 export default BlogText
