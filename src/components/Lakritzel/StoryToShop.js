@@ -7,11 +7,14 @@ function StoryToShop({ flipToShop, onButtonClick }) {
       <Image src="./img/Rettemich.jpg"></Image>
 
       <Text>
-        Dieser verkorkste Kritzelkopf hat mich über Nacht abgefüllt und in
-        dieser kleinen Flasche verkorkt. Hol mich hier raus, ich bin auch
-        zuckersüß ... versprochen.
+        Dieser verkorkste Kritzelkopf hat mich in dieser kleinen Flasche
+        verkorkt. Hol mich hier raus, ich fülle auch keinen ab, versprochen ...
       </Text>
-      <ButtonFront flipToShop={flipToShop} onClick={onButtonClick}>
+      <ButtonFront
+        disabled={flipToShop}
+        flipToShop={flipToShop}
+        onClick={onButtonClick}
+      >
         Rette Lakritzel
       </ButtonFront>
     </Wrapper>
@@ -46,15 +49,18 @@ const Headline = styled.h2`
 `
 
 const Text = styled.p`
-  font-family: Ventana;
-  font-size: 1.5rem;
+  font-family: var(--main-font);
+  font-size: 1.2rem;
   width: 350px;
   margin: 0 0 20px 0;
+  padding: 0 30px;
   text-align: center;
   grid-area: text;
 `
 
 const ButtonFront = styled.button`
+  font-family: Ventana;
+  letter-spacing: 2px;
   margin-bottom: 5px;
   backface-visibility: hidden;
   margin: 0 auto;
@@ -62,7 +68,7 @@ const ButtonFront = styled.button`
   background-color: black;
   color: white;
   width: 12rem;
-  height: 6rem;
+  height: 4.5rem;
   font-size: 2rem;
   border-radius: 15px;
   box-shadow: 0px 5px 10px 5px grey;
