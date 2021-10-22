@@ -33,19 +33,25 @@
       "mixedDrinks": "Shot",
       "name": "Wahnsinniger Bayleys",
       "ingredients": ["Lakritzel, Bayleys"],
-      "preparation": "Bayleys und Lakritzel zu gleichen Teilen in ein Pinnchen"
+      "preparation": "Gefährlich süße Mischung. 4cl Glas in den Verhältnissen: 30/70, 50/50 oder 70/30."
     },
     {
       "mixedDrinks": "Cocktail",
       "name": "Wahnsinniger Caipirinha",
       "ingredients": ["Lakritzel, Pitu, Limetten, Limettensaft, Rohzucker"],
-      "preparation": "1 Limette in vier Teile schnneiden und mit braunem Rohrzucker zerstampfen. 4cl Limettensaft hinzugeben, den Rest mit crushed Ice auffüllen und 2 cl Lakritzel drauf gießen."
+      "preparation": "1 Limette in braunem Rohrzucker zerstampfen. 4cl Limettensaft, Crushed Ice und die Krönung 2cl Lakritzel."
     },
     {
       "mixedDrinks": "Shot",
       "name": "Wahnsinniger B52",
       "ingredients": ["Lakritzel, Bayleys, Ceantreau, Kalua, Strohrum"],
-      "preparation": "Lakritzel, Bayleys, Ceantreau oder Kalua zu gleichen Teilen in ein 4cl Pinnchen, ein Teelöffel Strohrum obendrauf, anzünden, nach 1,30 Minuten auspusten und dann mit einem Strohhalm in einem Zug von unten nach oben trinken."
+      "preparation": "Lakritzel, Bayleys, Ceantreau oder Kalua zu gleichen Teilen in ein 4cl Pinnchen, ein Teelöffel Strohrum drauf und anzünden! Vorsicht heiß: Nur mit Strohalm trinken."
+    },
+    {
+      "mixedDrinks": "Cocktail",
+      "name": "Wahnsinniger 43 mit Milch",
+      "ingredients": ["Lakritzel, 43er, Schokoladensirup, Milch"],
+      "preparation": "2cl Lakritzel, 2cl 43er, 6cl Milch und Schokosirup."
     }
   ]
 }
