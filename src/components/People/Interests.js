@@ -13,6 +13,15 @@ function Interests() {
         <List>Hanteln schubsen</List>
         <List>Schreiben/Texten</List>
       </Ol>
+      <Headline>Fähigkeiten</Headline>
+      <Ol>
+        <List>Semantisches HTML</List>
+        <List>Java Script</List>
+        <List>CSS</List>
+        <List>React</List>
+        <List>Werbetexter</List>
+        <List>Kaufmann mit Führungserfahrung </List>
+      </Ol>
     </Wrapper>
   )
 }
