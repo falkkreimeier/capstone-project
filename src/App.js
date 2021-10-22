@@ -70,11 +70,12 @@ const Wrapper = styled.section`
 `
 
 const Main = styled.main`
+  border-radius: var(--border-radius);
   display: flex;
   flex-direction: column;
   gap: 5px;
   overflow: auto;
-  min-height: 400px;
+  flex: 1;
 `
 
 export default App
