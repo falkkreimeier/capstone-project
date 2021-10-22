@@ -10,6 +10,7 @@ const GlobalStlyles = createGlobalStyle`
     --color-fond: black;
     --main-font: "Inter", sans-serif;
     --main-Headline: 'Playfair Display', serif;
+    --kritzel-Font: 'Ventana';
 } 
 @font-face {
     font-family: Ventana;
@@ -22,10 +23,16 @@ html {
 
 * {
     box-sizing: inherit;
+    
+}
+
+p {
+    line-height: 1.5;
 }
 
 body {
     background-color: black;
+    margin: 0;
 }
 
 h2 {
