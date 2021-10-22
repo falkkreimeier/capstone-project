@@ -15,7 +15,7 @@ const Wrapper = styled.a`
   align-items: center;
   background: white;
   border-radius: var(--border-radius);
-  min-width: var(--main-width);
+  min-width: auto;
   padding: 10px;
   &:hover {
     background: #d4d4d4;
@@ -23,7 +23,7 @@ const Wrapper = styled.a`
 `
 const Img = styled.img`
   position: sticky;
-  height: 2rem;
+  height: 1.9rem;
 `
 
 export default linkedIn

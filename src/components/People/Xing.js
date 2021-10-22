@@ -11,7 +11,7 @@ function Xing() {
 
 export const Img = styled.img`
   position: sticky;
-  height: 3rem;
+  height: 2.5rem;
 `
 
 const Wrapper = styled.a`
@@ -21,7 +21,7 @@ const Wrapper = styled.a`
   background: white;
 
   border-radius: var(--border-radius);
-  min-width: var(--main-width);
+  min-width: auto;
   padding: 10px;
   &:hover {
     background: #d4d4d4;

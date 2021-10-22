@@ -21,7 +21,7 @@ function Portfolio() {
 
 const Wrapper = styled.div`
   grid-area: portfolio;
-  height: 200px;
+  height: 2200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,7 +50,7 @@ const Link = styled.a`
 `
 
 const Image = styled.img`
-  max-height: 5rem;
+  max-height: 10rem;
   margin: 0px 0px 15px 0px;
 `
 
