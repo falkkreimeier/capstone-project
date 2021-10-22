@@ -80,7 +80,7 @@ function OrderingForm({ onAddOrder, flipToShop, onButtonClick }) {
             <Input
               maxlength="20"
               type="number"
-              placeholder="0"
+              placeholder="Menge"
               name="quantity"
               required
             />
@@ -149,7 +149,7 @@ const Wrapper = styled.section`
   border-radius: var(--border-radius);
   padding: 0px;
   background-color: white;
-  height: 34rem;
+  height: auto;
 `
 
 const Form = styled.form`
@@ -205,6 +205,8 @@ const MessageContainer = styled.div`
 `
 
 const ButtonOrder = styled.button`
+  font-family: Ventana;
+  letter-spacing: 2px;
   margin: 0 auto;
   margin-bottom: 15px;
   border: none;
@@ -212,7 +214,7 @@ const ButtonOrder = styled.button`
   color: white;
   width: 11rem;
   height: 3rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
   border-radius: var(--border-radius);
   box-shadow: 0px 5px 10px 5px grey;
   &:hover {
@@ -223,7 +225,7 @@ const ButtonOrder = styled.button`
 const IconPosition = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin-right: 30px;
+  margin: 0 30px 20px 0;
 `
 
 export default OrderingForm
