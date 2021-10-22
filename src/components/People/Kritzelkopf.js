@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import Profile from './Profile'
 import Welcome from './Welcome'
 import Interests from './Interests'
-import Skills from './Skills'
 import Facts from './Facts'
 import Portfolio from './Portfolio'
 import Xing from './Xing'
@@ -16,13 +15,14 @@ function Kritzelkopf() {
       <Profile />
       <Welcome />
       <Interests />
-      <Skills />
       <Facts />
       <Portfolio />
-      <Xing />
-      <Github />
-      <LinkedIn />
       <BlogText />
+      <SoMeContainer>
+        <Xing />
+        <Github />
+        <LinkedIn />
+      </SoMeContainer>
     </Container>
   )
 }
@@ -33,24 +33,17 @@ const Container = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  /* display: grid;
-  grid-template-areas:
-    'head'
-    'profileArea'
-    'welcome'
-    'interests'
-    'skills'
-    'portfolio'
-    'facts'
-    'xing'
-    'github'
-    'linkedIn'
-    'blogText'
-    'footer'; */
   text-align: center;
   font-family: 'PT Serif', serif;
   width: var(--main-width);
   grid-gap: 5px;
+`
+
+const SoMeContainer = styled.div`
+  display: flex;
+  width: var(--main-width);
+  gap: 5px;
+  object-fit: contain;
 `
 
 export default Kritzelkopf
