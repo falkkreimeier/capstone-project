@@ -49,7 +49,7 @@ function ProductCard(props) {
 }
 
 const Container = styled.div`
-  margin: 0 auto;
+  margin: 2px auto 2px auto;
   border-radius: var(--border-radius);
   width: var(--main-width);
   height: 19rem;
@@ -175,7 +175,7 @@ const List = styled.li`
 const IconPosition = styled.div`
   position: relative;
   right: 40px;
-  top: 50px;
+  top: 60px;
 `
 
 export default ProductCard
