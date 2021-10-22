@@ -9,10 +9,10 @@ describe('render Facts', () => {
     expect(headline).toHaveLength(2)
   })
 
-  it('shows shows all Text', () => {
+  it('shows all Text', () => {
     render(<Facts />)
 
-    const text = screen.getByText('40 Jahre jung')
+    const text = screen.getByText('41 Jahre jung')
     expect(text).toBeInTheDocument()
 
     const text2 = screen.getByText('1,93m klein')

@@ -36,10 +36,10 @@ describe('render ProductCard', () => {
     expect(Price).toBeInTheDocument()
   })
 
-  it('renders two buttons', () => {
+  it('renders button', () => {
     render(<ProductCard />)
 
-    const buttons = screen.getAllByRole('button')
-    expect(buttons).toHaveLength(2)
+    const buttons = screen.getByRole('button')
+    expect(buttons).toBeInTheDocument()
   })
 })

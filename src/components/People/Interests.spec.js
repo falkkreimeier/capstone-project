@@ -5,8 +5,8 @@ describe('render Interests', () => {
   it('shows Headline', () => {
     render(<Interests />)
 
-    const headline = screen.getByRole('heading')
-    expect(headline).toBeInTheDocument()
+    const headline = screen.getAllByRole('heading')
+    expect(headline).toHaveLength(2)
   })
 
   it('shows shows all Text', () => {

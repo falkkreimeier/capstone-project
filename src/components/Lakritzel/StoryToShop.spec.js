@@ -16,11 +16,11 @@ describe('StoryToShop', () => {
     expect(headline).toBeInTheDocument()
   })
 
-  it('shows Headline', () => {
+  it('shows text', () => {
     render(<StoryToShop />)
 
     const text = screen.getByText(
-      'Dieser übergeschnapste Kritzelkopf hat mich über Nacht abgefüllt und in dieser kleinen Flasche verkorkt. Rette mich!'
+      'Dieser verkorkste Kritzelkopf hat mich in dieser kleinen Flasche verkorkt. Hol mich hier raus, ich fülle auch keinen ab, versprochen ...'
     )
     expect(text).toBeInTheDocument()
   })

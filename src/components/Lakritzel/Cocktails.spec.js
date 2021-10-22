@@ -5,14 +5,13 @@ describe('Cocktails', () => {
   it('shows all Text', () => {
     render(
       <Cocktails
-        mixed="Shot"
         name="Wahnsinniger Bayleys"
         ingredients="Lakritzel, Bayleys"
         preparation="Bayleys und Lakritzel zu gleichen Teilen in ein Pinnchen"
       />
     )
 
-    const text = screen.getByText('Shot Wahnsinniger Bayleys')
+    const text = screen.getByText('Wahnsinniger Bayleys')
     expect(text).toBeInTheDocument()
 
     const text2 = screen.getByText('Lakritzel, Bayleys')

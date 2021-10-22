@@ -19,10 +19,10 @@ describe('render Portfolio', () => {
     expect(headline).toBeInTheDocument()
   })
 
-  it('renders a button', () => {
+  it('renders Link', () => {
     render(<Portfolio />)
 
-    const buttonEl = screen.getByRole('button')
+    const buttonEl = screen.getByText('Portfolio')
     expect(buttonEl).toBeInTheDocument()
   })
 })
