@@ -5,23 +5,23 @@ function Interests() {
   return (
     <Wrapper>
       <Headline>Interessen</Headline>
-      <Ol>
-        <List>Programmieren</List>
-        <List>Bücher (Fantasy)</List>
-        <List>Gaming</List>
-        <List>Neue Dinge erfinden, z.B. Lakritzel</List>
-        <List>Hanteln schubsen</List>
-        <List>Schreiben/Texten</List>
-      </Ol>
+      <List>
+        <ListItem>Programmieren</ListItem>
+        <ListItem>Bücher (Fantasy)</ListItem>
+        <ListItem>Gaming</ListItem>
+        <ListItem>Neue Dinge erfinden, z.B. Lakritzel</ListItem>
+        <ListItem>Hanteln schubsen</ListItem>
+        <ListItem>Schreiben/Texten</ListItem>
+      </List>
       <Headline>Fähigkeiten</Headline>
-      <Ol>
-        <List>Semantisches HTML</List>
-        <List>Java Script</List>
-        <List>CSS</List>
-        <List>React</List>
-        <List>Werbetexter</List>
-        <List>Kaufmann mit Führungserfahrung </List>
-      </Ol>
+      <List>
+        <ListItem>Semantisches HTML</ListItem>
+        <ListItem>Java Script</ListItem>
+        <ListItem>CSS</ListItem>
+        <ListItem>React</ListItem>
+        <ListItem>Werbetexter</ListItem>
+        <ListItem>Kaufmann mit Führungserfahrung </ListItem>
+      </List>
     </Wrapper>
   )
 }
@@ -34,12 +34,12 @@ const Wrapper = styled.div`
   padding: var(--main-padding);
 `
 
-export const List = styled.li`
+export const ListItem = styled.li`
   text-align: left;
   font-family: 'Inter', sans-serif;
 `
 
-export const Ol = styled.ol`
+export const List = styled.ol`
   padding: 5px 0px 0px 35px;
   margin: 0;
 `
