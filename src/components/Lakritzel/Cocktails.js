@@ -27,9 +27,6 @@ const Wrapper = styled.section`
     border: 20px solid white;
     color: white;
   }
-  h4:nth-child(3n, 4n) {
-    color: white;
-  }
 `
 
 const Headline = styled.h2`

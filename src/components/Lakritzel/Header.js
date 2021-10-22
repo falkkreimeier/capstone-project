@@ -16,7 +16,6 @@ const Wrapper = styled.header`
   border-radius: 19px;
   background-color: white;
   width: var(--main-width);
-  height: auto;
 `
 
 const Image = styled.img`
