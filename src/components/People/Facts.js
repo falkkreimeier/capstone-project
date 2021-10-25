@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import klecks from '../Lakritzel/Assets/Kleckse_clean.jpg'
 
 function Facts() {
   return (
@@ -24,11 +25,15 @@ function Facts() {
 }
 
 const Wrapper = styled.div`
+  min-height: 22rem;
+  background-image: url(${klecks});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 21rem;
+  background-color: white;
   display: flex;
   flex-direction: column;
-  background: black;
   color: white;
-  border: 20px solid white;
   border-radius: var(--border-radius);
   padding: var(--main-padding);
 `
@@ -38,7 +43,6 @@ const Headline = styled.h2`
   font-weight: 600;
   text-align: center;
   font-size: 1.3rem;
-  margin: 2px 0px 2px 0px;
   text-decoration: none;
   color: white;
 `
@@ -49,7 +53,7 @@ const List = styled.li`
 `
 
 const Ol = styled.ol`
-  margin: 0 0 10px 0;
+  margin: 0 0 -20px 0;
 `
 
 export default Facts
