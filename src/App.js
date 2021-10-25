@@ -68,7 +68,8 @@ function App({ data }) {
 }
 
 const Wrapper = styled.section`
-  max-height: 100vh;
+  height: 100vh;
+  max-height: 963px;
   display: flex;
   flex-direction: column;
   gap: 5px;
