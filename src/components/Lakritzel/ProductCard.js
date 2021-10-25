@@ -19,14 +19,14 @@ function ProductCard(props) {
             flipToDetails={flipToDetails}
             onClick={flipToDetailsButton}
           >
-            Was ist da drin?!
+            Inhalt
           </ButtonFront>
         </FlipCardFront>
 
         <FlipCardBack>
           <Logo src={props.crazy} alt="Lakritzel" />
           <Text>{props.description}</Text>
-          <Headline>Wahnsinniger Inhalt</Headline>
+          <Headline>Wahnsinnig</Headline>
           <Details>
             <List>{props.ingredients}</List>
             <List>{props.alcohol}</List>
