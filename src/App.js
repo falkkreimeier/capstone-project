@@ -1,4 +1,5 @@
 import Header from './components/Lakritzel/Header'
+import AgeGate from './components/Lakritzel/AgeGate'
 import ProductCard from './components/Lakritzel/ProductCard'
 import Shop from './components/Lakritzel/Shop'
 import CampaignCard from './components/Lakritzel/CampaignCard'
@@ -9,12 +10,17 @@ import styled from 'styled-components/macro'
 import { Switch, Route } from 'react-router-dom'
 import GlobalStlyles from './GlobalStyles'
 import useOrder from './hook/useOrder'
+import AgeFail from './components/Lakritzel/AgeFail'
 
 function App({ data }) {
   const { handleAddOrder } = useOrder()
 
   return (
     <Wrapper>
+      <Route exact path="/agefail">
+        <AgeFail />
+      </Route>
+      <AgeGate onButtonClick={ProductCard} />
       <GlobalStlyles />
       <Header />
       <Main>
