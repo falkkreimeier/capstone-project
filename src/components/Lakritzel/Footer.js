@@ -1,24 +1,53 @@
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
-import cocktailImg from '../Lakritzel/Assets/Logo.svg'
-import bottleImg from '../Lakritzel/Assets/painted-bottle.svg'
-import shot from '../Lakritzel/Assets/Pinnchen.png'
-import portfolio from '../Lakritzel/Assets/Portfolio.png'
+import { FaShoppingCart as Shop } from 'react-icons/fa'
+import { CgProfile as Profile } from 'react-icons/cg'
+import { AiFillPicture as Picture } from 'react-icons/ai'
+import { IconContext } from 'react-icons'
+import { FaCocktail as Cocktail } from 'react-icons/fa'
 
 function Nav() {
   return (
     <Navigation>
       <NavigationLink exact to="/" activeClassName="active">
-        <Image src={bottleImg} alt="Products" />
+        <IconContext.Provider
+          value={{
+            color: 'black',
+            size: '25px',
+          }}
+        >
+          <Shop />
+        </IconContext.Provider>
       </NavigationLink>
       <NavigationLink exact to="/campaign" activeClassName="active">
-        <Image src={cocktailImg} alt="Motive" />
+        <IconContext.Provider
+          value={{
+            color: 'black',
+            size: '25px',
+          }}
+        >
+          <Picture />
+        </IconContext.Provider>
       </NavigationLink>
       <NavigationLink exact to="/cocktails" activeClassName="active">
-        <Image src={shot} alt="Cocktails and Shots" />
+        <IconContext.Provider
+          value={{
+            color: 'black',
+            size: '25px',
+          }}
+        >
+          <Cocktail />
+        </IconContext.Provider>
       </NavigationLink>
       <NavigationLink exact to="/kritzelkopf" activeClassName="active">
-        <Image src={portfolio} alt="The Man behind the Monster" />
+        <IconContext.Provider
+          value={{
+            color: 'black',
+            size: '25px',
+          }}
+        >
+          <Profile />
+        </IconContext.Provider>
       </NavigationLink>
     </Navigation>
   )
@@ -32,13 +61,7 @@ const Navigation = styled.nav`
   margin: 0 auto 8px auto;
   border-radius: 19px;
   width: var(--main-width);
-  min-height: 80px;
-`
-
-const Image = styled.img`
-  height: 3.5rem;
-  width: 3.5rem;
-  object-fit: contain;
+  min-height: 40px;
 `
 
 const NavigationLink = styled(NavLink)`
