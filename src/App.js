@@ -2,8 +2,8 @@ import Header from './components/Lakritzel/Header'
 import AgeGate from './components/Lakritzel/AgeGate'
 import ProductCard from './components/Lakritzel/ProductCard'
 import Shop from './components/Lakritzel/Shop'
+import Nav from './components/Lakritzel/Nav'
 import CampaignCard from './components/Lakritzel/CampaignCard'
-import Footer from './components/Lakritzel/Footer'
 import Cocktails from './components/Lakritzel/Cocktails'
 import Kritzelkopf from './components/People/Kritzelkopf'
 import styled from 'styled-components/macro'
@@ -62,7 +62,7 @@ function App({ data }) {
           </Route>
         </Switch>
       </Main>
-      <Footer />
+      <Nav />
     </Wrapper>
   )
 }
@@ -76,6 +76,7 @@ const Wrapper = styled.section`
 `
 
 const Main = styled.main`
+  margin: 84px auto 56px auto;
   border-radius: var(--border-radius);
   display: flex;
   flex-direction: column;
