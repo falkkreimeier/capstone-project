@@ -10,7 +10,8 @@ function Header() {
 }
 
 const Wrapper = styled.header`
-  margin: 8px auto 1px auto;
+  position: fixed;
+  left: 36.5%;
   display: flex;
   justify-content: center;
   border-radius: 19px;
