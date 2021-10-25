@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import AgeFail from './AgeFail'
+import AgeFail from './WrongAgePicture'
 
 describe('AgeFail', () => {
   it('shows Image', () => {

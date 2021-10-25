@@ -1,10 +1,10 @@
 import styled from 'styled-components'
-import Logo from './Assets/Logo-lettering.jpg'
+import logo from './Assets/Logo_Claim_Lakritzel.png'
 
 function Header() {
   return (
     <Wrapper>
-      <Image src={Logo} alt="Lakritzel App" />
+      <Image src={logo} alt="Lakritzel App" />
     </Wrapper>
   )
 }
@@ -20,7 +20,7 @@ const Wrapper = styled.header`
 
 const Image = styled.img`
   margin: 0 auto;
-  height: 5.5rem;
+  height: 5rem;
 `
 
 export default Header

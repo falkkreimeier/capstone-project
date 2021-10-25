@@ -1,5 +1,5 @@
 import React from 'react'
-import AgeFail from './AgeFail'
+import AgeFail from './WrongAgePicture'
 
 export default {
   title: 'component/AgeFail',

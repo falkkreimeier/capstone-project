@@ -10,17 +10,17 @@ import styled from 'styled-components/macro'
 import { Switch, Route } from 'react-router-dom'
 import GlobalStlyles from './GlobalStyles'
 import useOrder from './hook/useOrder'
-import WrongAgePicture from './components/Lakritzel/AgeFail'
+import WrongAgePicture from './components/Lakritzel/WrongAgePicture'
 
 function App({ data }) {
   const { handleAddOrder } = useOrder()
 
   return (
     <Wrapper>
+      <AgeGate />
       <Route exact path="/agefail">
         <WrongAgePicture />
       </Route>
-      <AgeGate />
       <GlobalStlyles />
       <Header />
       <Main>
@@ -68,8 +68,7 @@ function App({ data }) {
 }
 
 const Wrapper = styled.section`
-  height: 100vh;
-  max-height: 920px;
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 5px;

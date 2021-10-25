@@ -12,16 +12,15 @@ function WrongAgePicture() {
 }
 
 const Wrapper = styled.section`
-  position: absolute;
   background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  background-color: white;
-  height: 100%;
+  height: 100vh;
   width: 100%;
-  z-index: 100;
+  position: absolute;
+  z-index: 50;
   animation-duration: 1s;
   animation-name: fallDown;
   &.active {
