@@ -54,6 +54,9 @@ function Nav() {
 }
 
 const Navigation = styled.nav`
+  position: fixed;
+  left: 36.5%;
+  top: 92%;
   background-color: white;
   display: flex;
   align-items: center;
