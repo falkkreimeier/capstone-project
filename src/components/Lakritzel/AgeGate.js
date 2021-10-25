@@ -1,31 +1,32 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import styled, { css } from 'styled-components'
-import Logo from './Assets/Logo-lettering.jpg'
-import Crazy from './Assets/Übergeschnapst.jpg'
+import logo from './Assets/Logo-lettering.jpg'
+import crazy from './Assets/Übergeschnapst.jpg'
 
 function AgeGate() {
-  const [startWebsite, setStartWebsite] = useState(false)
-  function startWebsiteButton() {
-    setStartWebsite(true)
-  }
+  const [ageVerification, setAgeVerification] = useState(false)
+
   return (
-    <Wrapper startWebsite={startWebsite}>
+    <Wrapper ageVerification={ageVerification}>
       <CardContainer>
-        <LogoImg src={Logo} alt="Lakritzel Logo" activeClassName="active" />
+        <LogoImg src={logo} alt="Lakritzel Logo" activeClassName="active" />
         <Text>
           Um Zugang zu dieser Seite zu bekommen, musst du mindestens 18 Jahre
           alt sein!
         </Text>
-        <Button onClick={startWebsiteButton} type="button">
+        <Button
+          onClick={() => setAgeVerification(!ageVerification)}
+          type="button"
+        >
           Ich bin schon über 18
         </Button>
-        <LinkButton>
+        <LinkWrapper>
           <LinkTo exact to="/agefail">
             Ich bin noch keine 18
           </LinkTo>
-        </LinkButton>
-        <Image src={Crazy} />
+        </LinkWrapper>
+        <Image src={crazy} alt="" />
       </CardContainer>
     </Wrapper>
   )
@@ -41,8 +42,8 @@ const Wrapper = styled.section`
   height: 100vh;
   width: 100%;
   z-index: 50;
-  ${({ startWebsite }) =>
-    startWebsite &&
+  ${({ ageVerification }) =>
+    ageVerification &&
     css`
  animation-duration: 3s;
  animation-name: fadeOut;
@@ -91,7 +92,7 @@ const Button = styled.button`
   height: 1.5rem;
   color: white;
 `
-const LinkButton = styled.div`
+const LinkWrapper = styled.div`
   text-align: center;
   border-radius: 19px;
   background-color: black;

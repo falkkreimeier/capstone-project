@@ -10,7 +10,7 @@ import styled from 'styled-components/macro'
 import { Switch, Route } from 'react-router-dom'
 import GlobalStlyles from './GlobalStyles'
 import useOrder from './hook/useOrder'
-import AgeFail from './components/Lakritzel/AgeFail'
+import WrongAgePicture from './components/Lakritzel/AgeFail'
 
 function App({ data }) {
   const { handleAddOrder } = useOrder()
@@ -18,9 +18,9 @@ function App({ data }) {
   return (
     <Wrapper>
       <Route exact path="/agefail">
-        <AgeFail />
+        <WrongAgePicture />
       </Route>
-      <AgeGate onButtonClick={ProductCard} />
+      <AgeGate />
       <GlobalStlyles />
       <Header />
       <Main>

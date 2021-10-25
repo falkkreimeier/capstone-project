@@ -1,24 +1,25 @@
-import styled from 'styled-components'
-import Shorty from './Assets/shorty-nohl.jpg'
+import styled from 'styled-components/macro'
+import shorty from './Assets/shorty-nohl.jpg'
 
-function AgeFail() {
+function WrongAgePicture() {
   return (
     <Wrapper>
       <Headline>Oh, nein!</Headline>
-      <Subline> Du bist noch zu klein.</Subline>
-      <Image src={Shorty} alt="" />
+      <SublineHeadline> Du bist noch zu klein.</SublineHeadline>
+      <Image src={shorty} alt="" />
     </Wrapper>
   )
 }
 
 const Wrapper = styled.section`
+  position: absolute;
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  position: absolute;
   background-color: white;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   z-index: 100;
   animation-duration: 1s;
@@ -48,11 +49,11 @@ const Headline = styled.h2`
   z-index: 5;
 `
 
-const Subline = styled.h2`
+const SublineHeadline = styled.h2`
   margin-top: -5px;
   font-family: Ventana;
   font-size: 2rem;
   z-index: 5;
 `
 
-export default AgeFail
+export default WrongAgePicture
