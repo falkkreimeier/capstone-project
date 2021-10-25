@@ -55,8 +55,4 @@ const Subline = styled.h2`
   z-index: 5;
 `
 
-const Text = styled.p`
-  font-family: var(--main-fond);
-`
-
 export default AgeFail
