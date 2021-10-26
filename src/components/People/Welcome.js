@@ -4,7 +4,7 @@ import klecks from '../Lakritzel/Assets/Kleckse_clean.jpg'
 function Welcome() {
   return (
     <Wrapper>
-      <Headline>Der Mann hinter dem Monster</Headline>
+      <Headline>Der Mensch hinter dem Monster</Headline>
       <Text>
         Hi, ich bin Falk, Programmierer, Werbexter und Weltenretter, denn ich
         habe Lakritzel gefangen. <br /> <br />
