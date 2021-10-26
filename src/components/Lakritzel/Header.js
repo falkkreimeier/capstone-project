@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import logo from './Assets/Logo_Claim_Lakritzel.png'
+import logo from './Assets/Logo_Claim_Lakritzel.jpg'
 
 function Header() {
   return (
@@ -11,7 +11,10 @@ function Header() {
 
 const Wrapper = styled.header`
   position: fixed;
-  left: 36.5%;
+  left: 50%;
+  transform: translate(-50%);
+  top: 8px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   border-radius: 19px;
