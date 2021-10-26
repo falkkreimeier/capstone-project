@@ -17,12 +17,8 @@ function AgeGate({ onAgeButtonClick, ageVerified }) {
           Um Zugang zu dieser Seite zu bekommen, musst du mindestens 18 Jahre
           alt sein!
         </Text>
-        <Button onClick={over18Handler} type="button">
-          Ich bin schon über 18
-        </Button>
-        <Button onClick={under18Handler} type="button">
-          Ich bin noch keine 18
-        </Button>
+        <Button onClick={over18Handler}>Ich bin schon über 18</Button>
+        <Button onClick={under18Handler}>Ich bin noch keine 18</Button>
         <Image src={crazy} alt="" />
       </CardContainer>
     </Wrapper>
@@ -42,25 +38,26 @@ const Wrapper = styled.section`
   ${({ ageVerified }) =>
     ageVerified &&
     css`
- animation-duration: 3s;
- animation-name: fadeOut;
- animation-fill-mode: forwards;
- @keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-        visibility: hidden;
-    }
+      animation-duration: 3s;
+      animation-name: fallDown;
+      animation-fill-mode: forwards;
+      @keyframes fallDown {
+        from {
+          transform: translatey(0px);
+        }
 
- `}
+        to {
+          transform: translateY(-800px);
+          visibility: invisible;
+        }
+      }
+    `}
 `
 
 const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
-
+  border-radius: var(--border-radius);
   align-items: center;
   margin: 0 auto;
   width: 20rem;

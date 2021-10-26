@@ -18,8 +18,8 @@ import { Redirect } from 'react-router'
 function App({ data }) {
   const { handleAddOrder } = useOrder()
 
-  const [ageVerified, setAgeVerified] = useState(loadFromLocal('age'))
-  const [isOver18, setIsOver18] = useState(loadFromLocal('age'))
+  const [ageVerified, setAgeVerified] = useState(loadFromLocal('age') || false)
+  const [isOver18, setIsOver18] = useState(loadFromLocal('age') || false)
 
   function AgeButtonClick(value) {
     saveToLocal('age', value)

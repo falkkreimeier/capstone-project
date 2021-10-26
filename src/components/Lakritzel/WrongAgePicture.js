@@ -4,15 +4,17 @@ import shorty from './Assets/shorty-nohl.jpg'
 function WrongAgePicture() {
   return (
     <Wrapper>
-      <Headline>Oh, nein!</Headline>
-      <SublineHeadline> Du bist noch zu klein.</SublineHeadline>
-      <Image src={shorty} alt="" />
+      <CardContainer>
+        <Headline>Oh, nein!</Headline>
+        <SublineHeadline> Du bist noch zu klein.</SublineHeadline>
+        <Image src={shorty} alt="" />
+      </CardContainer>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.section`
-  background-color: white;
+  background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -35,23 +37,31 @@ const Wrapper = styled.section`
     }
   }
 `
-
-const Image = styled.img`
-  margin-top: -150px;
+const CardContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius);
+  align-items: center;
+  margin: 0 auto;
+  width: 20rem;
   height: 30rem;
+  background-color: white;
+`
+const Image = styled.img`
+  height: 15rem;
 `
 
 const Headline = styled.h2`
-  margin-bottom: -10px;
+  margin-bottom: -5px;
   font-family: Ventana;
-  font-size: 6rem;
+  font-size: 5rem;
   z-index: 5;
 `
 
 const SublineHeadline = styled.h2`
   margin-top: -5px;
   font-family: Ventana;
-  font-size: 2rem;
+  font-size: 1.6rem;
   z-index: 5;
 `
 
