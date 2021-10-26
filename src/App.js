@@ -1,44 +1,49 @@
 import Header from './components/Lakritzel/Header'
 import AgeGate from './components/Lakritzel/AgeGate'
-import ProductCard from './components/Lakritzel/ProductCard'
+import ProductList from './components/Lakritzel/ProductList'
 import Shop from './components/Lakritzel/Shop'
 import Nav from './components/Lakritzel/Nav'
 import CampaignCard from './components/Lakritzel/CampaignCard'
-import Cocktails from './components/Lakritzel/Cocktails'
+import CocktailList from './components/Lakritzel/CocktailList'
 import Kritzelkopf from './components/People/Kritzelkopf'
 import styled from 'styled-components/macro'
 import { Switch, Route } from 'react-router-dom'
-import GlobalStlyles from './GlobalStyles'
 import useOrder from './hook/useOrder'
 import WrongAgePicture from './components/Lakritzel/WrongAgePicture'
+import { useState } from 'react'
+import saveToLocal from './hook/saveToLocal'
+import loadFromLocal from './hook/loadFromLocal'
+import { Redirect } from 'react-router'
 
 function App({ data }) {
   const { handleAddOrder } = useOrder()
 
+  const [ageVerified, setAgeVerified] = useState(loadFromLocal('age'))
+  const [isOver18, setIsOver18] = useState(loadFromLocal('age'))
+
+  function AgeButtonClick(value) {
+    saveToLocal('age', value)
+    setAgeVerified(true)
+    setIsOver18(value)
+  }
+  if (!ageVerified) {
+    return (
+      <Wrapper>
+        <AgeGate ageVerified={ageVerified} onAgeButtonClick={AgeButtonClick} />
+      </Wrapper>
+    )
+  }
+  if (!isOver18) {
+    return <WrongAgePicture />
+  }
+
   return (
     <Wrapper>
-      <AgeGate />
-      <Route exact path="/agefail">
-        <WrongAgePicture />
-      </Route>
-      <GlobalStlyles />
       <Header />
       <Main>
         <Switch>
           <Route exact path="/">
-            {data.product.map(product => (
-              <ProductCard
-                description={product.description}
-                crazy={product.crazy}
-                price={product.price}
-                ingredients={product.ingredients}
-                alcohol={product.alcohol}
-                mount={product.mount}
-                image={product.image}
-                logo={product.logo}
-                key={product.name}
-              />
-            ))}
+            {ageVerified ? <ProductList data={data} /> : <Redirect to="/" />}
             <Shop onAddOrder={handleAddOrder} />
           </Route>
           <Route exact path="/campaign">
@@ -47,15 +52,7 @@ function App({ data }) {
             ))}
           </Route>
           <Route exact path="/cocktails">
-            {data.cocktails.map(cocktails => (
-              <Cocktails
-                name={cocktails.name}
-                mixed={cocktails.mixedDrinks}
-                ingredients={cocktails.ingredients}
-                preparation={cocktails.preparation}
-                key={cocktails.name}
-              />
-            ))}
+            <CocktailList data={data} />
           </Route>
           <Route exact path="/kritzelkopf">
             <Kritzelkopf />
@@ -76,10 +73,11 @@ const Wrapper = styled.section`
 `
 
 const Main = styled.main`
-  margin: 84px auto 56px auto;
+  margin: 94px auto 65px auto;
   border-radius: var(--border-radius);
   display: flex;
   flex-direction: column;
+  border-radius: 19px;
   gap: 5px;
   overflow: auto;
   flex: 1;

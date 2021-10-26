@@ -1,31 +1,28 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import styled, { css } from 'styled-components'
 import logo from './Assets/Logo-lettering.jpg'
 import crazy from './Assets/Übergeschnapst.jpg'
 
-function AgeGate() {
-  const [ageVerification, setAgeVerification] = useState(false)
-
+function AgeGate({ onAgeButtonClick, ageVerified }) {
+  function over18Handler() {
+    onAgeButtonClick(true)
+  }
+  function under18Handler() {
+    onAgeButtonClick(false)
+  }
   return (
-    <Wrapper ageVerification={ageVerification}>
+    <Wrapper activeClassName="active" ageVerified={ageVerified}>
       <CardContainer>
         <LogoImg src={logo} alt="Lakritzel Logo" activeClassName="active" />
         <Text>
           Um Zugang zu dieser Seite zu bekommen, musst du mindestens 18 Jahre
           alt sein!
         </Text>
-        <Button
-          onClick={() => setAgeVerification(!ageVerification)}
-          type="button"
-        >
+        <Button onClick={over18Handler} type="button">
           Ich bin schon über 18
         </Button>
-        <LinkWrapper>
-          <LinkTo exact to="/agefail">
-            Ich bin noch keine 18
-          </LinkTo>
-        </LinkWrapper>
+        <Button onClick={under18Handler} type="button">
+          Ich bin noch keine 18
+        </Button>
         <Image src={crazy} alt="" />
       </CardContainer>
     </Wrapper>
@@ -42,8 +39,8 @@ const Wrapper = styled.section`
   height: 100vh;
   width: 100%;
   z-index: 50;
-  ${({ ageVerification }) =>
-    ageVerification &&
+  ${({ ageVerified }) =>
+    ageVerified &&
     css`
  animation-duration: 3s;
  animation-name: fadeOut;
@@ -91,35 +88,6 @@ const Button = styled.button`
   width: 10rem;
   height: 1.5rem;
   color: white;
-`
-const LinkWrapper = styled.div`
-  text-align: center;
-  border-radius: 19px;
-  background-color: black;
-  margin: 5px;
-  width: 10rem;
-  height: 1.5rem;
-  color: white;
-  text-decoration: none;
-  padding: 2px 6px 2px 6px;
-  border-top: 2px solid grey;
-  border-right: 2px solid #333333;
-  border-bottom: 2px solid #333333;
-  border-left: 2px solid grey;
-  &:active {
-    border-top: 2px solid #333333;
-    border-right: 2px solid grey;
-    border-bottom: 2px solid grey;
-    border-left: 2px solid #333333;
-  }
-`
-
-const LinkTo = styled(Link)`
-  text-decoration: none;
-  color: white;
-  font-family: var(--main-font);
-  font-size: 13.5px;
-  text-align: center;
 `
 
 const Text = styled.p`
