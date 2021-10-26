@@ -33,6 +33,7 @@ p {
 body {
     background-color: black;
     margin: 0;
+    
 }
 
 h2 {
