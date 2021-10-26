@@ -26,7 +26,7 @@ function ProductCard(props) {
         <FlipCardBack>
           <Logo src={props.crazy} alt="Lakritzel" />
           <Text>{props.description}</Text>
-          <Headline>Wahnsinnig</Headline>
+          <Headline>Wahnsinn</Headline>
           <Details>
             <List>{props.ingredients}</List>
             <List>{props.alcohol}</List>
