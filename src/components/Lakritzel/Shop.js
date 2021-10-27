@@ -31,10 +31,11 @@ function Shop({ onAddOrder }) {
 }
 
 const Container = styled.div`
+  --card-height: 34rem;
   margin: 0 auto;
   width: var(--main-width);
   border-radius: var(--border-radius);
-  height: auto;
+  height: var(--card-height);
   perspective: 1000px;
 `
 
@@ -59,11 +60,10 @@ const FlipCardFront = styled.section`
   backface-visibility: hidden;
   position: absolute;
   border-radius: var(--border-radius);
-  height: 34rem;
+  height: var(--card-height);
 `
 
 const FlipCardBack = styled.section`
-  height: 19rem;
   width: var(--main-width);
   background-color: white;
   backface-visibility: hidden;
@@ -71,7 +71,7 @@ const FlipCardBack = styled.section`
   position: absolute;
   border: 1px solid black;
   border-radius: var(--border-radius);
-  height: 34rem;
+  height: var(--card-height);
 `
 
 export default Shop

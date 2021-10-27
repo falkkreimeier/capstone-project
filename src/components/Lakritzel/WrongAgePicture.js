@@ -33,7 +33,7 @@ const Wrapper = styled.section`
   height: 100vh;
   width: 100%;
   position: absolute;
-  /* z-index: 50; */
+  z-index: 50;
   animation-duration: 1s;
   animation-name: fallDown;
   &.active {

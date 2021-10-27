@@ -54,16 +54,15 @@ function Nav() {
 }
 
 const Navigation = styled.nav`
-  position: fixed;
-  height: 80px;
-  left: 50%;
-  transform: translate(-50%);
-  top: 92%;
+  // position: fixed;
+  // left: 50%;
+  // transform: translate(-50%);
+  // top: 92%;
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin: 0 auto 8px auto;
+  margin: 3px auto 8px auto;
   border-radius: 19px;
   width: var(--main-width);
   min-height: 40px;

@@ -18,33 +18,30 @@ import { Redirect } from 'react-router'
 function App({ data }) {
   const { handleAddOrder } = useOrder()
 
-  const [ageVerified, setAgeVerified] = useState(loadFromLocal('age') || false)
-  const [isOver18, setIsOver18] = useState(loadFromLocal('age') || false)
+  const [isOver18, setIsOver18] = useState(loadFromLocal('age') || null)
+  const [showWelcomeAnimation, setShowWelcomeAnimation] = useState(false)
 
-  function AgeButtonClick(value) {
-    saveToLocal('age', value)
-    setAgeVerified(true)
+  function ageButtonClick(value) {
+    setShowWelcomeAnimation(true)
     setIsOver18(value)
+    saveToLocal('age', value)
   }
-  if (!ageVerified || !isOver18) {
+  if (!isOver18) {
     return (
       <Wrapper>
-        <AgeGate ageVerified={ageVerified} onAgeButtonClick={AgeButtonClick} />
-        {!isOver18 && <WrongAgePicture />}
+        <AgeGate onAgeButtonClick={ageButtonClick} />
+        {isOver18 === false && <WrongAgePicture />}
       </Wrapper>
     )
   }
-  // if (!isOver18) {
-  //   return <WrongAgePicture />
-  // }
 
   return (
-    <Wrapper ageVerified={ageVerified}>
+    <Wrapper>
       <Header />
-      <Main>
+      <Main showWelcomeAnimation={showWelcomeAnimation}>
         <Switch>
           <Route exact path="/">
-            {ageVerified ? <ProductList data={data} /> : <Redirect to="/" />}
+            <ProductList data={data} />
             <Shop onAddOrder={handleAddOrder} />
           </Route>
           <Route exact path="/campaign">
@@ -60,19 +57,32 @@ function App({ data }) {
           </Route>
         </Switch>
       </Main>
-      <Nav />
+      <Footer>
+        <Nav />
+      </Footer>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.section`
-  height: 100vh;
-  max-height: 963px;
-  display: flex;
-  flex-direction: column;
+  // height: 100vh;
+  // max-height: 963px;
+  // display: flex;
+  // flex-direction: column;
+  // gap: 5px;
+`
+
+const Main = styled.main`
+  margin: 94px auto;
+  border-radius: var(--border-radius);
+  // display: flex;
+  // flex-direction: column;
+  border-radius: 19px;
   gap: 5px;
-  ${({ ageVerified }) =>
-    ageVerified &&
+  // overflow: auto;
+  flex: 1;
+  ${({ showWelcomeAnimation }) =>
+    showWelcomeAnimation &&
     css`
       animation-duration: 3s;
       animation-iteration-count: 1;
@@ -85,21 +95,18 @@ const Wrapper = styled.section`
 
         to {
           transform: translateY(0px);
-          visibility: invisible;
         }
       }
     `}
 `
 
-const Main = styled.main`
-  margin: 94px auto;
-  border-radius: var(--border-radius);
-  display: flex;
-  flex-direction: column;
-  border-radius: 19px;
-  gap: 5px;
-  overflow: auto;
-  flex: 1;
+const Footer = styled.footer`
+  background-color: yellow;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
 `
 
 export default App

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import logo from './Assets/Logo-lettering.jpg'
 import crazy from './Assets/Übergeschnapst.jpg'
 
-function AgeGate({ onAgeButtonClick, ageVerified }) {
+function AgeGate({ onAgeButtonClick }) {
   function over18Handler() {
     onAgeButtonClick(true)
   }
@@ -10,7 +10,7 @@ function AgeGate({ onAgeButtonClick, ageVerified }) {
     onAgeButtonClick(false)
   }
   return (
-    <Wrapper ageVerified={ageVerified}>
+    <Wrapper>
       <CardContainer>
         <LogoImg src={logo} alt="Lakritzel Logo" activeClassName="active" />
         <Text>
