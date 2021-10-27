@@ -1,11 +1,11 @@
 import React from 'react'
-import Footer from './Footer'
+import Nav from './Nav'
 
 export default {
-  title: 'component/Footer',
-  component: Footer,
+  title: 'component/Nav',
+  component: Nav,
 }
 
-const Template = args => <Footer {...args} />
+const Template = args => <Nav {...args} />
 
 export const Standard = Template.bind({})

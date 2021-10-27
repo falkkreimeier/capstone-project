@@ -1,11 +1,11 @@
 import React from 'react'
-import AgeFail from './WrongAgePicture'
+import WrongAgePicture from './WrongAgePicture'
 
 export default {
-  title: 'component/AgeFail',
-  component: AgeFail,
+  title: 'component/WrongAgePicture',
+  component: WrongAgePicture,
 }
 
-const Template = args => <AgeFail {...args} />
+const Template = args => <WrongAgePicture {...args} />
 
 export const Standard = Template.bind({})
