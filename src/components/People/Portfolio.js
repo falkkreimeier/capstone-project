@@ -14,34 +14,29 @@ function Portfolio() {
           alt="Werbung für Andros, eine vegane Joghurtalternative"
         />
       </a>
-      <Link href={PortfolioDatei}>Portfolio</Link>
+      <LinkContainer>
+        <Link href={PortfolioDatei}>Portfolio</Link>
+      </LinkContainer>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
   grid-area: portfolio;
-  height: 2200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background: white;
   border-radius: var(--border-radius);
   padding: var(--main-padding);
   min-width: var(--main-width);
 `
-
-const Link = styled.a`
-  margin-bottom: 10px;
+const LinkContainer = styled.div`
+  margin: 5px auto;
   width: 130px;
   text-decoration: none;
   border: 1px solid black;
   padding: var(--main-padding);
   border-radius: 40px;
-  text-decoration: none;
   background-color: black;
-  color: white;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--main-font);
   box-shadow: 0 14px 8px rgba(0, 0, 0, 0.25);
   transform: translateY(-4px);
   &:active {
@@ -49,6 +44,11 @@ const Link = styled.a`
     transform: translateY(-0px);
     transition: 0.1s;
   }
+`
+
+const Link = styled.a`
+  color: white;
+  text-decoration: none;
 `
 
 const Image = styled.img`
