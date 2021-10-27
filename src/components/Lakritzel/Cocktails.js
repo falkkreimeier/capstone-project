@@ -20,10 +20,8 @@ const Wrapper = styled.section`
   background-repeat: no-repeat;
   object-fit: cover;
   border-radius: var(--border-radius);
-  margin: 0 auto;
+  margin: 5px auto;
   background-color: white;
-  display: flex;
-  flex-direction: column;
   color: white;
   padding: 10px;
   width: var(--main-width);
@@ -38,7 +36,7 @@ const Wrapper = styled.section`
 const Headline = styled.h2`
   height: 40px;
   font-family: 'Ventana';
-  margin: 40px auto 0px auto;
+  margin: 40px 0px 0px 30px;
   z-index: 20;
 `
 
