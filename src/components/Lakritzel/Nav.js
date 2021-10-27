@@ -55,6 +55,7 @@ function Nav() {
 
 const Navigation = styled.nav`
   position: fixed;
+  height: 80px;
   left: 50%;
   transform: translate(-50%);
   top: 92%;
