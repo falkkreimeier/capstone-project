@@ -22,9 +22,10 @@ function StoryToShop({ flipToShop, onButtonClick }) {
 }
 
 const Wrapper = styled.section`
+  --card-height: 19rem;
   background-color: white;
   width: var(--main-width);
-  height: auto;
+  height: var(--card-height);
   border-radius: var(--border-radius);
   margin: 0 auto;
   align-items: flex-start;
