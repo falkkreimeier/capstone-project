@@ -32,8 +32,7 @@ function AgeGate({ onAgeButtonClick, ageVerified }) {
 const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: center;
   position: absolute;
   background-color: black;
   height: 100vh;
@@ -44,8 +43,8 @@ const Wrapper = styled.section`
 const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
-  border-radius: var(--border-radius);
   align-items: center;
+  border-radius: var(--border-radius);
   margin: 0 auto;
   width: 20rem;
   height: 30rem;
@@ -60,7 +59,7 @@ const LogoImg = styled.img`
 const Image = styled.img`
   margin: 10px auto 10px auto;
   justify-self: flex-start;
-  height: 14rem;
+  height: 12rem;
 `
 
 const Button = styled.button`
@@ -68,9 +67,9 @@ const Button = styled.button`
   text-align: center;
   border-radius: 19px;
   background-color: black;
-  margin: 5px;
+  margin: 8px;
+  padding: 5px;
   width: 10rem;
-  height: 1.5rem;
   color: white;
   box-shadow: 0 14px 8px rgba(0, 0, 0, 0.25);
   transform: translateY(-4px);
