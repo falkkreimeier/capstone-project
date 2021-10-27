@@ -1,6 +1,5 @@
 import styled from 'styled-components/macro'
 import shorty from './Assets/shorty-nohl.jpg'
-import AgeGate from './AgeGate'
 
 function WrongAgePicture() {
   return (
