@@ -1,29 +1,52 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import logo from './Assets/Logo_Claim_Lakritzel.jpg'
 
-function Header() {
+function Header({ showWelcomeAnimation }) {
   return (
-    <Wrapper>
-      <Image src={logo} alt="Lakritzel App" />
-    </Wrapper>
+    <HeaderEl showWelcomeAnimation={showWelcomeAnimation}>
+      <Wrapper>
+        <Image src={logo} alt="Lakritzel App" />
+      </Wrapper>
+    </HeaderEl>
   )
 }
 
-const Wrapper = styled.header`
+const HeaderEl = styled.header`
   position: fixed;
-  left: 50%;
-  transform: translate(-50%);
-  top: 8px;
-  margin: 0 auto;
+  background-color: black;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  ${({ showWelcomeAnimation }) =>
+    showWelcomeAnimation &&
+    css`
+      animation-duration: 3s;
+      animation-iteration-count: 1;
+      animation-name: fallDown;
+      animation-fill-mode: forwards;
+      @keyframes fallDown {
+        from {
+          transform: translatey(-900px);
+        }
+
+        to {
+          transform: translateY(0px);
+        }
+      }
+    `}
+`
+
+const Wrapper = styled.section`
   display: flex;
   justify-content: center;
-  border-radius: 19px;
+  margin: 5px auto;
+  border-radius: var(--border-radius);
   background-color: white;
   width: var(--main-width);
 `
 
 const Image = styled.img`
-  margin: 0 auto;
   height: 5rem;
 `
 
