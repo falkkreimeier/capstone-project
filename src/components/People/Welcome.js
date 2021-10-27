@@ -27,9 +27,6 @@ const Wrapper = styled.div`
   background-repeat: no-repeat;
   background-size: 21rem;
   background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   color: white;
   border-radius: var(--border-radius);
   padding: var(--main-padding);
