@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import logo from './Assets/Logo-lettering.jpg'
 import crazy from './Assets/Übergeschnapst.jpg'
 
@@ -10,15 +10,19 @@ function AgeGate({ onAgeButtonClick, ageVerified }) {
     onAgeButtonClick(false)
   }
   return (
-    <Wrapper activeClassName="active" ageVerified={ageVerified}>
+    <Wrapper ageVerified={ageVerified}>
       <CardContainer>
         <LogoImg src={logo} alt="Lakritzel Logo" activeClassName="active" />
         <Text>
           Um Zugang zu dieser Seite zu bekommen, musst du mindestens 18 Jahre
           alt sein!
         </Text>
-        <Button onClick={over18Handler}>Ich bin schon über 18</Button>
-        <Button onClick={under18Handler}>Ich bin noch keine 18</Button>
+        <Button activeClassName="active" onClick={over18Handler}>
+          Ich bin schon über 18
+        </Button>
+        <Button activeClassName="active" onClick={under18Handler}>
+          Ich bin noch keine 18
+        </Button>
         <Image src={crazy} alt="" />
       </CardContainer>
     </Wrapper>
@@ -35,23 +39,6 @@ const Wrapper = styled.section`
   height: 100vh;
   width: 100%;
   z-index: 50;
-  ${({ ageVerified }) =>
-    ageVerified &&
-    css`
-      animation-duration: 3s;
-      animation-name: fallDown;
-      animation-fill-mode: forwards;
-      @keyframes fallDown {
-        from {
-          transform: translatey(0px);
-        }
-
-        to {
-          transform: translateY(-800px);
-          visibility: invisible;
-        }
-      }
-    `}
 `
 
 const CardContainer = styled.div`
@@ -85,6 +72,13 @@ const Button = styled.button`
   width: 10rem;
   height: 1.5rem;
   color: white;
+  box-shadow: 0 14px 8px rgba(0, 0, 0, 0.25);
+  transform: translateY(-4px);
+  &:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    transform: translateY(-0px);
+    transition: 0.1s;
+  }
 `
 
 const Text = styled.p`

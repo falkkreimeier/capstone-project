@@ -32,20 +32,22 @@ const Wrapper = styled.div`
 `
 
 const Link = styled.a`
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   width: 130px;
   text-decoration: none;
   border: 1px solid black;
   padding: var(--main-padding);
   border-radius: 40px;
   text-decoration: none;
-  background-color: white;
+  background-color: black;
+  color: white;
   font-family: 'Inter', sans-serif;
-  box-shadow: 5px 5px 10px 5px black;
-  &:hover {
-    background-color: black;
-    box-shadow: 0px 0px 5px 5px grey;
-    color: white;
+  box-shadow: 0 14px 8px rgba(0, 0, 0, 0.25);
+  transform: translateY(-4px);
+  &:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    transform: translateY(-0px);
+    transition: 0.1s;
   }
 `
 

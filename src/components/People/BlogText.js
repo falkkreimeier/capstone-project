@@ -46,11 +46,13 @@ const LinkToBlog = styled.a`
   background-color: white;
   font-family: 'Inter', sans-serif;
   color: black;
-  box-shadow: 5px 5px 10px 5px black;
-  &:hover {
-    background-color: black;
-    box-shadow: 0px 0px 5px 5px grey;
-    color: white;
+  box-shadow: 0 14px 8px rgba(255, 255, 255, 255);
+  transform: translateY(-4px);
+
+  &:active {
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 100);
+    transform: translateY(-0px);
+    transition: 0.1s;
   }
 `
 

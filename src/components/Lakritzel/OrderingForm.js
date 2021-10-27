@@ -98,7 +98,7 @@ function OrderingForm({ onAddOrder, flipToShop, onButtonClick }) {
             />
           </label>
         </MessageContainer>
-        <ButtonOrder>Hol mich hier raus!</ButtonOrder>
+        <ButtonOrder activeClassName="active">Hol mich hier raus!</ButtonOrder>
       </Form>
       <IconPosition>
         <IconContext.Provider
@@ -216,10 +216,12 @@ const ButtonOrder = styled.button`
   height: 3rem;
   font-size: 1.2rem;
   border-radius: var(--border-radius);
-  box-shadow: 0px 5px 10px 5px grey;
-  &:hover {
-    border: 2px solid white;
-    box-shadow: 15px 15px 15px 8px grey;
+  box-shadow: 0 14px 8px rgba(0, 0, 0, 0.25);
+  transform: translateY(-4px);
+  &:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    transform: translateY(-0px);
+    transition: 0.1s;
   }
 `
 const IconPosition = styled.div`
