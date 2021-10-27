@@ -6,7 +6,7 @@ import Nav from './components/Lakritzel/Nav'
 import CampaignCard from './components/Lakritzel/CampaignCard'
 import CocktailList from './components/Lakritzel/CocktailList'
 import Kritzelkopf from './components/People/Kritzelkopf'
-import styled from 'styled-components/macro'
+import styled, { css } from 'styled-components/macro'
 import { Switch, Route } from 'react-router-dom'
 import useOrder from './hook/useOrder'
 import WrongAgePicture from './components/Lakritzel/WrongAgePicture'
@@ -26,19 +26,20 @@ function App({ data }) {
     setAgeVerified(true)
     setIsOver18(value)
   }
-  if (!ageVerified) {
+  if (!ageVerified || !isOver18) {
     return (
       <Wrapper>
         <AgeGate ageVerified={ageVerified} onAgeButtonClick={AgeButtonClick} />
+        {!isOver18 && <WrongAgePicture />}
       </Wrapper>
     )
   }
-  if (!isOver18) {
-    return <WrongAgePicture />
-  }
+  // if (!isOver18) {
+  //   return <WrongAgePicture />
+  // }
 
   return (
-    <Wrapper>
+    <Wrapper ageVerified={ageVerified}>
       <Header />
       <Main>
         <Switch>
@@ -70,10 +71,28 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   gap: 5px;
+  ${({ ageVerified }) =>
+    ageVerified &&
+    css`
+      animation-duration: 3s;
+      animation-iteration-count: 1;
+      animation-name: fallDown;
+      animation-fill-mode: forwards;
+      @keyframes fallDown {
+        from {
+          transform: translatey(-900px);
+        }
+
+        to {
+          transform: translateY(0px);
+          visibility: invisible;
+        }
+      }
+    `}
 `
 
 const Main = styled.main`
-  margin: 94px auto 65px auto;
+  margin: 94px auto;
   border-radius: var(--border-radius);
   display: flex;
   flex-direction: column;
