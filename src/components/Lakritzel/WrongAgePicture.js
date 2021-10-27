@@ -4,36 +4,26 @@ import AgeGate from './AgeGate'
 
 function WrongAgePicture() {
   return (
-    <>
-      {/* <Container>
-        <AgeGate />
-      </Container> */}
-
-      <Wrapper>
-        <CardContainer>
-          <Headline>Oh, nein!</Headline>
-          <SublineHeadline> Du bist noch zu klein.</SublineHeadline>
-          <Image src={shorty} alt="" />
-        </CardContainer>
-      </Wrapper>
-    </>
+    <Wrapper>
+      <CardContainer>
+        <Headline>Oh, nein!</Headline>
+        <SublineHeadline> Du bist noch zu klein.</SublineHeadline>
+        <Image src={shorty} alt="" />
+      </CardContainer>
+    </Wrapper>
   )
 }
-
-const Container = styled.section`
-  z-index: -1;
-`
 
 const Wrapper = styled.section`
   background-color: transparent;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100%;
   position: absolute;
-  /* z-index: 50; */
+  z-index: 50;
   animation-duration: 1s;
   animation-name: fallDown;
   &.active {
@@ -49,6 +39,7 @@ const Wrapper = styled.section`
   }
 `
 const CardContainer = styled.div`
+  box-shadow: inset 0px 0px 30px 0px black;
   display: flex;
   flex-direction: column;
   border-radius: var(--border-radius);
