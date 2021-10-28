@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import klecks from '../Lakritzel/Assets/Kleckse_clean.jpg'
 
 function Facts() {

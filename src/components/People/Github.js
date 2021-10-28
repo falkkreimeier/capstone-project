@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import Githubimg from '../People/img/github.svg.png'
 
 function Github() {

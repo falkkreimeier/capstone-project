@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { Headline } from './Profile'
 import Video from '../People/img/Profile_Video.mp4'
 import Portfolioimg from '../People/img/Portfolio.png'

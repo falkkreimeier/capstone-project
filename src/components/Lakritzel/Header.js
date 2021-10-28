@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from 'styled-components/macro'
 import logo from './Assets/Logo_Claim_Lakritzel.jpg'
 
 function Header({ showWelcomeAnimation }) {

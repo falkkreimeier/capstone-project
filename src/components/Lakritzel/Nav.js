@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from 'styled-components/macro'
 import { NavLink } from 'react-router-dom'
 import { FaShoppingCart as Shop } from 'react-icons/fa'
 import { CgProfile as Profile } from 'react-icons/cg'

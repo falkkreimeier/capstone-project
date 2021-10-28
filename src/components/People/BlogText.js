@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { Text } from './Welcome'
 import klecks from '../Lakritzel/Assets/Kleckse_clean.jpg'
 

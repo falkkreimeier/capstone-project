@@ -1,5 +1,5 @@
 import Kritzelkopf from '../People/img/Profil.JPG'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
 function Profile() {
   return (
