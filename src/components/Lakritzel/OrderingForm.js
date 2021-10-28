@@ -107,7 +107,7 @@ function OrderingForm({ onAddOrder, flipToShop, onButtonClick }) {
             size: '30px',
           }}
         >
-          <ArrowLeft flipToShop={flipToShop} onClick={onButtonClick} />
+          <ArrowLeft onClick={onButtonClick} />
         </IconContext.Provider>
       </IconPosition>
     </Wrapper>
