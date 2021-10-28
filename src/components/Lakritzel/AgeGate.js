@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import logo from './Assets/Logo-lettering.jpg'
-import crazy from './Assets/Übergeschnapst.jpg'
+import logo from './Assets/Logo_nobackground.png'
+import crazy from './Assets/Rettemich-nobackground.png'
 
 function AgeGate({ onAgeButtonClick, ageVerified }) {
   function over18Handler() {
@@ -23,6 +23,7 @@ function AgeGate({ onAgeButtonClick, ageVerified }) {
         <Button activeClassName="active" onClick={under18Handler}>
           Ich bin noch keine 18
         </Button>
+        <HealineImage>Total übergeschnapst</HealineImage>
         <Image src={crazy} alt="" />
       </CardContainer>
     </Wrapper>
@@ -41,6 +42,7 @@ const Wrapper = styled.section`
 `
 
 const CardContainer = styled.div`
+  box-shadow: inset 0px 0px 30px 0px black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,10 +58,18 @@ const LogoImg = styled.img`
   justify-self: flex-start;
   height: 6rem;
 `
+
+const HealineImage = styled.h2`
+  margin: 10px auto -5px auto;
+  font-size: 1rem;
+  padding: 0;
+  font-family: Ventana;
+`
+
 const Image = styled.img`
   margin: 10px auto 10px auto;
   justify-self: flex-start;
-  height: 12rem;
+  height: 8rem;
 `
 
 const Button = styled.button`
@@ -81,6 +91,7 @@ const Button = styled.button`
 `
 
 const Text = styled.p`
+  padding: 5px;
   text-align: center;
   margin: 0 auto 10px auto;
   font-family: var(--main-font);
