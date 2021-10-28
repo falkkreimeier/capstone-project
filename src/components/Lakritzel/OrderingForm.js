@@ -208,12 +208,12 @@ const ButtonOrder = styled.button`
   font-family: Ventana;
   letter-spacing: 2px;
   margin: 0 auto;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  height: 3rem;
   border: none;
   background-color: black;
   color: white;
   width: 11rem;
-  height: 3rem;
   font-size: 1.2rem;
   border-radius: var(--border-radius);
   box-shadow: 0 14px 8px rgba(0, 0, 0, 0.25);
@@ -227,7 +227,7 @@ const ButtonOrder = styled.button`
 const IconPosition = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin: 0 30px 20px 0;
+  margin: -20px 30px 0px 0px;
 `
 
 export default OrderingForm
