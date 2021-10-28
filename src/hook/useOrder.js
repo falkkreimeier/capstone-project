@@ -34,7 +34,7 @@ export default function useOrder() {
     setOrderData(addOrder)
 
     const stringifiedValue = JSON.stringify(addOrder)
-    localStorage.setItem('productsLocalStorage', stringifiedValue)
+    localStorage.setItem('usersLocalStorage', stringifiedValue)
   }
   return { handleAddOrder }
 }

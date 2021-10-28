@@ -1,6 +1,7 @@
 import styled from 'styled-components/macro'
 import { FaArrowCircleLeft as ArrowLeft } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
+import emailjs from 'emailjs-com'
 
 function OrderingForm({ onAddOrder, onButtonClick }) {
   return (
@@ -98,7 +99,9 @@ function OrderingForm({ onAddOrder, onButtonClick }) {
             />
           </label>
         </MessageContainer>
-        <ButtonOrder activeClassName="active">Hol mich hier raus!</ButtonOrder>
+        <ButtonOrder onClick={onAddOrder} activeClassName="active">
+          Hol mich hier raus!
+        </ButtonOrder>
       </Form>
       <IconPosition>
         <IconContext.Provider
