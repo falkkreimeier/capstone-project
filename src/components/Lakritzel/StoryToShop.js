@@ -65,11 +65,10 @@ const ButtonFront = styled.button`
   margin-bottom: 5px;
   backface-visibility: hidden;
   margin: 0 auto;
-  border: none;
+  padding-top: 5px;
   background-color: black;
   color: white;
   width: 12rem;
-  height: 4.5rem;
   font-size: 2rem;
   border-radius: 15px;
   box-shadow: 0 14px 8px rgba(0, 0, 0, 0.25);
