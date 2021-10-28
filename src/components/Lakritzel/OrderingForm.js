@@ -2,7 +2,7 @@ import styled from 'styled-components/macro'
 import { FaArrowCircleLeft as ArrowLeft } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
 
-function OrderingForm({ onAddOrder, flipToShop, onButtonClick }) {
+function OrderingForm({ onAddOrder, onButtonClick }) {
   return (
     <Wrapper>
       <Headline>Rette mich, wer kann!</Headline>
