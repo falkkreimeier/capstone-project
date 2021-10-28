@@ -14,26 +14,15 @@ describe('AgeGate', () => {
     expect(image).toHaveLength(2)
   })
 
-  it('shows the Link', () => {
+  it('shows 2 buttons', () => {
     render(
       <MemoryRouter>
         <AgeGate />
       </MemoryRouter>
     )
 
-    const link = screen.getByRole('link')
-    expect(link).toBeInTheDocument()
-  })
-
-  it('shows the button', () => {
-    render(
-      <MemoryRouter>
-        <AgeGate />
-      </MemoryRouter>
-    )
-
-    const button = screen.getByRole('button')
-    expect(button).toBeInTheDocument()
+    const buttons = screen.getAllByRole('button')
+    expect(buttons).toHaveLength(2)
   })
 
   it('shows all Text', () => {

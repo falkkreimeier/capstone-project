@@ -49,11 +49,13 @@ function ProductCard(props) {
 }
 
 const Container = styled.div`
+  --card-height: 19rem;
   margin: 2px auto 2px auto;
   border-radius: var(--border-radius);
   width: var(--main-width);
-  height: 19rem;
+  height: var(--card-height);
   perspective: 1000px;
+  margin-bottom: 5px;
 `
 
 const FlipCard = styled.section`
@@ -72,6 +74,7 @@ const FlipCard = styled.section`
 `
 
 const FlipCardFront = styled.section`
+  height: var(--card-height);
   background-color: white;
   width: 100%;
   backface-visibility: hidden;
@@ -85,7 +88,7 @@ const FlipCardFront = styled.section`
 
 const Image = styled.img`
   grid-area: image;
-  height: 19rem;
+  height: var(--card-height);
   border-radius: 19px;
   margin: 0;
 `
@@ -117,10 +120,12 @@ const ButtonFront = styled.button`
   border-radius: 15px;
   background-color: black;
   color: white;
-  box-shadow: 5px 5px 5px 2px grey;
-  &:hover  {
-    border: 2px solid white;
-    box-shadow: 10px 5px 5px 3px grey;
+  box-shadow: 0 14px 8px rgba(0, 0, 0, 0.25);
+  transform: translateY(-4px);
+  &:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    transform: translateY(-0px);
+    transition: 0.1s;
   }
   ${({ flipToDetails }) =>
     flipToDetails &&
@@ -130,6 +135,7 @@ const ButtonFront = styled.button`
 `
 
 const FlipCardBack = styled.section`
+  height: var(--card-height);
   height: 19rem;
   width: var(--main-width);
   background-color: white;

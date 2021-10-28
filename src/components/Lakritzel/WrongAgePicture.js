@@ -14,10 +14,10 @@ function WrongAgePicture() {
 }
 
 const Wrapper = styled.section`
-  background-color: black;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100%;
@@ -38,6 +38,7 @@ const Wrapper = styled.section`
   }
 `
 const CardContainer = styled.div`
+  box-shadow: inset 0px 0px 30px 0px black;
   display: flex;
   flex-direction: column;
   border-radius: var(--border-radius);

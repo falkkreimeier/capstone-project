@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
 function campaignCard(props) {
   return (
@@ -10,7 +10,7 @@ function campaignCard(props) {
 
 const Wrapper = styled.section`
   display: flex;
-  margin: 0 auto;
+  margin: 0px auto 5px auto;
   align-items: center;
   border-radius: var(--border-radius);
   background-color: white;

@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components'
-import logo from './Assets/Logo-lettering.jpg'
-import crazy from './Assets/Übergeschnapst.jpg'
+import styled from 'styled-components/macro'
+import logo from './Assets/Logo_nobackground.png'
+import crazy from './Assets/Rettemich-nobackground.png'
 
 function AgeGate({ onAgeButtonClick, ageVerified }) {
   function over18Handler() {
@@ -10,15 +10,20 @@ function AgeGate({ onAgeButtonClick, ageVerified }) {
     onAgeButtonClick(false)
   }
   return (
-    <Wrapper activeClassName="active" ageVerified={ageVerified}>
+    <Wrapper ageVerified={ageVerified}>
       <CardContainer>
         <LogoImg src={logo} alt="Lakritzel Logo" activeClassName="active" />
         <Text>
           Um Zugang zu dieser Seite zu bekommen, musst du mindestens 18 Jahre
           alt sein!
         </Text>
-        <Button onClick={over18Handler}>Ich bin schon über 18</Button>
-        <Button onClick={under18Handler}>Ich bin noch keine 18</Button>
+        <Button activeClassName="active" onClick={over18Handler}>
+          Ich bin schon über 18
+        </Button>
+        <Button activeClassName="active" onClick={under18Handler}>
+          Ich bin noch keine 18
+        </Button>
+        <HeadlineImage>Total übergeschnapst</HeadlineImage>
         <Image src={crazy} alt="" />
       </CardContainer>
     </Wrapper>
@@ -28,37 +33,20 @@ function AgeGate({ onAgeButtonClick, ageVerified }) {
 const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: center;
   position: absolute;
   background-color: black;
   height: 100vh;
   width: 100%;
   z-index: 50;
-  ${({ ageVerified }) =>
-    ageVerified &&
-    css`
-      animation-duration: 3s;
-      animation-name: fallDown;
-      animation-fill-mode: forwards;
-      @keyframes fallDown {
-        from {
-          transform: translatey(0px);
-        }
-
-        to {
-          transform: translateY(-800px);
-          visibility: invisible;
-        }
-      }
-    `}
 `
 
 const CardContainer = styled.div`
+  box-shadow: inset 0px 0px 30px 0px black;
   display: flex;
   flex-direction: column;
-  border-radius: var(--border-radius);
   align-items: center;
+  border-radius: var(--border-radius);
   margin: 0 auto;
   width: 20rem;
   height: 30rem;
@@ -70,10 +58,18 @@ const LogoImg = styled.img`
   justify-self: flex-start;
   height: 6rem;
 `
+
+const HeadlineImage = styled.h2`
+  margin: 10px auto -5px auto;
+  font-size: 1rem;
+  padding: 0;
+  font-family: Ventana;
+`
+
 const Image = styled.img`
   margin: 10px auto 10px auto;
   justify-self: flex-start;
-  height: 14rem;
+  height: 8rem;
 `
 
 const Button = styled.button`
@@ -81,13 +77,21 @@ const Button = styled.button`
   text-align: center;
   border-radius: 19px;
   background-color: black;
-  margin: 5px;
+  margin: 8px;
+  padding: 5px;
   width: 10rem;
-  height: 1.5rem;
   color: white;
+  box-shadow: 0 14px 8px rgba(0, 0, 0, 0.25);
+  transform: translateY(-4px);
+  &:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    transform: translateY(-0px);
+    transition: 0.1s;
+  }
 `
 
 const Text = styled.p`
+  padding: 5px;
   text-align: center;
   margin: 0 auto 10px auto;
   font-family: var(--main-font);

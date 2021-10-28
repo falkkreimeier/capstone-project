@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components/macro'
 import { NavLink } from 'react-router-dom'
 import { FaShoppingCart as Shop } from 'react-icons/fa'
 import { CgProfile as Profile } from 'react-icons/cg'
@@ -6,64 +6,89 @@ import { AiFillPicture as Picture } from 'react-icons/ai'
 import { IconContext } from 'react-icons'
 import { FaCocktail as Cocktail } from 'react-icons/fa'
 
-function Nav() {
+function Nav({ showWelcomeAnimation }) {
   return (
-    <Navigation>
-      <NavigationLink exact to="/" activeClassName="active">
-        <IconContext.Provider
-          value={{
-            color: 'black',
-            size: '25px',
-          }}
-        >
-          <Shop />
-        </IconContext.Provider>
-      </NavigationLink>
-      <NavigationLink exact to="/campaign" activeClassName="active">
-        <IconContext.Provider
-          value={{
-            color: 'black',
-            size: '25px',
-          }}
-        >
-          <Picture />
-        </IconContext.Provider>
-      </NavigationLink>
-      <NavigationLink exact to="/cocktails" activeClassName="active">
-        <IconContext.Provider
-          value={{
-            color: 'black',
-            size: '25px',
-          }}
-        >
-          <Cocktail />
-        </IconContext.Provider>
-      </NavigationLink>
-      <NavigationLink exact to="/kritzelkopf" activeClassName="active">
-        <IconContext.Provider
-          value={{
-            color: 'black',
-            size: '25px',
-          }}
-        >
-          <Profile />
-        </IconContext.Provider>
-      </NavigationLink>
-    </Navigation>
+    <Footer showWelcomeAnimation={showWelcomeAnimation}>
+      <Navigation>
+        <NavigationLink exact to="/" activeClassName="active">
+          <IconContext.Provider
+            value={{
+              color: 'black',
+              size: '25px',
+            }}
+          >
+            <Shop />
+          </IconContext.Provider>
+        </NavigationLink>
+        <NavigationLink exact to="/campaign" activeClassName="active">
+          <IconContext.Provider
+            value={{
+              color: 'black',
+              size: '25px',
+            }}
+          >
+            <Picture />
+          </IconContext.Provider>
+        </NavigationLink>
+        <NavigationLink exact to="/cocktails" activeClassName="active">
+          <IconContext.Provider
+            value={{
+              color: 'black',
+              size: '25px',
+            }}
+          >
+            <Cocktail />
+          </IconContext.Provider>
+        </NavigationLink>
+        <NavigationLink exact to="/kritzelkopf" activeClassName="active">
+          <IconContext.Provider
+            value={{
+              color: 'black',
+              size: '25px',
+            }}
+          >
+            <Profile />
+          </IconContext.Provider>
+        </NavigationLink>
+      </Navigation>
+    </Footer>
   )
 }
 
-const Navigation = styled.nav`
+const Footer = styled.footer`
   position: fixed;
-  left: 50%;
-  transform: translate(-50%);
-  top: 92%;
+  background-color: black;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  ${({ showWelcomeAnimation }) =>
+    showWelcomeAnimation &&
+    css`
+      animation-duration: 3s;
+      animation-iteration-count: 1;
+      animation-name: pullUp;
+      animation-fill-mode: forwards;
+      @keyframes pullUp {
+        from {
+          transform: translatey(900px);
+        }
+
+        to {
+          transform: translateY(0px);
+        }
+      }
+    `}
+`
+
+const Navigation = styled.nav`
+  height: 80px;
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin: 0 auto 8px auto;
-  border-radius: 19px;
+  margin: 5px auto;
+  border-radius: var(--border-radius);
   width: var(--main-width);
   min-height: 40px;
 `

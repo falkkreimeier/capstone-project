@@ -1,8 +1,8 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { FaArrowCircleLeft as ArrowLeft } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
 
-function OrderingForm({ onAddOrder, flipToShop, onButtonClick }) {
+function OrderingForm({ onAddOrder, onButtonClick }) {
   return (
     <Wrapper>
       <Headline>Rette mich, wer kann!</Headline>
@@ -98,7 +98,7 @@ function OrderingForm({ onAddOrder, flipToShop, onButtonClick }) {
             />
           </label>
         </MessageContainer>
-        <ButtonOrder>Hol mich hier raus!</ButtonOrder>
+        <ButtonOrder activeClassName="active">Hol mich hier raus!</ButtonOrder>
       </Form>
       <IconPosition>
         <IconContext.Provider
@@ -107,7 +107,7 @@ function OrderingForm({ onAddOrder, flipToShop, onButtonClick }) {
             size: '30px',
           }}
         >
-          <ArrowLeft flipToShop={flipToShop} onClick={onButtonClick} />
+          <ArrowLeft onClick={onButtonClick} />
         </IconContext.Provider>
       </IconPosition>
     </Wrapper>
@@ -208,24 +208,26 @@ const ButtonOrder = styled.button`
   font-family: Ventana;
   letter-spacing: 2px;
   margin: 0 auto;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  height: 3rem;
   border: none;
   background-color: black;
   color: white;
   width: 11rem;
-  height: 3rem;
   font-size: 1.2rem;
   border-radius: var(--border-radius);
-  box-shadow: 0px 5px 10px 5px grey;
-  &:hover {
-    border: 2px solid white;
-    box-shadow: 15px 15px 15px 8px grey;
+  box-shadow: 0 14px 8px rgba(0, 0, 0, 0.25);
+  transform: translateY(-4px);
+  &:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    transform: translateY(-0px);
+    transition: 0.1s;
   }
 `
 const IconPosition = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin: 0 30px 20px 0;
+  margin: -20px 30px 0px 0px;
 `
 
 export default OrderingForm

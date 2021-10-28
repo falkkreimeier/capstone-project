@@ -1,5 +1,5 @@
 import Kritzelkopf from '../People/img/Profil.JPG'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
 function Profile() {
   return (
@@ -13,10 +13,6 @@ function Profile() {
 const Wrapper = styled.div`
   margin: 0 auto;
   width: var(--main-width);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background: white;
   border-radius: var(--border-radius);
   padding: var(--main-padding);

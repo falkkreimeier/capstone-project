@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { Headline } from './Profile'
 
 function Interests() {
@@ -27,8 +27,6 @@ function Interests() {
 }
 
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
   background: white;
   border-radius: var(--border-radius);
   padding: var(--main-padding);

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import Profile from './Profile'
 import Welcome from './Welcome'
 import Interests from './Interests'

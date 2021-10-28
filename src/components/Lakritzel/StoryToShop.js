@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from 'styled-components/macro'
 
 function StoryToShop({ flipToShop, onButtonClick }) {
   return (
@@ -22,9 +22,10 @@ function StoryToShop({ flipToShop, onButtonClick }) {
 }
 
 const Wrapper = styled.section`
+  --card-height: 19rem;
   background-color: white;
   width: var(--main-width);
-  height: auto;
+  height: var(--card-height);
   border-radius: var(--border-radius);
   margin: 0 auto;
   align-items: flex-start;
@@ -64,23 +65,24 @@ const ButtonFront = styled.button`
   margin-bottom: 5px;
   backface-visibility: hidden;
   margin: 0 auto;
-  border: none;
+  padding-top: 5px;
   background-color: black;
   color: white;
   width: 12rem;
-  height: 4.5rem;
   font-size: 2rem;
   border-radius: 15px;
-  box-shadow: 0px 5px 10px 5px grey;
-  &:hover {
-    border: 2px solid white;
-    box-shadow: 15px 15px 15px 8px grey;
-    ${({ flipToShop }) =>
-      flipToShop &&
-      css`
-        pointer-events: none;
-      `}
+  box-shadow: 0 14px 8px rgba(0, 0, 0, 0.25);
+  transform: translateY(-4px);
+  &:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    transform: translateY(-0px);
+    transition: 0.1s;
   }
+  ${({ flipToShop }) =>
+    flipToShop &&
+    css`
+      pointer-events: none;
+    `}
 `
 
 export default StoryToShop

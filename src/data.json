@@ -1,6 +1,7 @@
 {
   "product": [
     {
+      "name": "lakritzel",
       "description": "Total übergeschnapster Lakritzlikör. VORSICHT: Kann abfüllend wirken.",
       "claim": "Der dunkle Wahnsinn",
       "price": "18,-",

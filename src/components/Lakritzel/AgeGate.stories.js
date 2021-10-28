@@ -6,6 +6,6 @@ export default {
   component: AgeGate,
 }
 
-const Template = args => <AgeGate {...args} />
+const Template = args => <AgeGate />
 
 export const Standard = Template.bind({})
