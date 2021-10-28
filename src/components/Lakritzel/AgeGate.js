@@ -23,7 +23,7 @@ function AgeGate({ onAgeButtonClick, ageVerified }) {
         <Button activeClassName="active" onClick={under18Handler}>
           Ich bin noch keine 18
         </Button>
-        <HealineImage>Total übergeschnapst</HealineImage>
+        <HeadlineImage>Total übergeschnapst</HeadlineImage>
         <Image src={crazy} alt="" />
       </CardContainer>
     </Wrapper>
@@ -59,7 +59,7 @@ const LogoImg = styled.img`
   height: 6rem;
 `
 
-const HealineImage = styled.h2`
+const HeadlineImage = styled.h2`
   margin: 10px auto -5px auto;
   font-size: 1rem;
   padding: 0;

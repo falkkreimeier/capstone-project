@@ -6,6 +6,6 @@ export default {
   component: WrongAgePicture,
 }
 
-const Template = args => <WrongAgePicture {...args} />
+const Template = args => <WrongAgePicture />
 
 export const Standard = Template.bind({})

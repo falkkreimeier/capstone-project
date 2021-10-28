@@ -19,10 +19,10 @@ function App({ data }) {
 
   const [isOver18, setIsOver18] = useState(loadFromLocal('age') || null)
 
-  const [showWelcomeAnimation, setshowWelcomeAnimation] = useState(false)
+  const [showWelcomeAnimation, setShowWelcomeAnimation] = useState(false)
 
   function AgeButtonClick(value) {
-    setshowWelcomeAnimation(true)
+    setShowWelcomeAnimation(true)
     saveToLocal('age', value)
     setIsOver18(value)
   }
