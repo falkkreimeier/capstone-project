@@ -81,10 +81,10 @@ const Button = styled.button`
   padding: 5px;
   width: 160px;
   color: white;
-  box-shadow: 0 14px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 0 0 1px #fff, 0 14px 8px rgba(0, 0, 0, 0.25);
   transform: translateY(-4px);
   &:active {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    box-shadow: inset 0 0 0 1px #fff, 0 2px 4px rgba(0, 0, 0, 0.8);
     transform: translateY(-0px);
     transition: 0.1s;
   }
