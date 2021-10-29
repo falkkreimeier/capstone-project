@@ -1,12 +1,11 @@
 import { useState } from 'react'
-import { initialData } from '../initialData'
 
 export default function useOrder() {
   const [orderData, setOrderData] = useState(() => {
     if (localStorage.getItem('usersLocalStorage')) {
       return JSON.parse(localStorage.getItem('usersLocalStorage'))
     } else {
-      return initialData
+      return ''
     }
   })
 
