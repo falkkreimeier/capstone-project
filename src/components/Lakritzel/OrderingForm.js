@@ -1,9 +1,15 @@
 import styled from 'styled-components/macro'
-import { FaArrowCircleLeft as ArrowLeft } from 'react-icons/fa'
+import { useState } from 'react'
 import { IconContext } from 'react-icons'
+import { FaArrowCircleLeft as ArrowLeft } from 'react-icons/fa'
 import emailjs from 'emailjs-com'
+import OrderingInfo from './OrderingInfo'
 
 function OrderingForm({ onAddOrder, onButtonClick }) {
+  const [orderingInfo, setOrderingInfo] = useState(true)
+  function handleOrderingButtonClick() {
+    setOrderingInfo(!orderingInfo)
+  }
   function sendEmail(e, form) {
     e.preventDefault()
     emailjs
@@ -23,6 +29,15 @@ function OrderingForm({ onAddOrder, onButtonClick }) {
       )
     e.target.reset()
   }
+  if (!orderingInfo) {
+    return (
+      <OrderingInfo
+        orderingInfo={orderingInfo}
+        onHandleOrderingButtonClick={handleOrderingButtonClick}
+      />
+    )
+  }
+
   return (
     <Wrapper>
       <Headline>Rette mich, wer kann!</Headline>
@@ -161,6 +176,7 @@ function OrderingForm({ onAddOrder, onButtonClick }) {
       message: message.value,
     })
     sendEmail(event, form)
+    handleOrderingButtonClick(event)
     form.reset()
   }
 }
