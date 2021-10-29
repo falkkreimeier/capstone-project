@@ -237,7 +237,7 @@ const MessageContainer = styled.div`
   margin: 7px;
   margin-bottom: 20px;
   width: 170px;
-  height: 80px;
+  height: 50px;
   border-radius: 19px;
   border: 2px solid black;
   text-align: center;
@@ -263,7 +263,7 @@ const ButtonOrder = styled.button`
 const IconPosition = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin: -20px 30px 0px 0px;
+  margin: -38px 30px 0px 0px;
 `
 
 export default OrderingForm
