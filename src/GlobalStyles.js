@@ -8,8 +8,8 @@ const GlobalStlyles = createGlobalStyle`
     --main-width: 352px;
     --main-padding: 10px;
     --color-fond: black;
-    --main-font: "Inter", sans-serif;
-    --main-Headline: 'Playfair Display', serif;
+    --main-font:  'Fira Sans', sans-serif;
+    --main-Headline: 'Pragati Narrow', sans-serif;
     --kritzel-Font: 'Ventana';
 } 
 @font-face {
