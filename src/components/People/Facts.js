@@ -25,7 +25,7 @@ function Facts() {
 }
 
 const Wrapper = styled.div`
-  min-height: 22rem;
+  min-height: 352px;
   background-image: url(${klecks});
   background-position: center;
   background-repeat: no-repeat;

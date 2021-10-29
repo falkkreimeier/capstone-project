@@ -52,7 +52,7 @@ const Link = styled.a`
 `
 
 const Image = styled.img`
-  max-height: 10rem;
+  max-height: 160px;
   margin: 0px 0px 15px 0px;
 `
 

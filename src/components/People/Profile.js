@@ -31,7 +31,7 @@ export const Headline = styled.h2`
 
 const StyledProfileImage = styled.img`
   position: sticky;
-  height: 20rem;
+  height: 320px;
   padding: 0px;
 `
 

@@ -11,7 +11,7 @@ function Xing() {
 
 export const Img = styled.img`
   position: sticky;
-  height: 2.5rem;
+  height: 40px;
 `
 
 const Wrapper = styled.a`

@@ -47,7 +47,7 @@ const Wrapper = styled.section`
 `
 
 const Image = styled.img`
-  height: 5rem;
+  height: 80px;
 `
 
 export default Header

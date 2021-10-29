@@ -32,7 +32,7 @@ const Wrapper = styled.a`
 `
 const Img = styled.img`
   position: sticky;
-  height: 1.9rem;
+  height: 30.4px;
 `
 
 export default linkedIn

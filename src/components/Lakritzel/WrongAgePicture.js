@@ -44,12 +44,12 @@ const CardContainer = styled.div`
   border-radius: var(--border-radius);
   align-items: center;
   margin: 0 auto;
-  width: 20rem;
-  height: 30rem;
+  width: 320px;
+  height: 480px;
   background-color: white;
 `
 const Image = styled.img`
-  height: 15rem;
+  height: 240px;
 `
 
 const Headline = styled.h2`

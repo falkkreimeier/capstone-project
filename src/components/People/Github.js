@@ -11,7 +11,7 @@ function Github() {
 
 export const Img = styled.img`
   position: sticky;
-  height: 4rem;
+  height: 64px;
 `
 
 const Wrapper = styled.a`

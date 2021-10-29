@@ -21,11 +21,11 @@ function Welcome() {
 }
 
 const Wrapper = styled.div`
-  min-height: 22rem;
+  min-height: 352px;
   background-image: url(${klecks});
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 21rem;
+  background-size: 336px;
   background-color: white;
   color: white;
   border-radius: var(--border-radius);

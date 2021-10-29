@@ -14,14 +14,14 @@ const Wrapper = styled.section`
   align-items: center;
   border-radius: var(--border-radius);
   background-color: white;
-  width: 22rem;
-  height: 25rem;
+  width: 352px;
+  height: 400px;
   gap: 5px;
 `
 
 const Image = styled.img`
   margin: 0 auto;
-  height: 20rem;
+  height: 320px;
 `
 
 export default campaignCard

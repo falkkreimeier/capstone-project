@@ -49,7 +49,7 @@ function ProductCard(props) {
 }
 
 const Container = styled.div`
-  --card-height: 19rem;
+  --card-height: 304px;
   margin: 2px auto 2px auto;
   border-radius: var(--border-radius);
   width: var(--main-width);
@@ -136,7 +136,6 @@ const ButtonFront = styled.button`
 
 const FlipCardBack = styled.section`
   height: var(--card-height);
-  height: 19rem;
   width: var(--main-width);
   background-color: white;
   backface-visibility: hidden;
