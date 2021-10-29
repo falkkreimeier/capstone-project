@@ -1,5 +1,4 @@
 import styled from 'styled-components/macro'
-import { Headline } from './Profile'
 import Video from '../People/img/Profile_Video.mp4'
 import Portfolioimg from '../People/img/Portfolio.png'
 import PortfolioDatei from '../People/img/Portfolio-komprimiert Kopie.pdf'
@@ -27,6 +26,10 @@ const Wrapper = styled.div`
   border-radius: var(--border-radius);
   padding: var(--main-padding);
   min-width: var(--main-width);
+`
+
+const Headline = styled.h2`
+  font-family: var(--main-Headline);
 `
 const LinkContainer = styled.div`
   margin: 5px auto;

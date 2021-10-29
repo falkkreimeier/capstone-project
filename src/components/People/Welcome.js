@@ -35,10 +35,10 @@ const Wrapper = styled.div`
 export const Text = styled.p`
   font-size: 13px;
   margin: 0px 20px 20px 20px;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--main-font);
 `
 const Headline = styled.h2`
-  font-family: 'Playfair Display', serif;
+  font-family: var(--main-Headline);
   text-align: center;
   font-size: 1.2rem;
   padding-bottom: 10px;

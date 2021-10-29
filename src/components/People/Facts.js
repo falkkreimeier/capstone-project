@@ -37,7 +37,7 @@ const Wrapper = styled.div`
 `
 
 const Headline = styled.h2`
-  font-family: 'Playfair Display', serif;
+  font-family: var(--main-Headline);
   font-weight: 600;
   text-align: center;
   font-size: 1.3rem;
@@ -47,7 +47,7 @@ const Headline = styled.h2`
 
 const List = styled.li`
   text-align: left;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--main-font);
 `
 
 const Ol = styled.ol`

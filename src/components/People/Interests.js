@@ -1,5 +1,4 @@
 import styled from 'styled-components/macro'
-import { Headline } from './Profile'
 
 function Interests() {
   return (
@@ -32,9 +31,13 @@ const Wrapper = styled.div`
   padding: var(--main-padding);
 `
 
+const Headline = styled.h2`
+  font-family: var(--main-Headline);
+`
+
 export const ListItem = styled.li`
   text-align: left;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--main-font);
 `
 
 export const List = styled.ol`

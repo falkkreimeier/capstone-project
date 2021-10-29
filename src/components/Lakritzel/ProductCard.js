@@ -169,6 +169,7 @@ const Headline = styled.h2`
 `
 
 const Details = styled.ol`
+  font-family: var(--main-font);
   margin: -10px 15px;
   grid-area: details;
 `

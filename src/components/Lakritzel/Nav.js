@@ -72,11 +72,11 @@ const NavigationLink = styled(NavLink)`
   color: white;
   font-size: 1.2rem;
   border-radius: var(--border-radius);
-  box-shadow: inset 0 0 0 2px #fff, 0 14px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 0 0 2px #fff;
   transform: translateY(-4px);
   &:active {
-    box-shadow: inset 0 0 1px #fff, 0 2px 4px rgba(0, 0, 0, 0.8);
-    transform: translateY(-0px);
+    box-shadow: inset 0 0 1px #fff;
+    transform: translateY(0px);
     transition: 0.1s;
   }
   &.active {
