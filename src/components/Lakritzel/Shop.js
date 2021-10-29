@@ -31,7 +31,7 @@ function Shop({ onAddOrder }) {
 }
 
 const Container = styled.div`
-  --card-height: 500px;
+  --card-height: 520px;
   margin: 0 auto;
   width: var(--main-width);
   border-radius: var(--border-radius);
