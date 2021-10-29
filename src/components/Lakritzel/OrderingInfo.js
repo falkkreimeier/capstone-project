@@ -62,6 +62,7 @@ const Headline = styled.h2`
 `
 
 const Text = styled.p`
+  text-align: center;
   font-family: var(--main-font);
   margin-top: -35px;
   padding: 20px;
