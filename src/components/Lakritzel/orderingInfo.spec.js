@@ -18,10 +18,17 @@ describe('render OrderingInfo', () => {
     expect(text).toBeInTheDocument()
   })
 
-  it('shows shows Button', () => {
+  it('shows Button', () => {
     render(<OrderingInfo />)
 
-    const text = screen.getByRole('button')
-    expect(text).toBeInTheDocument()
+    const button = screen.getByRole('button')
+    expect(button).toBeInTheDocument()
+  })
+
+  it('shows Image', () => {
+    render(<OrderingInfo />)
+
+    const image = screen.getByRole('img')
+    expect(image).toBeInTheDocument()
   })
 })
