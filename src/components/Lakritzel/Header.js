@@ -1,10 +1,12 @@
 import styled, { css } from 'styled-components/macro'
 import logo from './Assets/Logo_Claim_Lakritzel.jpg'
+import fisch from './Assets/Klammerfisch_bw.png'
 
 function Header({ showWelcomeAnimation }) {
   return (
     <HeaderEl showWelcomeAnimation={showWelcomeAnimation}>
       <Wrapper>
+        <Logo src={fisch} alt="" />
         <Image src={logo} alt="Lakritzel App" />
       </Wrapper>
     </HeaderEl>
@@ -38,8 +40,6 @@ const HeaderEl = styled.header`
 `
 
 const Wrapper = styled.section`
-  display: flex;
-  justify-content: center;
   margin: 5px auto;
   border-radius: var(--border-radius);
   background-color: white;
@@ -47,7 +47,17 @@ const Wrapper = styled.section`
 `
 
 const Image = styled.img`
+  position: relative;
+  left: 50px;
+  text-align: center;
   height: 80px;
+`
+
+const Logo = styled.img`
+  position: relative;
+  left: 260px;
+  bottom: 15px;
+  height: 40px;
 `
 
 export default Header
