@@ -4,6 +4,25 @@ import { IconContext } from 'react-icons'
 import emailjs from 'emailjs-com'
 
 function OrderingForm({ onAddOrder, onButtonClick }) {
+  function sendEmail(e, form) {
+    e.preventDefault()
+    emailjs
+      .sendForm(
+        'service_j4pyv19',
+        'template_22yilsn',
+        form,
+        'user_Vw3AP2J9KSibkIg9aSk6p'
+      )
+      .then(
+        result => {
+          console.log(result.text)
+        },
+        error => {
+          console.log(error.text)
+        }
+      )
+    e.target.reset()
+  }
   return (
     <Wrapper>
       <Headline>Rette mich, wer kann!</Headline>
@@ -141,6 +160,7 @@ function OrderingForm({ onAddOrder, onButtonClick }) {
       quantity: quantity.value,
       message: message.value,
     })
+    sendEmail(event, form)
     form.reset()
   }
 }
@@ -209,14 +229,11 @@ const MessageContainer = styled.div`
 
 const ButtonOrder = styled.button`
   font-family: Ventana;
-  letter-spacing: 2px;
   margin: 0 auto;
-  margin-bottom: 10px;
-  height: 3rem;
-  border: none;
+  padding: 10px;
+  height: 40px;
   background-color: black;
   color: white;
-  width: 11rem;
   font-size: 1.2rem;
   border-radius: var(--border-radius);
   box-shadow: 0 14px 8px rgba(0, 0, 0, 0.25);
