@@ -1,54 +1,21 @@
 import styled, { css } from 'styled-components/macro'
 import { NavLink } from 'react-router-dom'
-import { FaShoppingCart as Shop } from 'react-icons/fa'
-import { CgProfile as Profile } from 'react-icons/cg'
-import { AiFillPicture as Picture } from 'react-icons/ai'
-import { IconContext } from 'react-icons'
-import { FaCocktail as Cocktail } from 'react-icons/fa'
 
 function Nav({ showWelcomeAnimation }) {
   return (
     <Footer showWelcomeAnimation={showWelcomeAnimation}>
       <Navigation>
         <NavigationLink exact to="/" activeClassName="active">
-          <IconContext.Provider
-            value={{
-              color: 'black',
-              size: '25px',
-            }}
-          >
-            <Shop />
-          </IconContext.Provider>
+          Shop
         </NavigationLink>
         <NavigationLink exact to="/campaign" activeClassName="active">
-          <IconContext.Provider
-            value={{
-              color: 'black',
-              size: '25px',
-            }}
-          >
-            <Picture />
-          </IconContext.Provider>
+          Pics
         </NavigationLink>
         <NavigationLink exact to="/cocktails" activeClassName="active">
-          <IconContext.Provider
-            value={{
-              color: 'black',
-              size: '25px',
-            }}
-          >
-            <Cocktail />
-          </IconContext.Provider>
+          Drinks
         </NavigationLink>
         <NavigationLink exact to="/kritzelkopf" activeClassName="active">
-          <IconContext.Provider
-            value={{
-              color: 'black',
-              size: '25px',
-            }}
-          >
-            <Profile />
-          </IconContext.Provider>
+          Me
         </NavigationLink>
       </Navigation>
     </Footer>
@@ -94,16 +61,28 @@ const Navigation = styled.nav`
 `
 
 const NavigationLink = styled(NavLink)`
-  &:hover {
-    background-color: none;
-    border-radius: 50%;
-    box-shadow: 5px 0px 2px 2px grey;
+  font-family: Ventana;
+  min-width: 60px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px auto 0 auto;
+  padding: 10px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: var(--border-radius);
+  box-shadow: inset 0 0 0 2px #fff, 0 14px 8px rgba(0, 0, 0, 0.25);
+  transform: translateY(-4px);
+  &:active {
+    box-shadow: inset 0 0 1px #fff, 0 2px 4px rgba(0, 0, 0, 0.8);
+    transform: translateY(-0px);
+    transition: 0.1s;
   }
-
   &.active {
-    background-color: none;
-    border-radius: 50%;
-    box-shadow: 5px 0px 2px 2px black;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
   }
 `
 
