@@ -41,8 +41,8 @@ function App({ data }) {
       <Main showWelcomeAnimation={showWelcomeAnimation}>
         <Switch>
           <Route exact path="/">
-            <ProductList data={data} />
             <Shop onAddOrder={handleAddOrder} />
+            <ProductList data={data} />
           </Route>
           <Route exact path="/campaign">
             {data.campaign.map(campaign => (
