@@ -24,6 +24,7 @@ function Nav({ showWelcomeAnimation }) {
 
 const Footer = styled.footer`
   position: fixed;
+  border-radius: 5px;
   background-color: black;
   right: 0;
   left: 0;
@@ -50,12 +51,12 @@ const Footer = styled.footer`
 
 const Navigation = styled.nav`
   height: 80px;
+  width: var(--main-width);
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   margin: 5px auto;
-  width: 100%;
   min-height: 40px;
 `
 

@@ -38,11 +38,11 @@ const HeaderEl = styled.header`
 `
 
 const Wrapper = styled.section`
+  width: var(--main-width);
   display: flex;
   justify-content: center;
-  margin: 5px auto;
   background-color: white;
-  width: 100%;
+  margin: 5px auto;
 `
 
 const Image = styled.img`
