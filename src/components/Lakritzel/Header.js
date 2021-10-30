@@ -43,6 +43,7 @@ const Wrapper = styled.section`
   justify-content: center;
   background-color: white;
   margin: 5px auto;
+  border-radius: 5px;
 `
 
 const Image = styled.img`

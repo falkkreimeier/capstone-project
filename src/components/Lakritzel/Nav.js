@@ -58,6 +58,7 @@ const Navigation = styled.nav`
   justify-content: space-evenly;
   margin: 5px auto;
   min-height: 40px;
+  border-radius: 5px;
 `
 
 const NavigationLink = styled(NavLink)`
