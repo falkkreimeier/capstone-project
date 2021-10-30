@@ -6,8 +6,9 @@ import Facts from './Facts'
 import Portfolio from './Portfolio'
 import Xing from './Xing'
 import Github from './Github'
-import LinkedIn from './linkedIn'
+import LinkedIn from './LinkedIn'
 import BlogText from './BlogText'
+import TechStack from './TechStack'
 
 function Kritzelkopf() {
   return (
@@ -17,6 +18,7 @@ function Kritzelkopf() {
       <Interests />
       <Facts />
       <Portfolio />
+      <TechStack />
       <BlogText />
       <SoMeContainer>
         <Xing />
