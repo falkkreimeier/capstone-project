@@ -14,12 +14,11 @@ function Interests() {
       </List>
       <Headline>Fähigkeiten</Headline>
       <List>
-        <ListItem>Semantisches HTML</ListItem>
-        <ListItem>Java Script</ListItem>
-        <ListItem>CSS</ListItem>
-        <ListItem>React</ListItem>
-        <ListItem>Werbetexter</ListItem>
-        <ListItem>Kaufmann mit Führungserfahrung </ListItem>
+        <ListItem>Web Developer</ListItem>
+        <ListItem>Werbetexten</ListItem>
+        <ListItem>Recherche</ListItem>
+        <ListItem>Ikea Schränke augbauen</ListItem>
+        <ListItem>Grillen</ListItem>
       </List>
     </Wrapper>
   )
