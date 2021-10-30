@@ -55,8 +55,7 @@ const Navigation = styled.nav`
   align-items: center;
   justify-content: space-evenly;
   margin: 5px auto;
-  border-radius: var(--border-radius);
-  width: var(--main-width);
+  width: 100%;
   min-height: 40px;
 `
 
