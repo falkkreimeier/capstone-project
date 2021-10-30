@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import LinkedIn from './linkedIn'
+import LinkedIn from './LinkedIn'
 
 describe('render LinkedIn', () => {
   it('shows LinkedIn image', () => {

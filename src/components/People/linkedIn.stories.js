@@ -1,5 +1,5 @@
 import React from 'react'
-import LinkedIn from './linkedIn'
+import LinkedIn from './LinkedIn'
 
 export default {
   title: 'component/LinkedIn',
