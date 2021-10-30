@@ -5,7 +5,7 @@ describe('Header', () => {
   it('shows Header Image', () => {
     render(<Header />)
 
-    const logo = screen.getAllByRole('img')
-    expect(logo).toHaveLength(2)
+    const logo = screen.getByRole('img')
+    expect(logo).toBeInTheDocument()
   })
 })
