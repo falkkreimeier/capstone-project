@@ -36,7 +36,7 @@ const Headline = styled.h2`
 `
 
 const List = styled.ol`
-  margin: -20px 0 10px 0px;
+  margin: -10px 0 10px 0px;
 `
 
 const ListItem = styled.li`

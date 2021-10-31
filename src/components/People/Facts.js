@@ -37,12 +37,12 @@ const Wrapper = styled.div`
 
 const Headline = styled.h2`
   font-family: var(--main-Headline);
-  margin-top: 30px;
+  margin-top: 30px auto;
   font-size: 1.3rem;
 `
 
 const List = styled.ol`
-  margin: -20px 0 -10px 0px;
+  margin: -10px 0 -10px 0px;
 `
 
 const ListItem = styled.li`
