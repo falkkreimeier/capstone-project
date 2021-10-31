@@ -8,10 +8,9 @@ function Welcome() {
       <Text>
         Hi, ich bin Falk, Programmierer, Werbexter und Weltenretter, denn ich
         habe Lakritzel gefangen. <br /> <br />
-        Das übergeschnapste Tröpfchen ist ein echter Unruhestifter. Es raubt
-        unschuldigen Seelen den Verstand, lässt sie auf Tischen tanzen, und
-        berauschende Gespräche über das Leben führen. VORSICHT: Kann abfüllend
-        wirken.
+        Das übergeschnapste Tröpfchen raubt unschuldigen Seelen den Verstand,
+        lässt sie auf Tischen tanzen, und berauschende Gespräche über das Leben
+        führen.
         <br /> <br />
         Diese und viele andere meiner vermeintlichen Heldentaten findet ihr
         hier.
