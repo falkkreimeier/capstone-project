@@ -29,19 +29,20 @@ const Wrapper = styled.div`
   border-radius: var(--border-radius);
   padding: var(--main-padding);
 `
-
 const Headline = styled.h2`
   font-family: var(--main-Headline);
+  margin-top: 10px;
+  font-size: 1.3rem;
 `
 
-export const ListItem = styled.li`
+const List = styled.ol`
+  margin: -20px 0 10px 0px;
+`
+
+const ListItem = styled.li`
   text-align: left;
   font-family: var(--main-font);
-`
-
-export const List = styled.ol`
-  padding: 5px 0px 0px 35px;
-  margin: 0;
+  margin-left: 20px;
 `
 
 export default Interests
