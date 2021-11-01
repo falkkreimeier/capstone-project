@@ -219,7 +219,7 @@ const Headline = styled.h2`
 
 const InputContainer = styled.div`
   margin: 7px;
-  width: 170px;
+  width: 180px;
   border: 2px solid black;
   border-radius: 19px;
   text-align: center;
@@ -236,7 +236,7 @@ const MessageContainer = styled.div`
   align-items: center;
   margin: 7px;
   margin-bottom: 20px;
-  width: 170px;
+  width: 180px;
   height: 50px;
   border-radius: 19px;
   border: 2px solid black;
