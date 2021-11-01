@@ -68,8 +68,8 @@ const Wrapper = styled.section`
 `
 
 const Main = styled.main`
-  margin: 70px auto;
-  padding-bottom: 90px;
+  margin: 0 auto;
+  padding: 90px 0;
   border-radius: var(--border-radius);
   ${({ showWelcomeAnimation }) =>
     showWelcomeAnimation &&
