@@ -10,11 +10,18 @@ import styled, { css } from 'styled-components/macro'
 import { Switch, Route } from 'react-router-dom'
 import useOrder from './hook/useOrder'
 import WrongAgePicture from './components/Lakritzel/WrongAgePicture'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import saveToLocal from './hook/saveToLocal'
 import loadFromLocal from './hook/loadFromLocal'
+import { useLocation } from 'react-router-dom'
 
 function App({ data }) {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+
   const { handleAddOrder } = useOrder()
 
   const [isOver18, setIsOver18] = useState(loadFromLocal('age') || null)
