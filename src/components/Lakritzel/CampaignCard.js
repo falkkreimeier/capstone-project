@@ -10,13 +10,12 @@ function campaignCard(props) {
 
 const Wrapper = styled.section`
   display: flex;
-  margin: 0px auto 5px auto;
+  margin: 5px auto;
   align-items: center;
   border-radius: var(--border-radius);
   background-color: white;
   width: 352px;
   height: 400px;
-  gap: 5px;
 `
 
 const Image = styled.img`
