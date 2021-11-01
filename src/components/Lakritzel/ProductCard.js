@@ -19,14 +19,14 @@ function ProductCard(props) {
             flipToDetails={flipToDetails}
             onClick={flipToDetailsButton}
           >
-            Inhalt
+            WARNUNG
           </ButtonFront>
         </FlipCardFront>
 
         <FlipCardBack>
           <Logo src={props.crazy} alt="Lakritzel" />
           <Text>{props.description}</Text>
-          <Headline>Wahnsinn</Headline>
+          <Headline>Wahnsinnige Mischung</Headline>
           <Details>
             <List>{props.ingredients}</List>
             <List>{props.alcohol}</List>
@@ -157,7 +157,7 @@ const Logo = styled.img`
 const Text = styled.p`
   font-family: var(--main-font);
   width: 200px;
-  margin: 40px 20px 0 -180px;
+  margin: 40px 20px 0 -170px;
   grid-area: portrait;
 `
 
@@ -180,7 +180,7 @@ const List = styled.li`
 const IconPosition = styled.div`
   position: relative;
   right: 40px;
-  top: 60px;
+  top: 50px;
 `
 
 export default ProductCard

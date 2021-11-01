@@ -7,8 +7,8 @@ function OrderingInfo({ orderingInfo, onHandleOrderingButtonClick }) {
       <Headline>Endlich frei!</Headline>
       <Image src={crazy} alt="" />
       <Text>
-        Tausend Dank, eine Mail mit meinen dunklen Plänen habe ich dir gerade
-        geschickt.
+        Willkommen auf der dunklen Seite der Nacht. Kleine Bestellbestätigung
+        hab ich dir auch schon geschickt.
       </Text>
       <Button onClick={onHandleOrderingButtonClick}>Alles klar!</Button>
     </Wrapper>
