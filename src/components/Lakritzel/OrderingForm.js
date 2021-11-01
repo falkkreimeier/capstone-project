@@ -228,6 +228,7 @@ const InputContainer = styled.div`
 const Input = styled.input`
   border: none;
   text-align: center;
+  width: 160px;
 `
 
 const MessageContainer = styled.div`
