@@ -29,5 +29,23 @@ describe('render Interests', () => {
 
     const text6 = screen.getByText('Schreiben/Texten')
     expect(text6).toBeInTheDocument()
+
+    const text7 = screen.getByText('Schreiben/Texten')
+    expect(text7).toBeInTheDocument()
+
+    const text8 = screen.getByText('Web Developer')
+    expect(text8).toBeInTheDocument()
+
+    const text9 = screen.getByText('Werbetexten')
+    expect(text9).toBeInTheDocument()
+
+    const text10 = screen.getByText('Recherche')
+    expect(text10).toBeInTheDocument()
+
+    const text11 = screen.getByText('Ikea Schränke aufbauen')
+    expect(text11).toBeInTheDocument()
+
+    const text12 = screen.getByText('Grillen')
+    expect(text12).toBeInTheDocument()
   })
 })

@@ -16,7 +16,7 @@ function Cocktails({ name, ingredients, preparation }) {
 const Wrapper = styled.section`
   background-image: url(${klecks});
   background-position: center;
-  background-size: 21rem;
+  background-size: 336px;
   background-repeat: no-repeat;
   object-fit: cover;
   border-radius: var(--border-radius);
@@ -30,6 +30,12 @@ const Wrapper = styled.section`
   &:nth-child(even) {
     background-image: none;
     color: black;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
   }
 `
 

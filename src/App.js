@@ -10,11 +10,18 @@ import styled, { css } from 'styled-components/macro'
 import { Switch, Route } from 'react-router-dom'
 import useOrder from './hook/useOrder'
 import WrongAgePicture from './components/Lakritzel/WrongAgePicture'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import saveToLocal from './hook/saveToLocal'
 import loadFromLocal from './hook/loadFromLocal'
+import { useLocation } from 'react-router-dom'
 
 function App({ data }) {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+
   const { handleAddOrder } = useOrder()
 
   const [isOver18, setIsOver18] = useState(loadFromLocal('age') || null)
@@ -41,8 +48,8 @@ function App({ data }) {
       <Main showWelcomeAnimation={showWelcomeAnimation}>
         <Switch>
           <Route exact path="/">
-            <ProductList data={data} />
             <Shop onAddOrder={handleAddOrder} />
+            <ProductList data={data} />
           </Route>
           <Route exact path="/campaign">
             {data.campaign.map(campaign => (
@@ -68,8 +75,8 @@ const Wrapper = styled.section`
 `
 
 const Main = styled.main`
-  margin: 93px auto;
-  padding-bottom: 90px;
+  margin: 0 auto;
+  padding: 90px 0;
   border-radius: var(--border-radius);
   ${({ showWelcomeAnimation }) =>
     showWelcomeAnimation &&

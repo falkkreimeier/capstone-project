@@ -48,15 +48,15 @@ const CardContainer = styled.div`
   align-items: center;
   border-radius: var(--border-radius);
   margin: 0 auto;
-  width: 20rem;
-  height: 30rem;
+  width: 320px;
+  height: 480px;
   background-color: white;
 `
 
 const LogoImg = styled.img`
   margin: 10px auto 10px auto;
   justify-self: flex-start;
-  height: 6rem;
+  height: 96px;
 `
 
 const HeadlineImage = styled.h2`
@@ -69,7 +69,7 @@ const HeadlineImage = styled.h2`
 const Image = styled.img`
   margin: 10px auto 10px auto;
   justify-self: flex-start;
-  height: 8rem;
+  height: 128px;
 `
 
 const Button = styled.button`
@@ -79,12 +79,12 @@ const Button = styled.button`
   background-color: black;
   margin: 8px;
   padding: 5px;
-  width: 10rem;
+  width: 160px;
   color: white;
-  box-shadow: 0 14px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 0 0 1px #fff, 0 14px 8px rgba(0, 0, 0, 0.25);
   transform: translateY(-4px);
   &:active {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    box-shadow: inset 0 0 0 1px #fff, 0 2px 4px rgba(0, 0, 0, 0.8);
     transform: translateY(-0px);
     transition: 0.1s;
   }

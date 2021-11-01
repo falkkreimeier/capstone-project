@@ -19,14 +19,14 @@ function ProductCard(props) {
             flipToDetails={flipToDetails}
             onClick={flipToDetailsButton}
           >
-            Inhalt
+            WARNUNG
           </ButtonFront>
         </FlipCardFront>
 
         <FlipCardBack>
           <Logo src={props.crazy} alt="Lakritzel" />
           <Text>{props.description}</Text>
-          <Headline>Wahnsinn</Headline>
+          <Headline>Wahnsinnige Mischung</Headline>
           <Details>
             <List>{props.ingredients}</List>
             <List>{props.alcohol}</List>
@@ -49,13 +49,12 @@ function ProductCard(props) {
 }
 
 const Container = styled.div`
-  --card-height: 19rem;
-  margin: 2px auto 2px auto;
+  --card-height: 304px;
+  margin: 2px auto 0px auto;
   border-radius: var(--border-radius);
   width: var(--main-width);
   height: var(--card-height);
   perspective: 1000px;
-  margin-bottom: 5px;
 `
 
 const FlipCard = styled.section`
@@ -136,7 +135,6 @@ const ButtonFront = styled.button`
 
 const FlipCardBack = styled.section`
   height: var(--card-height);
-  height: 19rem;
   width: var(--main-width);
   background-color: white;
   backface-visibility: hidden;
@@ -159,7 +157,7 @@ const Logo = styled.img`
 const Text = styled.p`
   font-family: var(--main-font);
   width: 200px;
-  margin: 40px 20px 0 -180px;
+  margin: 40px 20px 0 -170px;
   grid-area: portrait;
 `
 
@@ -170,6 +168,7 @@ const Headline = styled.h2`
 `
 
 const Details = styled.ol`
+  font-family: var(--main-font);
   margin: -10px 15px;
   grid-area: details;
 `
@@ -181,7 +180,7 @@ const List = styled.li`
 const IconPosition = styled.div`
   position: relative;
   right: 40px;
-  top: 60px;
+  top: 50px;
 `
 
 export default ProductCard

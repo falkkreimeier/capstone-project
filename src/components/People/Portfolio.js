@@ -1,5 +1,4 @@
 import styled from 'styled-components/macro'
-import { Headline } from './Profile'
 import Video from '../People/img/Profile_Video.mp4'
 import Portfolioimg from '../People/img/Portfolio.png'
 import PortfolioDatei from '../People/img/Portfolio-komprimiert Kopie.pdf'
@@ -28,6 +27,10 @@ const Wrapper = styled.div`
   padding: var(--main-padding);
   min-width: var(--main-width);
 `
+
+const Headline = styled.h2`
+  font-family: var(--main-Headline);
+`
 const LinkContainer = styled.div`
   margin: 5px auto;
   width: 130px;
@@ -52,7 +55,7 @@ const Link = styled.a`
 `
 
 const Image = styled.img`
-  max-height: 10rem;
+  max-height: 160px;
   margin: 0px 0px 15px 0px;
 `
 

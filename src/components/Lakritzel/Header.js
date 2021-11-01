@@ -38,16 +38,16 @@ const HeaderEl = styled.header`
 `
 
 const Wrapper = styled.section`
+  width: var(--main-width);
   display: flex;
   justify-content: center;
-  margin: 5px auto;
-  border-radius: var(--border-radius);
   background-color: white;
-  width: var(--main-width);
+  margin: 5px auto;
+  border-radius: 5px;
 `
 
 const Image = styled.img`
-  height: 5rem;
+  height: 80px;
 `
 
 export default Header

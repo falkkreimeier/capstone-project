@@ -5,27 +5,26 @@ function Facts() {
   return (
     <Wrapper>
       <Headline>Fakten:</Headline>
-      <Ol>
-        <List>41 Jahre jung</List>
-        <List>1,93m klein</List>
-        <List>Hoffnungsloser Optimist</List>
-        <List>Philantrop</List>
-        <List>
+      <List>
+        <ListItem>41 Jahre jung</ListItem>
+        <ListItem>1,93m klein</ListItem>
+        <ListItem>Hoffnungsloser Optimist</ListItem>
+        <ListItem>Philantrop</ListItem>
+        <ListItem>
           Voll auf Spur, aber immer auch ein kleines bisschen daneben.
-        </List>
-        <br />
-      </Ol>
+        </ListItem>
+      </List>
       <Headline>Zitate:</Headline>
-      <Ol>
-        <List>"Isst du das noch?!"</List>
-        <List>"Wer hat das Fettnäpfchen hier hingestellt?!"</List>
-      </Ol>
+      <List>
+        <ListItem>"Isst du das noch?!"</ListItem>
+        <ListItem>"Wer hat das Fettnäpfchen hier hingestellt?!"</ListItem>
+      </List>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
-  min-height: 22rem;
+  min-height: 352px;
   background-image: url(${klecks});
   background-position: center;
   background-repeat: no-repeat;
@@ -37,21 +36,19 @@ const Wrapper = styled.div`
 `
 
 const Headline = styled.h2`
-  font-family: 'Playfair Display', serif;
-  font-weight: 600;
-  text-align: center;
+  font-family: var(--main-Headline);
+  margin-top: 30px auto;
   font-size: 1.3rem;
-  text-decoration: none;
-  color: white;
 `
 
-const List = styled.li`
+const List = styled.ol`
+  margin: -10px 0 -10px 0px;
+`
+
+const ListItem = styled.li`
   text-align: left;
-  font-family: 'Inter', sans-serif;
-`
-
-const Ol = styled.ol`
-  margin: 0 0 -20px 0;
+  font-family: var(--main-font);
+  margin-left: 20px;
 `
 
 export default Facts

@@ -1,8 +1,43 @@
 import styled from 'styled-components/macro'
-import { FaArrowCircleLeft as ArrowLeft } from 'react-icons/fa'
+import { useState } from 'react'
 import { IconContext } from 'react-icons'
+import { FaArrowCircleLeft as ArrowLeft } from 'react-icons/fa'
+import emailjs from 'emailjs-com'
+import OrderingInfo from './OrderingInfo'
 
 function OrderingForm({ onAddOrder, onButtonClick }) {
+  const [orderingInfo, setOrderingInfo] = useState(true)
+  function handleOrderingButtonClick() {
+    setOrderingInfo(!orderingInfo)
+  }
+  function sendEmail(e, form) {
+    e.preventDefault()
+    emailjs
+      .sendForm(
+        'service_j4pyv19',
+        'template_22yilsn',
+        form,
+        'user_Vw3AP2J9KSibkIg9aSk6p'
+      )
+      .then(
+        result => {
+          console.log(result.text)
+        },
+        error => {
+          console.log(error.text)
+        }
+      )
+    e.target.reset()
+  }
+  if (!orderingInfo) {
+    return (
+      <OrderingInfo
+        orderingInfo={orderingInfo}
+        onHandleOrderingButtonClick={handleOrderingButtonClick}
+      />
+    )
+  }
+
   return (
     <Wrapper>
       <Headline>Rette mich, wer kann!</Headline>
@@ -98,7 +133,9 @@ function OrderingForm({ onAddOrder, onButtonClick }) {
             />
           </label>
         </MessageContainer>
-        <ButtonOrder activeClassName="active">Hol mich hier raus!</ButtonOrder>
+        <ButtonOrder onClick={onAddOrder} activeClassName="active">
+          Hol mich hier raus!
+        </ButtonOrder>
       </Form>
       <IconPosition>
         <IconContext.Provider
@@ -138,6 +175,8 @@ function OrderingForm({ onAddOrder, onButtonClick }) {
       quantity: quantity.value,
       message: message.value,
     })
+    sendEmail(event, form)
+    handleOrderingButtonClick(event)
     form.reset()
   }
 }
@@ -198,7 +237,7 @@ const MessageContainer = styled.div`
   margin: 7px;
   margin-bottom: 20px;
   width: 170px;
-  height: 80px;
+  height: 50px;
   border-radius: 19px;
   border: 2px solid black;
   text-align: center;
@@ -206,14 +245,11 @@ const MessageContainer = styled.div`
 
 const ButtonOrder = styled.button`
   font-family: Ventana;
-  letter-spacing: 2px;
   margin: 0 auto;
-  margin-bottom: 10px;
-  height: 3rem;
-  border: none;
+  padding: 10px;
+  height: 40px;
   background-color: black;
   color: white;
-  width: 11rem;
   font-size: 1.2rem;
   border-radius: var(--border-radius);
   box-shadow: 0 14px 8px rgba(0, 0, 0, 0.25);
@@ -227,7 +263,7 @@ const ButtonOrder = styled.button`
 const IconPosition = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin: -20px 30px 0px 0px;
+  margin: -38px 30px 0px 0px;
 `
 
 export default OrderingForm

@@ -10,18 +10,23 @@ function campaignCard(props) {
 
 const Wrapper = styled.section`
   display: flex;
-  margin: 0px auto 5px auto;
+  margin: 5px auto;
   align-items: center;
   border-radius: var(--border-radius);
   background-color: white;
-  width: 22rem;
-  height: 25rem;
-  gap: 5px;
+  width: 352px;
+  height: 400px;
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
 `
 
 const Image = styled.img`
   margin: 0 auto;
-  height: 20rem;
+  height: 320px;
 `
 
 export default campaignCard

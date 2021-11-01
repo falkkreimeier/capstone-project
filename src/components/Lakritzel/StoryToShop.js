@@ -22,10 +22,7 @@ function StoryToShop({ flipToShop, onButtonClick }) {
 }
 
 const Wrapper = styled.section`
-  --card-height: 19rem;
   background-color: white;
-  width: var(--main-width);
-  height: var(--card-height);
   border-radius: var(--border-radius);
   margin: 0 auto;
   align-items: flex-start;
@@ -38,14 +35,13 @@ const Image = styled.img`
   margin-bottom: 15px;
   border-radius: 20px;
   grid-area: image;
-  height: 12rem;
+  height: 192px;
 `
 
 const Headline = styled.h2`
   margin: 0 auto;
   font-size: 3rem;
-  padding-top: 25px;
-  grid-area: headline;
+  padding-top: 20px;
   font-family: Ventana;
 `
 
@@ -61,16 +57,15 @@ const Text = styled.p`
 
 const ButtonFront = styled.button`
   font-family: Ventana;
-  letter-spacing: 2px;
-  margin-bottom: 5px;
   backface-visibility: hidden;
   margin: 0 auto;
-  padding-top: 5px;
+  padding-top: 3px;
   background-color: black;
   color: white;
-  width: 12rem;
-  font-size: 2rem;
-  border-radius: 15px;
+  height: 40px;
+  width: 192px;
+  font-size: 1.5rem;
+  border-radius: var(--border-radius);
   box-shadow: 0 14px 8px rgba(0, 0, 0, 0.25);
   transform: translateY(-4px);
   &:active {

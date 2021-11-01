@@ -8,10 +8,9 @@ function Welcome() {
       <Text>
         Hi, ich bin Falk, Programmierer, Werbexter und Weltenretter, denn ich
         habe Lakritzel gefangen. <br /> <br />
-        Das übergeschnapste Tröpfchen ist ein echter Unruhestifter. Es raubt
-        unschuldigen Seelen den Verstand, lässt sie auf Tischen tanzen, und
-        berauschende Gespräche über das Leben führen. VORSICHT: Kann abfüllend
-        wirken.
+        Das übergeschnapste Tröpfchen raubt unschuldigen Seelen den Verstand,
+        lässt sie auf Tischen tanzen, und berauschende Gespräche über das Leben
+        führen.
         <br /> <br />
         Diese und viele andere meiner vermeintlichen Heldentaten findet ihr
         hier.
@@ -21,11 +20,11 @@ function Welcome() {
 }
 
 const Wrapper = styled.div`
-  min-height: 22rem;
+  min-height: 352px;
   background-image: url(${klecks});
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 21rem;
+  background-size: 336px;
   background-color: white;
   color: white;
   border-radius: var(--border-radius);
@@ -35,10 +34,10 @@ const Wrapper = styled.div`
 export const Text = styled.p`
   font-size: 13px;
   margin: 0px 20px 20px 20px;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--main-font);
 `
 const Headline = styled.h2`
-  font-family: 'Playfair Display', serif;
+  font-family: var(--main-Headline);
   text-align: center;
   font-size: 1.2rem;
   padding-bottom: 10px;
