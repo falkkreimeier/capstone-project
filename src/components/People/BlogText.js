@@ -29,7 +29,7 @@ const Wrapper = styled.div`
 `
 
 const LinkContainer = styled.div`
-  margin: 5px auto;
+  margin: 0px auto;
   width: 130px;
   text-decoration: none;
   border: 1px solid black;
