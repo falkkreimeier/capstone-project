@@ -19,14 +19,13 @@ const Wrapper = styled.div`
 `
 
 export const Headline = styled.h2`
-  font-family: 'Playfair Display', serif;
+  font-family: var(--main-Headline);
   font-weight: 600;
   text-align: center;
   font-size: 1.3rem;
   padding-bottom: 10px;
   margin: 10px 0px 5px 0px;
   text-decoration: none;
-  color: #58555a;
 `
 
 const StyledProfileImage = styled.img`
