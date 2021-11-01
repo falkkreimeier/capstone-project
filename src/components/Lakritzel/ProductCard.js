@@ -50,12 +50,11 @@ function ProductCard(props) {
 
 const Container = styled.div`
   --card-height: 304px;
-  margin: 2px auto 2px auto;
+  margin: 2px auto 0px auto;
   border-radius: var(--border-radius);
   width: var(--main-width);
   height: var(--card-height);
   perspective: 1000px;
-  margin-bottom: 5px;
 `
 
 const FlipCard = styled.section`
