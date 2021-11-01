@@ -16,6 +16,12 @@ const Wrapper = styled.section`
   background-color: white;
   width: 352px;
   height: 400px;
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
 `
 
 const Image = styled.img`

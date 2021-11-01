@@ -31,6 +31,12 @@ const Wrapper = styled.section`
     background-image: none;
     color: black;
   }
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
 `
 
 const Headline = styled.h2`
