@@ -227,8 +227,10 @@ const InputContainer = styled.div`
 
 const Input = styled.input`
   border: none;
+  margin-top: 4px;
   text-align: center;
-  width: 160px;
+  width: 150px;
+  height: 15px;
 `
 
 const MessageContainer = styled.div`
