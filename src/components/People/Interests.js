@@ -17,7 +17,7 @@ function Interests() {
         <ListItem>Web Developer</ListItem>
         <ListItem>Werbetexten</ListItem>
         <ListItem>Recherche</ListItem>
-        <ListItem>Ikea Schränke augbauen</ListItem>
+        <ListItem>Ikea Schränke aufbauen</ListItem>
         <ListItem>Grillen</ListItem>
       </List>
     </Wrapper>
