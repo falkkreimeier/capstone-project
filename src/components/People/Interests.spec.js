@@ -42,7 +42,7 @@ describe('render Interests', () => {
     const text10 = screen.getByText('Recherche')
     expect(text10).toBeInTheDocument()
 
-    const text11 = screen.getByText('Ikea Schränke augbauen')
+    const text11 = screen.getByText('Ikea Schränke aufbauen')
     expect(text11).toBeInTheDocument()
 
     const text12 = screen.getByText('Grillen')
