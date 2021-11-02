@@ -228,7 +228,7 @@ const InputContainer = styled.div`
 const Input = styled.input`
   border: none;
   text-align: center;
-  width: 170px;
+  width: 155px;
 `
 
 const MessageContainer = styled.div`
@@ -264,7 +264,7 @@ const ButtonOrder = styled.button`
 const IconPosition = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin: -38px 30px 0px 0px;
+  margin: 0px 30px 0px 0px;
 `
 
 export default OrderingForm

@@ -12,15 +12,15 @@ Have a look at Lakritzel on Vercel 👀
 
 ## Screenshots!
 
-ConcertLife_Overview
+Lakritzel Online-Shop
 
-<img src="./Lakritzel-Shop1.png" alt="" width="200px" style="margin-left:16px;"/>
+<img src="./Lakritzel-Shop1.png" alt="" width="150px" style="margin-left:16px;"/>
 
-<img src="./Lakritzel-Shop2.png" alt="" width="200px" style="margin-left:16px;"/>
+<img src="./Lakritzel-Shop2.png" alt="" width="150px" style="margin-left:16px;"/>
 
-<img src="./Lakritzel-Shop3.png" alt="" width="200px" style="margin-left:16px;"/>
+<img src="./Lakritzel-Shop3.png" alt="" width="150px" style="margin-left:16px;"/>
 
-<img src="./Lakritzel-Shop4.png" alt="" width="200px" style="margin-left:16px;"/>
+<img src="./Lakritzel-Shop4.png" alt="" width="150px" style="margin-left:16px;"/>
 
 ## Tech Stack
 
@@ -31,7 +31,6 @@ Node.js
 JavaScript
 React Hooks
 React Router
-PropTypes
 Styled Components
 Storybook
 React Testing Library

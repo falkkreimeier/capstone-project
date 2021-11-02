@@ -6,7 +6,7 @@ function Welcome() {
     <Wrapper>
       <Headline>Der Mensch hinter dem Monster</Headline>
       <Text>
-        Hi, ich bin Falk, Programmierer, Werbexter und Weltenretter, denn ich
+        Hi, ich bin Falk, Programmierer, Werbtexter und Weltenretter, denn ich
         habe Lakritzel gefangen. <br /> <br />
         Das übergeschnapste Tröpfchen raubt unschuldigen Seelen den Verstand,
         lässt sie auf Tischen tanzen, und berauschende Gespräche über das Leben
