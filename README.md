@@ -10,7 +10,7 @@ Stay tuned to see this and more upcomming andventures of the crazy black droplet
 
 Have a look at Lakritzel on Vercel 👀
 
-[Lakritzel Online-Shop](https://capstone-project-939qc6vpb-falkkreimeier.vercel.app/)
+[Lakritzel Online-Shop](https://capstone-project-l2pejjcth-falkkreimeier.vercel.app/)
 
 ## Screenshots!
 
