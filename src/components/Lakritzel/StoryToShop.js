@@ -7,8 +7,8 @@ function StoryToShop({ flipToShop, onButtonClick }) {
       <Image src="./img/Rettemich.jpg"></Image>
 
       <Text>
-        Dieser verkorkste Kritzelkopf hat mich in dieser kleinen Flasche
-        verkorkt. Hol mich hier raus, ich fülle auch keinen ab, versprochen ...
+        Ich wurde gegen meinen Willen in dieser Flasche verkorkt. Hol mich hier
+        raus! Ich fülle auch keinen ab ... versprochen.
       </Text>
       <ButtonFront
         disabled={flipToShop}
