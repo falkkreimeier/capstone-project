@@ -20,7 +20,7 @@ describe('StoryToShop', () => {
     render(<StoryToShop />)
 
     const text = screen.getByText(
-      'Ich wurde gegen meinen Willen in dieser Flasche verkorkt. Hol mich hier aus! Ich fülle auch keinen ab ... versprochen.'
+      'Ich wurde gegen meinen Willen in dieser Flasche verkorkt. Hol mich hier raus! Ich fülle auch keinen ab ... versprochen.'
     )
     expect(text).toBeInTheDocument()
   })
