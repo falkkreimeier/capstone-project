@@ -13,7 +13,7 @@ describe('render OrderingInfo', () => {
     render(<OrderingInfo />)
 
     const text = screen.getByText(
-      'Tausend Dank, eine Mail mit meinen dunklen Plänen habe ich dir gerade geschickt.'
+      'Willkommen auf der dunklen Seite der Nacht. Kleine Bestellbestätigung hab ich dir auch schon geschickt.'
     )
     expect(text).toBeInTheDocument()
   })

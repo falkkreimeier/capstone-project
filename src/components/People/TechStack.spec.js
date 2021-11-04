@@ -12,10 +12,10 @@ describe('render TechStack', () => {
   it('shows Text', () => {
     render(<TechStack />)
 
-    const text = screen.getByText('HTML')
+    const text = screen.getByText('HTML5')
     expect(text).toBeInTheDocument()
 
-    const text2 = screen.getByText('CSS')
+    const text2 = screen.getByText('CSS3')
     expect(text2).toBeInTheDocument()
 
     const text3 = screen.getByText('React')
@@ -36,7 +36,19 @@ describe('render TechStack', () => {
     const text8 = screen.getByText('Git & GitHub')
     expect(text8).toBeInTheDocument()
 
-    const text9 = screen.getByText('Figma')
+    const text9 = screen.getByText('React-Testing-Library')
     expect(text9).toBeInTheDocument()
+
+    const text10 = screen.getByText('Storybook')
+    expect(text10).toBeInTheDocument()
+
+    const text11 = screen.getByText('Vercel')
+    expect(text11).toBeInTheDocument()
+
+    const text12 = screen.getByText('VS Code')
+    expect(text12).toBeInTheDocument()
+
+    const text13 = screen.getByText('Mongoose')
+    expect(text13).toBeInTheDocument()
   })
 })
