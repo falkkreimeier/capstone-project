@@ -1,7 +1,7 @@
 {
   "files": {
     "0.d0518bfc.iframe.bundle.js": "./0.d0518bfc.iframe.bundle.js",
-    "main.js": "./main.07b119f7.iframe.bundle.js",
+    "main.js": "./main.2fb42b50.iframe.bundle.js",
     "runtime~main.js": "./runtime~main.230735f1.iframe.bundle.js",
     "vendors~main.js": "./vendors~main.dbc767d1.iframe.bundle.js",
     "vendors~main.js.map": "./vendors~main.dbc767d1.iframe.bundle.js.map",
@@ -26,13 +26,13 @@
     "static/media/der-ballert-noHeadline.d2f8cd92.png": "./static/media/der-ballert-noHeadline.d2f8cd92.png",
     "static/media/github.svg.1c95b85d.png": "./static/media/github.svg.1c95b85d.png",
     "static/media/linkedin.400c860f.svg": "./static/media/linkedin.400c860f.svg",
-    "static/media/shorty-nohl.1b06f640.jpg": "./static/media/shorty-nohl.1b06f640.jpg",
+    "static/media/shorty-nohl-noBG.db6f0d66.png": "./static/media/shorty-nohl-noBG.db6f0d66.png",
     "static/media/xing.5cea201b.svg": "./static/media/xing.5cea201b.svg",
     "vendors~main.dbc767d1.iframe.bundle.js.LICENSE.txt": "./vendors~main.dbc767d1.iframe.bundle.js.LICENSE.txt"
   },
   "entrypoints": [
     "runtime~main.230735f1.iframe.bundle.js",
     "vendors~main.dbc767d1.iframe.bundle.js",
-    "main.07b119f7.iframe.bundle.js"
+    "main.2fb42b50.iframe.bundle.js"
   ]
 }
