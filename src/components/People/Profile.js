@@ -11,6 +11,7 @@ function Profile() {
 }
 
 const Wrapper = styled.div`
+  grid-area: kritzelkopf;
   margin: 0 auto;
   width: var(--main-width);
   background: white;
@@ -23,7 +24,7 @@ export const Headline = styled.h2`
   font-weight: 600;
   text-align: center;
   font-size: 1.3rem;
-  padding-bottom: 10px;
+  padding-bottom: 0;
   margin: 10px 0px 5px 0px;
   text-decoration: none;
 `
