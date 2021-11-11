@@ -22,6 +22,7 @@ function StoryToShop({ flipToShop, onButtonClick }) {
 }
 
 const Wrapper = styled.section`
+  grid-area: story;
   background-color: white;
   border-radius: var(--border-radius);
   margin: 0 auto;

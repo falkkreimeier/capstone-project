@@ -23,6 +23,7 @@ function Nav({ showWelcomeAnimation }) {
 }
 
 const Footer = styled.footer`
+  grid-area: nav;
   position: fixed;
   border-radius: 5px;
   background-color: black;
@@ -47,6 +48,9 @@ const Footer = styled.footer`
         }
       }
     `}
+  @media screen and (min-width:1000px) {
+    display: none;
+  }
 `
 
 const Navigation = styled.nav`

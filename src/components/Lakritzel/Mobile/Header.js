@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components/macro'
-import logo from './Assets/Logo_Claim_Lakritzel.jpg'
+import logo from '../Assets/Logo_Claim_Lakritzel.jpg'
 
 function Header({ showWelcomeAnimation }) {
   return (
@@ -12,6 +12,7 @@ function Header({ showWelcomeAnimation }) {
 }
 
 const HeaderEl = styled.header`
+  grid-area: header;
   position: fixed;
   background-color: black;
   right: 0;
@@ -35,6 +36,11 @@ const HeaderEl = styled.header`
         }
       }
     `}
+  @media only screen and (min-width: 1000px) {
+    background-color: white;
+    position: static;
+    max-width: 1060px;
+  }
 `
 
 const Wrapper = styled.section`
@@ -44,6 +50,10 @@ const Wrapper = styled.section`
   background-color: white;
   margin: 5px auto;
   border-radius: 5px;
+  @media only screen and (min-width: 1000px) {
+    width: 1060px;
+    border-radius: 5px;
+  }
 `
 
 const Image = styled.img`

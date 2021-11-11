@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro'
-import klecks from './Assets/Kleckse_clean.jpg'
+import klecks from '../Assets/Kleckse_clean.jpg'
 
 function Cocktails({ name, ingredients, preparation }) {
   return (

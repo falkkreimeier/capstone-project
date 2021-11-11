@@ -49,12 +49,17 @@ function ProductCard(props) {
 }
 
 const Container = styled.div`
+  grid-area: productCard;
   --card-height: 304px;
   margin: 2px auto 0px auto;
   border-radius: var(--border-radius);
   width: var(--main-width);
   height: var(--card-height);
   perspective: 1000px;
+  @media screen and (min-width: 1000px) {
+    margin: 0;
+    --card-height: 295px;
+  }
 `
 
 const FlipCard = styled.section`

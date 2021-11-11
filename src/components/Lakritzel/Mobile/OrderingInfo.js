@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import crazy from './Assets/der-ballert-noHeadline.png'
+import crazy from '../Assets/der-ballert-noHeadline.png'
 
 function OrderingInfo({ orderingInfo, onHandleOrderingButtonClick }) {
   return (
