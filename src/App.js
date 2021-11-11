@@ -1,19 +1,18 @@
-import Header from './components/Lakritzel/Header'
-import AgeGate from './components/Lakritzel/AgeGate'
-import ProductList from './components/Lakritzel/ProductList'
-import Shop from './components/Lakritzel/Shop'
-import Nav from './components/Lakritzel/Nav'
-import CampaignCard from './components/Lakritzel/CampaignCard'
-import CocktailList from './components/Lakritzel/CocktailList'
+import Header from './components/Lakritzel/Mobile/Header'
+import AgeGate from './components/Lakritzel/Mobile/AgeGate'
+import Nav from './components/Lakritzel/Mobile/Nav'
+import CampaignCard from './components/Lakritzel/Mobile/CampaignCard'
+import CocktailList from './components/Lakritzel/Mobile/CocktailList'
 import Kritzelkopf from './components/People/Kritzelkopf'
 import styled, { css } from 'styled-components/macro'
 import { Switch, Route } from 'react-router-dom'
 import useOrder from './hook/useOrder'
-import WrongAgePicture from './components/Lakritzel/WrongAgePicture'
+import WrongAgePicture from './components/Lakritzel/Mobile/WrongAgePicture'
 import { useState, useEffect } from 'react'
 import saveToLocal from './hook/saveToLocal'
 import loadFromLocal from './hook/loadFromLocal'
 import { useLocation } from 'react-router-dom'
+import DesktopSide from './components/Lakritzel/Desktop/DesktopSide'
 
 function App({ data }) {
   const { pathname } = useLocation()
@@ -48,8 +47,7 @@ function App({ data }) {
       <Main showWelcomeAnimation={showWelcomeAnimation}>
         <Switch>
           <Route exact path="/">
-            <Shop onAddOrder={handleAddOrder} />
-            <ProductList data={data} />
+            <DesktopSide onAddOrder={handleAddOrder} data={data} />
           </Route>
           <Route exact path="/campaign">
             {data.campaign.map(campaign => (
@@ -95,6 +93,9 @@ const Main = styled.main`
         }
       }
     `}
+  @media only screen and (min-width: 1000px) {
+    padding: 0px;
+  }
 `
 
 export default App
