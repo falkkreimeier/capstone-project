@@ -4,6 +4,7 @@ import Nav from './components/Lakritzel/Mobile/Nav'
 import CampaignCard from './components/Lakritzel/Mobile/CampaignCard'
 import CocktailList from './components/Lakritzel/Mobile/CocktailList'
 import Kritzelkopf from './components/People/Kritzelkopf'
+import AGB from '../src/components/Lakritzel/Both/AGB'
 import styled, { css } from 'styled-components/macro'
 import { Switch, Route } from 'react-router-dom'
 import useOrder from './hook/useOrder'
@@ -13,6 +14,8 @@ import saveToLocal from './hook/saveToLocal'
 import loadFromLocal from './hook/loadFromLocal'
 import { useLocation } from 'react-router-dom'
 import DesktopSide from './components/Lakritzel/Desktop/DesktopSide'
+import Impressum from './components/Lakritzel/Both/Impressum'
+import Datenschutz from './components/Lakritzel/Both/Datenschutz'
 
 function App({ data }) {
   const { pathname } = useLocation()
@@ -50,15 +53,31 @@ function App({ data }) {
             <DesktopSide onAddOrder={handleAddOrder} data={data} />
           </Route>
           <Route exact path="/campaign">
-            {data.campaign.map(campaign => (
-              <CampaignCard image={campaign.image} key={campaign.image} />
-            ))}
+            <Container>
+              {data.campaign.map(campaign => (
+                <CampaignCard image={campaign.image} key={campaign.image} />
+              ))}
+            </Container>
           </Route>
+
           <Route exact path="/cocktails">
-            <CocktailList data={data} />
+            <Container>
+              <CocktailList data={data} />
+            </Container>
           </Route>
+
           <Route exact path="/kritzelkopf">
             <Kritzelkopf />
+          </Route>
+
+          <Route exact path="/agb">
+            <AGB />
+          </Route>
+          <Route exact path="/impressum">
+            <Impressum />
+          </Route>
+          <Route exact path="/datenschutz">
+            <Datenschutz />
           </Route>
         </Switch>
       </Main>
@@ -67,7 +86,17 @@ function App({ data }) {
   )
 }
 
-const Wrapper = styled.section`
+const Container = styled.section`
+  @media only screen and (min-width: 1000px) {
+    margin-left: 160px;
+    grid-gap: 3px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 352px 253px;
+  }
+`
+
+const Wrapper = styled.div`
   height: 100vh;
   max-height: 963px;
 `
@@ -95,6 +124,7 @@ const Main = styled.main`
     `}
   @media only screen and (min-width: 1000px) {
     padding: 0px;
+    width: 1060px;
   }
 `
 
