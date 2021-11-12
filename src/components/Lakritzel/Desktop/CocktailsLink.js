@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom'
 
 function CocktailsLink() {
   return (
-    <LinkTo to="/cocktails">
+    <Wrapper>
       <Headline>Wahnsinnige Mixgetränke</Headline>
       <Text>Lorem Ipsum</Text>
-    </LinkTo>
+    </Wrapper>
   )
 }
 
-const LinkTo = styled(Link)`
+const Wrapper = styled.section`
   grid-area: cocktailsLink;
   display: none;
   @media only screen and (min-width: 1000px) {
@@ -27,16 +27,8 @@ const LinkTo = styled(Link)`
     color: white;
     padding: 10px;
     width: var(--main-width);
-    height: 297px;
-    transform: translateY(0px);
-    &:hover {
-      transform: translateY(-4px);
-    }
-    &:active {
-      transform: translateY(4px);
-      transition: 0.1s;
-    }
-  } ;
+    min-height: 300px;
+  }
 `
 
 const Headline = styled.h2`

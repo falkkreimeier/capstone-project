@@ -1,13 +1,10 @@
 import styled from 'styled-components/macro'
 import Übergeschnapst from '../Assets/Süß.jpg'
-import { Link } from 'react-router-dom'
 
 function CampaignCardLink() {
   return (
     <Wrapper>
-      <Link to="/campaign">
-        <Image src={Übergeschnapst} alt="" />
-      </Link>
+      <Image src={Übergeschnapst} alt="" />
     </Wrapper>
   )
 }
@@ -23,20 +20,12 @@ const Wrapper = styled.section`
     background-color: white;
     width: var(--main-width);
     height: 300px;
-    transform: translateY(0px);
-    &:hover {
-      transform: translateY(-4px);
-    }
-    &:active {
-      transform: translateY(4px);
-      transition: 0.1s;
-    }
-  } ;
+  }
 `
 
 const Image = styled.img`
   margin: 0 auto;
-  height: 260px;
+  height: 297px;
 `
 
 export default CampaignCardLink
