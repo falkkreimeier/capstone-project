@@ -6,9 +6,7 @@ function ProfileDesktop() {
   return (
     <Wrapper>
       <Headline>Kritzelkopf</Headline>
-      <Link to="/kritzelkopf">
-        <StyledProfileImage src={Kritzelkopf} alt="Profilbild" />
-      </Link>
+      <StyledProfileImage src={Kritzelkopf} alt="Profilbild" />
     </Wrapper>
   )
 }
@@ -23,19 +21,11 @@ const Wrapper = styled.div`
   display: none;
   @media screen and (min-width: 1000px) {
     padding: 0;
-    height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform: translateY(0px);
-    &:hover {
-      transform: translateY(-4px);
-    }
-    &:active {
-      transform: translateY(0px);
-      transition: 0.1s;
-    }
+    height: 300px;
   } ;
 `
 
