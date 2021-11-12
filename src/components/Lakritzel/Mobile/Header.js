@@ -12,6 +12,7 @@ function Header({ showWelcomeAnimation }) {
 }
 
 const HeaderEl = styled.header`
+  border-radius: 5px;
   grid-area: header;
   position: fixed;
   background-color: black;
@@ -39,7 +40,8 @@ const HeaderEl = styled.header`
   @media only screen and (min-width: 1000px) {
     background-color: white;
     position: static;
-    max-width: 1060px;
+    margin: 10px 5px 3px 5px;
+    width: auto;
   }
 `
 
@@ -51,8 +53,7 @@ const Wrapper = styled.section`
   margin: 5px auto;
   border-radius: 5px;
   @media only screen and (min-width: 1000px) {
-    width: 1060px;
-    border-radius: 5px;
+    margin: 0 auto;
   }
 `
 

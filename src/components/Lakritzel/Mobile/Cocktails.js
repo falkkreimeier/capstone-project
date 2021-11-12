@@ -25,7 +25,7 @@ const Wrapper = styled.section`
   color: white;
   padding: 10px;
   width: var(--main-width);
-  min-height: 22rem;
+  height: 352px;
   gap: 5px;
   &:nth-child(even) {
     background-image: none;
@@ -36,6 +36,11 @@ const Wrapper = styled.section`
   }
   &:last-child {
     margin-bottom: 0;
+  }
+  @media only screen and (min-width: 1000px) {
+    margin: 0;
+    max-height: 320px;
+    background-size: 300px;
   }
 `
 
@@ -48,15 +53,21 @@ const Headline = styled.h2`
 
 const Subline = styled.h4`
   font-family: var(--main-headline);
-  margin-bottom: 5px;
-  margin: 0px 0 0 30px;
+  margin: 0 0 5px 30px;
   z-index: 20;
+  @media only screen and (min-width: 1000px) {
+    margin: 0 0 5px 49px;
+  }
 `
 
 const Text = styled.p`
   font-family: var(--main-font);
-  padding-right: 20px;
-  margin: 0px 0 10px 30px;
+
+  margin: 0px 25px 10px 30px;
   z-index: 20;
+  @media only screen and (min-width: 1000px) {
+    font-size: 15px;
+    margin: 0px 30px 10px 50px;
+  }
 `
 export default Cocktails

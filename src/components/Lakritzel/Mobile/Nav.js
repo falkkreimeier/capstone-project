@@ -49,7 +49,9 @@ const Footer = styled.footer`
       }
     `}
   @media screen and (min-width:1000px) {
-    display: none;
+    position: static;
+    margin: 0px 5px 10px 5px;
+    width: auto;
   }
 `
 
@@ -59,10 +61,13 @@ const Navigation = styled.nav`
   background-color: white;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
   margin: 5px auto;
   min-height: 40px;
   border-radius: 5px;
+  @media screen and (min-width: 1000px) {
+    margin: 3px auto 0 auto;
+    width: auto;
+  }
 `
 
 const NavigationLink = styled(NavLink)`

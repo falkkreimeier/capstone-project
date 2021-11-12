@@ -58,7 +58,7 @@ const Container = styled.div`
   perspective: 1000px;
   @media screen and (min-width: 1000px) {
     margin: 0;
-    --card-height: 295px;
+    min-height: 300px;
   }
 `
 
