@@ -5,7 +5,10 @@ function CocktailsLink() {
   return (
     <Wrapper>
       <Headline>Wahnsinnige Mixgetränke</Headline>
-      <Text>Lorem Ipsum</Text>
+      <Text>
+        Der übergeschnapste Tropfen treibt nicht nur Menschen in den Wahnsinn,
+        sonder auch diese ausgefallenen Cocktail und Shot Rezepte.
+      </Text>
     </Wrapper>
   )
 }
@@ -18,7 +21,7 @@ const Wrapper = styled.section`
     display: inherit;
     background-image: url(${klecks});
     background-position: center;
-    background-size: 260px;
+    background-size: 320px;
     background-repeat: no-repeat;
     object-fit: cover;
     border-radius: var(--border-radius);
@@ -33,7 +36,7 @@ const Wrapper = styled.section`
 const Headline = styled.h2`
   height: 40px;
   font-family: 'Ventana';
-  margin: 40px 0px 0px 55px;
+  margin: 50px 0px 0px 40px;
   z-index: 20;
 `
 
@@ -41,7 +44,7 @@ const Text = styled.p`
   text-decoration: none;
   font-family: var(--main-font);
   padding-right: 20px;
-  margin: -70px 0 10px 55px;
+  margin: -100px 0 10px 40px;
   z-index: 20;
 `
 

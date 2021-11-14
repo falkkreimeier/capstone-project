@@ -95,6 +95,9 @@ const NavigationLink = styled(NavLink)`
     color: black;
     border: 2px solid black;
   }
+  @media screen and (min-width: 1000px) {
+    min-width: 230px;
+  }
 `
 
 export default Nav
