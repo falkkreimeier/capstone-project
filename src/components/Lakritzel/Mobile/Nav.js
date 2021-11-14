@@ -14,8 +14,8 @@ function Nav({ showWelcomeAnimation }) {
         <NavigationLink exact to="/cocktails" activeClassName="active">
           Drinks
         </NavigationLink>
-        <NavigationLink exact to="/kritzelkopf" activeClassName="active">
-          Me
+        <NavigationLink exact to="/Info" activeClassName="active">
+          Info
         </NavigationLink>
       </Navigation>
     </Footer>
@@ -23,6 +23,7 @@ function Nav({ showWelcomeAnimation }) {
 }
 
 const Footer = styled.footer`
+  grid-area: nav;
   position: fixed;
   border-radius: 5px;
   background-color: black;
@@ -47,18 +48,27 @@ const Footer = styled.footer`
         }
       }
     `}
+  @media screen and (min-width:1000px) {
+    position: static;
+    margin: 0px 5px 10px 5px;
+    width: auto;
+  }
 `
 
 const Navigation = styled.nav`
+  grid-area: nav;
   height: 80px;
   width: var(--main-width);
   background-color: white;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
   margin: 5px auto;
   min-height: 40px;
   border-radius: 5px;
+  @media screen and (min-width: 1000px) {
+    margin: 4px auto 0 auto;
+    width: 1060px;
+  }
 `
 
 const NavigationLink = styled(NavLink)`
@@ -84,6 +94,9 @@ const NavigationLink = styled(NavLink)`
     background-color: white;
     color: black;
     border: 2px solid black;
+  }
+  @media screen and (min-width: 1000px) {
+    min-width: 230px;
   }
 `
 

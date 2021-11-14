@@ -49,6 +49,7 @@ function ProductCard(props) {
 }
 
 const Container = styled.div`
+  grid-area: productCard;
   --card-height: 304px;
   margin: 2px auto 0px auto;
   border-radius: var(--border-radius);
@@ -83,6 +84,10 @@ const FlipCardFront = styled.section`
   grid-template-areas:
     'image price'
     'image button';
+  @media screen and (min-width: 1000px) {
+    margin: 0;
+    --card-height: 325px;
+  }
 `
 
 const Image = styled.img`
@@ -90,6 +95,9 @@ const Image = styled.img`
   height: var(--card-height);
   border-radius: 19px;
   margin: 0;
+  @media screen and (min-width: 1000px) {
+    height: 304px;
+  }
 `
 
 const Price = styled.div`
@@ -146,6 +154,10 @@ const FlipCardBack = styled.section`
   grid-template-areas:
     'logo portrait'
     'details button';
+  @media screen and (min-width: 1000px) {
+    margin: 0;
+    --card-height: 325px;
+  }
 `
 
 const Logo = styled.img`

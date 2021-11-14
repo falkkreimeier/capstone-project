@@ -26,6 +26,10 @@ const Wrapper = styled.div`
   border-radius: var(--border-radius);
   padding: var(--main-padding);
   min-width: var(--main-width);
+  margin-bottom: 5px;
+  @media only screen and (min-width: 1000px) {
+    margin-bottom: 0;
+  }
 `
 
 const Headline = styled.h2`

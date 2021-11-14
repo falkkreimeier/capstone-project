@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro'
-import logo from './Assets/Logo_nobackground.png'
-import crazy from './Assets/Rettemich-nobackground.png'
+import logo from '../Assets/Logo_nobackground.png'
+import crazy from '../Assets/Rettemich-nobackground.png'
 
 function AgeGate({ onAgeButtonClick, ageVerified }) {
   function over18Handler() {

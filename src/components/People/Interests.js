@@ -25,9 +25,14 @@ function Interests() {
 }
 
 const Wrapper = styled.div`
+  grid-area: interests;
+  margin-bottom: 5px;
   background: white;
   border-radius: var(--border-radius);
   padding: var(--main-padding);
+  @media only screen and (min-width: 1000px) {
+    margin-bottom: 0;
+  }
 `
 const Headline = styled.h2`
   font-family: var(--main-Headline);

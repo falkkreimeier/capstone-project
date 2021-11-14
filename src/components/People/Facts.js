@@ -24,6 +24,7 @@ function Facts() {
 }
 
 const Wrapper = styled.div`
+  grid-area: facts;
   min-height: 352px;
   background-image: url(${klecks});
   background-position: center;
@@ -33,16 +34,21 @@ const Wrapper = styled.div`
   color: white;
   border-radius: var(--border-radius);
   padding: var(--main-padding);
+  margin-bottom: 5px;
+  @media only screen and (min-width: 1000px) {
+    margin-bottom: 0;
+    padding-top: 60px;
+  }
 `
 
 const Headline = styled.h2`
   font-family: var(--main-Headline);
-  margin-top: 30px auto;
+  margin: 30px auto 0 40px;
   font-size: 1.3rem;
 `
 
 const List = styled.ol`
-  margin: -10px 0 -10px 0px;
+  margin: -5px auto;
 `
 
 const ListItem = styled.li`

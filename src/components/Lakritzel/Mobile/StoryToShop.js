@@ -10,6 +10,14 @@ function StoryToShop({ flipToShop, onButtonClick }) {
         Ich wurde gegen meinen Willen in dieser Flasche verkorkt. Hol mich hier
         raus! Ich fülle auch keinen ab ... versprochen.
       </Text>
+
+      <TextLong>
+        Ich wurde über Nacht abgefüllt und in dieser kleinen Flasche verorkt!
+        Aber du kannst was daran ändern! Hol mich hier raus, zusammen werden wir
+        die Menschen auf Tischen tanzen lassen und tiefgründige Gespräche ...
+        Ähh, ich meinte natürlich ganz gesittet aufs Leben anstoßen.
+      </TextLong>
+
       <ButtonFront
         disabled={flipToShop}
         flipToShop={flipToShop}
@@ -22,6 +30,7 @@ function StoryToShop({ flipToShop, onButtonClick }) {
 }
 
 const Wrapper = styled.section`
+  grid-area: story;
   background-color: white;
   border-radius: var(--border-radius);
   margin: 0 auto;
@@ -53,6 +62,23 @@ const Text = styled.p`
   padding: 0 30px;
   text-align: center;
   grid-area: text;
+  @media only screen and (min-width: 1000px) {
+    display: none;
+  }
+`
+
+const TextLong = styled.p`
+  display: none;
+  @media (min-width: 1000px) {
+    display: inline;
+    font-family: var(--main-font);
+    font-size: 1.2rem;
+    width: 350px;
+    margin: 0 0 20px 0;
+    padding: 0 30px;
+    text-align: center;
+    grid-area: text;
+  }
 `
 
 const ButtonFront = styled.button`

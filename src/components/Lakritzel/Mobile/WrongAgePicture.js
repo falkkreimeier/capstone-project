@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro'
-import shorty from './Assets/shorty-nohl-noBG.png'
+import shorty from '../Assets/shorty-nohl-noBG.png'
 
 function WrongAgePicture() {
   return (

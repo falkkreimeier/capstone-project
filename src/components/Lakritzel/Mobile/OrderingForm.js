@@ -133,6 +133,7 @@ function OrderingForm({ onAddOrder, onButtonClick }) {
             />
           </label>
         </MessageContainer>
+
         <ButtonOrder onClick={onAddOrder} activeClassName="active">
           Hol mich hier raus!
         </ButtonOrder>
@@ -223,6 +224,10 @@ const InputContainer = styled.div`
   border: 2px solid black;
   border-radius: 19px;
   text-align: center;
+  @media only screen and (min-width: 1000px) {
+    width: 220px;
+    margin: 9px;
+  }
 `
 
 const Input = styled.input`
@@ -230,6 +235,9 @@ const Input = styled.input`
   text-align: center;
   margin-top: 3px;
   width: 155px;
+  @media only screen and (min-width: 1000px) {
+    min-height: 25px;
+  }
 `
 
 const MessageContainer = styled.div`
@@ -243,11 +251,16 @@ const MessageContainer = styled.div`
   border-radius: 19px;
   border: 2px solid black;
   text-align: center;
+  @media only screen and (min-width: 1000px) {
+    width: 220px;
+    margin: 9px;
+    height: 70px;
+  }
 `
 
 const ButtonOrder = styled.button`
   font-family: Ventana;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 10px;
   height: 40px;
   background-color: black;

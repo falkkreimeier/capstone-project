@@ -33,12 +33,21 @@ const Container = styled.div`
   margin: 0 auto;
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
   font-family: 'PT Serif', serif;
   width: var(--main-width);
-  grid-gap: 5px;
+  @media only screen and (min-width: 1000px) {
+    margin: 0;
+
+    /* max-width: 1000px; */
+    display: grid;
+    grid-template-areas:
+      'profile welcome welcome welcome'
+      'profile interests interests portfolio'
+      'facts xing github linkedIn'
+      'facts techstack blog blog';
+    grid-gap: 0.2rem;
+    text-align: center;
+  }
 `
 
 const SoMeContainer = styled.div`

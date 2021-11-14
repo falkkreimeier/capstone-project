@@ -11,11 +11,15 @@ function Profile() {
 }
 
 const Wrapper = styled.div`
-  margin: 0 auto;
+  grid-area: profile;
+  margin-bottom: 5px;
   width: var(--main-width);
   background: white;
   border-radius: var(--border-radius);
   padding: var(--main-padding);
+  @media only screen and (min-width: 1000px) {
+    margin-bottom: 0;
+  }
 `
 
 export const Headline = styled.h2`
@@ -23,7 +27,7 @@ export const Headline = styled.h2`
   font-weight: 600;
   text-align: center;
   font-size: 1.3rem;
-  padding-bottom: 10px;
+  padding-bottom: 0;
   margin: 10px 0px 5px 0px;
   text-decoration: none;
 `
