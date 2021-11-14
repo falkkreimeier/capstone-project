@@ -19,7 +19,7 @@ const Wrapper = styled.section`
     border-radius: var(--border-radius);
     background-color: white;
     width: var(--main-width);
-    height: 300px;
+    /* height: 300px; */
   }
 `
 

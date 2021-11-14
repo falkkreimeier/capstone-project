@@ -25,6 +25,7 @@ function TechStack() {
 }
 
 const Wrapper = styled.section`
+  grid-area: techstack;
   min-height: 352px;
   background-image: url(${klecks});
   background-position: center;
@@ -34,16 +35,20 @@ const Wrapper = styled.section`
   color: white;
   border-radius: var(--border-radius);
   padding: var(--main-padding);
+  margin-bottom: 5px;
+  @media only screen and (min-width: 1000px) {
+    margin-bottom: 0;
+  }
 `
 
 const Headline = styled.h2`
-  margin-top: 20px;
+  margin: 20px 0 0px 50px;
   font-family: var(--main-Headline);
 `
 
 const List = styled.ol`
   padding: 5px 0px 0px 35px;
-  margin: -20px 0 20px 50px;
+  margin: -10px 0 20px 50px;
 `
 
 const ListItem = styled.li`

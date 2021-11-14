@@ -4,7 +4,6 @@ import ProductList from '../Mobile/ProductList'
 import CampaignCardLink from './CampaignCardLink'
 import CocktailsLink from './CocktailsLink'
 import ProfileDesktop from './ProfileDesktop'
-import FooterDesktop from './FooterDesktop'
 
 function DesktopSide({ onAddOrder, data }) {
   return (

@@ -26,6 +26,7 @@ const Wrapper = styled.section`
   @media only screen and (min-width: 1000px) {
     margin: 0;
     height: 320px;
+    width: 530px;
   }
 `
 

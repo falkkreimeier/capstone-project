@@ -8,9 +8,31 @@ function OrderingInfo({ orderingInfo, onHandleOrderingButtonClick }) {
       <Image src={crazy} alt="" />
       <Text>
         Willkommen auf der dunklen Seite der Nacht. Kleine Bestellbestätigung
-        hab ich dir auch schon geschickt.
+        hab ich dir auch schon geschickt. Zahle jetzt mit PayPal oder per
+        Direktüberweisung + 5€ Versand (siehe Bestätigungs-Mail).
       </Text>
-      <Button onClick={onHandleOrderingButtonClick}>Alles klar!</Button>
+      <Form
+        action="https://www.paypal.com/cgi-bin/webscr"
+        method="post"
+        target="_top"
+      >
+        <input type="hidden" name="cmd" value="_s-xclick" />
+        <input type="hidden" name="hosted_button_id" value="LC4NYX7ZDMLTU" />
+        <input
+          type="image"
+          src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_paynowCC_LG.gif"
+          border="0"
+          name="submit"
+          alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal."
+        />
+        <img
+          alt=""
+          border="0"
+          src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif"
+          width="1"
+          height="1"
+        />
+      </Form>
     </Wrapper>
   )
 }
@@ -38,22 +60,9 @@ const Wrapper = styled.section`
   }
 `
 
-const Button = styled.button`
-  font-family: Ventana;
-  margin: 0 auto;
-  padding: 10px;
-  height: 40px;
-  background-color: black;
-  color: white;
-  font-size: 1.2rem;
-  border-radius: var(--border-radius);
-  box-shadow: 0 14px 8px rgba(0, 0, 0, 0.25);
-  transform: translateY(-4px);
-  &:active {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-    transform: translateY(-0px);
-    transition: 0.1s;
-  }
+const Form = styled.form`
+  margin-top: -20px;
+  padding-bottom: 20px;
 `
 
 const Headline = styled.h2`

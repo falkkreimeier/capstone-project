@@ -10,6 +10,7 @@ function Github() {
 }
 
 export const Img = styled.img`
+  grid-area: github;
   position: sticky;
   height: 64px;
 `
@@ -20,9 +21,15 @@ const Wrapper = styled.a`
   min-width: auto;
   padding: 10px;
   transform: translateY(px);
+  &:hover {
+    background-color: lightgrey;
+  }
   &:active {
     transform: translateY(4px);
     transition: 0.1s;
+  }
+  @media only screen and (min-width: 1000px) {
+    min-width: var(--soMe-width);
   }
 `
 

@@ -56,10 +56,6 @@ const Container = styled.div`
   width: var(--main-width);
   height: var(--card-height);
   perspective: 1000px;
-  @media screen and (min-width: 1000px) {
-    margin: 0;
-    min-height: 300px;
-  }
 `
 
 const FlipCard = styled.section`
@@ -88,6 +84,10 @@ const FlipCardFront = styled.section`
   grid-template-areas:
     'image price'
     'image button';
+  @media screen and (min-width: 1000px) {
+    margin: 0;
+    --card-height: 325px;
+  }
 `
 
 const Image = styled.img`
@@ -95,6 +95,9 @@ const Image = styled.img`
   height: var(--card-height);
   border-radius: 19px;
   margin: 0;
+  @media screen and (min-width: 1000px) {
+    height: 304px;
+  }
 `
 
 const Price = styled.div`
@@ -151,6 +154,10 @@ const FlipCardBack = styled.section`
   grid-template-areas:
     'logo portrait'
     'details button';
+  @media screen and (min-width: 1000px) {
+    margin: 0;
+    --card-height: 325px;
+  }
 `
 
 const Logo = styled.img`

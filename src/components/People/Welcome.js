@@ -20,7 +20,8 @@ function Welcome() {
 }
 
 const Wrapper = styled.div`
-  min-height: 352px;
+  grid-area: welcome;
+  height: 352px;
   background-image: url(${klecks});
   background-position: center;
   background-repeat: no-repeat;
@@ -29,12 +30,22 @@ const Wrapper = styled.div`
   color: white;
   border-radius: var(--border-radius);
   padding: var(--main-padding);
+  margin-bottom: 5px;
+  @media only screen and (min-width: 1000px) {
+    margin: 0;
+    background-image: none;
+    height: auto;
+  }
 `
 
 export const Text = styled.p`
   font-size: 13px;
   margin: 0px 20px 20px 20px;
   font-family: var(--main-font);
+  @media only screen and (min-width: 1000px) {
+    margin: 0;
+    color: black;
+  }
 `
 const Headline = styled.h2`
   font-family: var(--main-Headline);
@@ -43,6 +54,10 @@ const Headline = styled.h2`
   padding-bottom: 10px;
   margin: 35px 0px 5px 0px;
   color: white;
+  @media only screen and (min-width: 1000px) {
+    margin: 0;
+    color: black;
+  }
 `
 
 export default Welcome

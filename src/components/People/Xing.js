@@ -15,17 +15,23 @@ export const Img = styled.img`
 `
 
 const Wrapper = styled.a`
+  grid-area: xing;
   display: flex;
   justify-content: center;
   align-items: center;
   background: white;
   border-radius: var(--border-radius);
-  min-width: auto;
   padding: 10px;
   transform: translateY(0px);
+  &:hover {
+    background-color: lightgrey;
+  }
   &:active {
     transform: translateY(4px);
     transition: 0.1s;
+  }
+  @media only screen and (min-width: 1000px) {
+    min-width: var(--soMe-width);
   }
 `
 

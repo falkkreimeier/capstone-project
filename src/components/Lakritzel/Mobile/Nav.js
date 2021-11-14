@@ -14,8 +14,8 @@ function Nav({ showWelcomeAnimation }) {
         <NavigationLink exact to="/cocktails" activeClassName="active">
           Drinks
         </NavigationLink>
-        <NavigationLink exact to="/kritzelkopf" activeClassName="active">
-          Me
+        <NavigationLink exact to="/Info" activeClassName="active">
+          Info
         </NavigationLink>
       </Navigation>
     </Footer>
@@ -56,6 +56,7 @@ const Footer = styled.footer`
 `
 
 const Navigation = styled.nav`
+  grid-area: nav;
   height: 80px;
   width: var(--main-width);
   background-color: white;
@@ -65,8 +66,8 @@ const Navigation = styled.nav`
   min-height: 40px;
   border-radius: 5px;
   @media screen and (min-width: 1000px) {
-    margin: 3px auto 0 auto;
-    width: auto;
+    margin: 4px auto 0 auto;
+    width: 1060px;
   }
 `
 

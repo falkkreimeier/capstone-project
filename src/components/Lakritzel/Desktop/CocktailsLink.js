@@ -1,6 +1,5 @@
 import styled from 'styled-components/macro'
 import klecks from '../Assets/Kleckse_clean.jpg'
-import { Link } from 'react-router-dom'
 
 function CocktailsLink() {
   return (

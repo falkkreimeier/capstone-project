@@ -11,12 +11,15 @@ function Profile() {
 }
 
 const Wrapper = styled.div`
-  grid-area: kritzelkopf;
-  margin: 0 auto;
+  grid-area: profile;
+  margin-bottom: 5px;
   width: var(--main-width);
   background: white;
   border-radius: var(--border-radius);
   padding: var(--main-padding);
+  @media only screen and (min-width: 1000px) {
+    margin-bottom: 0;
+  }
 `
 
 export const Headline = styled.h2`

@@ -1,12 +1,10 @@
-import Kritzelkopf from '../../People/img/Profil.JPG'
+import zukunft from '../Assets/Zukunft.jpg'
 import styled from 'styled-components/macro'
-import { Link } from 'react-router-dom'
 
 function ProfileDesktop() {
   return (
     <Wrapper>
-      <Headline>Kritzelkopf</Headline>
-      <StyledProfileImage src={Kritzelkopf} alt="Profilbild" />
+      <StyledProfileImage src={zukunft} alt="Profilbild" />
     </Wrapper>
   )
 }
@@ -25,18 +23,8 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    /* height: 300px; */
   } ;
-`
-
-export const Headline = styled.h2`
-  font-family: ventana;
-  font-weight: 600;
-  text-align: center;
-  font-size: 1.3rem;
-  padding-bottom: 0;
-  margin: 10px 0px 5px 0px;
-  text-decoration: none;
 `
 
 const StyledProfileImage = styled.img`

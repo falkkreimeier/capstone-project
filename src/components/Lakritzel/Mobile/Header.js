@@ -38,14 +38,13 @@ const HeaderEl = styled.header`
       }
     `}
   @media only screen and (min-width: 1000px) {
-    background-color: white;
     position: static;
-    margin: 10px 5px 3px 5px;
-    width: auto;
+    margin: 0 auto 4px auto;
   }
 `
 
 const Wrapper = styled.section`
+  grid-area: header;
   width: var(--main-width);
   display: flex;
   justify-content: center;
@@ -54,6 +53,7 @@ const Wrapper = styled.section`
   border-radius: 5px;
   @media only screen and (min-width: 1000px) {
     margin: 0 auto;
+    width: 1060px;
   }
 `
 

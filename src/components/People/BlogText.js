@@ -20,12 +20,17 @@ function BlogText() {
 }
 
 const Wrapper = styled.div`
+  grid-area: blog;
   min-height: 352px;
   background-size: 21rem;
   background-color: white;
   color: white;
   border-radius: var(--border-radius);
   padding: var(--main-padding);
+  margin-bottom: 5px;
+  @media only screen and (min-width: 1000px) {
+    margin: 0;
+  }
 `
 
 const LinkContainer = styled.div`
