@@ -1,6 +1,5 @@
 import styled from 'styled-components/macro'
 import { Link } from 'react-router-dom'
-import FooterDesktop from '../Desktop/FooterDesktop'
 
 function AGB() {
   return (
@@ -40,28 +39,28 @@ function AGB() {
           eine unverbindliche Aufforderungen an den Verbraucher, Waren zu
           bestellen. Mit der Bestellung der gewünschten Ware gibt der
           Verbraucher ein für ihn verbindliches Angebot auf Abschluss eines
-          Kaufvertrages ab. (4) Bei Eingang einer Bestellung in unserem
+          Kaufvertrages ab. 4 Bei Eingang einer Bestellung in unserem
           Internetshop gelten folgende Regelungen: Der Verbraucher gibt ein
           bindendes Vertragsangebot ab, indem er die in unserem Internetshop
           vorgesehene Bestellprozedur erfolgreich durchläuft.
           <br /> <br />
           Die Bestellung erfolgt in folgenden Schritten:
           <br /> <br />
-          1) Auswahl der gewünschten Ware
+          1 Auswahl der gewünschten Ware
           <br /> <br />
-          2) Bestätigen durch Anklicken der Buttons „Bestellen“
+          2 Bestätigen durch Anklicken der Buttons „Bestellen“
           <br /> <br />
-          3) Prüfung der Angaben im Warenkorb
+          3 Prüfung der Angaben im Warenkorb
           <br /> <br />
-          4) Betätigung des Buttons „zur Kasse“
+          4 Betätigung des Buttons „zur Kasse“
           <br /> <br />
-          5) Anmeldung im Internetshop nach Registrierung und Eingabe der
-          Anmelderangaben (E-Mail-Adresse und Passwort).
+          5 Anmeldung im Internetshop nach Registrierung und Eingabe der
+          Anmelderangaben "E-Mail-Adresse und Passwort".
           <br /> <br />
-          6) Nochmalige Prüfung bzw. Berichtigung der jeweiligen eingegebenen
+          6 Nochmalige Prüfung bzw. Berichtigung der jeweiligen eingegebenen
           Daten.
           <br /> <br />
-          7) Verbindliche Absendung der Bestellung durch Anklicken des Buttons
+          7 Verbindliche Absendung der Bestellung durch Anklicken des Buttons
           „kostenpflichtig bestellen“ bzw. „kaufen“
           <br /> <br />
           Der Verbraucher kann vor dem verbindlichen Absenden der Bestellung
@@ -71,9 +70,9 @@ function AGB() {
           und Eingabefehler berichtigen bzw. durch Schließen des
           Internetbrowsers den Bestellvorgang abbrechen. Wir bestätigen den
           Eingang der Bestellung unmittelbar durch eine automatisch generierte
-          E-Mail („Auftragsbestätigung“). Mit dieser nehmen wir Ihr Angebot an.
+          E-Mail „Auftragsbestätigung“. Mit dieser nehmen wir Ihr Angebot an.
           <br /> <br />
-          (5) Speicherung des Vertragstextes bei Bestellungen über unseren
+          5 Speicherung des Vertragstextes bei Bestellungen über unseren
           Internetshop : Wir senden Ihnen die Bestelldaten und unsere AGB per
           E-Mail zu. Die AGB können Sie jederzeit auch unter
           http://www.lakritzel.com/agb.html einsehen. Ihre Bestelldaten sind aus
@@ -81,19 +80,19 @@ function AGB() {
           <br /> <br />
           §3 Preise, Versandkosten, Zahlung, Fälligkeit
           <br /> <br />
-          (1) Die angegebenen Preise enthalten die gesetzliche Umsatzsteuer und
+          1 Die angegebenen Preise enthalten die gesetzliche Umsatzsteuer und
           sonstige Preisbestandteile. Hinzu kommen etwaige Versandkosten.
           <br /> <br />
-          (2) Der Verbraucher hat die Möglichkeit der Zahlung per Vorkasse,
+          2 Der Verbraucher hat die Möglichkeit der Zahlung per Vorkasse,
           Bankeinzug, PayPal .
           <br /> <br />
-          (3) Hat der Verbraucher die Zahlung per Vorkasse gewählt, so
+          3 Hat der Verbraucher die Zahlung per Vorkasse gewählt, so
           verpflichtet er sich, den Kaufpreis unverzüglich nach Vertragsschluss
           zu zahlen.
           <br /> <br />
           §4 Lieferung
           <br />
-          (1) Sofern wir dies in der Produktbeschreibung nicht deutlich anders
+          1 Sofern wir dies in der Produktbeschreibung nicht deutlich anders
           angegeben haben, sind alle von uns angebotenen Artikel sofort
           versandfertig. Die Lieferung erfolgt hier spätesten innerhalb von 5
           Werktagen. Dabei beginnt die Frist für die Lieferung im Falle der
@@ -103,7 +102,7 @@ function AGB() {
           Samstag, Sonntag oder gesetzlichen Feiertag am Lieferort, so endet die
           Frist am nächsten Werktag.
           <br /> <br />
-          (2) Die Gefahr des zufälligen Untergangs und der zufälligen
+          2 Die Gefahr des zufälligen Untergangs und der zufälligen
           Verschlechterung der verkauften Sache geht auch beim Versendungskauf
           erst mit der Übergabe der Sache an den Käufer auf diesen über.
           <br /> <br />
@@ -145,8 +144,8 @@ function AGB() {
           <br />
           E-Mail falk.kreimeier@lakritzel.com
           <br />
-          mittels einer eindeutigen Erklärung (z.B. ein mit der Post versandter
-          Brief, Telefax oder E-Mail) über Ihren Entschluss, diesen Vertrag zu
+          mittels einer eindeutigen Erklärung "z.B. ein mit der Post versandter
+          Brief, Telefax oder E-Mail" über Ihren Entschluss, diesen Vertrag zu
           widerrufen, informieren. Sie können dafür das beigefügte
           Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben
           ist.
@@ -185,8 +184,8 @@ function AGB() {
           <br />
           Muster-Widerrufsformular
           <br />
-          (Wenn Sie den Vertrag widerrufen wollen, dann füllen Sie bitte dieses
-          Formular aus und senden Sie es zurück.)
+          "Wenn Sie den Vertrag widerrufen wollen, dann füllen Sie bitte dieses
+          Formular aus und senden Sie es zurück."
           <br />
           An :<br />
           Lakritzel
@@ -200,23 +199,23 @@ function AGB() {
           E-Mail falk.kreimeier@lakritzel.com
           <br />
           <br /> <br />
-          Hiermit widerrufe(n) ich/wir (*) den von mir/uns (*) abgeschlossenen
-          Vertrag über den Kauf der folgenden Waren (*)/die Erbringung der
-          folgenden Dienstleistung (*)
+          Hiermit widerrufen wir * den von mir/uns * abgeschlossenen Vertrag
+          über den Kauf der folgenden Waren */die Erbringung der folgenden
+          Dienstleistung *
           <br /> <br />
           _____________________________________________________ Bestellt am
-          (*)/erhalten am (*)
+          */erhalten am *
           <br /> <br />
           __________________
           <br />
-          Name des/der Verbraucher(s)
+          Name des Verbrauchers
           <br />
           <br /> <br />
-          _____________________________________________________ Anschrift
-          des/der Verbraucher(s)
+          _____________________________________________________ Anschrift des
+          Verbrauchers
           <br />
-          _____________________________________________________ Unterschrift
-          des/der Verbraucher(s) (nur bei Mitteilung auf Papier)
+          _____________________________________________________ Unterschrift des
+          Verbrauchers "nur bei Mitteilung auf Papier"
           <br />
           <br /> <br />
           __________________
@@ -226,7 +225,7 @@ function AGB() {
           <br /> <br />
           __________________
           <br />
-          (*) Unzutreffendes streichen.
+          * Unzutreffendes streichen.
           <br /> <br />
           §8 Gewährleistung
           <br />
@@ -239,7 +238,7 @@ function AGB() {
           §36, 37 Verbraucherstreitbeilegungsgesetz
           <br />
           Die Europäische Kommission stellt eine Plattform für die
-          außergerichtliche Online-Streitbeilegung (OS-Plattform) bereit, die
+          außergerichtliche Online-Streitbeilegung "OS-Plattform" bereit, die
           unter www.ec.europa.eu/consumers/odr aufrufbar ist. Unsere
           E-Mail-Adresse finden Sie in unserem Impressum. Wir sind weder
           verpflichtet noch bereit, an dem Streitschlichtungsverfahren
@@ -257,14 +256,13 @@ function AGB() {
           <br /> <br />
           © Copyright – Falk Kreimeier – Impressum
           <br />
-          WP DSGVO Tools (GDPR) for Wordpress and WooCommerce Wir verwenden
+          WP DSGVO Tools "GDPR" for Wordpress and WooCommerce Wir verwenden
           Cookies, um Ihnen das beste Nutzererlebnis bieten zu können. Wenn Sie
           fortfahren, diese Seite zu verwenden, nehmen wir an, dass Sie damit
           einverstanden sind. OK Ablehnen
         </Text>
-        <LinkTo to="/">ZURÜCK</LinkTo>
+        <LinkTo to="/info">ZURÜCK</LinkTo>
       </Wrapper>
-      <FooterDesktop />
     </>
   )
 }
@@ -285,6 +283,7 @@ const Text = styled.p`
 `
 
 const LinkTo = styled(Link)`
+  text-decoration: none;
   font-family: Ventana;
   margin: 0 auto;
   padding: 10px;

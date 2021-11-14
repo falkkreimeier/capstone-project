@@ -5,6 +5,7 @@ import CampaignCard from './components/Lakritzel/Mobile/CampaignCard'
 import CocktailList from './components/Lakritzel/Mobile/CocktailList'
 import Kritzelkopf from './components/People/Kritzelkopf'
 import AGB from '../src/components/Lakritzel/Both/AGB'
+import Info from '../src/components/Lakritzel/Both/Info'
 import styled, { css } from 'styled-components/macro'
 import { Switch, Route } from 'react-router-dom'
 import useOrder from './hook/useOrder'
@@ -69,7 +70,9 @@ function App({ data }) {
           <Route exact path="/kritzelkopf">
             <Kritzelkopf />
           </Route>
-
+          <Route exact path="/info">
+            <Info />
+          </Route>
           <Route exact path="/agb">
             <AGB />
           </Route>
@@ -88,11 +91,10 @@ function App({ data }) {
 
 const Container = styled.section`
   @media only screen and (min-width: 1000px) {
-    margin-left: 160px;
-    grid-gap: 3px;
+    grid-gap: 4px;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 352px 253px;
+    grid-template-columns: 1fr 1fr;
   }
 `
 

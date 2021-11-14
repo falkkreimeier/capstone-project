@@ -11,6 +11,7 @@ const GlobalStlyles = createGlobalStyle`
     --main-font:  'Fira Sans', sans-serif;
     --main-Headline: 'Pragati Narrow', sans-serif;
     --kritzel-Font: 'Ventana';
+    --soMe-width: 234px;
 } 
 @font-face {
     font-family: Ventana;

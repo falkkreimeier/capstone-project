@@ -1,6 +1,5 @@
 import styled from 'styled-components/macro'
 import { Link } from 'react-router-dom'
-import FooterDesktop from '../Desktop/FooterDesktop'
 
 function Datenschutz() {
   return (
@@ -128,9 +127,8 @@ function Datenschutz() {
           <br />
           Quellverweis: eRecht24
         </Text>
-        <LinkTo to="/">ZURÜCK</LinkTo>
+        <LinkTo to="/info">ZURÜCK</LinkTo>
       </Wrapper>
-      <FooterDesktop />
     </>
   )
 }
@@ -155,6 +153,7 @@ const Text = styled.p`
 `
 
 const LinkTo = styled(Link)`
+  text-decoration: none;
   font-family: Ventana;
   margin: 0 auto;
   padding: 10px;
