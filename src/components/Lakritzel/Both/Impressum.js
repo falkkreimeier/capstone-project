@@ -1,10 +1,12 @@
 import styled from 'styled-components/macro'
 import { Link } from 'react-router-dom'
+import kritzelkopf from '../Assets/Portfolio.jpg'
 
 function Impressum() {
   return (
     <>
       <Wrapper>
+        <Image src={kritzelkopf} alt="" />
         <Text>
           Falk Kreimeier <br />
           Gesundheitstraße 11
@@ -47,6 +49,12 @@ const Wrapper = styled.section`
   @media only screen and (min-width: 1000px) {
     min-width: 1060px;
   }
+`
+
+const Image = styled.img`
+  position: relative;
+  left: 85px;
+  height: 150px;
 `
 
 const Text = styled.p`

@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro'
 import { Link } from 'react-router-dom'
-import prost from '../Assets/Prost-Wanted.jpg'
+import prost from '../Assets/Prost-Wanted-ohne-Logo.jpg'
 
 function Info() {
   return (
@@ -24,15 +24,20 @@ const Wrapper = styled.section`
   padding: 20px;
   width: var(--main-width);
   border-radius: var(--border-radius);
-  @media only screen and (min-width: 1000px) {
+  @media (min-width: 1000px) {
     min-width: 1060px;
   }
 `
 
-const Headline = styled.h2``
+const Headline = styled.h2`
+  position: relative;
+  bottom: 75px;
+  font-size: 1.8rem;
+`
 
 const Image = styled.img`
-  height: 350px;
+  height: 380px;
+  margin-bottom: -80px;
 `
 
 const LinkTo = styled(Link)`
