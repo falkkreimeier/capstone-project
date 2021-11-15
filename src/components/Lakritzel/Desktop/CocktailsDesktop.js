@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro'
 import klecks from '../Assets/Kleckse_clean.jpg'
 
-function CocktailsLink() {
+function CocktailsDesktop() {
   return (
     <Wrapper>
       <Headline>Wahnsinnige Mixgetränke</Headline>
@@ -48,4 +48,4 @@ const Text = styled.p`
   z-index: 20;
 `
 
-export default CocktailsLink
+export default CocktailsDesktop

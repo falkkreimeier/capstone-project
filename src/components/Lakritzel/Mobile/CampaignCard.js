@@ -23,7 +23,7 @@ const Wrapper = styled.section`
   &:last-child {
     margin-bottom: 0;
   }
-  @media only screen and (min-width: 1000px) {
+  @media (min-width: 1000px) {
     margin: 0;
     height: 320px;
     width: 530px;

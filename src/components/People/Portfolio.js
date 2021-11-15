@@ -27,7 +27,7 @@ const Wrapper = styled.div`
   padding: var(--main-padding);
   min-width: var(--main-width);
   margin-bottom: 5px;
-  @media only screen and (min-width: 1000px) {
+  @media (min-width: 1000px) {
     margin-bottom: 0;
   }
 `

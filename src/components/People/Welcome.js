@@ -31,7 +31,7 @@ const Wrapper = styled.div`
   border-radius: var(--border-radius);
   padding: var(--main-padding);
   margin-bottom: 5px;
-  @media only screen and (min-width: 1000px) {
+  @media (min-width: 1000px) {
     margin: 0;
     background-image: none;
     height: auto;

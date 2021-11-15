@@ -32,13 +32,13 @@ function Shop({ onAddOrder }) {
 
 const Container = styled.div`
   grid-area: shop;
-  --card-height: 520px;
+  --card-height: 500px;
   margin: 0 auto 5px auto;
   width: var(--main-width);
   border-radius: var(--border-radius);
   height: var(--card-height);
   perspective: 1000px;
-  @media screen and (min-width: 1000px) {
+  @media (min-width: 1000px) {
     --card-height: 650px;
     margin: 0;
   }
@@ -67,7 +67,7 @@ const FlipCardFront = styled.section`
   position: absolute;
   border-radius: var(--border-radius);
   height: var(--card-height);
-  @media screen and (min-width: 1000px) {
+  @media (min-width: 1000px) {
     width: 348px;
   }
 `

@@ -1,6 +1,6 @@
 import { tupleExpression } from '@babel/types'
 import { render, screen } from '@testing-library/react'
-import CocktailsLink from './CocktailsLink'
+import CocktailsLink from './CocktailsDesktop'
 
 describe('CocktailsLink', () => {
   it('shows Headline', () => {

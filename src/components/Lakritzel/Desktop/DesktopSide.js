@@ -1,8 +1,8 @@
 import styled from 'styled-components/macro'
 import Shop from '../Mobile/Shop'
 import ProductList from '../Mobile/ProductList'
-import CampaignCardLink from './CampaignCardLink'
-import CocktailsLink from './CocktailsLink'
+import CampaignCardDesktop from './CampaignCardDesktop'
+import CocktailsDesktop from './CocktailsDesktop'
 import ProfileDesktop from './ProfileDesktop'
 
 function DesktopSide({ onAddOrder, data }) {
@@ -10,8 +10,8 @@ function DesktopSide({ onAddOrder, data }) {
     <Wrapper>
       <Shop onAddOrder={onAddOrder} data={data} />
       <ProductList data={data} />
-      <CampaignCardLink />
-      <CocktailsLink />
+      <CampaignCardDesktop />
+      <CocktailsDesktop />
       <ProfileDesktop />
     </Wrapper>
   )

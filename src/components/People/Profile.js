@@ -17,7 +17,7 @@ const Wrapper = styled.div`
   background: white;
   border-radius: var(--border-radius);
   padding: var(--main-padding);
-  @media only screen and (min-width: 1000px) {
+  @media (min-width: 1000px) {
     margin-bottom: 0;
   }
 `

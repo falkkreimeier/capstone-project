@@ -28,7 +28,7 @@ const Wrapper = styled.a`
     transform: translateY(4px);
     transition: 0.1s;
   }
-  @media only screen and (min-width: 1000px) {
+  @media (min-width: 1000px) {
     min-width: var(--soMe-width);
   }
 `

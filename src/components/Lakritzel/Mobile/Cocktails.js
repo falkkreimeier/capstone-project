@@ -50,7 +50,7 @@ const Headline = styled.h2`
   font-family: 'Ventana';
   margin: 40px 0px 0px 30px;
   z-index: 20;
-  @media only screen and (min-width: 1000px) {
+  @media (min-width: 1000px) {
     padding: 0px 100px 0px 95px;
   }
 `

@@ -224,7 +224,7 @@ const InputContainer = styled.div`
   border: 2px solid black;
   border-radius: 19px;
   text-align: center;
-  @media only screen and (min-width: 1000px) {
+  @media (min-width: 1000px) {
     width: 220px;
     margin: 9px;
   }
@@ -235,7 +235,7 @@ const Input = styled.input`
   text-align: center;
   margin-top: 3px;
   width: 155px;
-  @media only screen and (min-width: 1000px) {
+  @media (min-width: 1000px) {
     min-height: 25px;
   }
 `
@@ -251,7 +251,7 @@ const MessageContainer = styled.div`
   border-radius: 19px;
   border: 2px solid black;
   text-align: center;
-  @media only screen and (min-width: 1000px) {
+  @media (min-width: 1000px) {
     width: 220px;
     margin: 9px;
     height: 70px;
@@ -260,7 +260,7 @@ const MessageContainer = styled.div`
 
 const ButtonOrder = styled.button`
   font-family: Ventana;
-  margin: 20px auto;
+  margin: 0px auto;
   padding: 10px;
   height: 40px;
   background-color: black;
@@ -273,6 +273,9 @@ const ButtonOrder = styled.button`
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
     transform: translateY(-0px);
     transition: 0.1s;
+  }
+  @media (min-width: 1000px) {
+    margin: 20px auto;
   }
 `
 const IconPosition = styled.div`

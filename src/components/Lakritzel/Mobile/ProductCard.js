@@ -154,7 +154,7 @@ const FlipCardBack = styled.section`
   grid-template-areas:
     'logo portrait'
     'details button';
-  @media screen and (min-width: 1000px) {
+  @media (min-width: 1000px) {
     margin: 0;
     --card-height: 325px;
   }

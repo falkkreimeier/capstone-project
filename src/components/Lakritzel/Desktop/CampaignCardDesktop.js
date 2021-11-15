@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro'
 import Übergeschnapst from '../Assets/Süß.jpg'
 
-function CampaignCardLink() {
+function CampaignCardDesktop() {
   return (
     <Wrapper>
       <Image src={Übergeschnapst} alt="" />
@@ -28,4 +28,4 @@ const Image = styled.img`
   height: 297px;
 `
 
-export default CampaignCardLink
+export default CampaignCardDesktop

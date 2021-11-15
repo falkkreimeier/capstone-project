@@ -35,7 +35,7 @@ const Container = styled.div`
   height: 100%;
   font-family: 'PT Serif', serif;
   width: var(--main-width);
-  @media only screen and (min-width: 1000px) {
+  @media (min-width: 1000px) {
     margin: 0;
 
     /* max-width: 1000px; */

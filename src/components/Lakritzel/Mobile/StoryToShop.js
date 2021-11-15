@@ -6,17 +6,17 @@ function StoryToShop({ flipToShop, onButtonClick }) {
       <Headline>HILFEEEE!!!!</Headline>
       <Image src="./img/Rettemich.jpg"></Image>
 
-      <Text>
+      <TextMobile>
         Ich wurde gegen meinen Willen in dieser Flasche verkorkt. Hol mich hier
         raus! Ich fülle auch keinen ab ... versprochen.
-      </Text>
+      </TextMobile>
 
-      <TextLong>
+      <TextDesktop>
         Ich wurde über Nacht abgefüllt und in dieser kleinen Flasche verorkt!
         Aber du kannst was daran ändern! Hol mich hier raus, zusammen werden wir
         die Menschen auf Tischen tanzen lassen und tiefgründige Gespräche ...
         Ähh, ich meinte natürlich ganz gesittet aufs Leben anstoßen.
-      </TextLong>
+      </TextDesktop>
 
       <ButtonFront
         disabled={flipToShop}
@@ -54,7 +54,7 @@ const Headline = styled.h2`
   font-family: Ventana;
 `
 
-const Text = styled.p`
+const TextMobile = styled.p`
   font-family: var(--main-font);
   font-size: 1.2rem;
   width: 350px;
@@ -62,12 +62,12 @@ const Text = styled.p`
   padding: 0 30px;
   text-align: center;
   grid-area: text;
-  @media only screen and (min-width: 1000px) {
+  @media (min-width: 1000px) {
     display: none;
   }
 `
 
-const TextLong = styled.p`
+const TextDesktop = styled.p`
   display: none;
   @media (min-width: 1000px) {
     display: inline;
