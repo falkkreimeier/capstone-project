@@ -50,7 +50,7 @@ const Wrapper = styled.section`
   align-items: center;
   background-color: white;
   margin: 0 auto;
-  height: 633px;
+  height: 76vh;
   width: var(--main-width);
   border-radius: var(--border-radius);
   @media (min-width: 1000px) {
