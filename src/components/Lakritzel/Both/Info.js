@@ -7,9 +7,40 @@ function Info() {
     <Wrapper>
       <Image src={prost} alt="" />
       <Headline>Informationen</Headline>
-      <LinkTo to="agb">AGB</LinkTo>
-      <LinkTo to="datenschutz">Datenschutz</LinkTo>
-      <LinkTo to="impressum">Impressum</LinkTo>
+      <Text>
+        Falk Kreimeier <br />
+        Gesundheitstraße 11
+        <br />
+        42699 Solingen
+        <br />
+        Deutschland
+        <br />
+        Telefon: 0152 05639742
+        <br />
+        E-Mail: info@lakritzel.com
+        <br />
+        <br />
+        Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz:
+        128/5342/4596
+        <br />
+        <br />
+        §36, 37 Verbraucherstreitbeilegungsgesetz
+        <br />
+        <br />
+        Die Europäische Kommission stellt eine Plattform für die
+        außergerichtliche Online-Streitbeilegung (OS-Plattform) bereit, die
+        unter www.ec.europa.eu/consumers/odr aufrufbar ist. Unsere
+        E-Mail-Adresse finden Sie in unserem Impressum. Wir sind weder
+        verpflichtet noch bereit, an dem Streitschlichtungsverfahren
+        teilzunehmen.
+      </Text>
+      <LinkContainer>
+        <LinkTo to="agb">AGB</LinkTo>
+        <LinkTo to="datenschutz">Datenschutz</LinkTo>
+        <LinkToImpressum to="impressum">Impressum</LinkToImpressum>
+      </LinkContainer>
+      <br />
+      <br />
     </Wrapper>
   )
 }
@@ -26,6 +57,11 @@ const Wrapper = styled.section`
   border-radius: var(--border-radius);
   @media (min-width: 1000px) {
     min-width: 1060px;
+    height: 500px;
+    display: grid;
+    grid-template-areas:
+      'image text'
+      'image buttons';
   }
 `
 
@@ -33,11 +69,38 @@ const Headline = styled.h2`
   position: relative;
   bottom: 75px;
   font-size: 1.8rem;
+  @media (min-width: 1000px) {
+    bottom: 180px;
+    left: 120px;
+  }
+`
+const Text = styled.p`
+  grid-area: text;
+  font-family: var(--main-font);
+  margin: 0px 0 0 20px;
+  @media (max-width: 1000px) {
+    display: none;
+  }
 `
 
 const Image = styled.img`
+  grid-area: image;
   height: 380px;
   margin-bottom: -80px;
+  @media (min-width: 1000px) {
+    height: 450px;
+    margin: 0 0 0 50px;
+  }
+`
+
+const LinkContainer = styled.div`
+  grid-area: buttons;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 1000px) {
+    display: flex;
+    flex-direction: row;
+  }
 `
 
 const LinkTo = styled(Link)`
@@ -63,6 +126,35 @@ const LinkTo = styled(Link)`
     background-color: white;
     color: black;
     border: 2px solid black;
+  }
+`
+
+const LinkToImpressum = styled(Link)`
+  font-family: Ventana;
+  min-width: 250px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px auto 0 auto;
+  padding: 10px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: var(--border-radius);
+  box-shadow: inset 0 0 0 2px #fff;
+  transform: translateY(-4px);
+  &:active {
+    box-shadow: inset 0 0 1px #fff;
+    transform: translateY(0px);
+    transition: 0.1s;
+  }
+  &.active {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+  }
+  @media (min-width: 1000px) {
+    display: none;
   }
 `
 
