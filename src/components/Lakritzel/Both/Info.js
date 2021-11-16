@@ -52,7 +52,8 @@ const Wrapper = styled.section`
   align-items: center;
   background-color: white;
   margin: 0 auto;
-  padding: 20px;
+  height: 635px;
+
   width: var(--main-width);
   border-radius: var(--border-radius);
   @media (min-width: 1000px) {
@@ -95,6 +96,7 @@ const Image = styled.img`
 `
 
 const LinkContainer = styled.div`
+  margin-top: 30px;
   grid-area: buttons;
   display: flex;
   flex-direction: column;
