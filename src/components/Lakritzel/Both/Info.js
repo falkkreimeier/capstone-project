@@ -68,7 +68,7 @@ const Wrapper = styled.section`
 const Headline = styled.h2`
   position: relative;
   bottom: 75px;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   @media (min-width: 1000px) {
     font-size: 1.8rem;
     bottom: 180px;
