@@ -39,8 +39,6 @@ function Info() {
         <LinkTo to="datenschutz">Datenschutz</LinkTo>
         <LinkToImpressum to="impressum">Impressum</LinkToImpressum>
       </LinkContainer>
-      <br />
-      <br />
     </Wrapper>
   )
 }
@@ -52,8 +50,7 @@ const Wrapper = styled.section`
   align-items: center;
   background-color: white;
   margin: 0 auto;
-  height: 635px;
-
+  height: 633px;
   width: var(--main-width);
   border-radius: var(--border-radius);
   @media (min-width: 1000px) {
@@ -96,7 +93,7 @@ const Image = styled.img`
 `
 
 const LinkContainer = styled.div`
-  margin-top: 30px;
+  margin-top: 20px;
   grid-area: buttons;
   display: flex;
   flex-direction: column;
