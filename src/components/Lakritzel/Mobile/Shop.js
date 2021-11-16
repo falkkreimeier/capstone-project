@@ -33,14 +33,14 @@ function Shop({ onAddOrder }) {
 const Container = styled.div`
   grid-area: shop;
   --card-height: 500px;
-  margin: 0 auto 5px auto;
+  margin: 2px auto;
   width: var(--main-width);
   border-radius: var(--border-radius);
   height: var(--card-height);
   perspective: 1000px;
   @media (min-width: 1000px) {
-    --card-height: 650px;
-    margin: 0;
+    --card-height: 645px;
+    margin: 0 auto;
   }
 `
 

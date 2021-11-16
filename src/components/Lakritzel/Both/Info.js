@@ -57,7 +57,7 @@ const Wrapper = styled.section`
   border-radius: var(--border-radius);
   @media (min-width: 1000px) {
     min-width: 1060px;
-    height: 500px;
+    height: 645px;
     display: grid;
     grid-template-areas:
       'image text'
@@ -68,8 +68,9 @@ const Wrapper = styled.section`
 const Headline = styled.h2`
   position: relative;
   bottom: 75px;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   @media (min-width: 1000px) {
+    font-size: 1.8rem;
     bottom: 180px;
     left: 120px;
   }

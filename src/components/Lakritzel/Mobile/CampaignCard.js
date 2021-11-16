@@ -25,7 +25,7 @@ const Wrapper = styled.section`
   }
   @media (min-width: 1000px) {
     margin: 0;
-    height: 320px;
+    max-height: 320.5px;
     width: 530px;
   }
 `

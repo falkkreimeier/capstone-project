@@ -6,8 +6,8 @@ function CocktailsDesktop() {
     <Wrapper>
       <Headline>Wahnsinnige Mixgetränke</Headline>
       <Text>
-        Der übergeschnapste Tropfen treibt nicht nur Menschen in den Wahnsinn,
-        sonder auch diese ausgefallenen Cocktail und Shot Rezepte.
+        Lakritzel ist dir noch nicht verrückt genug? Unsere wahnsinnigen
+        Cocktail und Shot Rezepte sind total übergeschnapst.
       </Text>
     </Wrapper>
   )
@@ -43,7 +43,7 @@ const Headline = styled.h2`
 const Text = styled.p`
   text-decoration: none;
   font-family: var(--main-font);
-  padding-right: 20px;
+  padding-right: 30px;
   margin: -100px 0 10px 40px;
   z-index: 20;
 `

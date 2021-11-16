@@ -27,7 +27,7 @@ const Wrapper = styled.section`
   width: var(--main-width);
   height: 352px;
   gap: 5px;
-  &:nth-child(even) {
+  &:nth-child(odd) {
     background-image: none;
     color: black;
   }
@@ -39,7 +39,7 @@ const Wrapper = styled.section`
   }
   @media only screen and (min-width: 1000px) {
     margin: 0;
-    max-height: 320px;
+    max-height: 320.5px;
     background-size: 300px;
     width: 530px;
   }
@@ -71,7 +71,6 @@ const Text = styled.p`
   z-index: 20;
   @media only screen and (min-width: 1000px) {
     font-size: 15px;
-    /* margin: 0px 150px 10px 90px; */
     padding: 0px 100px 0px 95px;
   }
 `
