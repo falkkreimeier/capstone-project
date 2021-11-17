@@ -50,7 +50,7 @@ const Wrapper = styled.section`
   align-items: center;
   background-color: white;
   margin: 0 auto;
-  height: 76vh;
+  height: 485px;
   width: var(--main-width);
   border-radius: var(--border-radius);
   @media (min-width: 1000px) {
@@ -65,8 +65,8 @@ const Wrapper = styled.section`
 
 const Headline = styled.h2`
   position: relative;
-  bottom: 75px;
-  font-size: 1.5rem;
+  bottom: 25px;
+  font-size: 1.2rem;
   @media (min-width: 1000px) {
     font-size: 1.8rem;
     bottom: 180px;
@@ -84,7 +84,7 @@ const Text = styled.p`
 
 const Image = styled.img`
   grid-area: image;
-  height: 380px;
+  height: 350px;
   margin-bottom: -80px;
   @media (min-width: 1000px) {
     height: 450px;

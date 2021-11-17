@@ -19,7 +19,7 @@ function ProductCard(props) {
             flipToDetails={flipToDetails}
             onClick={flipToDetailsButton}
           >
-            WARNUNG
+            Warnung
           </ButtonFront>
         </FlipCardFront>
 
@@ -113,6 +113,8 @@ const Price = styled.div`
 `
 
 const ButtonFront = styled.button`
+  font-family: ventana;
+  font-size: 1.4rem;
   backface-visibility: hidden;
   position: relative;
   top: 100px;

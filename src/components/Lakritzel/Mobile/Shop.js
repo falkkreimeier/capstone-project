@@ -39,7 +39,7 @@ const Container = styled.div`
   height: var(--card-height);
   perspective: 1000px;
   @media (min-width: 1000px) {
-    --card-height: 645px;
+    --card-height: 655px;
     margin: 0 auto;
   }
 `
@@ -67,9 +67,6 @@ const FlipCardFront = styled.section`
   position: absolute;
   border-radius: var(--border-radius);
   height: var(--card-height);
-  @media (min-width: 1000px) {
-    width: 348px;
-  }
 `
 
 const FlipCardBack = styled.section`

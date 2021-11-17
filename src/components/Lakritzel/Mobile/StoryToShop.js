@@ -23,7 +23,7 @@ function StoryToShop({ flipToShop, onButtonClick }) {
         flipToShop={flipToShop}
         onClick={onButtonClick}
       >
-        Rette Lakritzel
+        Rette mich
       </ButtonFront>
     </Wrapper>
   )
