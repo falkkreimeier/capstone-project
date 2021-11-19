@@ -49,7 +49,7 @@ const Wrapper = styled.section`
   display: flex;
   justify-content: center;
   background-color: white;
-  margin: 5px auto;
+  margin: 0px auto;
   border-radius: 5px;
   @media only screen and (min-width: 1000px) {
     margin: 0 auto;

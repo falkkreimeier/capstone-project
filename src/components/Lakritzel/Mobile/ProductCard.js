@@ -113,6 +113,9 @@ const Price = styled.div`
 `
 
 const ButtonFront = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: ventana;
   font-size: 1.4rem;
   backface-visibility: hidden;

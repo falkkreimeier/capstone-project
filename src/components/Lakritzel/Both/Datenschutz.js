@@ -148,7 +148,7 @@ const Headline = styled.h2`
   margin-bottom: -3px;
 `
 
-const Text = styled.p`
+const Text = styled.span`
   font-family: var(--main-font);
 `
 
