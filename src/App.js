@@ -105,7 +105,7 @@ const Wrapper = styled.div`
 
 const Main = styled.main`
   margin: 0 auto;
-  padding: 90px 0;
+  padding: 83px 0;
   border-radius: var(--border-radius);
   ${({ showWelcomeAnimation }) =>
     showWelcomeAnimation &&
