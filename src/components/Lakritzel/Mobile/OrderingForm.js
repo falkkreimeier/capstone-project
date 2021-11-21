@@ -5,11 +5,21 @@ import { FaArrowCircleLeft as ArrowLeft } from 'react-icons/fa'
 import emailjs from 'emailjs-com'
 import OrderingInfo from './OrderingInfo'
 
-function OrderingForm({ onAddOrder, onButtonClick }) {
+function OrderingForm({
+  onAddOrder,
+  onButtonClick,
+  onShopButtonClick,
+  count,
+  onHandleChange,
+}) {
   const [orderingInfo, setOrderingInfo] = useState(true)
   function handleOrderingButtonClick() {
+    if (count === 0) {
+      return ''
+    }
     setOrderingInfo(!orderingInfo)
   }
+
   function sendEmail(e, form) {
     e.preventDefault()
     emailjs
@@ -112,12 +122,13 @@ function OrderingForm({ onAddOrder, onButtonClick }) {
         <InputContainer>
           <label>
             <HiddenLabelText>Anzahl:</HiddenLabelText>
-            <Input
-              maxlength="20"
+            <InputQuantity
               type="number"
-              placeholder="Menge"
+              maxlength="20"
               name="quantity"
               required
+              value={count}
+              onChange={onHandleChange}
             />
           </label>
         </InputContainer>
@@ -138,6 +149,7 @@ function OrderingForm({ onAddOrder, onButtonClick }) {
           Hol mich hier raus!
         </ButtonOrder>
       </Form>
+
       <IconPosition>
         <IconContext.Provider
           value={{
@@ -145,7 +157,7 @@ function OrderingForm({ onAddOrder, onButtonClick }) {
             size: '30px',
           }}
         >
-          <ArrowLeft onClick={onButtonClick} />
+          <ArrowLeft onClick={onShopButtonClick} />
         </IconContext.Provider>
       </IconPosition>
     </Wrapper>
@@ -190,6 +202,19 @@ const Wrapper = styled.section`
   padding: 0px;
   background-color: white;
   height: auto;
+  animation-duration: 1s;
+  animation-name: riseUp;
+  &.active {
+    @keyframes riseUp {
+      from {
+        transform: translatey(800px);
+      }
+
+      to {
+        transform: translateY(0);
+      }
+    }
+  }
 `
 
 const Form = styled.form`
@@ -282,6 +307,43 @@ const IconPosition = styled.div`
   display: flex;
   justify-content: flex-end;
   margin: 0px 30px 0px 0px;
+`
+
+const InputQuantity = styled.input`
+  border: none;
+  text-align: center;
+  margin-top: 3px;
+  width: 155px;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  :-webkit-inner-spin-button,
+  :-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+  @media (min-width: 1000px) {
+    min-height: 25px;
+  }
+`
+
+export const ButtonUp = styled.button`
+  font-size: 1.4rem;
+  text-decoration: none;
+  text-align: center;
+  width: 80px;
+  height: 35px;
+  margin: 14px 5px;
+  border: 1px solid grey;
+  border-radius: 15px;
+  background-color: black;
+  color: white;
+  box-shadow: 0 14px 8px rgba(0, 0, 0, 0.25);
+  transform: translateY(-4px);
+  &:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    transform: translateY(-0px);
+    transition: 0.1s;
+  }
 `
 
 export default OrderingForm

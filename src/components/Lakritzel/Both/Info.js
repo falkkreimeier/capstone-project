@@ -50,7 +50,7 @@ const Wrapper = styled.section`
   align-items: center;
   background-color: white;
   margin: 0 auto;
-  height: 485px;
+  height: 550px;
   width: var(--main-width);
   border-radius: var(--border-radius);
   @media (min-width: 1000px) {
@@ -65,11 +65,11 @@ const Wrapper = styled.section`
 
 const Headline = styled.h2`
   position: relative;
-  bottom: 25px;
+  bottom: 55px;
   font-size: 1.2rem;
   @media (min-width: 1000px) {
     font-size: 1.8rem;
-    bottom: 180px;
+    bottom: 235px;
     left: 120px;
   }
 `

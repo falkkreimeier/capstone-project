@@ -86,7 +86,7 @@ const FlipCardFront = styled.section`
     'image button';
   @media screen and (min-width: 1000px) {
     margin: 0;
-    --card-height: 323px;
+    --card-height: 329px;
   }
 `
 
