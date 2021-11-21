@@ -306,7 +306,7 @@ const ButtonOrder = styled.button`
 const IconPosition = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin: 0px 30px 0px 0px;
+  margin: -38px 30px 0px 0px;
 `
 
 const InputQuantity = styled.input`
