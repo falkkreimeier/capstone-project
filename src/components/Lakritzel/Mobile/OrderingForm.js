@@ -157,7 +157,7 @@ function OrderingForm({
             size: '30px',
           }}
         >
-          <ArrowLeft onClick={onShopButtonClick} />
+          <ArrowLeft onClick={onButtonClick} />
         </IconContext.Provider>
       </IconPosition>
     </Wrapper>
