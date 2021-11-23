@@ -36,6 +36,7 @@ const Wrapper = styled.div`
 const LinkContainer = styled.div`
   margin: 0px auto;
   width: 130px;
+  text-align: center;
   text-decoration: none;
   border: 1px solid black;
   padding: var(--main-padding);

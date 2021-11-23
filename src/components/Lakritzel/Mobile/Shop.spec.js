@@ -6,13 +6,13 @@ describe('Shop', () => {
     render(<Shop />)
 
     const buttons = screen.getAllByRole('button')
-    expect(buttons).toHaveLength(2)
+    expect(buttons).toHaveLength(4)
   })
 
   it('shows Button Text', () => {
     render(<Shop />)
 
-    const buttonText = screen.getByText('Rette Lakritzel')
+    const buttonText = screen.getByText('Rette mich')
     expect(buttonText).toBeInTheDocument()
   })
 })

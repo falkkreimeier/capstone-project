@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/react'
-import CampaignCardLink from './CampaignCardLink'
+import CampaignCardDesktop from './CampaignCardDesktop'
 
-describe('CampaignCardLink', () => {
+describe('CampaignCardDesktop', () => {
   it('shows image', () => {
-    render(<CampaignCardLink />)
+    render(<CampaignCardDesktop />)
     const image = screen.getByRole('img', { hidden: true })
     expect(image).toBeInTheDocument()
   })

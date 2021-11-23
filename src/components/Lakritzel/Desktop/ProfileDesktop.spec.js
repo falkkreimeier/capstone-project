@@ -4,7 +4,7 @@ import ProfileDesktop from './ProfileDesktop'
 describe('ProfileDesktop', () => {
   it('shows image', () => {
     render(<ProfileDesktop />)
-    const headline = screen.getByRole('heading', { hidden: true })
-    expect(headline).toBeInTheDocument()
+    const image = screen.getByRole('img', { hidden: true })
+    expect(image).toBeInTheDocument()
   })
 })

@@ -27,7 +27,7 @@ function ShoppingCard() {
   )
   function onOrderButtonClickHandler() {
     if (count === 0) {
-      throw new Error('Bitte Menge angeben')
+      return alert('Bitte Menge angeben')
     } else {
       setShowOrderingFormAnimation(true)
     }
@@ -44,7 +44,7 @@ function ShoppingCard() {
           onAddOrder={handleAddOrder}
           onShopButtonClick={onShopButtonClickHandler}
           count={count}
-          ClickUpHandler={ClickDownHandler}
+          ClickUpHandler={ClickUpHandler}
           ClickDownHandler={ClickDownHandler}
           onHandleChange={handleChange}
         />

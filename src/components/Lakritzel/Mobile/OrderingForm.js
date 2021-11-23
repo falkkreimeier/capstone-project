@@ -4,6 +4,7 @@ import { IconContext } from 'react-icons'
 import { FaArrowCircleLeft as ArrowLeft } from 'react-icons/fa'
 import emailjs from 'emailjs-com'
 import OrderingInfo from './OrderingInfo'
+import { ButtonContainer } from '../Both/ShoppingCart'
 
 function OrderingForm({
   onAddOrder,
@@ -11,13 +12,17 @@ function OrderingForm({
   onShopButtonClick,
   count,
   onHandleChange,
+  ClickUpHandler,
+  ClickDownHandler,
 }) {
   const [orderingInfo, setOrderingInfo] = useState(true)
-  function handleOrderingButtonClick() {
+  function handleOrderingButtonClick(event) {
+    event.preventDefault()
     if (count === 0) {
-      return ''
+      return alert('Bitte Menge angeben')
+    } else {
+      setOrderingInfo(!orderingInfo)
     }
-    setOrderingInfo(!orderingInfo)
   }
 
   function sendEmail(e, form) {
@@ -119,19 +124,21 @@ function OrderingForm({
             />
           </label>
         </InputContainer>
-        <InputContainer>
-          <label>
-            <HiddenLabelText>Anzahl:</HiddenLabelText>
-            <InputQuantity
-              type="number"
-              maxlength="20"
-              name="quantity"
-              required
-              value={count}
-              onChange={onHandleChange}
-            />
-          </label>
-        </InputContainer>
+        <QuantityWrapper>
+          <InputContainer>
+            <label>
+              <HiddenLabelText>Anzahl:</HiddenLabelText>
+              <InputQuantity
+                type="number"
+                maxlength="20"
+                name="quantity"
+                required
+                value={count}
+                onChange={onHandleChange}
+              />
+            </label>
+          </InputContainer>
+        </QuantityWrapper>
         <MessageContainer>
           <label>
             <HiddenLabelText>Nachricht:</HiddenLabelText>
@@ -144,7 +151,10 @@ function OrderingForm({
             />
           </label>
         </MessageContainer>
-
+        <ButtonContainer>
+          <ButtonMore onClick={ClickUpHandler}>+</ButtonMore>
+          <ButtonLess onClick={ClickDownHandler}>-</ButtonLess>
+        </ButtonContainer>
         <ButtonOrder onClick={onAddOrder} activeClassName="active">
           Hol mich hier raus!
         </ButtonOrder>
@@ -157,7 +167,7 @@ function OrderingForm({
             size: '30px',
           }}
         >
-          <ArrowLeft onClick={onButtonClick} />
+          <ArrowLeft onClick={onShopButtonClick} />
         </IconContext.Provider>
       </IconPosition>
     </Wrapper>
@@ -242,6 +252,12 @@ const Headline = styled.h2`
   text-align: center;
   font-family: Ventana;
 `
+const QuantityWrapper = styled.div`
+  background-color: white;
+  border-radius: var(--border-radius);
+  /* border: 1px solid black; */
+  z-index: 5;
+`
 
 const InputContainer = styled.div`
   margin: 7px;
@@ -303,6 +319,56 @@ const ButtonOrder = styled.button`
     margin: 20px auto;
   }
 `
+const ButtonMore = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 102px;
+  left: 130px;
+  border-top-right-radius: 19px;
+  border-bottom-right-radius: 19px;
+  margin: 0px auto;
+  height: 20px;
+  background-color: black;
+  color: white;
+  font-size: 1.2rem;
+  width: 40px;
+  transform: translateY(-4px);
+  &:active {
+    transform: translateY(-0px);
+    transition: 0.1s;
+  }
+  @media (min-width: 1000px) {
+    margin: 20px auto;
+  }
+`
+
+const ButtonLess = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 102px;
+  right: 130px;
+  border-top-left-radius: 19px;
+  border-bottom-left-radius: 19px;
+  margin: 0px auto;
+  height: 20px;
+  background-color: black;
+  color: white;
+  font-size: 1.2rem;
+  width: 40px;
+  transform: translateY(-4px);
+  &:active {
+    transform: translateY(-0px);
+    transition: 0.1s;
+  }
+  @media (min-width: 1000px) {
+    margin: 20px auto;
+  }
+`
+
 const IconPosition = styled.div`
   display: flex;
   justify-content: flex-end;
@@ -323,26 +389,6 @@ const InputQuantity = styled.input`
   }
   @media (min-width: 1000px) {
     min-height: 25px;
-  }
-`
-
-export const ButtonUp = styled.button`
-  font-size: 1.4rem;
-  text-decoration: none;
-  text-align: center;
-  width: 80px;
-  height: 35px;
-  margin: 14px 5px;
-  border: 1px solid grey;
-  border-radius: 15px;
-  background-color: black;
-  color: white;
-  box-shadow: 0 14px 8px rgba(0, 0, 0, 0.25);
-  transform: translateY(-4px);
-  &:active {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-    transform: translateY(-0px);
-    transition: 0.1s;
   }
 `
 
