@@ -167,7 +167,7 @@ function OrderingForm({
             size: '30px',
           }}
         >
-          <ArrowLeft onClick={onShopButtonClick} />
+          <ArrowLeft onClick={onButtonClick} />
         </IconContext.Provider>
       </IconPosition>
     </Wrapper>
@@ -255,7 +255,6 @@ const Headline = styled.h2`
 const QuantityWrapper = styled.div`
   background-color: white;
   border-radius: var(--border-radius);
-  /* border: 1px solid black; */
   z-index: 5;
 `
 
