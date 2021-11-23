@@ -3,8 +3,10 @@ import styled from 'styled-components/macro'
 import bottle from '../Assets/painted-bottle.jpg'
 import OrderingForm from '../Mobile/OrderingForm'
 import useOrder from '../../../hook/useOrder'
+import { FaArrowCircleLeft as ArrowLeft } from 'react-icons/fa'
+import { IconContext } from 'react-icons'
 
-function ShoppingCard() {
+function ShoppingCard({ onButtonClick }) {
   const { handleAddOrder } = useOrder()
   const [count, setCount] = useState(0)
 
@@ -69,6 +71,17 @@ function ShoppingCard() {
       >
         Jetzt bestellen
       </ButtonOrdering>
+
+      <IconPosition>
+        <IconContext.Provider
+          value={{
+            color: 'black',
+            size: '30px',
+          }}
+        >
+          <ArrowLeft onClick={onButtonClick} />
+        </IconContext.Provider>
+      </IconPosition>
     </Wrapper>
   )
 }
@@ -153,6 +166,12 @@ const ButtonOrdering = styled.button`
     transform: translateY(-0px);
     transition: 0.1s;
   }
+`
+
+const IconPosition = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 0px 0px 250px;
 `
 
 export default ShoppingCard

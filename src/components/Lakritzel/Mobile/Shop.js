@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components/macro'
 import { useState } from 'react'
 import StoryToShop from './StoryToShop'
-import OrderingForm from './OrderingForm'
+import ShoppingCard from '../Both/ShoppingCart'
 
-function Shop({ onAddOrder }) {
+function Shop() {
   const [flipToShop, setFlipToShop] = useState(false)
   function flipToShopButton() {
     setFlipToShop(!flipToShop)
@@ -19,11 +19,7 @@ function Shop({ onAddOrder }) {
         </FlipCardFront>
 
         <FlipCardBack>
-          <OrderingForm
-            onAddOrder={onAddOrder}
-            onButtonClick={flipToShopButton}
-            flipToShop={flipToShop}
-          />
+          <ShoppingCard onButtonClick={flipToShopButton} />
         </FlipCardBack>
       </FlipCard>
     </Container>

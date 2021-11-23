@@ -6,7 +6,6 @@ import CocktailList from './components/Lakritzel/Mobile/CocktailList'
 import Kritzelkopf from './components/People/Kritzelkopf'
 import AGB from '../src/components/Lakritzel/Both/AGB'
 import Info from '../src/components/Lakritzel/Both/Info'
-import ShoppingCard from './components/Lakritzel/Both/ShoppingCart'
 import styled, { css } from 'styled-components/macro'
 import { Switch, Route } from 'react-router-dom'
 import useOrder from './hook/useOrder'
@@ -82,9 +81,6 @@ function App({ data }) {
           </Route>
           <Route exact path="/datenschutz">
             <Datenschutz />
-          </Route>
-          <Route exact path="/warenkorb">
-            <ShoppingCard />
           </Route>
         </Switch>
       </Main>

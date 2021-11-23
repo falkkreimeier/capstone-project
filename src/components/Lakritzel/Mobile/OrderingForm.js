@@ -167,7 +167,7 @@ function OrderingForm({
             size: '30px',
           }}
         >
-          <ArrowLeft onClick={onButtonClick} />
+          <ArrowLeft onClick={onShopButtonClick} />
         </IconContext.Provider>
       </IconPosition>
     </Wrapper>
@@ -323,7 +323,7 @@ const ButtonMore = styled.button`
   justify-content: center;
   align-items: center;
   position: relative;
-  bottom: 102px;
+  bottom: 106px;
   left: 130px;
   border-top-right-radius: 19px;
   border-bottom-right-radius: 19px;
@@ -333,13 +333,11 @@ const ButtonMore = styled.button`
   color: white;
   font-size: 1.2rem;
   width: 40px;
-  transform: translateY(-4px);
-  &:active {
-    transform: translateY(-0px);
-    transition: 0.1s;
-  }
   @media (min-width: 1000px) {
-    margin: 20px auto;
+    position: relative;
+    height: 28px;
+    bottom: 126px;
+    left: 155px;
   }
 `
 
@@ -348,8 +346,8 @@ const ButtonLess = styled.button`
   justify-content: center;
   align-items: center;
   position: relative;
-  bottom: 102px;
-  right: 130px;
+  bottom: 106px;
+  right: 90px;
   border-top-left-radius: 19px;
   border-bottom-left-radius: 19px;
   margin: 0px auto;
@@ -358,13 +356,11 @@ const ButtonLess = styled.button`
   color: white;
   font-size: 1.2rem;
   width: 40px;
-  transform: translateY(-4px);
-  &:active {
-    transform: translateY(-0px);
-    transition: 0.1s;
-  }
   @media (min-width: 1000px) {
-    margin: 20px auto;
+    position: relative;
+    height: 28px;
+    bottom: 126px;
+    right: 155px;
   }
 `
 
