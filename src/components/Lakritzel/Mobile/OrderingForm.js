@@ -156,7 +156,7 @@ function OrderingForm({
           <ButtonLess onClick={ClickDownHandler}>-</ButtonLess>
         </ButtonContainer>
         <ButtonOrder onClick={onAddOrder} activeClassName="active">
-          Hol mich hier raus!
+          Jetzt bestellen
         </ButtonOrder>
       </Form>
 

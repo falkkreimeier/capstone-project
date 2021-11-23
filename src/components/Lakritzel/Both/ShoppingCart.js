@@ -69,7 +69,7 @@ function ShoppingCard({ onButtonClick }) {
         activeClassName="active"
         onClick={onOrderButtonClickHandler}
       >
-        Jetzt bestellen
+        Hol mich hier raus!
       </ButtonOrdering>
 
       <IconPosition>
@@ -110,6 +110,10 @@ const InputQuantity = styled.input`
 
 const Image = styled.img`
   height: 150px;
+  @media (min-width: 1000px) {
+    margin-top: 50px;
+    height: 300px;
+  }
 `
 
 const InputContainer = styled.div`
@@ -152,7 +156,7 @@ const ButtonOrdering = styled.button`
   font-size: 0.9rem;
   text-decoration: none;
   text-align: center;
-  width: 120px;
+  width: 140px;
   height: 35px;
   margin: 14px 5px;
   border: 1px solid grey;
