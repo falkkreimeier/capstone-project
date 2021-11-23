@@ -109,7 +109,7 @@ const InputQuantity = styled.input`
 `
 
 const Image = styled.img`
-  height: 150px;
+  height: 220px;
   @media (min-width: 1000px) {
     margin-top: 50px;
     height: 300px;

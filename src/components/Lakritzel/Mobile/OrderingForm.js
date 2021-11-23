@@ -152,8 +152,8 @@ function OrderingForm({
           </label>
         </MessageContainer>
         <ButtonContainer>
-          <ButtonMore onClick={ClickUpHandler}>+</ButtonMore>
-          <ButtonLess onClick={ClickDownHandler}>-</ButtonLess>
+          <ButtonPlus onClick={ClickUpHandler}>+</ButtonPlus>
+          <ButtonMinus onClick={ClickDownHandler}>-</ButtonMinus>
         </ButtonContainer>
         <ButtonOrder onClick={onAddOrder} activeClassName="active">
           Jetzt bestellen
@@ -318,7 +318,7 @@ const ButtonOrder = styled.button`
     margin: 20px auto;
   }
 `
-const ButtonMore = styled.button`
+const ButtonPlus = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -341,13 +341,13 @@ const ButtonMore = styled.button`
   }
 `
 
-const ButtonLess = styled.button`
+const ButtonMinus = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   bottom: 106px;
-  right: 90px;
+  right: 130px;
   border-top-left-radius: 19px;
   border-bottom-left-radius: 19px;
   margin: 0px auto;
