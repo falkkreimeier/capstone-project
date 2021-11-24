@@ -151,14 +151,15 @@ function OrderingForm({
             />
           </label>
         </MessageContainer>
-        <ButtonContainer>
-          <ButtonPlus onClick={ClickUpHandler}>+</ButtonPlus>
-          <ButtonMinus onClick={ClickDownHandler}>-</ButtonMinus>
-        </ButtonContainer>
+
         <ButtonOrder onClick={onAddOrder} activeClassName="active">
           Jetzt bestellen
         </ButtonOrder>
       </Form>
+      <ButtonContainer>
+        <ButtonPlus onClick={ClickUpHandler}>+</ButtonPlus>
+        <ButtonMinus onClick={ClickDownHandler}>-</ButtonMinus>
+      </ButtonContainer>
 
       <IconPosition>
         <IconContext.Provider
@@ -324,7 +325,7 @@ const ButtonPlus = styled.button`
   align-items: center;
   position: relative;
   bottom: 106px;
-  left: 130px;
+  left: 199px;
   border-top-right-radius: 19px;
   border-bottom-right-radius: 19px;
   margin: 0px auto;
@@ -336,8 +337,8 @@ const ButtonPlus = styled.button`
   @media (min-width: 1000px) {
     position: relative;
     height: 28px;
-    bottom: 126px;
-    left: 155px;
+    bottom: 207px;
+    left: 224px;
   }
 `
 
@@ -347,7 +348,7 @@ const ButtonMinus = styled.button`
   align-items: center;
   position: relative;
   bottom: 106px;
-  right: 130px;
+  right: 200px;
   border-top-left-radius: 19px;
   border-bottom-left-radius: 19px;
   margin: 0px auto;
@@ -359,8 +360,8 @@ const ButtonMinus = styled.button`
   @media (min-width: 1000px) {
     position: relative;
     height: 28px;
-    bottom: 126px;
-    right: 155px;
+    bottom: 207px;
+    right: 225px;
   }
 `
 
