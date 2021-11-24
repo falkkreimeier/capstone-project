@@ -300,7 +300,7 @@ const MessageContainer = styled.div`
 
 const ButtonOrder = styled.button`
   font-family: Ventana;
-  margin: 0px auto;
+  margin: -20px auto;
   padding: 10px;
   height: 40px;
   background-color: black;
@@ -367,7 +367,7 @@ const ButtonMinus = styled.button`
 const IconPosition = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin: -38px 30px 0px 0px;
+  margin: -18px 30px 0px 0px;
 `
 
 const InputQuantity = styled.input`
