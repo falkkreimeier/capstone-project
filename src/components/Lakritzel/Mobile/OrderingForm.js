@@ -324,7 +324,7 @@ const ButtonPlus = styled.button`
   justify-content: center;
   align-items: center;
   position: relative;
-  bottom: 130px;
+  bottom: 132px;
   left: 199px;
   border-top-right-radius: 19px;
   border-bottom-right-radius: 19px;
@@ -347,7 +347,7 @@ const ButtonMinus = styled.button`
   justify-content: center;
   align-items: center;
   position: relative;
-  bottom: 130px;
+  bottom: 132px;
   right: 200px;
   border-top-left-radius: 19px;
   border-bottom-left-radius: 19px;
