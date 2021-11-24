@@ -15,23 +15,6 @@ function ShoppingCard({
   onHandleChange,
 }) {
   const { handleAddOrder } = useOrder()
-  //   const [count, setCount] = useState(0)
-
-  //   const handleChange = event => {
-  //     setCount(event.target.value)
-  //   }
-
-  //   function ClickDownHandler() {
-  //     if (count > 0) {
-  //       setCount(count - 1)
-  //     }
-  //   }
-
-  //   function ClickUpHandler() {
-  //     setCount(count + 1)
-  //     saveToLocal('quantity', value)
-  //   }
-
   const [showOrderingFormAnimation, setShowOrderingFormAnimation] = useState(
     false
   )
