@@ -164,8 +164,8 @@ const ButtonOrdering = styled.button`
   font-size: 0.9rem;
   text-decoration: none;
   text-align: center;
-  width: 140px;
-  height: 35px;
+  width: 145px;
+  height: 40px;
   margin: 14px 5px;
   border: 1px solid grey;
   border-radius: 15px;
