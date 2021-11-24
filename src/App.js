@@ -19,6 +19,32 @@ import Impressum from './components/Lakritzel/Both/Impressum'
 import Datenschutz from './components/Lakritzel/Both/Datenschutz'
 
 function App({ data }) {
+  const [count, setCount] = useState(loadFromLocal('quantity') || 0)
+
+  function ClickUpHandler() {
+    setCount(count + 1)
+    saveToLocal('quantity', count)
+  }
+
+  const handleChange = event => {
+    setCount(event.target.value)
+  }
+
+  function ClickDownHandler() {
+    if (count > 0) {
+      setCount(count - 1)
+      saveToLocal('quantity', count)
+    }
+  }
+  const [flipToShop, setFlipToShop] = useState(false)
+  function flipToShopButton() {
+    setFlipToShop(!flipToShop)
+  }
+
+  function flipToShoppingCartButton() {
+    setFlipToShop(true)
+  }
+
   const { pathname } = useLocation()
 
   useEffect(() => {
@@ -47,11 +73,26 @@ function App({ data }) {
 
   return (
     <Wrapper>
-      <Header showWelcomeAnimation={showWelcomeAnimation} />
+      <Header
+        count={count}
+        onFlipToShoppingCartButtonClick={flipToShoppingCartButton}
+        showWelcomeAnimation={showWelcomeAnimation}
+      />
       <Main showWelcomeAnimation={showWelcomeAnimation}>
         <Switch>
           <Route exact path="/">
-            <DesktopSide onAddOrder={handleAddOrder} data={data} />
+            <DesktopSide
+              onFlipToShopButtonClick={flipToShopButton}
+              flipToShop={flipToShop}
+              setFlipToShop={setFlipToShop}
+              onAddOrder={handleAddOrder}
+              data={data}
+              count={count}
+              setCount={setCount}
+              ClickUpHandler={ClickUpHandler}
+              ClickDownHandler={ClickDownHandler}
+              onHandleChange={handleChange}
+            />
           </Route>
           <Route exact path="/campaign">
             <Container>

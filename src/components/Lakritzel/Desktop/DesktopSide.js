@@ -5,10 +5,32 @@ import CampaignCardDesktop from './CampaignCardDesktop'
 import CocktailsDesktop from './CocktailsDesktop'
 import ProfileDesktop from './ProfileDesktop'
 
-function DesktopSide({ onAddOrder, data }) {
+function DesktopSide({
+  onAddOrder,
+  data,
+  onFlipToShopButtonClick,
+  flipToShop,
+  setFlipToShop,
+  count,
+  setCount,
+  ClickUpHandler,
+  ClickDownHandler,
+  onHandleChange,
+}) {
   return (
     <Wrapper>
-      <Shop onAddOrder={onAddOrder} data={data} />
+      <Shop
+        count={count}
+        setCount={setCount}
+        onFlipToShopButtonClick={onFlipToShopButtonClick}
+        flipToShop={flipToShop}
+        setFlipToShop={setFlipToShop}
+        onAddOrder={onAddOrder}
+        data={data}
+        ClickUpHandler={ClickUpHandler}
+        ClickDownHandler={ClickDownHandler}
+        onHandleChange={onHandleChange}
+      />
       <ProductList data={data} />
       <CampaignCardDesktop />
       <CocktailsDesktop />

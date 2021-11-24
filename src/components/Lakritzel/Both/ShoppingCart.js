@@ -6,23 +6,31 @@ import useOrder from '../../../hook/useOrder'
 import { FaArrowCircleLeft as ArrowLeft } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
 
-function ShoppingCard({ onButtonClick }) {
+function ShoppingCard({
+  onFlipToShopButtonClick,
+  count,
+  setCount,
+  ClickUpHandler,
+  ClickDownHandler,
+  onHandleChange,
+}) {
   const { handleAddOrder } = useOrder()
-  const [count, setCount] = useState(0)
+  //   const [count, setCount] = useState(0)
 
-  const handleChange = event => {
-    setCount(event.target.value)
-  }
+  //   const handleChange = event => {
+  //     setCount(event.target.value)
+  //   }
 
-  function ClickDownHandler() {
-    if (count > 0) {
-      setCount(count - 1)
-    }
-  }
+  //   function ClickDownHandler() {
+  //     if (count > 0) {
+  //       setCount(count - 1)
+  //     }
+  //   }
 
-  function ClickUpHandler() {
-    setCount(count + 1)
-  }
+  //   function ClickUpHandler() {
+  //     setCount(count + 1)
+  //     saveToLocal('quantity', value)
+  //   }
 
   const [showOrderingFormAnimation, setShowOrderingFormAnimation] = useState(
     false
@@ -48,7 +56,7 @@ function ShoppingCard({ onButtonClick }) {
           count={count}
           ClickUpHandler={ClickUpHandler}
           ClickDownHandler={ClickDownHandler}
-          onHandleChange={handleChange}
+          onHandleChange={onHandleChange}
         />
       </Wrapper>
     )
@@ -59,7 +67,7 @@ function ShoppingCard({ onButtonClick }) {
       <Headline>Warenkorb</Headline>
       <Image src={bottle} alt="" />
       <InputContainer>
-        <InputQuantity value={count} onChange={handleChange} />
+        <InputQuantity value={count} onChange={onHandleChange} />
       </InputContainer>
       <ButtonContainer>
         <Button onClick={ClickDownHandler}> - </Button>
@@ -79,7 +87,7 @@ function ShoppingCard({ onButtonClick }) {
             size: '30px',
           }}
         >
-          <ArrowLeft onClick={onButtonClick} />
+          <ArrowLeft onClick={onFlipToShopButtonClick} />
         </IconContext.Provider>
       </IconPosition>
     </Wrapper>

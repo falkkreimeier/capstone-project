@@ -1,25 +1,35 @@
 import styled, { css } from 'styled-components/macro'
-import { useState } from 'react'
 import StoryToShop from './StoryToShop'
 import ShoppingCard from '../Both/ShoppingCart'
 
-function Shop() {
-  const [flipToShop, setFlipToShop] = useState(false)
-  function flipToShopButton() {
-    setFlipToShop(!flipToShop)
-  }
+function Shop({
+  onFlipToShopButtonClick,
+  flipToShop,
+  count,
+  setCount,
+  ClickUpHandler,
+  ClickDownHandler,
+  onHandleChange,
+}) {
   return (
     <Container>
       <FlipCard flipToShop={flipToShop}>
         <FlipCardFront>
           <StoryToShop
             flipToShop={flipToShop}
-            onButtonClick={flipToShopButton}
+            onFlipToShopButtonClick={onFlipToShopButtonClick}
           />
         </FlipCardFront>
 
         <FlipCardBack>
-          <ShoppingCard onButtonClick={flipToShopButton} />
+          <ShoppingCard
+            onHandleChange={onHandleChange}
+            ClickUpHandler={ClickUpHandler}
+            ClickDownHandler={ClickDownHandler}
+            count={count}
+            setCount={setCount}
+            onFlipToShopButtonClick={onFlipToShopButtonClick}
+          />
         </FlipCardBack>
       </FlipCard>
     </Container>
