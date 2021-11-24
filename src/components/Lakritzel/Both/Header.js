@@ -3,11 +3,9 @@ import logo from '../Assets/Logo_Claim_Lakritzel.jpg'
 import { FaShoppingCart } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
 
 function Header({
   showWelcomeAnimation,
-  OrderButtonClickHandler,
   count,
   onFlipToShoppingCartButtonClick,
 }) {
