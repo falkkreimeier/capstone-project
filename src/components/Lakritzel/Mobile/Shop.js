@@ -82,7 +82,6 @@ const FlipCardBack = styled.section`
   backface-visibility: hidden;
   transform: rotateY(180deg);
   position: absolute;
-  border: 1px solid black;
   border-radius: var(--border-radius);
 `
 

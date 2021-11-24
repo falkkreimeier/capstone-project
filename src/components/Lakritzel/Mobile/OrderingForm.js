@@ -8,7 +8,6 @@ import { ButtonContainer } from '../Both/ShoppingCart'
 
 function OrderingForm({
   onAddOrder,
-  onButtonClick,
   onShopButtonClick,
   count,
   onHandleChange,
@@ -208,10 +207,10 @@ function OrderingForm({
 const Wrapper = styled.section`
   margin: 0 auto;
   width: var(--main-width);
-  border: 1px solid white;
+  /* border: 1px solid white; */
   border-radius: var(--border-radius);
   padding: 0px;
-  background-color: white;
+  /* background-color: white; */
   height: auto;
   animation-duration: 1s;
   animation-name: riseUp;
@@ -257,6 +256,7 @@ const QuantityWrapper = styled.div`
   background-color: white;
   border-radius: var(--border-radius);
   z-index: 5;
+  border-radius: 19px;
 `
 
 const InputContainer = styled.div`
@@ -324,7 +324,7 @@ const ButtonPlus = styled.button`
   justify-content: center;
   align-items: center;
   position: relative;
-  bottom: 132px;
+  bottom: 130px;
   left: 199px;
   border-top-right-radius: 19px;
   border-bottom-right-radius: 19px;
@@ -347,7 +347,7 @@ const ButtonMinus = styled.button`
   justify-content: center;
   align-items: center;
   position: relative;
-  bottom: 132px;
+  bottom: 130px;
   right: 200px;
   border-top-left-radius: 19px;
   border-bottom-left-radius: 19px;

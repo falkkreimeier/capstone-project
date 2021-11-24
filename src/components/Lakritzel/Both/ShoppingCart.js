@@ -162,7 +162,7 @@ export const Button = styled.button`
 
 const ButtonOrdering = styled.button`
   font-family: ventana;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   text-decoration: none;
   text-align: center;
   width: 145px;

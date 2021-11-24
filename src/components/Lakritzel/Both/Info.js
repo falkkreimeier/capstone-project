@@ -49,7 +49,7 @@ const Wrapper = styled.section`
   justify-content: center;
   align-items: center;
   background-color: white;
-  margin: 0 auto;
+  margin: 0px auto;
   height: 550px;
   width: var(--main-width);
   border-radius: var(--border-radius);
@@ -57,6 +57,7 @@ const Wrapper = styled.section`
     min-width: 1060px;
     height: 645px;
     display: grid;
+    padding-top: 80px;
     grid-template-areas:
       'image text'
       'image buttons';
