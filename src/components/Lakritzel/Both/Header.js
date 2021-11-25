@@ -13,7 +13,7 @@ function Header({
     <HeaderEl showWelcomeAnimation={showWelcomeAnimation}>
       <Wrapper>
         <Image src={logo} alt="Lakritzel App" />
-        <LinkToShop exact to="/">
+        <LinkToShop to="/">
           <IconPosition>
             <IconContext.Provider
               value={{

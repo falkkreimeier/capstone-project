@@ -148,7 +148,7 @@ const ButtonOrdering = styled.button`
   font-size: 1.2rem;
   text-decoration: none;
   text-align: center;
-  width: 145px;
+  width: 173px;
   height: 40px;
   margin: 14px 5px;
   border: 1px solid grey;
