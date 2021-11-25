@@ -11,11 +11,6 @@ function StoryToShop({
   showShoppingCard,
   setShowShoppingCard,
 }) {
-  // const [showShoppingCard, setShowShoppingCard] = useState(false)
-  // function shoppingCardButtonClick() {
-  //   setShowShoppingCard(!showShoppingCard)
-  // }
-
   if (showShoppingCard) {
     return (
       <ShoppingCard

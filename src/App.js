@@ -23,7 +23,7 @@ function App({ data }) {
 
   function ClickUpHandler() {
     setCount(count + 1)
-    saveToLocal('quantity', count)
+    saveToLocal('quantity', count + 1)
   }
 
   const handleChange = event => {
@@ -33,7 +33,7 @@ function App({ data }) {
   function ClickDownHandler() {
     if (count > 0) {
       setCount(count - 1)
-      saveToLocal('quantity', count)
+      saveToLocal('quantity', count - 1)
     }
   }
 
@@ -41,11 +41,6 @@ function App({ data }) {
   function shoppingCardButton() {
     setShowShoppingCard(!showShoppingCard)
   }
-
-  // const [flipToShop, setFlipToShop] = useState(false)
-  // function flipToShopButton() {
-  //   setFlipToShop(!flipToShop)
-  // }
 
   function shoppingCartButtonClick() {
     setShowShoppingCard(true)
