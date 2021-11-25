@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components/macro'
-import { useState } from 'react'
 import ShoppingCard from '../Both/ShoppingCart'
 
 function StoryToShop({
