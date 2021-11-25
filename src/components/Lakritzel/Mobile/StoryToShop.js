@@ -91,7 +91,7 @@ const ButtonFront = styled.button`
   height: 40px;
   width: 192px;
   font-size: 1.5rem;
-  border-radius: var(--border-radius);
+  border-radius: 19px;
   box-shadow: 0 14px 8px rgba(0, 0, 0, 0.25);
   transform: translateY(-4px);
   &:active {
