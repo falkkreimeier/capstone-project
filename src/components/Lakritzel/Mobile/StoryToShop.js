@@ -1,6 +1,31 @@
 import styled, { css } from 'styled-components/macro'
+import { useState } from 'react'
+import ShoppingCard from '../Both/ShoppingCart'
 
-function StoryToShop({ flipToShop, onFlipToShopButtonClick }) {
+function StoryToShop({
+  flipToShop,
+  count,
+  ClickUpHandler,
+  ClickDownHandler,
+  onHandleChange,
+}) {
+  const [showShoppingCard, setShowShoppingCard] = useState(false)
+  function shoppingCardButtonClick() {
+    setShowShoppingCard(!showShoppingCard)
+  }
+
+  if (showShoppingCard) {
+    return (
+      <ShoppingCard
+        onHandleChange={onHandleChange}
+        count={count}
+        onshoppingCardButtonClick={shoppingCardButtonClick}
+        ClickUpHandler={ClickUpHandler}
+        ClickDownHandler={ClickDownHandler}
+      />
+    )
+  }
+
   return (
     <Wrapper>
       <Headline>HILFEEEE!!!!</Headline>
@@ -21,7 +46,8 @@ function StoryToShop({ flipToShop, onFlipToShopButtonClick }) {
       <ButtonFront
         disabled={flipToShop}
         flipToShop={flipToShop}
-        onClick={onFlipToShopButtonClick}
+        // onClick={onFlipToShopButtonClick}
+        onClick={shoppingCardButtonClick}
       >
         Rette mich
       </ButtonFront>
@@ -30,13 +56,21 @@ function StoryToShop({ flipToShop, onFlipToShopButtonClick }) {
 }
 
 const Wrapper = styled.section`
-  grid-area: story;
-  background-color: white;
-  border-radius: var(--border-radius);
-  margin: 0 auto;
-  align-items: flex-start;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  grid-area: shop;
+  --card-height: 500px;
+  margin: 5px auto;
+  width: var(--main-width);
+  border-radius: var(--border-radius);
+  height: var(--card-height);
+  perspective: 1000px;
+  @media (min-width: 1000px) {
+    --card-height: 645px;
+    margin: 0 auto;
+  }
 `
 
 const Image = styled.img`
@@ -92,10 +126,8 @@ const ButtonFront = styled.button`
   width: 192px;
   font-size: 1.5rem;
   border-radius: 19px;
-  box-shadow: 0 14px 8px rgba(0, 0, 0, 0.25);
   transform: translateY(-4px);
   &:active {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
     transform: translateY(-0px);
     transition: 0.1s;
   }

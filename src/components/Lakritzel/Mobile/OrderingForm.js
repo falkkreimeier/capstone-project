@@ -205,26 +205,11 @@ function OrderingForm({
 }
 
 const Wrapper = styled.section`
+  grid-area: shop;
   margin: 0 auto;
   width: var(--main-width);
-  /* border: 1px solid white; */
   border-radius: var(--border-radius);
   padding: 0px;
-  /* background-color: white; */
-  height: auto;
-  animation-duration: 1s;
-  animation-name: riseUp;
-  &.active {
-    @keyframes riseUp {
-      from {
-        transform: translatey(800px);
-      }
-
-      to {
-        transform: translateY(0);
-      }
-    }
-  }
 `
 
 const Form = styled.form`
@@ -307,11 +292,9 @@ const ButtonOrder = styled.button`
   background-color: black;
   color: white;
   font-size: 1.2rem;
-  border-radius: var(--border-radius);
-  box-shadow: 0 14px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 19px;
   transform: translateY(-4px);
   &:active {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
     transform: translateY(-0px);
     transition: 0.1s;
   }
@@ -386,7 +369,6 @@ const InputQuantity = styled.input`
   @media (min-width: 1000px) {
     min-height: 25px;
   }
-
 `
 
 export default OrderingForm

@@ -1,32 +1,21 @@
 import styled from 'styled-components/macro'
-import Shop from '../Mobile/Shop'
 import ProductList from '../Mobile/ProductList'
 import CampaignCardDesktop from './CampaignCardDesktop'
 import CocktailsDesktop from './CocktailsDesktop'
 import ProfileDesktop from './ProfileDesktop'
+import StoryToShop from '../Mobile/StoryToShop'
 
 function DesktopSide({
-  onAddOrder,
   data,
-  onFlipToShopButtonClick,
-  flipToShop,
-  setFlipToShop,
   count,
-  setCount,
   ClickUpHandler,
   ClickDownHandler,
   onHandleChange,
 }) {
   return (
     <Wrapper>
-      <Shop
+      <StoryToShop
         count={count}
-        setCount={setCount}
-        onFlipToShopButtonClick={onFlipToShopButtonClick}
-        flipToShop={flipToShop}
-        setFlipToShop={setFlipToShop}
-        onAddOrder={onAddOrder}
-        data={data}
         ClickUpHandler={ClickUpHandler}
         ClickDownHandler={ClickDownHandler}
         onHandleChange={onHandleChange}
