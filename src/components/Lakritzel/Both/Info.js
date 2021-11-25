@@ -49,14 +49,15 @@ const Wrapper = styled.section`
   justify-content: center;
   align-items: center;
   background-color: white;
-  margin: 0 auto;
-  height: 495px;
+  margin: 0px auto;
+  height: 550px;
   width: var(--main-width);
   border-radius: var(--border-radius);
   @media (min-width: 1000px) {
     min-width: 1060px;
     height: 645px;
     display: grid;
+    padding-top: 80px;
     grid-template-areas:
       'image text'
       'image buttons';
@@ -69,7 +70,7 @@ const Headline = styled.h2`
   font-size: 1.2rem;
   @media (min-width: 1000px) {
     font-size: 1.8rem;
-    bottom: 180px;
+    bottom: 235px;
     left: 120px;
   }
 `

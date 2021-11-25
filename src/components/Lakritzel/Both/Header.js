@@ -1,18 +1,36 @@
 import styled, { css } from 'styled-components/macro'
-import logo from '../Assets/Logo_Claim_Lakritzel.jpg'
+import logo from '../Assets/Logo-lettering.jpg'
+import { FaShoppingCart } from 'react-icons/fa'
+import { IconContext } from 'react-icons'
+import { Link } from 'react-router-dom'
 
-function Header({ showWelcomeAnimation }) {
+function Header({
+  showWelcomeAnimation,
+  count,
+  onFlipToShoppingCartButtonClick,
+}) {
   return (
     <HeaderEl showWelcomeAnimation={showWelcomeAnimation}>
       <Wrapper>
         <Image src={logo} alt="Lakritzel App" />
+        <LinkToShop to="/">
+          <IconPosition>
+            <IconContext.Provider
+              value={{
+                size: '25px',
+              }}
+            >
+              <FaShoppingCart onClick={onFlipToShoppingCartButtonClick} />
+            </IconContext.Provider>
+          </IconPosition>
+        </LinkToShop>
+        <Quantity>{count}</Quantity>
       </Wrapper>
     </HeaderEl>
   )
 }
 
 const HeaderEl = styled.header`
-  border-radius: 5px;
   grid-area: header;
   position: fixed;
   background-color: black;
@@ -49,16 +67,44 @@ const Wrapper = styled.section`
   display: flex;
   justify-content: center;
   background-color: white;
-  margin: 0px auto;
-  border-radius: 5px;
+  margin: 5px auto;
   @media only screen and (min-width: 1000px) {
     margin: 0 auto;
-    width: 1060px;
+    width: 1063px;
   }
 `
 
 const Image = styled.img`
-  height: 80px;
+  position: relative;
+  left: 20px;
+  height: 90px;
+  padding: 10px;
+  @media (min-width: 1000px) {
+    position: static;
+  }
+`
+
+const IconPosition = styled.div`
+  position: relative;
+  left: 80px;
+  top: 10px;
+  @media (min-width: 1000px) {
+    left: 420px;
+  }
+`
+
+const Quantity = styled.div`
+  position: relative;
+  left: 65px;
+  top: 35px;
+  @media (min-width: 1000px) {
+    left: 405px;
+    top: 35px;
+  }
+`
+
+const LinkToShop = styled(Link)`
+  color: black;
 `
 
 export default Header

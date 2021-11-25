@@ -1,28 +1,34 @@
 import styled, { css } from 'styled-components/macro'
-import { useState } from 'react'
 import StoryToShop from './StoryToShop'
-import OrderingForm from './OrderingForm'
+import ShoppingCard from '../Both/ShoppingCart'
 
-function Shop({ onAddOrder }) {
-  const [flipToShop, setFlipToShop] = useState(false)
-  function flipToShopButton() {
-    setFlipToShop(!flipToShop)
-  }
+function Shop({
+  onFlipToShopButtonClick,
+  flipToShop,
+  count,
+  setCount,
+  ClickUpHandler,
+  ClickDownHandler,
+  onHandleChange,
+}) {
   return (
     <Container>
       <FlipCard flipToShop={flipToShop}>
         <FlipCardFront>
           <StoryToShop
             flipToShop={flipToShop}
-            onButtonClick={flipToShopButton}
+            onFlipToShopButtonClick={onFlipToShopButtonClick}
           />
         </FlipCardFront>
 
         <FlipCardBack>
-          <OrderingForm
-            onAddOrder={onAddOrder}
-            onButtonClick={flipToShopButton}
-            flipToShop={flipToShop}
+          <ShoppingCard
+            onHandleChange={onHandleChange}
+            ClickUpHandler={ClickUpHandler}
+            ClickDownHandler={ClickDownHandler}
+            count={count}
+            setCount={setCount}
+            onFlipToShopButtonClick={onFlipToShopButtonClick}
           />
         </FlipCardBack>
       </FlipCard>
@@ -39,7 +45,7 @@ const Container = styled.div`
   height: var(--card-height);
   perspective: 1000px;
   @media (min-width: 1000px) {
-    --card-height: 65g5px;
+    --card-height: 645px;
     margin: 0 auto;
   }
 `
@@ -76,7 +82,6 @@ const FlipCardBack = styled.section`
   backface-visibility: hidden;
   transform: rotateY(180deg);
   position: absolute;
-  border: 1px solid black;
   border-radius: var(--border-radius);
 `
 

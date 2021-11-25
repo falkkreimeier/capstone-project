@@ -4,12 +4,26 @@ import { IconContext } from 'react-icons'
 import { FaArrowCircleLeft as ArrowLeft } from 'react-icons/fa'
 import emailjs from 'emailjs-com'
 import OrderingInfo from './OrderingInfo'
+import { ButtonContainer } from '../Both/ShoppingCart'
 
-function OrderingForm({ onAddOrder, onButtonClick }) {
+function OrderingForm({
+  onAddOrder,
+  onShopButtonClick,
+  count,
+  onHandleChange,
+  ClickUpHandler,
+  ClickDownHandler,
+}) {
   const [orderingInfo, setOrderingInfo] = useState(true)
-  function handleOrderingButtonClick() {
-    setOrderingInfo(!orderingInfo)
+  function handleOrderingButtonClick(event) {
+    event.preventDefault()
+    if (count === 0) {
+      return alert('Bitte Menge angeben')
+    } else {
+      setOrderingInfo(!orderingInfo)
+    }
   }
+
   function sendEmail(e, form) {
     e.preventDefault()
     emailjs
@@ -109,18 +123,21 @@ function OrderingForm({ onAddOrder, onButtonClick }) {
             />
           </label>
         </InputContainer>
-        <InputContainer>
-          <label>
-            <HiddenLabelText>Anzahl:</HiddenLabelText>
-            <Input
-              maxlength="20"
-              type="number"
-              placeholder="Menge"
-              name="quantity"
-              required
-            />
-          </label>
-        </InputContainer>
+        <QuantityWrapper>
+          <InputContainer>
+            <label>
+              <HiddenLabelText>Anzahl:</HiddenLabelText>
+              <InputQuantity
+                type="number"
+                maxlength="20"
+                name="quantity"
+                required
+                value={count}
+                onChange={onHandleChange}
+              />
+            </label>
+          </InputContainer>
+        </QuantityWrapper>
         <MessageContainer>
           <label>
             <HiddenLabelText>Nachricht:</HiddenLabelText>
@@ -135,9 +152,14 @@ function OrderingForm({ onAddOrder, onButtonClick }) {
         </MessageContainer>
 
         <ButtonOrder onClick={onAddOrder} activeClassName="active">
-          Hol mich hier raus!
+          Jetzt bestellen
         </ButtonOrder>
       </Form>
+      <ButtonContainer>
+        <ButtonPlus onClick={ClickUpHandler}>+</ButtonPlus>
+        <ButtonMinus onClick={ClickDownHandler}>-</ButtonMinus>
+      </ButtonContainer>
+
       <IconPosition>
         <IconContext.Provider
           value={{
@@ -145,7 +167,7 @@ function OrderingForm({ onAddOrder, onButtonClick }) {
             size: '30px',
           }}
         >
-          <ArrowLeft onClick={onButtonClick} />
+          <ArrowLeft onClick={onShopButtonClick} />
         </IconContext.Provider>
       </IconPosition>
     </Wrapper>
@@ -185,11 +207,24 @@ function OrderingForm({ onAddOrder, onButtonClick }) {
 const Wrapper = styled.section`
   margin: 0 auto;
   width: var(--main-width);
-  border: 1px solid white;
+  /* border: 1px solid white; */
   border-radius: var(--border-radius);
   padding: 0px;
-  background-color: white;
+  /* background-color: white; */
   height: auto;
+  animation-duration: 1s;
+  animation-name: riseUp;
+  &.active {
+    @keyframes riseUp {
+      from {
+        transform: translatey(800px);
+      }
+
+      to {
+        transform: translateY(0);
+      }
+    }
+  }
 `
 
 const Form = styled.form`
@@ -216,6 +251,12 @@ const Headline = styled.h2`
   grid-area: headline;
   text-align: center;
   font-family: Ventana;
+`
+const QuantityWrapper = styled.div`
+  background-color: white;
+  border-radius: var(--border-radius);
+  z-index: 5;
+  border-radius: 19px;
 `
 
 const InputContainer = styled.div`
@@ -260,7 +301,7 @@ const MessageContainer = styled.div`
 
 const ButtonOrder = styled.button`
   font-family: Ventana;
-  margin: 0px auto;
+  margin: -8px auto;
   padding: 10px;
   height: 40px;
   background-color: black;
@@ -278,10 +319,74 @@ const ButtonOrder = styled.button`
     margin: 20px auto;
   }
 `
+const ButtonPlus = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 130px;
+  left: 199px;
+  border-top-right-radius: 19px;
+  border-bottom-right-radius: 19px;
+  margin: 0px auto;
+  height: 20px;
+  background-color: black;
+  color: white;
+  font-size: 1.2rem;
+  width: 40px;
+  @media (min-width: 1000px) {
+    position: relative;
+    height: 28px;
+    bottom: 207px;
+    left: 224px;
+  }
+`
+
+const ButtonMinus = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 130px;
+  right: 200px;
+  border-top-left-radius: 19px;
+  border-bottom-left-radius: 19px;
+  margin: 0px auto;
+  height: 20px;
+  background-color: black;
+  color: white;
+  font-size: 1.2rem;
+  width: 40px;
+  @media (min-width: 1000px) {
+    position: relative;
+    height: 28px;
+    bottom: 207px;
+    right: 225px;
+  }
+`
+
 const IconPosition = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin: -40px 30px 0px 0px;
+  margin: -50px 30px 0px 0px;
+`
+
+const InputQuantity = styled.input`
+  border: none;
+  text-align: center;
+  margin-top: 3px;
+  width: 155px;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  :-webkit-inner-spin-button,
+  :-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+  @media (min-width: 1000px) {
+    min-height: 25px;
+  }
+
 `
 
 export default OrderingForm

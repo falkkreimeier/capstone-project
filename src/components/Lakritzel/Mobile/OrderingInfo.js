@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import crazy from '../Assets/der-ballert-noHeadline.png'
 
-function OrderingInfo({ orderingInfo, onHandleOrderingButtonClick }) {
+function OrderingInfo({ orderingInfo }) {
   return (
     <Wrapper orderingInfo={orderingInfo}>
       <Headline>Endlich frei!</Headline>

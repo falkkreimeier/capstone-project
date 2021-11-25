@@ -25,7 +25,6 @@ function Nav({ showWelcomeAnimation }) {
 const Footer = styled.footer`
   grid-area: nav;
   position: fixed;
-  border-radius: 5px;
   background-color: black;
   right: 0;
   left: 0;
@@ -64,10 +63,9 @@ const Navigation = styled.nav`
   align-items: center;
   margin: 5px auto;
   min-height: 40px;
-  border-radius: 5px;
   @media screen and (min-width: 1000px) {
     margin: 4px auto 0 auto;
-    width: 1060px;
+    width: 1063px;
   }
 `
 

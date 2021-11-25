@@ -21,6 +21,10 @@ function Portfolio() {
 }
 
 const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   grid-area: portfolio;
   background: white;
   border-radius: var(--border-radius);
@@ -37,6 +41,7 @@ const Headline = styled.h2`
 `
 const LinkContainer = styled.div`
   margin: 5px auto;
+  text-align: center;
   width: 130px;
   text-decoration: none;
   border: 1px solid black;

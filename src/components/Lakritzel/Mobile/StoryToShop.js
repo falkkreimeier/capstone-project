@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components/macro'
 
-function StoryToShop({ flipToShop, onButtonClick }) {
+function StoryToShop({ flipToShop, onFlipToShopButtonClick }) {
   return (
     <Wrapper>
       <Headline>HILFEEEE!!!!</Headline>
@@ -21,7 +21,7 @@ function StoryToShop({ flipToShop, onButtonClick }) {
       <ButtonFront
         disabled={flipToShop}
         flipToShop={flipToShop}
-        onClick={onButtonClick}
+        onClick={onFlipToShopButtonClick}
       >
         Rette mich
       </ButtonFront>

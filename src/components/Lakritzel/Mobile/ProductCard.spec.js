@@ -20,7 +20,7 @@ describe('render ProductCard', () => {
     expect(text).toHaveAttribute('alt', altText)
   })
 
-  it('has the correct alt text', () => {
+  it('has the correct alt text2', () => {
     const altText2 = 'Lakritzel'
 
     render(<ProductCard image="https://localhost:3000/" />)

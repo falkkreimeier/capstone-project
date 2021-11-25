@@ -4,7 +4,7 @@ import Ventana from './Font/Lakritzel-Ventana.otf'
 const GlobalStlyles = createGlobalStyle`
 
 :root {
-    --border-radius: 19px;
+    --border-radius: 1px;
     --main-width: 352px;
     --main-padding: 10px;
     --color-fond: black;

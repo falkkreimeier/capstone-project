@@ -13,7 +13,7 @@ describe('render OrderingInfo', () => {
     render(<OrderingInfo />)
 
     const text = screen.getByText(
-      'Willkommen auf der dunklen Seite der Nacht. Kleine Bestellbestätigung hab ich dir auch schon geschickt.'
+      'Willkommen auf der dunklen Seite der Nacht. Kleine Bestellbestätigung hab ich dir auch schon geschickt. Zahle jetzt mit PayPal oder per Direktüberweisung + 5€ Versand (siehe Bestätigungs-Mail).'
     )
     expect(text).toBeInTheDocument()
   })
@@ -28,7 +28,7 @@ describe('render OrderingInfo', () => {
   it('shows Image', () => {
     render(<OrderingInfo />)
 
-    const image = screen.getByRole('img')
-    expect(image).toBeInTheDocument()
+    const image = screen.getAllByRole('img')
+    expect(image).toHaveLength(2)
   })
 })
