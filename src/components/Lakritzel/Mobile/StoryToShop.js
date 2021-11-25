@@ -8,18 +8,21 @@ function StoryToShop({
   ClickUpHandler,
   ClickDownHandler,
   onHandleChange,
+  onShoppingCardButton,
+  showShoppingCard,
+  setShowShoppingCard,
 }) {
-  const [showShoppingCard, setShowShoppingCard] = useState(false)
-  function shoppingCardButtonClick() {
-    setShowShoppingCard(!showShoppingCard)
-  }
+  // const [showShoppingCard, setShowShoppingCard] = useState(false)
+  // function shoppingCardButtonClick() {
+  //   setShowShoppingCard(!showShoppingCard)
+  // }
 
   if (showShoppingCard) {
     return (
       <ShoppingCard
         onHandleChange={onHandleChange}
         count={count}
-        onshoppingCardButtonClick={shoppingCardButtonClick}
+        onShoppingCardButton={onShoppingCardButton}
         ClickUpHandler={ClickUpHandler}
         ClickDownHandler={ClickDownHandler}
       />
@@ -43,14 +46,7 @@ function StoryToShop({
         Ähh, ich meinte natürlich ganz gesittet aufs Leben anstoßen.
       </TextDesktop>
 
-      <ButtonFront
-        disabled={flipToShop}
-        flipToShop={flipToShop}
-        // onClick={onFlipToShopButtonClick}
-        onClick={shoppingCardButtonClick}
-      >
-        Rette mich
-      </ButtonFront>
+      <ButtonFront onClick={onShoppingCardButton}>Rette mich</ButtonFront>
     </Wrapper>
   )
 }

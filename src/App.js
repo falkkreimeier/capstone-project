@@ -36,13 +36,19 @@ function App({ data }) {
       saveToLocal('quantity', count)
     }
   }
-  const [flipToShop, setFlipToShop] = useState(false)
-  function flipToShopButton() {
-    setFlipToShop(!flipToShop)
+
+  const [showShoppingCard, setShowShoppingCard] = useState(false)
+  function shoppingCardButton() {
+    setShowShoppingCard(!showShoppingCard)
   }
 
-  function flipToShoppingCartButton() {
-    setFlipToShop(true)
+  // const [flipToShop, setFlipToShop] = useState(false)
+  // function flipToShopButton() {
+  //   setFlipToShop(!flipToShop)
+  // }
+
+  function shoppingCartButtonClick() {
+    setShowShoppingCard(true)
   }
 
   const { pathname } = useLocation()
@@ -75,16 +81,16 @@ function App({ data }) {
     <Wrapper>
       <Header
         count={count}
-        onFlipToShoppingCartButtonClick={flipToShoppingCartButton}
+        onShoppingCardButtonClick={shoppingCartButtonClick}
         showWelcomeAnimation={showWelcomeAnimation}
       />
       <Main showWelcomeAnimation={showWelcomeAnimation}>
         <Switch>
           <Route exact path="/">
             <DesktopSide
-              onFlipToShopButtonClick={flipToShopButton}
-              flipToShop={flipToShop}
-              setFlipToShop={setFlipToShop}
+              onShoppingCardButton={shoppingCardButton}
+              showShoppingCard={showShoppingCard}
+              setShowShoppingCard={setShowShoppingCard}
               onAddOrder={handleAddOrder}
               data={data}
               count={count}

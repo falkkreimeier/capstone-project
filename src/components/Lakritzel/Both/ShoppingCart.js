@@ -11,7 +11,7 @@ function ShoppingCard({
   ClickUpHandler,
   ClickDownHandler,
   onHandleChange,
-  onshoppingCardButtonClick,
+  onShoppingCardButton,
 }) {
   const { handleAddOrder } = useOrder()
   const [showOrderingForm, setShowOrderingForm] = useState(false)
@@ -67,7 +67,7 @@ function ShoppingCard({
             size: '30px',
           }}
         >
-          <ArrowLeft onClick={onshoppingCardButtonClick} />
+          <ArrowLeft onClick={onShoppingCardButton} />
         </IconContext.Provider>
       </IconPosition>
     </Wrapper>
