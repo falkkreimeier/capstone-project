@@ -31,6 +31,10 @@ p {
     line-height: 1.5;
 }
 
+span {
+    line-height: 1.5;
+}
+
 body {
     background-color: black;
     margin: 0;

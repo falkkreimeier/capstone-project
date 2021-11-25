@@ -4,7 +4,7 @@ import Nav from './components/Lakritzel/Both/Nav'
 import CampaignCard from './components/Lakritzel/Mobile/CampaignCard'
 import CocktailList from './components/Lakritzel/Mobile/CocktailList'
 import Kritzelkopf from './components/People/Kritzelkopf'
-import AGB from '../src/components/Lakritzel/Both/AGB'
+import AGB from './components/Lakritzel/Both/AGB'
 import Info from '../src/components/Lakritzel/Both/Info'
 import styled, { css } from 'styled-components/macro'
 import { Switch, Route } from 'react-router-dom'
@@ -146,7 +146,7 @@ const Wrapper = styled.div`
 
 const Main = styled.main`
   margin: 0 auto;
-  padding: 99px 0 90px 0;
+  padding: 83px 0;
   border-radius: var(--border-radius);
   ${({ showWelcomeAnimation }) =>
     showWelcomeAnimation &&

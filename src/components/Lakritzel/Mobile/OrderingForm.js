@@ -386,6 +386,7 @@ const InputQuantity = styled.input`
   @media (min-width: 1000px) {
     min-height: 25px;
   }
+
 `
 
 export default OrderingForm
