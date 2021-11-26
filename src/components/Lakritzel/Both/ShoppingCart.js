@@ -7,30 +7,27 @@ import { FaArrowCircleLeft as ArrowLeft } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
 
 function ShoppingCard({
-  onFlipToShopButtonClick,
   count,
-  setCount,
   ClickUpHandler,
   ClickDownHandler,
   onHandleChange,
+  onShoppingCardButton,
 }) {
   const { handleAddOrder } = useOrder()
-  const [showOrderingFormAnimation, setShowOrderingFormAnimation] = useState(
-    false
-  )
+  const [showOrderingForm, setShowOrderingForm] = useState(false)
   function onOrderButtonClickHandler() {
     if (count === 0) {
       return alert('Bitte Menge angeben')
     } else {
-      setShowOrderingFormAnimation(true)
+      setShowOrderingForm(true)
     }
   }
 
   function onShopButtonClickHandler() {
-    setShowOrderingFormAnimation(false)
+    setShowOrderingForm(false)
   }
 
-  if (showOrderingFormAnimation) {
+  if (showOrderingForm) {
     return (
       <Wrapper>
         <OrderingForm
@@ -70,7 +67,7 @@ function ShoppingCard({
             size: '30px',
           }}
         >
-          <ArrowLeft onClick={onFlipToShopButtonClick} />
+          <ArrowLeft onClick={onShoppingCardButton} />
         </IconContext.Provider>
       </IconPosition>
     </Wrapper>
@@ -78,14 +75,22 @@ function ShoppingCard({
 }
 
 const Wrapper = styled.section`
+  --card-height: 500px;
+  height: var(--card-height);
+  grid-area: shop;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
+  margin-bottom: 5px;
   background-color: white;
   width: var(--main-width);
   border-radius: var(--border-radius);
+  @media (min-width: 1000px) {
+    margin-bottom: 0;
+    --card-height: 645px;
+  }
 `
 const Headline = styled.h2`
   font-family: ventana;
@@ -134,10 +139,8 @@ export const Button = styled.button`
   border-radius: 15px;
   background-color: black;
   color: white;
-  box-shadow: 0 14px 8px rgba(0, 0, 0, 0.25);
   transform: translateY(-4px);
   &:active {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
     transform: translateY(-0px);
     transition: 0.1s;
   }
@@ -155,10 +158,8 @@ const ButtonOrdering = styled.button`
   border-radius: 15px;
   background-color: black;
   color: white;
-  box-shadow: 0 14px 8px rgba(0, 0, 0, 0.25);
   transform: translateY(-4px);
   &:active {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
     transform: translateY(-0px);
     transition: 0.1s;
   }
@@ -167,7 +168,7 @@ const ButtonOrdering = styled.button`
 const IconPosition = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin: 10px 0px 0px 250px;
+  margin: 10px 0px 20px 250px;
 `
 
 export default ShoppingCard

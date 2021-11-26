@@ -4,11 +4,7 @@ import { FaShoppingCart } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
 import { Link } from 'react-router-dom'
 
-function Header({
-  showWelcomeAnimation,
-  count,
-  onFlipToShoppingCartButtonClick,
-}) {
+function Header({ showWelcomeAnimation, count, onShoppingCardButtonClick }) {
   return (
     <HeaderEl showWelcomeAnimation={showWelcomeAnimation}>
       <Wrapper>
@@ -20,7 +16,7 @@ function Header({
                 size: '25px',
               }}
             >
-              <FaShoppingCart onClick={onFlipToShoppingCartButtonClick} />
+              <FaShoppingCart onClick={onShoppingCardButtonClick} />
             </IconContext.Provider>
           </IconPosition>
         </LinkToShop>

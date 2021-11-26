@@ -70,7 +70,7 @@ const Headline = styled.h2`
   font-size: 1.2rem;
   @media (min-width: 1000px) {
     font-size: 1.8rem;
-    bottom: 235px;
+    bottom: 195px;
     left: 120px;
   }
 `

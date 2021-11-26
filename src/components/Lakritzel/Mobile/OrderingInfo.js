@@ -45,19 +45,6 @@ const Wrapper = styled.section`
   margin: 0 auto;
   height: 500px;
   background-color: white;
-  animation-duration: 1s;
-  animation-name: riseUp;
-  &.active {
-    @keyframes riseUp {
-      from {
-        transform: translatey(800px);
-      }
-
-      to {
-        transform: translateY(0);
-      }
-    }
-  }
 `
 
 const Form = styled.form`

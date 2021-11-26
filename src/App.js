@@ -23,7 +23,7 @@ function App({ data }) {
 
   function ClickUpHandler() {
     setCount(count + 1)
-    saveToLocal('quantity', count)
+    saveToLocal('quantity', count + 1)
   }
 
   const handleChange = event => {
@@ -33,16 +33,17 @@ function App({ data }) {
   function ClickDownHandler() {
     if (count > 0) {
       setCount(count - 1)
-      saveToLocal('quantity', count)
+      saveToLocal('quantity', count - 1)
     }
   }
-  const [flipToShop, setFlipToShop] = useState(false)
-  function flipToShopButton() {
-    setFlipToShop(!flipToShop)
+
+  const [showShoppingCard, setShowShoppingCard] = useState(false)
+  function shoppingCardButton() {
+    setShowShoppingCard(!showShoppingCard)
   }
 
-  function flipToShoppingCartButton() {
-    setFlipToShop(true)
+  function shoppingCartButtonClick() {
+    setShowShoppingCard(true)
   }
 
   const { pathname } = useLocation()
@@ -75,16 +76,16 @@ function App({ data }) {
     <Wrapper>
       <Header
         count={count}
-        onFlipToShoppingCartButtonClick={flipToShoppingCartButton}
+        onShoppingCardButtonClick={shoppingCartButtonClick}
         showWelcomeAnimation={showWelcomeAnimation}
       />
       <Main showWelcomeAnimation={showWelcomeAnimation}>
         <Switch>
           <Route exact path="/">
             <DesktopSide
-              onFlipToShopButtonClick={flipToShopButton}
-              flipToShop={flipToShop}
-              setFlipToShop={setFlipToShop}
+              onShoppingCardButton={shoppingCardButton}
+              showShoppingCard={showShoppingCard}
+              setShowShoppingCard={setShowShoppingCard}
               onAddOrder={handleAddOrder}
               data={data}
               count={count}
