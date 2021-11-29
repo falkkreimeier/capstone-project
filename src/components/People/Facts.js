@@ -9,15 +9,14 @@ function Facts() {
         <ListItem>41 Jahre jung</ListItem>
         <ListItem>1,93m klein</ListItem>
         <ListItem>Hoffnungsloser Optimist</ListItem>
-        <ListItem>Philantrop</ListItem>
+        <ListItem>Philanthrop</ListItem>
         <ListItem>
           Voll auf Spur, aber immer auch ein kleines bisschen daneben.
         </ListItem>
       </List>
-      <Headline>Zitate:</Headline>
+      <Headline>Zitat:</Headline>
       <List>
         <ListItem>"Isst du das noch?!"</ListItem>
-        <ListItem>"Wer hat das Fettnäpfchen hier hingestellt?!"</ListItem>
       </List>
     </Wrapper>
   )
@@ -25,36 +24,39 @@ function Facts() {
 
 const Wrapper = styled.div`
   grid-area: facts;
-  min-height: 352px;
-  background-image: url(${klecks});
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 21rem;
   background-color: white;
-  color: white;
+  color: black;
   border-radius: var(--border-radius);
   padding: var(--main-padding);
-  margin-bottom: 5px;
-  @media (min-width: 1000px) {
-    margin-bottom: 0;
-    padding-top: 60px;
+  @media (max-width: 1000px) {
+    min-height: 352px;
+    background-color: white;
+    color: white;
+    background-image: url(${klecks});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 21rem;
   }
 `
 
 const Headline = styled.h2`
   font-family: var(--main-Headline);
-  margin: 30px auto 0 40px;
+  margin-top: 30px auto;
   font-size: 1.3rem;
 `
 
 const List = styled.ol`
-  margin: -5px auto;
+  margin: -10px 0 -10px 0px;
 `
 
 const ListItem = styled.li`
   text-align: left;
   font-family: var(--main-font);
   margin-left: 20px;
+  @media (max-width: 1000px) {
+    margin-left: 50px;
+    padding-right: 30px;
+  }
 `
 
 export default Facts

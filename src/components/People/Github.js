@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro'
-import Githubimg from '../People/img/github.svg.png'
+import Githubimg from '../People/Assets/github.svg.png'
 
 function Github() {
   return (
@@ -10,26 +10,23 @@ function Github() {
 }
 
 export const Img = styled.img`
-  grid-area: github;
   position: sticky;
   height: 64px;
 `
 
 const Wrapper = styled.a`
+  grid-area: github;
   background: white;
   border-radius: var(--border-radius);
-  min-width: auto;
-  padding: 10px;
-  transform: translateY(px);
+  padding: 5px;
+
+  transform: translateY(0px);
   &:hover {
     background-color: lightgrey;
   }
   &:active {
     transform: translateY(4px);
     transition: 0.1s;
-  }
-  @media (min-width: 1000px) {
-    min-width: var(--soMe-width);
   }
 `
 

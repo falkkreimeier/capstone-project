@@ -1,4 +1,4 @@
-import zukunft from '../Assets/Zukunft.jpg'
+import zukunft from '../Assets/Zukunft-noLogo.jpg'
 import styled from 'styled-components/macro'
 
 function ProfileDesktop() {
@@ -32,7 +32,7 @@ const StyledProfileImage = styled.img`
   padding: 0px;
   @media screen and (min-width: 1000px) {
     position: static;
-    height: 240px;
+    height: 280px;
   }
 `
 export default ProfileDesktop

@@ -1,4 +1,4 @@
-import Kritzelkopf from '../People/img/Profil.JPG'
+import Kritzelkopf from '../People/Assets/Profil.JPG'
 import styled from 'styled-components/macro'
 
 function Profile() {
@@ -12,13 +12,11 @@ function Profile() {
 
 const Wrapper = styled.div`
   grid-area: profile;
-  margin-bottom: 5px;
-  width: var(--main-width);
   background: white;
-  border-radius: var(--border-radius);
   padding: var(--main-padding);
-  @media (min-width: 1000px) {
-    margin-bottom: 0;
+  border-radius: var(--border-radius);
+  @media (max-width: 1000px) {
+    width: 420px;
   }
 `
 
@@ -27,7 +25,7 @@ export const Headline = styled.h2`
   font-weight: 600;
   text-align: center;
   font-size: 1.3rem;
-  padding-bottom: 0;
+  padding-bottom: 10px;
   margin: 10px 0px 5px 0px;
   text-decoration: none;
 `

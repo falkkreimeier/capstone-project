@@ -4,19 +4,21 @@ import Nav from './components/Lakritzel/Both/Nav'
 import CampaignCard from './components/Lakritzel/Mobile/CampaignCard'
 import CocktailList from './components/Lakritzel/Mobile/CocktailList'
 import Kritzelkopf from './components/People/Kritzelkopf'
+import CVPageOne from './components/People/CVPageOne'
+import CVPageTwo from './components/People/CVPageTwo'
 import AGB from './components/Lakritzel/Both/AGB'
 import Info from '../src/components/Lakritzel/Both/Info'
 import styled, { css } from 'styled-components/macro'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, useLocation, withRouter } from 'react-router-dom'
 import useOrder from './hook/useOrder'
 import WrongAgePicture from './components/Lakritzel/Mobile/WrongAgePicture'
 import { useState, useEffect } from 'react'
 import saveToLocal from './hook/saveToLocal'
 import loadFromLocal from './hook/loadFromLocal'
-import { useLocation } from 'react-router-dom'
 import DesktopSide from './components/Lakritzel/Desktop/DesktopSide'
 import Impressum from './components/Lakritzel/Both/Impressum'
 import Datenschutz from './components/Lakritzel/Both/Datenschutz'
+import Cookies from './components/Lakritzel/Both/Cookies'
 
 function App({ data }) {
   const [count, setCount] = useState(loadFromLocal('quantity') || 0)
@@ -63,6 +65,7 @@ function App({ data }) {
     saveToLocal('age', value)
     setIsOver18(value)
   }
+
   if (!isOver18) {
     return (
       <Wrapper>
@@ -74,21 +77,25 @@ function App({ data }) {
 
   return (
     <Wrapper>
-      <Header
-        count={count}
-        onShoppingCardButtonClick={shoppingCartButtonClick}
-        showWelcomeAnimation={showWelcomeAnimation}
-      />
+      {window.location.pathname !== '/kritzelkopf' ? (
+        <Header
+          count={count}
+          onShoppingCardButtonClick={shoppingCartButtonClick}
+          showWelcomeAnimation={showWelcomeAnimation}
+        />
+      ) : null}
       <Main showWelcomeAnimation={showWelcomeAnimation}>
         <Switch>
           <Route exact path="/">
             <DesktopSide
+              count={count}
+              onShoppingCardButtonClick={shoppingCartButtonClick}
+              showWelcomeAnimation={showWelcomeAnimation}
               onShoppingCardButton={shoppingCardButton}
               showShoppingCard={showShoppingCard}
               setShowShoppingCard={setShowShoppingCard}
               onAddOrder={handleAddOrder}
               data={data}
-              count={count}
               setCount={setCount}
               ClickUpHandler={ClickUpHandler}
               ClickDownHandler={ClickDownHandler}
@@ -102,15 +109,10 @@ function App({ data }) {
               ))}
             </Container>
           </Route>
-
           <Route exact path="/cocktails">
             <Container>
               <CocktailList data={data} />
             </Container>
-          </Route>
-
-          <Route exact path="/kritzelkopf">
-            <Kritzelkopf />
           </Route>
           <Route exact path="/info">
             <Info />
@@ -124,9 +126,23 @@ function App({ data }) {
           <Route exact path="/datenschutz">
             <Datenschutz />
           </Route>
+          <ContainerPortfolio>
+            <Route exact path="/kritzelkopf">
+              <Kritzelkopf />
+            </Route>
+            <Route exact path="/lebenslauf1">
+              <CVPageOne />
+            </Route>
+            <Route exact path="/lebenslauf2">
+              <CVPageTwo />
+            </Route>
+          </ContainerPortfolio>
         </Switch>
       </Main>
-      <Nav showWelcomeAnimation={showWelcomeAnimation} />
+      <Cookies />
+      {window.location.pathname !== '/kritzelkopf' ? (
+        <Nav showWelcomeAnimation={showWelcomeAnimation} />
+      ) : null}
     </Wrapper>
   )
 }
@@ -166,10 +182,19 @@ const Main = styled.main`
         }
       }
     `}
-  @media only screen and (min-width: 1000px) {
+  @media (min-width: 1000px) {
     padding: 0px;
     width: 1060px;
   }
 `
 
-export default App
+const ContainerPortfolio = styled.section`
+  margin: -83px auto;
+  height: 100vh;
+  max-width: 1000px;
+  @media (min-width: 1000px) {
+    margin: 0 auto;
+  }
+`
+
+export default withRouter(App)

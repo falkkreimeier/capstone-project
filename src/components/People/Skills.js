@@ -1,15 +1,15 @@
 import styled from 'styled-components/macro'
 
-function Interests() {
+function Skills() {
   return (
     <Wrapper>
-      <Headline>Interessen</Headline>
+      <Headline>Fähigkeiten</Headline>
       <List>
-        <ListItem>Programmieren</ListItem>
-        <ListItem>Bücher (Fantasy)</ListItem>
-        <ListItem>Gaming</ListItem>
-        <ListItem>Hanteln schubsen</ListItem>
-        <ListItem>Schreiben/Texten</ListItem>
+        <ListItem>Web-Entwicklung</ListItem>
+        <ListItem>Werbetexten</ListItem>
+        <ListItem>Marketing</ListItem>
+        <ListItem>Organisation</ListItem>
+        <ListItem>Ikea Schränke aufbauen</ListItem>
       </List>
     </Wrapper>
   )
@@ -17,7 +17,7 @@ function Interests() {
 
 const Wrapper = styled.div`
   width: 220px;
-  grid-area: interests;
+  grid-area: skills;
   background: white;
   border-radius: var(--border-radius);
   padding: var(--main-padding);
@@ -45,4 +45,4 @@ const ListItem = styled.li`
   margin-left: 20px;
 `
 
-export default Interests
+export default Skills

@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro'
-import linkedInimg from '../People/img/linkedin.svg'
+import linkedInimg from '../People/Assets/linkedin.svg'
 
 function LinkedIn() {
   return (
@@ -10,24 +10,20 @@ function LinkedIn() {
 }
 
 const Wrapper = styled.a`
-  grid-area: linkedIn;
+  grid-area: linkedin;
   display: flex;
   justify-content: center;
   align-items: center;
   background: white;
   border-radius: var(--border-radius);
-  min-width: auto;
-  padding: 10px;
-  transform: translateY(0px);
+  padding: 15px;
+  transform: translateY(px);
   &:hover {
     background-color: lightgrey;
   }
   &:active {
     transform: translateY(4px);
     transition: 0.1s;
-  }
-  @media (min-width: 1000px) {
-    min-width: var(--soMe-width);
   }
 `
 
