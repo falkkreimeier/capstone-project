@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro'
-import Video from '../People/img/Profile_Video.mp4'
-import Portfolioimg from '../People/img/Portfolio.png'
-import PortfolioDatei from '../People/img/Portfolio-komprimiert Kopie.pdf'
+import Video from '../People/Assets/Profile_Video.mp4'
+import Portfolioimg from '../People/Assets/Portfolio.png'
+import PortfolioDatei from '../People/Assets/Portfolio-komprimiert Kopie.pdf'
 
 function Portfolio() {
   return (
@@ -21,27 +21,25 @@ function Portfolio() {
 }
 
 const Wrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  width: 220px;
   grid-area: portfolio;
   background: white;
   border-radius: var(--border-radius);
   padding: var(--main-padding);
-  min-width: var(--main-width);
-  margin-bottom: 5px;
-  @media (min-width: 1000px) {
-    margin-bottom: 0;
+  @media (max-width: 800px) {
+    min-width: 420px;
   }
 `
 
 const Headline = styled.h2`
+  margin-top: 10px;
+  font-size: 1.3rem;
   font-family: var(--main-Headline);
+  font-size: 1.3rem;
 `
+
 const LinkContainer = styled.div`
-  margin: 5px auto;
-  text-align: center;
+  margin: 0 auto;
   width: 130px;
   text-decoration: none;
   border: 1px solid black;
@@ -64,8 +62,8 @@ const Link = styled.a`
 `
 
 const Image = styled.img`
-  max-height: 160px;
-  margin: 0px 0px 15px 0px;
+  max-height: 90px;
+  margin: -5px 0px 15px 0px;
 `
 
 export default Portfolio

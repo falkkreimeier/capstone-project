@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import Xingimg from '../People/img/xing.svg'
+import styled from 'styled-components/macro'
+import Xingimg from '../People/Assets/xing.svg'
 
 function Xing() {
   return (
@@ -30,8 +30,8 @@ const Wrapper = styled.a`
     transform: translateY(4px);
     transition: 0.1s;
   }
-  @media (min-width: 1000px) {
-    min-width: var(--soMe-width);
+  @media (max-width: 800px) {
+    margin-bottom: 0px;
   }
 `
 
