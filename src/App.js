@@ -84,6 +84,7 @@ function App({ data }) {
           showWelcomeAnimation={showWelcomeAnimation}
         />
       ) : null}
+
       <Cookies />
       <Main showWelcomeAnimation={showWelcomeAnimation}>
         <Switch>
@@ -156,12 +157,6 @@ const Container = styled.section`
   }
 `
 
-const ContainerPortfolio = styled.section`
-  margin: 0 auto;
-  height: 100vh;
-  max-width: 1000px;
-`
-
 const Wrapper = styled.div`
   height: 100vh;
   max-height: 963px;
@@ -188,10 +183,17 @@ const Main = styled.main`
         }
       }
     `}
-  @media only screen and (min-width: 1000px) {
+  @media (min-width: 1000px) {
     padding: 0px;
     width: 1060px;
   }
+`
+
+const ContainerPortfolio = styled.section`
+  margin: 0 auto;
+  height: 100vh;
+  max-width: 1000px;
+  padding: 0;
 `
 
 export default withRouter(App)
