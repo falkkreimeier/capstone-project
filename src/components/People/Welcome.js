@@ -24,7 +24,7 @@ const Wrapper = styled.div`
   color: black;
   border-radius: var(--border-radius);
   padding: var(--main-padding);
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     min-height: 352px;
     background-color: white;
     color: white;
@@ -32,6 +32,7 @@ const Wrapper = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-size: 21rem;
+    padding: 0 60px;
   }
 `
 
@@ -39,10 +40,10 @@ export const Text = styled.p`
   font-size: 17px;
   font-family: var(--main-font);
   margin: -10px 20px 20px 20px;
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     font-size: 13px;
-    margin: -10px 20px 20px 20px;
-    padding: 0 40px;
+    margin: -10px 0;
+    padding: 0 15px;
   }
 `
 
@@ -51,8 +52,8 @@ const Headline = styled.h2`
   text-align: center;
   font-size: 1.2rem;
   padding-bottom: 10px;
-  @media (max-width: 800px) {
-    margin: 35px 20px 20px 20px;
+  @media (max-width: 1000px) {
+    margin: 45px 20px 20px 20px;
     color: white;
   }
 `

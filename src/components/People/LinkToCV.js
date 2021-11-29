@@ -21,7 +21,7 @@ const Wrapper = styled.section`
   grid-area: linktocv;
   border-radius: var(--border-radius);
   background-color: white;
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     min-height: 352px;
     background-color: white;
     color: white;
@@ -34,23 +34,23 @@ const Wrapper = styled.section`
 `
 
 const Headline = styled.h2`
-  margin-bottom: -20px;
+  margin-bottom: 10px;
   font-family: var(--main-Headline);
   text-align: center;
   font-size: 1.2rem;
   padding-bottom: 10px;
-  @media (max-width: 800px) {
-    margin-top: 40px;
+  @media (max-width: 1000px) {
+    margin-top: 30px;
   }
 `
 
 const Text = styled.p`
-  font-size: 17px;
-  padding: 20px;
+  font-size: 15px;
+  padding: 0 65px;
   font-family: var(--main-font);
-  @media (max-width: 800px) {
-    padding: 20px 70px;
-    font-size: 13px;
+  @media (max-width: 1000px) {
+    padding: 0px 70px;
+    font-size: 14px;
   }
 `
 
@@ -64,19 +64,16 @@ const LinkToCV1 = styled(Link)`
   border-radius: 40px;
   background-color: black;
   font-family: var(--main-font);
-  box-shadow: 0 14px 8px rgba(0, 0, 0, 0.25);
   transform: translateY(-4px);
   &:active {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
     transform: translateY(-0px);
     transition: 0.1s;
   }
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     background-color: white;
     color: black;
-    box-shadow: 0 14px 8px white;
+    transform: translateY(-4px);
     &:active {
-      box-shadow: 0 2px 4px white;
       transform: translateY(-0px);
       transition: 0.1s;
     }

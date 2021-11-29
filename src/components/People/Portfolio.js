@@ -26,7 +26,7 @@ const Wrapper = styled.div`
   background: white;
   border-radius: var(--border-radius);
   padding: var(--main-padding);
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     min-width: 420px;
   }
 `

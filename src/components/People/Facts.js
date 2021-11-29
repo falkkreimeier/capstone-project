@@ -28,7 +28,7 @@ const Wrapper = styled.div`
   color: black;
   border-radius: var(--border-radius);
   padding: var(--main-padding);
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     min-height: 352px;
     background-color: white;
     color: white;
@@ -53,8 +53,9 @@ const ListItem = styled.li`
   text-align: left;
   font-family: var(--main-font);
   margin-left: 20px;
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     margin-left: 50px;
+    padding-right: 30px;
   }
 `
 

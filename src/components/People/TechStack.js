@@ -30,7 +30,7 @@ const Wrapper = styled.div`
   color: black;
   border-radius: var(--border-radius);
   padding: var(--main-padding);
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     min-height: 352px;
     background-color: white;
     color: white;
@@ -43,7 +43,7 @@ const Wrapper = styled.div`
 `
 
 const Headline = styled.h2`
-  margin-top: -10px;
+  margin-top: 20px;
   font-family: var(--main-Headline);
   @media (max-width: 800px) {
     margin-top: 20px;
@@ -51,9 +51,9 @@ const Headline = styled.h2`
 `
 
 const List = styled.ol`
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     padding: 5px 0px 0px 35px;
-    margin: -20px 0 20px 100px;
+    margin: 10px 0 20px 100px;
   }
 `
 

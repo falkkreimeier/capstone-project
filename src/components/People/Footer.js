@@ -25,13 +25,13 @@ const Wrapper = styled.footer`
   color: black;
   border-radius: 5px;
   padding: var(--main-padding);
-  @media (max-width: 375px) {
+  @media (max-width: 1000px) {
     max-width: 410;
   }
 `
 const Text = styled.p`
   font-family: var(--main-font);
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     font-size: 13px;
   }
 `

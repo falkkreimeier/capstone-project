@@ -6,8 +6,9 @@ function CocktailsDesktop() {
     <Wrapper>
       <Headline>Wahnsinnige Mixgetränke</Headline>
       <Text>
-        Lakritzel ist dir noch nicht verrückt genug? Unsere wahnsinnigen
-        Cocktail und Shot Rezepte sind total übergeschnapst.
+        Lakritzel ist dir noch nicht verrückt genug? Kein Problem! Mit diesen
+        übergeschnapsten Coktail- und Shot-Ideen, treibst du alle in den dunklen
+        Wahnsinn.
       </Text>
     </Wrapper>
   )
@@ -44,7 +45,7 @@ const Text = styled.p`
   text-decoration: none;
   font-family: var(--main-font);
   padding-right: 30px;
-  margin: -100px 0 10px 40px;
+  margin: -60px 0 10px 40px;
   z-index: 20;
 `
 

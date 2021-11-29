@@ -21,12 +21,11 @@ function Cookies() {
 
 const Wrapper = styled.section`
   display: flex;
-  padding-left: 20px;
   position: fixed;
-  bottom: 90px;
-  left: 202px;
-  background-color: white;
   width: 352px;
+  bottom: 90px;
+  left: 113px;
+  background-color: white;
   border: 1px solid black;
   z-index: 50;
   ${({ removeCookieInfo }) =>

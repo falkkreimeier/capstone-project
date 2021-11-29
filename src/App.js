@@ -84,8 +84,6 @@ function App({ data }) {
           showWelcomeAnimation={showWelcomeAnimation}
         />
       ) : null}
-
-      <Cookies />
       <Main showWelcomeAnimation={showWelcomeAnimation}>
         <Switch>
           <Route exact path="/">
@@ -141,6 +139,7 @@ function App({ data }) {
           </ContainerPortfolio>
         </Switch>
       </Main>
+      <Cookies />
       {window.location.pathname !== '/kritzelkopf' ? (
         <Nav showWelcomeAnimation={showWelcomeAnimation} />
       ) : null}
@@ -190,10 +189,12 @@ const Main = styled.main`
 `
 
 const ContainerPortfolio = styled.section`
-  margin: 0 auto;
+  margin: -83px auto;
   height: 100vh;
   max-width: 1000px;
-  padding: 0;
+  @media (min-width: 1000px) {
+    margin: 0 auto;
+  }
 `
 
 export default withRouter(App)
