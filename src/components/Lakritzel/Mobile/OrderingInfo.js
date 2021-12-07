@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import crazy from '../Assets/der-ballert-noHeadline.png'
-import PayPal from '../Both/PayPal'
+import PayPal from '../mobile/PayPal'
 import { useState } from 'react'
 
 function OrderingInfo({ orderingInfo, count }) {
@@ -14,28 +14,7 @@ function OrderingInfo({ orderingInfo, count }) {
         hab ich dir auch schon geschickt. Zahle jetzt mit PayPal oder per
         Direktüberweisung + 5€ Versand (siehe Bestätigungs-Mail).
       </Text>
-      {/* <Form
-        action="https://www.paypal.com/cgi-bin/webscr"
-        method="post"
-        target="_top"
-      >
-        <input type="hidden" name="cmd" value="_s-xclick" />
-        <input type="hidden" name="hosted_button_id" value="LC4NYX7ZDMLTU" />
-        <input
-          type="image"
-          src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_paynowCC_LG.gif"
-          border="0"
-          name="submit"
-          alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal."
-        />
-        <img
-          alt=""
-          border="0"
-          src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif"
-          width="1"
-          height="1"
-        />
-      </Form> */}
+
       {purchase ? (
         <PayPal />
       ) : (
@@ -62,11 +41,6 @@ const Wrapper = styled.section`
 `
 
 const PayPalButton = styled.button``
-
-const Form = styled.form`
-  margin-top: -20px;
-  padding-bottom: 20px;
-`
 
 const Headline = styled.h2`
   margin-top: 20px;
