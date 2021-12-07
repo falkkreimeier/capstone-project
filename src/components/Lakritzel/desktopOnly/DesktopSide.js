@@ -1,9 +1,9 @@
 import styled from 'styled-components/macro'
-import ProductList from '../Mobile/ProductList'
+import ProductList from '../mobile/ProductList'
 import CampaignCardDesktop from './CampaignCardDesktop'
 import CocktailsDesktop from './CocktailsDesktop'
 import ProfileDesktop from './ProfileDesktop'
-import StoryToShop from '../Mobile/StoryToShop'
+import StoryToShop from '../mobile/StoryToShop'
 
 function DesktopSide({
   data,
