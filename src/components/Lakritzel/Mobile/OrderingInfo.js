@@ -1,9 +1,12 @@
 import styled from 'styled-components'
 import crazy from '../Assets/der-ballert-noHeadline.png'
+import PayPal from '../Both/PayPal'
+import { useState } from 'react'
 
-function OrderingInfo({ orderingInfo }) {
+function OrderingInfo({ orderingInfo, count }) {
+  const [purchase, setPurchase] = useState()
   return (
-    <Wrapper orderingInfo={orderingInfo}>
+    <Wrapper orderingInfo={(orderingInfo, count)}>
       <Headline>Endlich frei!</Headline>
       <Image src={crazy} alt="" />
       <Text>
@@ -11,7 +14,7 @@ function OrderingInfo({ orderingInfo }) {
         hab ich dir auch schon geschickt. Zahle jetzt mit PayPal oder per
         Direktüberweisung + 5€ Versand (siehe Bestätigungs-Mail).
       </Text>
-      <Form
+      {/* <Form
         action="https://www.paypal.com/cgi-bin/webscr"
         method="post"
         target="_top"
@@ -32,7 +35,18 @@ function OrderingInfo({ orderingInfo }) {
           width="1"
           height="1"
         />
-      </Form>
+      </Form> */}
+      {purchase ? (
+        <PayPal />
+      ) : (
+        <PayPalButton
+          onClick={() => {
+            setPurchase(true)
+          }}
+        >
+          Jetzt kaufen
+        </PayPalButton>
+      )}
     </Wrapper>
   )
 }
@@ -46,6 +60,8 @@ const Wrapper = styled.section`
   height: 500px;
   background-color: white;
 `
+
+const PayPalButton = styled.button``
 
 const Form = styled.form`
   margin-top: -20px;

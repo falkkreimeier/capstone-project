@@ -46,6 +46,7 @@ function OrderingForm({
   if (!orderingInfo) {
     return (
       <OrderingInfo
+        count={count}
         orderingInfo={orderingInfo}
         onHandleOrderingButtonClick={handleOrderingButtonClick}
       />

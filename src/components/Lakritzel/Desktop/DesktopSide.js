@@ -39,7 +39,7 @@ const Wrapper = styled.section`
     width: 1060px;
     margin: 0 auto;
     display: grid;
-    grid-gap: 3px;
+    grid-gap: 4px;
     grid-auto-columns: 1fr 1fr;
     grid-template-areas:
       'campaignLink shop kritzelkopf'

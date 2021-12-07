@@ -59,7 +59,6 @@ function ShoppingCard({
       >
         Hol mich hier raus!
       </ButtonOrdering>
-
       <IconPosition>
         <IconContext.Provider
           value={{
