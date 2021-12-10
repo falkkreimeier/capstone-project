@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import crazy from '../Assets/der-ballert-noHeadline.png'
-import PayPal from '../mobile/PayPal'
 
 function OrderingInfo({ orderingInfo, count }) {
   return (
