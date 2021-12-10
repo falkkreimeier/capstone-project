@@ -1,11 +1,11 @@
 import React from 'react'
-import CocktailsDesktop from './CocktailsDesktop'
+import CampaignCardDesktop from './CampaignCardDesktop'
 
 export default {
-  title: 'component/CocktailsDesktop',
-  component: CocktailsDesktop,
+  title: 'component/CampaignCardDesktop',
+  component: CampaignCardDesktop,
 }
 
-const Template = args => <CocktailsDesktop {...args} />
+const Template = args => <CampaignCardDesktop {...args} />
 
 export const Standard = Template.bind()

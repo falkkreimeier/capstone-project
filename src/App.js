@@ -84,6 +84,7 @@ function App({ data }) {
           showWelcomeAnimation={showWelcomeAnimation}
         />
       ) : null}
+
       <Main showWelcomeAnimation={showWelcomeAnimation}>
         <Switch>
           <Route exact path="/">

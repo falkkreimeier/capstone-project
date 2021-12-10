@@ -14,18 +14,21 @@ function Cookies() {
   return (
     <Wrapper removeCookieInfo={removeCookieInfo}>
       <Text>Lakritzel nutzt nur die essenziellen Cookies.</Text>
-      <Button onClick={removeCookieInfoButton}>YEAH!</Button>
+      <Button onClick={removeCookieInfoButton}>Alles klar!</Button>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.section`
-  display: flex;
+  background-color: black;
+  color: white;
   position: fixed;
+  padding: 5px;
+  display: flex;
   width: 352px;
   bottom: 90px;
-  left: 113px;
-  background-color: white;
+  left: 50%;
+  transform: translate(-50%);
   border: 1px solid black;
   z-index: 50;
   ${({ removeCookieInfo }) =>
@@ -33,11 +36,18 @@ const Wrapper = styled.section`
     css`
       display: none;
     `}
+  @media (min-width: 800px) {
+    width: 1066px;
+  }
 `
 
 const Text = styled.p`
   font-family: var(--main-font);
-  font-size: 14px;
+  font-size: 1rem;
+  @media (min-width: 1000px) {
+    font-size: 2rem;
+    padding-left: 40px;
+  }
 `
 
 const Button = styled.button`
@@ -51,12 +61,19 @@ const Button = styled.button`
   height: 35px;
   border: 1px solid grey;
   border-radius: 15px;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   transform: translateY(-4px);
   &:active {
     transform: translateY(-0px);
     transition: 0.1s;
+  }
+  @media (min-width: 1000px) {
+    height: 70px;
+    width: 140px;
+    left: 40px;
+    top: 25px;
+    font-size: 1rem;
   }
 `
 

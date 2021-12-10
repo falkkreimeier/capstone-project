@@ -14,14 +14,14 @@ describe('Impressum', () => {
     expect(image).toBeInTheDocument()
   })
 
-  it('shows Button', () => {
+  it('shows Link', () => {
     render(
       <MemoryRouter>
         <Impressum />
       </MemoryRouter>
     )
 
-    const button = screen.getByRole('button')
-    expect(button).toBeInTheDocument()
+    const link = screen.getByText('ZURÜCK')
+    expect(link).toBeInTheDocument()
   })
 })

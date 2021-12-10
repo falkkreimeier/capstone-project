@@ -31,6 +31,7 @@ function PayPal() {
       })
       .render(paypal.current)
   }, [])
+
   return (
     <Wrapper>
       <div ref={paypal}></div>
