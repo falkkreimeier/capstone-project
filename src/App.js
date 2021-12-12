@@ -1,4 +1,4 @@
-import Header from './components/Lakritzel/mobile/Header'
+import Header from '../src/components/Lakritzel/mobile/Header'
 import AgeGate from './components/Lakritzel/mobile/AgeGate'
 import Nav from './components/Lakritzel/mobile/Nav'
 import CampaignCard from './components/Lakritzel/mobile/CampaignCard'
