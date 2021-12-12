@@ -1,24 +1,24 @@
-import Header from './components/Lakritzel/Both/Header'
-import AgeGate from './components/Lakritzel/Mobile/AgeGate'
-import Nav from './components/Lakritzel/Both/Nav'
-import CampaignCard from './components/Lakritzel/Mobile/CampaignCard'
-import CocktailList from './components/Lakritzel/Mobile/CocktailList'
+import Header from './components/Lakritzel/mobile/Header'
+import AgeGate from './components/Lakritzel/mobile/AgeGate'
+import Nav from './components/Lakritzel/mobile/Nav'
+import CampaignCard from './components/Lakritzel/mobile/CampaignCard'
+import CocktailList from './components/Lakritzel/mobile/CocktailList'
 import Kritzelkopf from './components/People/Kritzelkopf'
 import CVPageOne from './components/People/CVPageOne'
 import CVPageTwo from './components/People/CVPageTwo'
-import AGB from './components/Lakritzel/Both/AGB'
-import Info from '../src/components/Lakritzel/Both/Info'
+import AGB from './components/Lakritzel/mobile/AGB'
+import Info from '../src/components/Lakritzel/mobile/Info'
 import styled, { css } from 'styled-components/macro'
 import { Switch, Route, useLocation, withRouter } from 'react-router-dom'
 import useOrder from './hook/useOrder'
-import WrongAgePicture from './components/Lakritzel/Mobile/WrongAgePicture'
+import WrongAgePicture from './components/Lakritzel/mobile/WrongAgePicture'
 import { useState, useEffect } from 'react'
 import saveToLocal from './hook/saveToLocal'
 import loadFromLocal from './hook/loadFromLocal'
-import DesktopSide from './components/Lakritzel/Desktop/DesktopSide'
-import Impressum from './components/Lakritzel/Both/Impressum'
-import Datenschutz from './components/Lakritzel/Both/Datenschutz'
-import Cookies from './components/Lakritzel/Both/Cookies'
+import DesktopSide from './components/Lakritzel/desktopOnly/DesktopSide'
+import Impressum from './components/Lakritzel/mobile/Impressum'
+import Datenschutz from './components/Lakritzel/mobile/Datenschutz'
+import Cookies from './components/Lakritzel/mobile/Cookies'
 
 function App({ data }) {
   const [count, setCount] = useState(loadFromLocal('quantity') || 0)
@@ -84,6 +84,7 @@ function App({ data }) {
           showWelcomeAnimation={showWelcomeAnimation}
         />
       ) : null}
+
       <Main showWelcomeAnimation={showWelcomeAnimation}>
         <Switch>
           <Route exact path="/">

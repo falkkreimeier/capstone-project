@@ -7,7 +7,7 @@ function LinkToCV() {
     <Wrapper>
       <Headline>Mein Lebenslauf</Headline>
       <Text>
-        IT-Systemkaufmann, Autovermieter, Werbetexter, Schnapshändler, und
+        IT-Systemkaufmann, Autovermieter, Werbetexter, Schnapshändler und
         Web-Developer. <br /> <br /> Man könnte sagen, ich haben viele Seiten
         und das hier ist eine davon. Alle anderen findet ihr in meinem
         Lebenslauf:
