@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components/macro'
 import { useState } from 'react'
-import saveToLocal from '../../../../src/hook/saveToLocal'
-import loadFromLocal from '../../../../src/hook/loadFromLocal'
+import saveToLocal from '../../../hook/saveToLocal'
+import loadFromLocal from '../../../hook/loadFromLocal'
 
 function Cookies() {
   const [removeCookieInfo, setRemoveCookieInfo] = useState(

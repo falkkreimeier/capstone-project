@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components/macro'
-import ShoppingCard from '../mobile/ShoppingCart'
+import ShoppingCard from './ShoppingCart'
 
 function StoryToShop({
   flipToShop,

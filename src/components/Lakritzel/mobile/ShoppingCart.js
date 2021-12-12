@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styled from 'styled-components/macro'
 import bottle from '../Assets/painted-bottle.jpg'
-import OrderingForm from '../mobile/OrderingForm'
+import OrderingForm from './OrderingForm'
 import useOrder from '../../../hook/useOrder'
 import { FaArrowCircleLeft as ArrowLeft } from 'react-icons/fa'
 import { IconContext } from 'react-icons'

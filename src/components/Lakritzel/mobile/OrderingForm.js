@@ -4,7 +4,7 @@ import { IconContext } from 'react-icons'
 import { FaArrowCircleLeft as ArrowLeft } from 'react-icons/fa'
 import emailjs from 'emailjs-com'
 import OrderingInfo from './OrderingInfo'
-import { ButtonContainer } from '../mobile/ShoppingCart'
+import { ButtonContainer } from './ShoppingCart'
 
 function OrderingForm({
   onAddOrder,
