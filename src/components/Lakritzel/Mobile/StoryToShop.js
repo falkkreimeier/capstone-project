@@ -35,9 +35,9 @@ function StoryToShop({
       </TextMobile>
 
       <TextDesktop>
-        Ich wurde über Nacht abgefüllt und in dieser Flasche eingesperrt! Mit
+        Ich wurde über Nacht abgefüllt und in dieser Flasche eingesperrt! Mir
         wird vorgeworfen, total übergeschnapst zu sein, aber ich bin unschuldig!
-        Rette mich, ich fülle auch keinen ab ... versprochen.
+        Hol mich hier raus, ich fülle auch keinen ab ... versprochen.
       </TextDesktop>
 
       <ButtonFront onClick={onShoppingCardButton}>Rette mich</ButtonFront>
