@@ -29,15 +29,15 @@ function StoryToShop({
       <Image src="./img/Rettemich.jpg"></Image>
 
       <TextMobile>
-        Ich wurde gegen meinen Willen in dieser Flasche verkorkt. Hol mich hier
-        raus! Ich fülle auch keinen ab ... versprochen.
+        Ich wurde in dieser Flasche eingesperrt, nur weil ich ein bisschen
+        übergeschnapst bin. Hol mich hier raus! Ich fülle auch keinen ab ...
+        versprochen.
       </TextMobile>
 
       <TextDesktop>
-        Ich wurde über Nacht abgefüllt und in dieser kleinen Flasche verorkt!
-        Aber du kannst was daran ändern! Hol mich hier raus, zusammen werden wir
-        die Menschen auf Tischen tanzen lassen und tiefgründige Gespräche ...
-        Ähh, ich meinte natürlich ganz gesittet aufs Leben anstoßen.
+        Ich wurde über Nacht abgefüllt und in dieser Flasche eingesperrt! Mit
+        wird vorgeworfen, total übergeschnapst zu sein, aber ich bin unschuldig!
+        Rette mich, ich fülle auch keinen ab ... versprochen.
       </TextDesktop>
 
       <ButtonFront onClick={onShoppingCardButton}>Rette mich</ButtonFront>
