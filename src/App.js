@@ -9,7 +9,7 @@ import CVPageTwo from './components/People/CVPageTwo'
 import AGB from './components/Lakritzel/mobile/AGB'
 import Info from '../src/components/Lakritzel/mobile/Info'
 import styled, { css } from 'styled-components/macro'
-import { Switch, Route, useLocation } from 'react-router-dom'
+import { Switch, Route, useLocation, withRouter } from 'react-router-dom'
 import useOrder from './hook/useOrder'
 import WrongAgePicture from './components/Lakritzel/mobile/WrongAgePicture'
 import { useState, useEffect } from 'react'
@@ -77,11 +77,13 @@ function App({ data }) {
 
   return (
     <Wrapper>
-      <Header
-        count={count}
-        onShoppingCardButtonClick={shoppingCartButtonClick}
-        showWelcomeAnimation={showWelcomeAnimation}
-      />
+      {window.location.pathname !== '/kritzelkopf' ? (
+        <Header
+          count={count}
+          onShoppingCardButtonClick={shoppingCartButtonClick}
+          showWelcomeAnimation={showWelcomeAnimation}
+        />
+      ) : null}
 
       <Main showWelcomeAnimation={showWelcomeAnimation}>
         <Switch>
@@ -139,7 +141,9 @@ function App({ data }) {
         </Switch>
       </Main>
       <Cookies />
-      <Nav showWelcomeAnimation={showWelcomeAnimation} />
+      {window.location.pathname !== '/kritzelkopf' ? (
+        <Nav showWelcomeAnimation={showWelcomeAnimation} />
+      ) : null}
     </Wrapper>
   )
 }
@@ -194,4 +198,4 @@ const ContainerPortfolio = styled.section`
   }
 `
 
-export default App
+export default withRouter(App)
