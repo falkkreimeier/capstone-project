@@ -2,14 +2,12 @@ import styled, { css } from 'styled-components/macro'
 import ShoppingCard from './ShoppingCart'
 
 function StoryToShop({
-  flipToShop,
   count,
   ClickUpHandler,
   ClickDownHandler,
   onHandleChange,
   onShoppingCardButton,
   showShoppingCard,
-  setShowShoppingCard,
 }) {
   if (showShoppingCard) {
     return (
@@ -51,7 +49,7 @@ const Wrapper = styled.section`
   justify-content: center;
   background-color: white;
   grid-area: shop;
-  --card-height: 500px;
+  --card-height: 605px;
   margin: 5px auto;
   width: var(--main-width);
   border-radius: var(--border-radius);
@@ -64,17 +62,15 @@ const Wrapper = styled.section`
 `
 
 const Image = styled.img`
-  margin: 0 auto;
-  margin-bottom: 15px;
+  margin: 10px auto;
   border-radius: 20px;
   grid-area: image;
   height: 192px;
 `
 
 const Headline = styled.h2`
-  margin: 0 auto;
+  margin: 0px auto;
   font-size: 3rem;
-  padding-top: 20px;
   font-family: Ventana;
 `
 

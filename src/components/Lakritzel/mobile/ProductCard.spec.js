@@ -7,7 +7,7 @@ describe('render ProductCard', () => {
   it('shows ProductCard Images', () => {
     render(<ProductCard />)
 
-    const Images = screen.getAllByRole('img')
+    const Images = screen.getAllByRole('img', { hidden: true })
     expect(Images).toHaveLength(2)
   })
 
@@ -16,7 +16,7 @@ describe('render ProductCard', () => {
 
     render(<ProductCard image="https://localhost:3000/" />)
 
-    const text = screen.getByAltText(altText)
+    const text = screen.getByAltText(altText, { hidden: true })
     expect(text).toHaveAttribute('alt', altText)
   })
 
@@ -25,21 +25,21 @@ describe('render ProductCard', () => {
 
     render(<ProductCard image="https://localhost:3000/" />)
 
-    const text2 = screen.getByAltText(altText2)
+    const text2 = screen.getByAltText(altText2, { hidden: true })
     expect(text2).toHaveAttribute('alt', altText2)
   })
 
   it('displays the Price of the Product', () => {
     render(<ProductCard price={price} />)
 
-    const Price = screen.getByText('18,-')
+    const Price = screen.getByText('18,-', { hidden: true })
     expect(Price).toBeInTheDocument()
   })
 
   it('renders button', () => {
     render(<ProductCard />)
 
-    const buttons = screen.getByRole('button')
+    const buttons = screen.getByRole('button', { hidden: true })
     expect(buttons).toBeInTheDocument()
   })
 })

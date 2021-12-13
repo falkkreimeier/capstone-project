@@ -31,6 +31,7 @@ function ShoppingCard({
     return (
       <Wrapper>
         <OrderingForm
+          onShoppingCardButton={onShoppingCardButton}
           onAddOrder={handleAddOrder}
           onShopButtonClick={onShopButtonClickHandler}
           count={count}
@@ -49,6 +50,13 @@ function ShoppingCard({
       <InputContainer>
         <InputQuantity value={count} onChange={onHandleChange} />
       </InputContainer>
+      {count > 0 ? (
+        <Price>
+          {count * 18}€ <br /> <Shipping>plus 5€ Versand</Shipping>
+        </Price>
+      ) : (
+        ''
+      )}
       <ButtonContainer>
         <Button onClick={ClickDownHandler}> - </Button>
         <Button onClick={ClickUpHandler}>+</Button>
@@ -74,7 +82,7 @@ function ShoppingCard({
 }
 
 const Wrapper = styled.section`
-  --card-height: 500px;
+  --card-height: 605px;
   height: var(--card-height);
   grid-area: shop;
   display: flex;
@@ -93,7 +101,7 @@ const Wrapper = styled.section`
 `
 const Headline = styled.h2`
   font-family: ventana;
-  margin-bottom: 0;
+  margin: 20px auto 10px auto;
 `
 
 const InputQuantity = styled.input`
@@ -102,11 +110,31 @@ const InputQuantity = styled.input`
   width: 160px;
   height: 20px;
 `
+const Price = styled.div`
+  font-family: ventana;
+  font-size: 2.4rem;
+  position: relative;
+  left: 110px;
+  bottom: 305px;
+  margin: -24px auto;
+  @media (min-width: 1000px) {
+    bottom: 300px;
+  }
+`
+
+const Shipping = styled.p`
+  font-family: ventana;
+  font-size: 1.3rem;
+  margin: -10px auto;
+  @media (min-width: 1000px) {
+    font-size: 1.5rem;
+  }
+`
 
 const Image = styled.img`
-  height: 220px;
+  height: 310px;
   @media (min-width: 1000px) {
-    margin-top: 50px;
+    margin-top: 20px;
     height: 300px;
   }
 `
@@ -167,7 +195,7 @@ const ButtonOrdering = styled.button`
 const IconPosition = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin: 10px 0px 20px 250px;
+  margin: 0px 0px 20px 250px;
 `
 
 export default ShoppingCard

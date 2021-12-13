@@ -77,14 +77,15 @@ function App({ data }) {
 
   return (
     <Wrapper>
-      {window.location.pathname !== '/kritzelkopf' ? (
+      {window.location.pathname === '/kritzelkopf' ||
+      window.location.pathname === '/lebenslauf1' ||
+      window.location.pathname === '/lebenslauf2' ? null : (
         <Header
           count={count}
           onShoppingCardButtonClick={shoppingCartButtonClick}
           showWelcomeAnimation={showWelcomeAnimation}
         />
-      ) : null}
-
+      )}
       <Main showWelcomeAnimation={showWelcomeAnimation}>
         <Switch>
           <Route exact path="/">
@@ -94,7 +95,6 @@ function App({ data }) {
               showWelcomeAnimation={showWelcomeAnimation}
               onShoppingCardButton={shoppingCardButton}
               showShoppingCard={showShoppingCard}
-              setShowShoppingCard={setShowShoppingCard}
               onAddOrder={handleAddOrder}
               data={data}
               setCount={setCount}
