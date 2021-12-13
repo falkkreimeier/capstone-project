@@ -13,14 +13,12 @@ function DesktopSide({
   onHandleChange,
   onShoppingCardButton,
   showShoppingCard,
-  setShowShoppingCard,
 }) {
   return (
     <Wrapper>
       <StoryToShop
         onShoppingCardButton={onShoppingCardButton}
         showShoppingCard={showShoppingCard}
-        setShowShoppingCard={setShowShoppingCard}
         count={count}
         ClickUpHandler={ClickUpHandler}
         ClickDownHandler={ClickDownHandler}

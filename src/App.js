@@ -77,15 +77,15 @@ function App({ data }) {
 
   return (
     <Wrapper>
-      {window.location.pathname === '/kritzelkopf' ||
-      window.location.pathname === '/lebenslauf1' ||
-      window.location.pathname === '/lebenslauf2' ? null : (
+      {window.location.pathname !== '/kritzelkopf' &&
+      window.location.pathname !== '/cvPageOne' &&
+      window.location.pathname !== '/cvPageTwo' ? (
         <Header
           count={count}
           onShoppingCardButtonClick={shoppingCartButtonClick}
           showWelcomeAnimation={showWelcomeAnimation}
         />
-      )}
+      ) : null}
       <Main showWelcomeAnimation={showWelcomeAnimation}>
         <Switch>
           <Route exact path="/">
@@ -131,17 +131,19 @@ function App({ data }) {
             <Route exact path="/kritzelkopf">
               <Kritzelkopf />
             </Route>
-            <Route exact path="/lebenslauf1">
+            <Route exact path="/cvPageOne">
               <CVPageOne />
             </Route>
-            <Route exact path="/lebenslauf2">
+            <Route exact path="/cvPageTwo">
               <CVPageTwo />
             </Route>
           </ContainerPortfolio>
         </Switch>
       </Main>
       <Cookies />
-      {window.location.pathname !== '/kritzelkopf' ? (
+      {window.location.pathname !== '/kritzelkopf' &&
+      window.location.pathname !== '/cvPageOne' &&
+      window.location.pathname !== '/cvPageTwo' ? (
         <Nav showWelcomeAnimation={showWelcomeAnimation} />
       ) : null}
     </Wrapper>

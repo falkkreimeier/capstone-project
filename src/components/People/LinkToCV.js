@@ -12,7 +12,7 @@ function LinkToCV() {
         und das hier ist eine davon. Alle anderen findet ihr in meinem
         Lebenslauf:
       </Text>
-      <LinkToCV1 to="/Lebenslauf1">Zu meinem Lebenslauf</LinkToCV1>
+      <LinkToCV1 to="/cvPageOne">Zu meinem Lebenslauf</LinkToCV1>
     </Wrapper>
   )
 }
