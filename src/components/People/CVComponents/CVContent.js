@@ -1,4 +1,4 @@
-import styled from "styled-components/macro";
+import styled from 'styled-components/macro'
 
 function CVContent() {
   return (
@@ -13,41 +13,32 @@ function CVContent() {
       </Text>
 
       <SubHeadline>Copywriter/Redakteur, 12/05 Solutions</SubHeadline>
-      <Text>
-        Aug 2020 - Feb 2021
-        <List>
-          <ListItem>
-            SEO Texterstellung von Blobs und Websites für Volvo, Toyota,
-            Stadtwerke Solingen, Olaf Jansen Immobilien
-          </ListItem>
-          <ListItem>
-            SEA Keyword Erstellung für Google Adwords Anzeigen
-          </ListItem>
-          <ListItem>
-            UX Texte für die interne Unternehmenskommunikation
-          </ListItem>
-          <ListItem>Social Media Pläne und Content-Entwicklung</ListItem>
-          <ListItem>Kundenpräsentation</ListItem>
-        </List>
-      </Text>
+      <Text>Aug 2020 - Feb 2021</Text>
+      <List>
+        <ListItem>
+          SEO Texterstellung von Blobs und Websites für Volvo, Toyota,
+          Stadtwerke Solingen, Olaf Jansen Immobilien
+        </ListItem>
+        <ListItem>SEA Keyword Erstellung für Google Adwords Anzeigen</ListItem>
+        <ListItem>UX Texte für die interne Unternehmenskommunikation</ListItem>
+        <ListItem>Social Media Pläne und Content-Entwicklung</ListItem>
+        <ListItem>Kundenpräsentation</ListItem>
+      </List>
+
       <SubHeadline>Copywriter, Supersieben</SubHeadline>
-      <Text>
-        Feb 2020 - Aug 2020
-        <List>
-          <ListItem>
-            Kampagnenentwicklung Funk, Print und Social Media für NETCOLOGNE und
-            MAREDO
-          </ListItem>
-          <ListItem>SEO Texterstellung und Recherche für Blogbeiträge</ListItem>
-          <ListItem>Social Media Pläne und Content-Entwicklung</ListItem>
-          <ListItem>
-            SEA Keyword Erstellung für Google Adwords Anzeigen
-          </ListItem>
-          <ListItem>Kundenmailings, Flyer und Broschürentexte</ListItem>
-        </List>
-      </Text>
+      <Text>Feb 2020 - Aug 2020</Text>
+      <List>
+        <ListItem>
+          Kampagnenentwicklung Funk, Print und Social Media für NETCOLOGNE und
+          MAREDO
+        </ListItem>
+        <ListItem>SEO Texterstellung und Recherche für Blogbeiträge</ListItem>
+        <ListItem>Social Media Pläne und Content-Entwicklung</ListItem>
+        <ListItem>SEA Keyword Erstellung für Google Adwords Anzeigen</ListItem>
+        <ListItem>Kundenmailings, Flyer und Broschürentexte</ListItem>
+      </List>
     </>
-  );
+  )
 }
 
 const Headline = styled.h2`
@@ -56,7 +47,7 @@ const Headline = styled.h2`
   font-size: 0.9rem;
   font-family: var(--main-Headline);
   border-bottom: 1px solid black;
-`;
+`
 
 const SubHeadline = styled.h2`
   text-align: left;
@@ -64,19 +55,22 @@ const SubHeadline = styled.h2`
   width: 300px;
   font-size: 0.7rem;
   font-family: var(--main-Headline);
-`;
+`
 
 const Text = styled.p`
   text-align: left;
   margin: 0px 10px;
   font-family: var(--main-font);
   font-size: 0.6rem;
-`;
+`
 
 const List = styled.ul`
   margin: 0px 0px 10px -25px;
-`;
+`
 
-const ListItem = styled.li``;
+const ListItem = styled.li`
+  font-family: var(--main-font);
+  font-size: 0.6rem;
+`
 
-export default CVContent;
+export default CVContent

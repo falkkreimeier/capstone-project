@@ -21,7 +21,7 @@ function CVPageOne() {
         <CVHeader />
         <CVContent />
         <LinkToMainPage to="/kritzelkopf">Hauptseite</LinkToMainPage>
-        <LinkToPageTwo to="/lebenslauf2">Seite 2</LinkToPageTwo>
+        <LinkToPageTwo to="/cvPageTwo">Seite 2</LinkToPageTwo>
       </Content>
     </Wrapper>
   )
@@ -30,7 +30,7 @@ function CVPageOne() {
 const Wrapper = styled.section`
   max-width: 430px;
   height: 700px;
-  margin: 20px auto;
+  margin: 0 auto;
   background-color: black;
   display: grid;
   grid-template-areas: 'details content1';

@@ -4,7 +4,6 @@ import CVDetailItems2 from '../People/CVComponents/CVDetailItems2'
 import { Link } from 'react-router-dom'
 
 function CVPageTwo() {
-  console.log(window.location.pathname)
   return (
     <Wrapper>
       <Details>
@@ -24,7 +23,7 @@ function CVPageTwo() {
 const Wrapper = styled.section`
   max-width: 430px;
   height: 620px;
-  margin: 20px auto;
+  margin: 0px auto;
   display: grid;
   grid-gap: 0px;
   grid-template-areas: 'details content2';
@@ -60,7 +59,7 @@ const Content = styled.div`
 
 const LinkToPageOne = styled(Link)`
   position: relative;
-  bottom: 10px;
+  top: 10px;
   left: 230px;
   text-decoration: none;
   color: white;
