@@ -14,7 +14,6 @@ import LinkToCV from './LinkToCV'
 import styled from 'styled-components/macro'
 
 function Kritzelkopf() {
-  console.log(window.location.pathname)
   return (
     <Container>
       <Header />
