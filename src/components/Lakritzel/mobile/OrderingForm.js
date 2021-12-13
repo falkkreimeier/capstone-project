@@ -46,6 +46,7 @@ function OrderingForm({
   if (!orderingInfo) {
     return (
       <OrderingInfo
+        onShopButtonClick={onShopButtonClick}
         count={count}
         orderingInfo={orderingInfo}
         onHandleOrderingButtonClick={handleOrderingButtonClick}
@@ -151,6 +152,19 @@ function OrderingForm({
             />
           </label>
         </MessageContainer>
+
+        <PriceWrapper>
+          <label>
+            <HiddenLabelText>Preis</HiddenLabelText>
+            <Input
+              type="number"
+              maxlength="20"
+              name="price"
+              required
+              value={count * 18 + 5}
+            />
+          </label>
+        </PriceWrapper>
 
         <ButtonOrder onClick={onAddOrder} activeClassName="active">
           Jetzt bestellen
@@ -370,6 +384,10 @@ const InputQuantity = styled.input`
   @media (min-width: 1000px) {
     min-height: 25px;
   }
+`
+
+const PriceWrapper = styled.div`
+  display: none;
 `
 
 export default OrderingForm

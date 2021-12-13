@@ -4,6 +4,7 @@ import CVDetailItems2 from '../People/CVComponents/CVDetailItems2'
 import { Link } from 'react-router-dom'
 
 function CVPageTwo() {
+  console.log(window.location.pathname)
   return (
     <Wrapper>
       <Details>
@@ -14,7 +15,7 @@ function CVPageTwo() {
 
       <Content>
         <CVContent2 />
-        <LinkToPageOne to="/lebenslauf1">Seite 1</LinkToPageOne>
+        <LinkToPageOne to="/cvPageOne">Seite 1</LinkToPageOne>
       </Content>
     </Wrapper>
   )

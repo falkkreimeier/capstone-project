@@ -49,13 +49,17 @@ function ProductCard(props) {
 }
 
 const Container = styled.div`
-  grid-area: productCard;
-  --card-height: 304px;
-  margin: 0 auto;
-  border-radius: var(--border-radius);
-  width: var(--main-width);
-  height: var(--card-height);
-  perspective: 1000px;
+  display: none;
+  @media (min-width: 1000px) {
+    display: inline;
+    grid-area: productCard;
+    --card-height: 304px;
+    margin: 0 auto;
+    border-radius: var(--border-radius);
+    width: var(--main-width);
+    height: var(--card-height);
+    perspective: 1000px;
+  }
 `
 
 const FlipCard = styled.section`
