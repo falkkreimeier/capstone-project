@@ -49,7 +49,7 @@ const Wrapper = styled.section`
   justify-content: center;
   background-color: white;
   grid-area: shop;
-  --card-height: 605px;
+  --card-height: 490px;
   margin: 5px auto;
   width: var(--main-width);
   border-radius: var(--border-radius);
@@ -59,31 +59,44 @@ const Wrapper = styled.section`
     --card-height: 645px;
     margin: 0 auto;
   }
+  @media (min-height: 668px) {
+    --card-height: 636px;
+  }
 `
 
 const Image = styled.img`
-  margin: 10px auto;
+  margin: 0 auto;
   border-radius: 20px;
   grid-area: image;
-  height: 192px;
+  height: 182px;
+  @media (min-height: 668px) {
+    margin: 10px auto;
+    height: 260px;
+  }
 `
 
 const Headline = styled.h2`
-  margin: 0px auto;
+  margin: 0 auto;
+  padding-top: 25px;
   font-size: 3rem;
   font-family: Ventana;
+  @media (min-height: 668px) {
+    padding-top: 0;
+  }
 `
 
 const TextMobile = styled.p`
   font-family: var(--main-font);
   font-size: 1.2rem;
   width: 350px;
-  margin: 0 0 20px 0;
   padding: 0 30px;
   text-align: center;
   grid-area: text;
   @media (min-width: 1000px) {
     display: none;
+  }
+  @media (min-height: 668px) {
+    margin: 10px auto;
   }
 `
 
@@ -105,7 +118,6 @@ const ButtonFront = styled.button`
   font-family: Ventana;
   backface-visibility: hidden;
   margin: 0 auto;
-  padding-top: 3px;
   background-color: black;
   color: white;
   height: 40px;
@@ -122,6 +134,9 @@ const ButtonFront = styled.button`
     css`
       pointer-events: none;
     `}
+  @media (min-height: 738px) {
+    margin: 15px auto;
+  }
 `
 
 export default StoryToShop

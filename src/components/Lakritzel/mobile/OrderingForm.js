@@ -156,13 +156,7 @@ function OrderingForm({
         <PriceWrapper>
           <label>
             <HiddenLabelText>Preis</HiddenLabelText>
-            <Input
-              type="number"
-              maxlength="20"
-              name="price"
-              required
-              value={count * 18 + 5}
-            />
+            <PriceField name="price" value={count * 18 + 5} />
           </label>
         </PriceWrapper>
 
@@ -247,7 +241,6 @@ const HiddenLabelText = styled.span`
 `
 
 const Headline = styled.h2`
-  padding-top: 10px;
   grid-area: headline;
   text-align: center;
   font-family: Ventana;
@@ -268,6 +261,9 @@ const InputContainer = styled.div`
   @media (min-width: 1000px) {
     width: 220px;
     margin: 9px;
+  }
+  @media (min-height: 668px) {
+    margin: 12px;
   }
 `
 
@@ -297,6 +293,9 @@ const MessageContainer = styled.div`
     margin: 9px;
     height: 70px;
   }
+  @media (min-height: 668px) {
+    margin: 12px;
+  }
 `
 
 const ButtonOrder = styled.button`
@@ -315,6 +314,9 @@ const ButtonOrder = styled.button`
   }
   @media (min-width: 1000px) {
     margin: 20px auto;
+  }
+  @media (min-height: 668px) {
+    margin: 20px;
   }
 `
 const ButtonPlus = styled.button`
@@ -337,6 +339,10 @@ const ButtonPlus = styled.button`
     height: 28px;
     bottom: 207px;
     left: 224px;
+  }
+  @media (min-height: 668px) {
+    bottom: 187px;
+    left: 205px;
   }
 `
 
@@ -361,12 +367,19 @@ const ButtonMinus = styled.button`
     bottom: 207px;
     right: 225px;
   }
+  @media (min-height: 668px) {
+    bottom: 187px;
+    right: 205px;
+  }
 `
 
 const IconPosition = styled.div`
   display: flex;
   justify-content: flex-end;
   margin: -50px 30px 0px 0px;
+  @media (min-height: 668px) {
+    margin: -20px 30px 0px 0px;
+  }
 `
 
 const InputQuantity = styled.input`
@@ -389,5 +402,7 @@ const InputQuantity = styled.input`
 const PriceWrapper = styled.div`
   display: none;
 `
+
+const PriceField = styled.div``
 
 export default OrderingForm

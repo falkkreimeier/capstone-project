@@ -27,24 +27,34 @@ const Wrapper = styled.section`
 `
 
 const Headline = styled.h2`
-  margin-top: 30px;
-  font-size: 3rem;
+  padding-top: 25px;
+  font-size: 2rem;
+  margin: 0;
+  @media (min-height: 668px) {
+    padding: 0;
+  }
 `
 
 const Text = styled.p`
   text-align: center;
   font-family: var(--main-font);
-  margin-top: -35px;
+  margin: -25px 10px;
   padding: 20px;
+  @media (min-height: 668px) {
+    margin: -25;
+  }
 `
 
 const Image = styled.img`
-  margin-top: -90px;
-  height: 300px;
+  margin-top: -10px;
+  height: 250px;
+  @media (min-height: 668px) {
+    height: 320px;
+  }
 `
 
 const Button = styled.button`
-  margin-top: -25px;
+  margin-top: 20px;
   font-family: Ventana;
   padding: 10px;
   height: 40px;

@@ -82,7 +82,7 @@ function ShoppingCard({
 }
 
 const Wrapper = styled.section`
-  --card-height: 605px;
+  --card-height: 500px;
   height: var(--card-height);
   grid-area: shop;
   display: flex;
@@ -98,10 +98,16 @@ const Wrapper = styled.section`
     margin-bottom: 0;
     --card-height: 645px;
   }
+  @media (min-height: 668px) {
+    --card-height: 636px;
+  }
 `
 const Headline = styled.h2`
   font-family: ventana;
   margin: 20px auto 10px auto;
+  @media (min-height: 668px) {
+    --card-height: 636px;
+  }
 `
 
 const InputQuantity = styled.input`
@@ -133,10 +139,13 @@ const Shipping = styled.p`
 `
 
 const Image = styled.img`
-  height: 310px;
+  height: 250px;
   @media (min-width: 1000px) {
     margin-top: 20px;
     height: 300px;
+  }
+  @media (min-height: 668px) {
+    height: 310px;
   }
 `
 
@@ -181,7 +190,6 @@ const ButtonOrdering = styled.button`
   text-align: center;
   width: 173px;
   height: 40px;
-  margin: 14px 5px;
   border: 1px solid grey;
   border-radius: 15px;
   background-color: black;
@@ -191,12 +199,18 @@ const ButtonOrdering = styled.button`
     transform: translateY(-0px);
     transition: 0.1s;
   }
+  @media (min-height: 668px) {
+    margin: 14px 5px;
+  }
 `
 
 const IconPosition = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin: 0px 0px 20px 250px;
+  margin: -38px 0px 20px 250px;
+  @media (min-height: 668px) {
+    margin: 0px 0px 20px 250px;
+  }
 `
 
 export default ShoppingCard
