@@ -27,15 +27,15 @@ function StoryToShop({
       <Image src="./img/Rettemich.jpg"></Image>
 
       <TextMobile>
-        Ich wurde in dieser Flasche eingesperrt, nur weil ich ein bisschen
-        übergeschnapst bin. Hol mich hier raus! Ich fülle auch keinen ab ...
+        Ich wurde eingesperrt, angeblich bin ich total übergeschnapst. ICH BIN
+        UNSCHULDIG! Hol mich hier raus! Ich fülle auch keinen ab ...
         versprochen.
       </TextMobile>
 
       <TextDesktop>
-        Ich wurde über Nacht abgefüllt und in dieser Flasche eingesperrt! Mir
-        wird vorgeworfen, total übergeschnapst zu sein, aber ich bin unschuldig!
-        Hol mich hier raus, ich fülle auch keinen ab ... versprochen.
+        Ich wurde über Nacht abgefüllt und in dieser Flasche eingesperrt!
+        Angeblich bin ich total übergeschnapst, aber ICH BIN UNSCHULDIG! Hol
+        mich hier raus, ich fülle auch keinen ab ... versprochen.
       </TextDesktop>
 
       <ButtonFront onClick={onShoppingCardButton}>Rette mich</ButtonFront>
@@ -56,7 +56,7 @@ const Wrapper = styled.section`
   height: var(--card-height);
   perspective: 1000px;
   @media (min-width: 1000px) {
-    --card-height: 645px;
+    --card-height: 608px;
     margin: 0 auto;
   }
   @media (min-height: 668px) {
@@ -71,7 +71,7 @@ const Image = styled.img`
   height: 182px;
   @media (min-height: 668px) {
     margin: 10px auto;
-    height: 260px;
+    height: 200px;
   }
 `
 
