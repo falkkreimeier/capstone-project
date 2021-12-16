@@ -34,7 +34,7 @@ const Headline = styled.h2`
 
 const List = styled.ol`
   margin: -10px 0 0 -30px;
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     margin: -10px 0 10px 0px;
   }
 `
