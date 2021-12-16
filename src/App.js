@@ -103,12 +103,7 @@ function App({ data }) {
               onHandleChange={handleChange}
             />
           </Route>
-          <Cookies />
-          {window.location.pathname !== '/kritzelkopf' &&
-          window.location.pathname !== '/cvPageOne' &&
-          window.location.pathname !== '/cvPageTwo' ? (
-            <Nav showWelcomeAnimation={showWelcomeAnimation} />
-          ) : null}
+
           <Route exact path="/campaign">
             <Container>
               {data.campaign.map(campaign => (
@@ -145,7 +140,13 @@ function App({ data }) {
             </Route>
           </ContainerPortfolio>
         </Switch>
+        <Cookies />
       </Main>
+      {window.location.pathname !== '/kritzelkopf' &&
+      window.location.pathname !== '/cvPageOne' &&
+      window.location.pathname !== '/cvPageTwo' ? (
+        <Nav showWelcomeAnimation={showWelcomeAnimation} />
+      ) : null}
     </Wrapper>
   )
 }
