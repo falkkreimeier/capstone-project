@@ -103,6 +103,7 @@ function App({ data }) {
               onHandleChange={handleChange}
             />
           </Route>
+
           <Route exact path="/campaign">
             <Container>
               {data.campaign.map(campaign => (
@@ -139,8 +140,8 @@ function App({ data }) {
             </Route>
           </ContainerPortfolio>
         </Switch>
+        <Cookies />
       </Main>
-      <Cookies />
       {window.location.pathname !== '/kritzelkopf' &&
       window.location.pathname !== '/cvPageOne' &&
       window.location.pathname !== '/cvPageTwo' ? (

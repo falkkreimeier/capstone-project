@@ -30,7 +30,7 @@ const Wrapper = styled.a`
     transform: translateY(4px);
     transition: 0.1s;
   }
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     margin-bottom: 0px;
   }
 `

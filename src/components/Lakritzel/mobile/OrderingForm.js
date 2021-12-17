@@ -156,13 +156,7 @@ function OrderingForm({
         <PriceWrapper>
           <label>
             <HiddenLabelText>Preis</HiddenLabelText>
-            <Input
-              type="number"
-              maxlength="20"
-              name="price"
-              required
-              value={count * 18 + 5}
-            />
+            <PriceField name="price" value={count * 18 + 5} />
           </label>
         </PriceWrapper>
 
@@ -247,16 +241,14 @@ const HiddenLabelText = styled.span`
 `
 
 const Headline = styled.h2`
-  padding-top: 10px;
   grid-area: headline;
   text-align: center;
   font-family: Ventana;
 `
 const QuantityWrapper = styled.div`
   background-color: white;
-  border-radius: var(--border-radius);
   z-index: 5;
-  border-radius: 19px;
+  border-radius: 35px;
 `
 
 const InputContainer = styled.div`
@@ -389,5 +381,7 @@ const InputQuantity = styled.input`
 const PriceWrapper = styled.div`
   display: none;
 `
+
+const PriceField = styled.div``
 
 export default OrderingForm

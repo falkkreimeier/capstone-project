@@ -13,7 +13,7 @@ function Cookies() {
   }
   return (
     <Wrapper removeCookieInfo={removeCookieInfo}>
-      <Text>Lakritzel nutzt nur die essenziellen Cookies.</Text>
+      <Text>Lakritzel nutzt nur essenzielle Cookies.</Text>
       <Button onClick={removeCookieInfoButton}>Alles klar!</Button>
     </Wrapper>
   )
@@ -22,7 +22,7 @@ function Cookies() {
 const Wrapper = styled.section`
   background-color: black;
   color: white;
-  position: fixed;
+  position: relative;
   padding: 5px;
   display: flex;
   width: 352px;
@@ -36,12 +36,13 @@ const Wrapper = styled.section`
     css`
       display: none;
     `}
-  @media (min-width: 800px) {
+  @media (min-width: 1000px) {
     width: 1066px;
   }
 `
 
 const Text = styled.p`
+  margin: 0 auto;
   font-family: var(--main-font);
   font-size: 1rem;
   @media (min-width: 1000px) {

@@ -20,7 +20,7 @@ describe('StoryToShop', () => {
     render(<StoryToShop />)
 
     const text = screen.getByText(
-      'Ich wurde in dieser Flasche eingesperrt, nur weil ich ein bisschen übergeschnapst bin. Hol mich hier raus! Ich fülle auch keinen ab ... versprochen.'
+      'Ich wurde über Nacht abgefüllt und in dieser Flasche eingesperrt! Angeblich bin ich total übergeschnapst, aber ICH BIN UNSCHULDIG! Hol mich hier raus, ich fülle auch keinen ab ... versprochen.'
     )
     expect(text).toBeInTheDocument()
   })

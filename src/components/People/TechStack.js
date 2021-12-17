@@ -45,7 +45,7 @@ const Wrapper = styled.div`
 const Headline = styled.h2`
   margin-top: 20px;
   font-family: var(--main-Headline);
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     margin-top: 20px;
   }
 `

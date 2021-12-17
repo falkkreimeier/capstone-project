@@ -39,7 +39,7 @@ const Icons = styled.img`
   height: 1.2rem;
   padding-right: 0.5rem;
   padding-left: 2rem;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 1000px) {
     height: 0.8rem;
   }
 `
