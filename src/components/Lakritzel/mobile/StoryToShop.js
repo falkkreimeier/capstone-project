@@ -56,11 +56,11 @@ const Wrapper = styled.section`
   height: var(--card-height);
   perspective: 1000px;
   @media (min-width: 1000px) {
-    --card-height: 608px;
+    --card-height: 645px;
     margin: 0 auto;
   }
   @media (min-height: 668px) {
-    --card-height: 636px;
+    --card-height: 645px;
   }
 `
 

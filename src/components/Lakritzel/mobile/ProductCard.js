@@ -90,7 +90,7 @@ const FlipCardFront = styled.section`
     'image button';
   @media screen and (min-width: 1000px) {
     margin: 0;
-    --card-height: 317px;
+    --card-height: 322px;
   }
 `
 
@@ -100,7 +100,7 @@ const Image = styled.img`
   border-radius: 19px;
   margin: 0;
   @media screen and (min-width: 1000px) {
-    height: 304px;
+    height: 300px;
   }
 `
 
@@ -162,7 +162,7 @@ const FlipCardBack = styled.section`
     'details button';
   @media (min-width: 1000px) {
     margin: 0;
-    --card-height: 323px;
+    --card-height: 322px;
   }
 `
 

@@ -98,15 +98,12 @@ const Wrapper = styled.section`
     margin-bottom: 0;
     --card-height: 645px;
   }
-  @media (min-height: 668px) {
-    --card-height: 636px;
-  }
 `
 const Headline = styled.h2`
   font-family: ventana;
   margin: 20px auto 10px auto;
   @media (min-height: 668px) {
-    --card-height: 636px;
+    --card-height: 645px;
   }
 `
 
@@ -143,9 +140,6 @@ const Image = styled.img`
   @media (min-width: 1000px) {
     margin-top: 20px;
     height: 300px;
-  }
-  @media (min-height: 668px) {
-    height: 310px;
   }
 `
 
@@ -208,9 +202,6 @@ const IconPosition = styled.div`
   display: flex;
   justify-content: flex-end;
   margin: -38px 0px 20px 250px;
-  @media (min-height: 668px) {
-    margin: 0px 0px 20px 250px;
-  }
 `
 
 export default ShoppingCard

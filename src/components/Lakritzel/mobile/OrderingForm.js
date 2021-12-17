@@ -247,9 +247,8 @@ const Headline = styled.h2`
 `
 const QuantityWrapper = styled.div`
   background-color: white;
-  border-radius: var(--border-radius);
   z-index: 5;
-  border-radius: 19px;
+  border-radius: 35px;
 `
 
 const InputContainer = styled.div`
@@ -261,9 +260,6 @@ const InputContainer = styled.div`
   @media (min-width: 1000px) {
     width: 220px;
     margin: 9px;
-  }
-  @media (min-height: 668px) {
-    margin: 12px;
   }
 `
 
@@ -293,9 +289,6 @@ const MessageContainer = styled.div`
     margin: 9px;
     height: 70px;
   }
-  @media (min-height: 668px) {
-    margin: 12px;
-  }
 `
 
 const ButtonOrder = styled.button`
@@ -314,9 +307,6 @@ const ButtonOrder = styled.button`
   }
   @media (min-width: 1000px) {
     margin: 20px auto;
-  }
-  @media (min-height: 668px) {
-    margin: 20px;
   }
 `
 const ButtonPlus = styled.button`
@@ -339,10 +329,6 @@ const ButtonPlus = styled.button`
     height: 28px;
     bottom: 207px;
     left: 224px;
-  }
-  @media (min-height: 668px) {
-    bottom: 187px;
-    left: 205px;
   }
 `
 
@@ -367,19 +353,12 @@ const ButtonMinus = styled.button`
     bottom: 207px;
     right: 225px;
   }
-  @media (min-height: 668px) {
-    bottom: 187px;
-    right: 205px;
-  }
 `
 
 const IconPosition = styled.div`
   display: flex;
   justify-content: flex-end;
   margin: -50px 30px 0px 0px;
-  @media (min-height: 668px) {
-    margin: -20px 30px 0px 0px;
-  }
 `
 
 const InputQuantity = styled.input`

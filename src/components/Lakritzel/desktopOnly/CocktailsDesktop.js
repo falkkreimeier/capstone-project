@@ -22,7 +22,7 @@ const Wrapper = styled.section`
     display: inherit;
     background-image: url(${klecks});
     background-position: center;
-    background-size: 320px;
+    background-size: 300px;
     background-repeat: no-repeat;
     object-fit: cover;
     border-radius: var(--border-radius);
