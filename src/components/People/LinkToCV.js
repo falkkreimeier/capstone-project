@@ -48,6 +48,7 @@ const Text = styled.p`
   font-size: 15px;
   padding: 0 65px;
   font-family: var(--main-font);
+  margin-bottom: 40px;
   @media (max-width: 1000px) {
     padding: 0px 70px;
     font-size: 14px;
@@ -55,7 +56,6 @@ const Text = styled.p`
 `
 
 const LinkToCV1 = styled(Link)`
-  margin: 30px;
   text-decoration: none;
   color: white;
   text-decoration: none;
