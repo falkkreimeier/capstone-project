@@ -140,13 +140,13 @@ function App({ data }) {
             </Route>
           </ContainerPortfolio>
         </Switch>
-        <Cookies />
       </Main>
       {window.location.pathname !== '/kritzelkopf' &&
       window.location.pathname !== '/cvPageOne' &&
       window.location.pathname !== '/cvPageTwo' ? (
         <Nav showWelcomeAnimation={showWelcomeAnimation} />
       ) : null}
+      <Cookies />
     </Wrapper>
   )
 }

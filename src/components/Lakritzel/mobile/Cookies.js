@@ -22,14 +22,14 @@ function Cookies() {
 const Wrapper = styled.section`
   background-color: black;
   color: white;
-  position: relative;
+  position: fixed;
   padding: 5px;
   display: flex;
   width: 352px;
   bottom: 90px;
   left: 50%;
   transform: translate(-50%);
-  border: 1px solid black;
+  border: 1px solid white;
   z-index: 50;
   ${({ removeCookieInfo }) =>
     removeCookieInfo &&
@@ -37,6 +37,7 @@ const Wrapper = styled.section`
       display: none;
     `}
   @media (min-width: 1000px) {
+    bottom: 78px;
     width: 1066px;
   }
 `
@@ -53,7 +54,7 @@ const Text = styled.p`
 
 const Button = styled.button`
   position: relative;
-  top: 30px;
+  top: 10px;
   right: 20px;
   font-size: 0.8rem;
   text-decoration: none;
@@ -72,8 +73,8 @@ const Button = styled.button`
   @media (min-width: 1000px) {
     height: 70px;
     width: 140px;
-    left: 40px;
-    top: 25px;
+    right: 130px;
+    top: 3px;
     font-size: 1rem;
   }
 `
