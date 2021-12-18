@@ -247,6 +247,9 @@ const Headline = styled.h2`
   margin-top: 100px;
   text-align: center;
   font-family: Ventana;
+  @media (min-width: 1000px) {
+    margin-top: 40px;
+  }
 `
 const QuantityWrapper = styled.div`
   background-color: white;
@@ -361,7 +364,10 @@ const ButtonMinus = styled.button`
 const IconPosition = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin: 0px 30px 0px 0px;
+  margin: 0px 36px 0px 0px;
+  @media (min-width: 1000px) {
+    margin-top: -54px;
+  }
 `
 
 const InputQuantity = styled.input`
