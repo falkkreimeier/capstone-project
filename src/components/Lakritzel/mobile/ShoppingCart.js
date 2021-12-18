@@ -52,7 +52,7 @@ function ShoppingCard({
       </InputContainer>
       {count > 0 ? (
         <Price>
-          {count * 18}€ <br /> <Shipping>plus 5€ Versand</Shipping>
+          {count * 18}€ <br /> <Shipping>+ 5€ Versand</Shipping>
         </Price>
       ) : (
         ''
