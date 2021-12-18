@@ -364,7 +364,7 @@ const ButtonMinus = styled.button`
 const IconPosition = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin: 0px 36px 0px 0px;
+  margin: 8px 36px 0px 0px;
   @media (min-width: 1000px) {
     margin-top: -54px;
   }
