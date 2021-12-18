@@ -219,6 +219,8 @@ const Wrapper = styled.section`
   width: var(--main-width);
   border-radius: var(--border-radius);
   padding: 0px;
+  background-color: white;
+  height: 645px;
 `
 
 const Form = styled.form`
@@ -242,6 +244,7 @@ const HiddenLabelText = styled.span`
 
 const Headline = styled.h2`
   grid-area: headline;
+  margin-top: 100px;
   text-align: center;
   font-family: Ventana;
 `
@@ -358,7 +361,7 @@ const ButtonMinus = styled.button`
 const IconPosition = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin: -50px 30px 0px 0px;
+  margin: 0px 30px 0px 0px;
 `
 
 const InputQuantity = styled.input`

@@ -49,7 +49,7 @@ const Wrapper = styled.section`
   justify-content: center;
   background-color: white;
   grid-area: shop;
-  --card-height: 490px;
+  --card-height: 645px;
   margin: 5px auto;
   width: var(--main-width);
   border-radius: var(--border-radius);
@@ -58,9 +58,6 @@ const Wrapper = styled.section`
   @media (min-width: 1000px) {
     --card-height: 645px;
     margin: 0 auto;
-  }
-  @media (min-height: 668px) {
-    --card-height: 645px;
   }
 `
 

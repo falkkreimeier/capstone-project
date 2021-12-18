@@ -82,7 +82,7 @@ function ShoppingCard({
 }
 
 const Wrapper = styled.section`
-  --card-height: 500px;
+  --card-height: 645px;
   height: var(--card-height);
   grid-area: shop;
   display: flex;
@@ -102,9 +102,6 @@ const Wrapper = styled.section`
 const Headline = styled.h2`
   font-family: ventana;
   margin: 20px auto 10px auto;
-  @media (min-height: 668px) {
-    --card-height: 645px;
-  }
 `
 
 const InputQuantity = styled.input`
@@ -201,7 +198,7 @@ const ButtonOrdering = styled.button`
 const IconPosition = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin: -38px 0px 20px 250px;
+  margin: 0px 0px 20px 250px;
 `
 
 export default ShoppingCard
