@@ -194,6 +194,7 @@ function OrderingForm({
       city,
       email,
       quantity,
+      price,
       message,
     } = form.elements
 
@@ -205,6 +206,7 @@ function OrderingForm({
       city: city.value,
       email: email.value,
       quantity: quantity.value,
+      price: price,
       message: message.value,
     })
     sendEmail(event, form)
@@ -391,6 +393,6 @@ const PriceWrapper = styled.div`
   display: none;
 `
 
-const PriceField = styled.div``
+const PriceField = styled.input``
 
 export default OrderingForm
