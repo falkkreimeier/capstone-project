@@ -118,7 +118,7 @@ const Price = styled.div`
   font-size: 2.4rem;
   position: relative;
   left: 110px;
-  bottom: 305px;
+  bottom: 250px;
   margin: -28px auto;
   @media (min-width: 1000px) {
     margin: -30.5px auto;
