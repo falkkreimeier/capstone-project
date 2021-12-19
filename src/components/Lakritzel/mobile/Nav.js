@@ -14,7 +14,7 @@ function Nav({ showWelcomeAnimation }) {
         <NavigationLink exact to="/cocktails" activeClassName="active">
           Drinks
         </NavigationLink>
-        <NavigationLink exact to="/Info" activeClassName="active">
+        <NavigationLink exact to="/info" activeClassName="active">
           Info
         </NavigationLink>
       </Navigation>
