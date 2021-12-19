@@ -122,9 +122,7 @@ function App({ data }) {
               <CocktailList data={data} />
             </Container>
           </Route>
-          <Route path="/info">
-            <Info />
-          </Route>
+          <Route path="/info" component={Info} />
           <Route path="/agb">
             <AGB />
           </Route>
