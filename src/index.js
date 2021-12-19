@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import data from './data.json'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router, browserHistory } from 'react-router-dom'
 import GlobalStlyles from './GlobalStyles'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <Router history={browserHistory}>
       <GlobalStlyles />
       <App data={data} />
     </Router>
