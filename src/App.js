@@ -9,7 +9,13 @@ import CVPageTwo from './components/People/CVPageTwo'
 import AGB from './components/Lakritzel/mobile/AGB'
 import Info from '../src/components/Lakritzel/mobile/Info'
 import styled, { css } from 'styled-components/macro'
-import { Switch, Route, useLocation, withRouter } from 'react-router-dom'
+import {
+  Switch,
+  Route,
+  useLocation,
+  withRouter,
+  Redirect,
+} from 'react-router-dom'
 import useOrder from './hook/useOrder'
 import WrongAgePicture from './components/Lakritzel/mobile/WrongAgePicture'
 import { useState, useEffect } from 'react'
@@ -104,41 +110,42 @@ function App({ data }) {
             />
           </Route>
 
-          <Route exact path="/campaign">
+          <Route path="/campaign">
             <Container>
               {data.campaign.map(campaign => (
                 <CampaignCard image={campaign.image} key={campaign.image} />
               ))}
             </Container>
           </Route>
-          <Route exact path="/cocktails">
+          <Route path="/cocktails">
             <Container>
               <CocktailList data={data} />
             </Container>
           </Route>
-          <Route exact path="/info">
+          <Route path="/info">
             <Info />
           </Route>
-          <Route exact path="/agb">
+          <Route path="/agb">
             <AGB />
           </Route>
-          <Route exact path="/impressum">
+          <Route path="/impressum">
             <Impressum />
           </Route>
           <Route exact path="/datenschutz">
             <Datenschutz />
           </Route>
           <ContainerPortfolio>
-            <Route exact path="/kritzelkopf">
+            <Route path="/kritzelkopf">
               <Kritzelkopf />
             </Route>
-            <Route exact path="/cvPageOne">
+            <Route path="/cvPageOne">
               <CVPageOne />
             </Route>
-            <Route exact path="/cvPageTwo">
+            <Route path="/cvPageTwo">
               <CVPageTwo />
             </Route>
           </ContainerPortfolio>
+          <Redirect from="*" to="/" />
         </Switch>
       </Main>
       {window.location.pathname !== '/kritzelkopf' &&
