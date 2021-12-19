@@ -123,31 +123,14 @@ function App({ data }) {
             </Container>
           </Route>
           <Route path="/info" component={Info} />
-          <Route path="/agb">
-            <AGB />
-          </Route>
-          <Route path="/impressum">
-            <Impressum />
-          </Route>
-          <Route exact path="/datenschutz">
-            <Datenschutz />
-          </Route>
+          <Route path="/agb" component={AGB} />
+          <Route path="/impressum" component={Impressum} />
+          <Route exact path="/datenschutz" component={Datenschutz} />
           <ContainerPortfolio>
-            <Route path="/kritzelkopf">
-              <Kritzelkopf />
-            </Route>
-            <Route path="/cvPageOne">
-              <CVPageOne />
-            </Route>
-            <Route path="/cvPageTwo">
-              <CVPageTwo />
-            </Route>
+            <Route path="/kritzelkopf" component={Kritzelkopf} />
+            <Route path="/cvPageOne" component={CVPageOne} />
+            <Route path="/cvPageTwo" component={CVPageTwo} />
           </ContainerPortfolio>
-          <Redirect from="https://lakritzel.com/campaign" to="/campaign" />
-          <Redirect
-            from="https://lakritzel.com/kritzelkopf"
-            to="/kritzelkopf"
-          />
         </Switch>
       </Main>
       {window.location.pathname !== '/kritzelkopf' &&
