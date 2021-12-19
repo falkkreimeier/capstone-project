@@ -111,18 +111,18 @@ function App({ data }) {
               ))}
             </Container>
           </Route>
-          <Route exact path="/cocktails">
+          <Route path="/cocktails">
             <Container>
               <CocktailList data={data} />
             </Container>
           </Route>
-          <Route exact path="/info">
+          <Route path="/info">
             <Info />
           </Route>
-          <Route exact path="/agb">
+          <Route path="/agb">
             <AGB />
           </Route>
-          <Route exact path="/impressum">
+          <Route path="/impressum">
             <Impressum />
           </Route>
           <Route exact path="/datenschutz">
