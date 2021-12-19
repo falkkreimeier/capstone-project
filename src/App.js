@@ -145,7 +145,11 @@ function App({ data }) {
               <CVPageTwo />
             </Route>
           </ContainerPortfolio>
-          <Redirect from="*" to="/" />
+          <Redirect from="https://lakritzel.com/campaign" to="/campaign" />
+          <Redirect
+            from="https://lakritzel.com/kritzelkopf"
+            to="/kritzelkopf"
+          />
         </Switch>
       </Main>
       {window.location.pathname !== '/kritzelkopf' &&
