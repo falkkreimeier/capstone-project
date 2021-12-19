@@ -1,0 +1,34 @@
+{
+  "files": {
+    "0.c2a7b5a5.iframe.bundle.js": "./0.c2a7b5a5.iframe.bundle.js",
+    "main.js": "./main.8404820f.iframe.bundle.js",
+    "runtime~main.js": "./runtime~main.34ebfaed.iframe.bundle.js",
+    "vendors~main.js": "./vendors~main.cb714ebe.iframe.bundle.js",
+    "vendors~main.js.map": "./vendors~main.cb714ebe.iframe.bundle.js.map",
+    "4.81006622.iframe.bundle.js": "./4.81006622.iframe.bundle.js",
+    "4.81006622.iframe.bundle.js.map": "./4.81006622.iframe.bundle.js.map",
+    "5.2b8380c1.iframe.bundle.js": "./5.2b8380c1.iframe.bundle.js",
+    "6.573aeeaf.iframe.bundle.js": "./6.573aeeaf.iframe.bundle.js",
+    "6.573aeeaf.iframe.bundle.js.map": "./6.573aeeaf.iframe.bundle.js.map",
+    "7.1f45da21.iframe.bundle.js": "./7.1f45da21.iframe.bundle.js",
+    "4.81006622.iframe.bundle.js.LICENSE.txt": "./4.81006622.iframe.bundle.js.LICENSE.txt",
+    "6.573aeeaf.iframe.bundle.js.LICENSE.txt": "./6.573aeeaf.iframe.bundle.js.LICENSE.txt",
+    "iframe.html": "./iframe.html",
+    "static/media/Kleckse_clean.jpg": "./static/media/Kleckse_clean.c13eb5a8.jpg",
+    "static/media/Lakritzel-Ventana.324e6a45.otf": "./static/media/Lakritzel-Ventana.324e6a45.otf",
+    "static/media/Logo-lettering.20acbf3a.jpg": "./static/media/Logo-lettering.20acbf3a.jpg",
+    "static/media/Logo_nobackground.406cb2cc.png": "./static/media/Logo_nobackground.406cb2cc.png",
+    "static/media/Portfolio.7769a175.jpg": "./static/media/Portfolio.7769a175.jpg",
+    "static/media/Rettemich-nobackground.eeb951a2.png": "./static/media/Rettemich-nobackground.eeb951a2.png",
+    "static/media/Süß.398386fb.jpg": "./static/media/Süß.398386fb.jpg",
+    "static/media/der-ballert-noHeadline.d2f8cd92.png": "./static/media/der-ballert-noHeadline.d2f8cd92.png",
+    "static/media/painted-bottle.e4148b58.jpg": "./static/media/painted-bottle.e4148b58.jpg",
+    "static/media/shorty-nohl-noBG.db6f0d66.png": "./static/media/shorty-nohl-noBG.db6f0d66.png",
+    "vendors~main.cb714ebe.iframe.bundle.js.LICENSE.txt": "./vendors~main.cb714ebe.iframe.bundle.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "runtime~main.34ebfaed.iframe.bundle.js",
+    "vendors~main.cb714ebe.iframe.bundle.js",
+    "main.8404820f.iframe.bundle.js"
+  ]
+}
