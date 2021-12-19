@@ -88,7 +88,7 @@ function App({ data }) {
       ) : null}
       <Main showWelcomeAnimation={showWelcomeAnimation}>
         <Switch>
-          <Route exact path="/*">
+          <Route exact path="/">
             <DesktopSide
               count={count}
               onShoppingCardButtonClick={shoppingCartButtonClick}
