@@ -9,13 +9,7 @@ import CVPageTwo from './components/People/CVPageTwo'
 import AGB from './components/Lakritzel/mobile/AGB'
 import Info from '../src/components/Lakritzel/mobile/Info'
 import styled, { css } from 'styled-components/macro'
-import {
-  Switch,
-  Route,
-  useLocation,
-  withRouter,
-  Redirect,
-} from 'react-router-dom'
+import { Switch, Route, useLocation, withRouter } from 'react-router-dom'
 import useOrder from './hook/useOrder'
 import WrongAgePicture from './components/Lakritzel/mobile/WrongAgePicture'
 import { useState, useEffect } from 'react'
@@ -110,26 +104,26 @@ function App({ data }) {
             />
           </Route>
 
-          <Route path="/campaign">
+          <Route exact path="/campaign">
             <Container>
               {data.campaign.map(campaign => (
                 <CampaignCard image={campaign.image} key={campaign.image} />
               ))}
             </Container>
           </Route>
-          <Route path="/cocktails">
+          <Route exact path="/cocktails">
             <Container>
               <CocktailList data={data} />
             </Container>
           </Route>
-          <Route path="/info" component={Info} />
-          <Route path="/agb" component={AGB} />
-          <Route path="/impressum" component={Impressum} />
+          <Route exact path="/info" component={Info} />
+          <Route exact path="/agb" component={AGB} />
+          <Route exact path="/impressum" component={Impressum} />
           <Route exact path="/datenschutz" component={Datenschutz} />
           <ContainerPortfolio>
-            <Route path="/kritzelkopf" component={Kritzelkopf} />
-            <Route path="/cvPageOne" component={CVPageOne} />
-            <Route path="/cvPageTwo" component={CVPageTwo} />
+            <Route exact path="/kritzelkopf" component={Kritzelkopf} />
+            <Route exact path="/cvPageOne" component={CVPageOne} />
+            <Route exact path="/cvPageTwo" component={CVPageTwo} />
           </ContainerPortfolio>
         </Switch>
       </Main>
