@@ -8,7 +8,7 @@ function Nav({ showWelcomeAnimation }) {
         <NavigationLink exact to="/" activeClassName="active">
           Shop
         </NavigationLink>
-        <NavigationLink exact to="/campaign" activeClassName="active">
+        <NavigationLink exact to="/motive" activeClassName="active">
           Pics
         </NavigationLink>
         <NavigationLink exact to="/cocktails" activeClassName="active">
