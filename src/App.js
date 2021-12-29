@@ -104,7 +104,7 @@ function App({ data }) {
             />
           </Route>
 
-          <Route exact path="/campaign">
+          <Route path="/motive">
             <Container>
               {data.campaign.map(campaign => (
                 <CampaignCard image={campaign.image} key={campaign.image} />
