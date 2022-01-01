@@ -91,7 +91,6 @@ function App({ data }) {
           <Route exact path="/">
             <DesktopSide
               count={count}
-              onShoppingCardButtonClick={shoppingCartButtonClick}
               showWelcomeAnimation={showWelcomeAnimation}
               onShoppingCardButton={shoppingCardButton}
               showShoppingCard={showShoppingCard}
