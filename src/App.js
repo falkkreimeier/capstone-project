@@ -77,9 +77,9 @@ function App({ data }) {
 
   return (
     <Wrapper>
-      {window.location.pathname !== '/kritzelkopf' &&
-      window.location.pathname !== '/cvPageOne' &&
-      window.location.pathname !== '/cvPageTwo' ? (
+      {window.location.hash !== '#/kritzelkopf' &&
+      window.location.hash !== '#/cvPageOne' &&
+      window.location.hash !== '#/cvPageTwo' ? (
         <Header
           count={count}
           onShoppingCardButtonClick={shoppingCartButtonClick}
