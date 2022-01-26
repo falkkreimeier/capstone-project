@@ -126,9 +126,9 @@ function App({ data }) {
           </ContainerPortfolio>
         </Switch>
       </Main>
-      {window.location.pathname !== '/kritzelkopf' &&
-      window.location.pathname !== '/cvPageOne' &&
-      window.location.pathname !== '/cvPageTwo' ? (
+      {window.location.hash !== '#/kritzelkopf' &&
+      window.location.hash !== '#/cvPageOne' &&
+      window.location.hash !== '#/cvPageTwo' ? (
         <Nav showWelcomeAnimation={showWelcomeAnimation} />
       ) : null}
       <Cookies />
